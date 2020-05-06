@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-VisualStudioVersion = 12.0.0.0
-MinimumVisualStudioVersion = 10.0.0.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompuMaster.Scopevisio.OpenApi", "src\CompuMaster.Scopevisio.OpenApi\CompuMaster.Scopevisio.OpenApi.csproj", "{87401C65-DA22-45D5-A4E5-697F23C9E4A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompuMaster.Scopevisio.OpenApi.Test", "src\CompuMaster.Scopevisio.OpenApi.Test\CompuMaster.Scopevisio.OpenApi.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
@@ -23,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EBEE784-F141-4A06-91C8-B286A506392E}
 	EndGlobalSection
 EndGlobal

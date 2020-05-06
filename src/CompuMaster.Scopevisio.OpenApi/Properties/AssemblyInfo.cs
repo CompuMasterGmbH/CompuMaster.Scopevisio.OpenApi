@@ -10,5 +10,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("camm")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
+[assembly: Guid("651A72B5-BC80-4838-8528-0A81F2B8E57B")]
 
-[assembly: AssemblyVersion("1.0.0")]
+[assembly: AssemblyVersion("0.0.1")]

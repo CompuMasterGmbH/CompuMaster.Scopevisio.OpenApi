@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scopevisio.OpenApi", "Scopevisio.OpenApi\Scopevisio.OpenApi.csproj", "{672274F7-238E-445C-A791-1682C8C3A3FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{672274F7-238E-445C-A791-1682C8C3A3FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{672274F7-238E-445C-A791-1682C8C3A3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{672274F7-238E-445C-A791-1682C8C3A3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{672274F7-238E-445C-A791-1682C8C3A3FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {457E754C-63E7-4EB1-B2F0-B8DF49BFB430}
+	EndGlobalSection
+EndGlobal

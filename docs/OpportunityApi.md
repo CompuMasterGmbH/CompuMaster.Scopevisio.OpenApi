@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.OpportunityApi
+# CompuMaster.Scopevisio.OpenApi.Api.OpportunityApi
 
 All URIs are relative to *https://appload.scopevisio.com/rest*
 
@@ -28,9 +28,9 @@ Convert the Scopevisio opportunity with the given number (interne Nummer) to an 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -106,9 +106,9 @@ Convert the Scopevisio opportunity with the given number (interne Nummer) to an 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -184,9 +184,9 @@ Convert the Scopevisio opportunity with the given number (interne Nummer) to an 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -262,9 +262,9 @@ Convert the Scopevisio opportunity with the given number (interne Nummer) to an 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -340,9 +340,9 @@ Convert the Scopevisio opportunity with the given number (interne Nummer) to a r
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -420,9 +420,9 @@ Returns all Scopevisio opportunites.  Required profile(s): <i>Angebote, Aufträg
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -497,9 +497,9 @@ Returns the Scopevisio sales potential with the given number (interne Nummer).  
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -576,9 +576,9 @@ Returns the positions for the opportunity with the given number (interne Nummer)
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {

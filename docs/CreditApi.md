@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.CreditApi
+# CompuMaster.Scopevisio.OpenApi.Api.CreditApi
 
 All URIs are relative to *https://appload.scopevisio.com/rest*
 
@@ -25,9 +25,9 @@ Returns the Scopevisio credit with the given number (interne Nummer).  Required 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -104,9 +104,9 @@ Returns the Scopevisio outgoing invoice document which is parent of the credit w
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -184,9 +184,9 @@ Returns the positions for the outgoing invoice with the given number(interne Num
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -264,9 +264,9 @@ Returns the Scopevisio credits. <i> Required profile(s): Rechnungen (Anzeigen)</
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -341,9 +341,9 @@ Post the credit with the given number(interne Nummer).  Required profile(s): <i>
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {

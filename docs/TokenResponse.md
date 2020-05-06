@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.TokenResponse
+# CompuMaster.Scopevisio.OpenApi.Model.TokenResponse
 
 ## Properties
 

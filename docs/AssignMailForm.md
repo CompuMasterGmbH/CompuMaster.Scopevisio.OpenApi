@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.AssignMailForm
+# CompuMaster.Scopevisio.OpenApi.Model.AssignMailForm
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.SubtaskForm
+# CompuMaster.Scopevisio.OpenApi.Model.SubtaskForm
 
 ## Properties
 

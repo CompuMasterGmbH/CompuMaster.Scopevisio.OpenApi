@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.PaymentTermForm
+# CompuMaster.Scopevisio.OpenApi.Model.PaymentTermForm
 
 ## Properties
 

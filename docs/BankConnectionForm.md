@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.BankConnectionForm
+# CompuMaster.Scopevisio.OpenApi.Model.BankConnectionForm
 
 ## Properties
 

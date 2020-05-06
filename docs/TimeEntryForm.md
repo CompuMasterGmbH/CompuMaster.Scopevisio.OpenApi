@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.TimeEntryForm
+# CompuMaster.Scopevisio.OpenApi.Model.TimeEntryForm
 
 ## Properties
 

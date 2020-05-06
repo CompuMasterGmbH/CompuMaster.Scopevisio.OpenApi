@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.IncomingMailForm
+# CompuMaster.Scopevisio.OpenApi.Model.IncomingMailForm
 
 ## Properties
 

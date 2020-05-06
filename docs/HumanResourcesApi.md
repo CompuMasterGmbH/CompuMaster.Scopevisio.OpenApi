@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.HumanResourcesApi
+# CompuMaster.Scopevisio.OpenApi.Api.HumanResourcesApi
 
 All URIs are relative to *https://appload.scopevisio.com/rest*
 
@@ -22,9 +22,9 @@ Get human resources.  Required profile(s): <i>Human-Ressourcen Verwaltung (Anzei
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -100,9 +100,9 @@ Return availability of human resources for the given time range. The both parame
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {

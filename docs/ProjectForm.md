@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.ProjectForm
+# CompuMaster.Scopevisio.OpenApi.Model.ProjectForm
 
 ## Properties
 

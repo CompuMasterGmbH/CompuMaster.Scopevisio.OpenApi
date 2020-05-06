@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.ProductGroupForm
+# CompuMaster.Scopevisio.OpenApi.Model.ProductGroupForm
 
 ## Properties
 

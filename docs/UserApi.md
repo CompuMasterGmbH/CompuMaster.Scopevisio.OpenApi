@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.UserApi
+# CompuMaster.Scopevisio.OpenApi.Api.UserApi
 
 All URIs are relative to *https://appload.scopevisio.com/rest*
 
@@ -25,9 +25,9 @@ Required profile(s): Benutzer (Bearbeiten).
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -103,9 +103,9 @@ Required profile(s): Benutzer (Bearbeiten).
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -181,9 +181,9 @@ Required profile(s): Benutzer (Anzeigen).
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -259,9 +259,9 @@ Required profile(s): Benutzer (Anzeigen).
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -336,9 +336,9 @@ Required profile(s): Benutzer (Bearbeiten).
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {

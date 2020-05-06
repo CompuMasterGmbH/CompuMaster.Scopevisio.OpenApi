@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ProductApi
+# CompuMaster.Scopevisio.OpenApi.Api.ProductApi
 
 All URIs are relative to *https://appload.scopevisio.com/rest*
 
@@ -26,9 +26,9 @@ Creates a new Scopevisio product.  Required profile(s): <i>Produktverwaltung (Be
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -103,9 +103,9 @@ Creates a new Scopevisio productGroup.  Required profile(s): <i>Produktverwaltun
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -180,9 +180,9 @@ Returns the Scopevisio product with the given id.  Required profile(s): <i>Produ
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -259,9 +259,9 @@ Returns all the Scopevisio productGroups.  Required profile(s): <i>Produktverwal
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -332,9 +332,9 @@ Returns all Scopevisio products.  Required profile(s): <i>Produktverwaltung (Anz
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -409,9 +409,9 @@ Updates the Scopevisio product with the given id.  Required profile(s): <i>Produ
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {

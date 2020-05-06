@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.RevenueStatementAccountsForm
+# CompuMaster.Scopevisio.OpenApi.Model.RevenueStatementAccountsForm
 
 ## Properties
 

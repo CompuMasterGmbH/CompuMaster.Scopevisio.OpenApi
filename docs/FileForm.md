@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.FileForm
+# CompuMaster.Scopevisio.OpenApi.Model.FileForm
 
 ## Properties
 

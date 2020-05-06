@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.CreditForm
+# CompuMaster.Scopevisio.OpenApi.Model.CreditForm
 
 ## Properties
 

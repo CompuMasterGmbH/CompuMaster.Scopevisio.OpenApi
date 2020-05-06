@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.KontaktForm
+# CompuMaster.Scopevisio.OpenApi.Model.KontaktForm
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.CashbookApi
+# CompuMaster.Scopevisio.OpenApi.Api.CashbookApi
 
 All URIs are relative to *https://appload.scopevisio.com/rest*
 
@@ -23,9 +23,9 @@ Creates a new Scopevisio cashbook entry.  Required profile(s): <i>Kassenbewegung
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -100,9 +100,9 @@ Returns Scopevisio cashbook sheets.  Required profile(s): <i>Abgeschlossene Kass
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {
@@ -177,9 +177,9 @@ Returns Scopevisio cashbooks settings.  Required profile(s): <i>Kassenbücher Da
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {

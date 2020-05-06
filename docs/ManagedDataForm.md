@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.ManagedDataForm
+# CompuMaster.Scopevisio.OpenApi.Model.ManagedDataForm
 
 ## Properties
 

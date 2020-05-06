@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.Customer
+# CompuMaster.Scopevisio.OpenApi.Model.Customer
 
 ## Properties
 

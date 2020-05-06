@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.TeamworkFileForm
+# CompuMaster.Scopevisio.OpenApi.Model.TeamworkFileForm
 
 ## Properties
 

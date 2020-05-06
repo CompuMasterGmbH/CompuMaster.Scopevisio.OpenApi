@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.DatevPostings
+# CompuMaster.Scopevisio.OpenApi.Model.DatevPostings
 
 ## Properties
 

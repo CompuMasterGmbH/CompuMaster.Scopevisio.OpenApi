@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.Employer
+# CompuMaster.Scopevisio.OpenApi.Model.Employer
 
 ## Properties
 

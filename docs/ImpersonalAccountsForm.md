@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.ImpersonalAccountsForm
+# CompuMaster.Scopevisio.OpenApi.Model.ImpersonalAccountsForm
 
 ## Properties
 

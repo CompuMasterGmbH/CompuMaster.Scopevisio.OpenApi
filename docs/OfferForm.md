@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.OfferForm
+# CompuMaster.Scopevisio.OpenApi.Model.OfferForm
 
 ## Properties
 

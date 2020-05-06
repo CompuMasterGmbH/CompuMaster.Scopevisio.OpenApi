@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.License
+# CompuMaster.Scopevisio.OpenApi.Model.License
 
 ## Properties
 

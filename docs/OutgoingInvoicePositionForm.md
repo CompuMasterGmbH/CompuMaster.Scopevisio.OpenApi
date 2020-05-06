@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.OutgoingInvoicePositionForm
+# CompuMaster.Scopevisio.OpenApi.Model.OutgoingInvoicePositionForm
 
 ## Properties
 

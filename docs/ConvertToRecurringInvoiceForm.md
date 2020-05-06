@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.ConvertToRecurringInvoiceForm
+# CompuMaster.Scopevisio.OpenApi.Model.ConvertToRecurringInvoiceForm
 
 ## Properties
 

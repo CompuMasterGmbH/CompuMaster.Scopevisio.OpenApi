@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.PositionsForm
+# CompuMaster.Scopevisio.OpenApi.Model.PositionsForm
 
 ## Properties
 

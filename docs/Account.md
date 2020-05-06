@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.Account
+# CompuMaster.Scopevisio.OpenApi.Model.Account
 
 ## Properties
 

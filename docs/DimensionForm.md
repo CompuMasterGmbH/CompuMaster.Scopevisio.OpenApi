@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.DimensionForm
+# CompuMaster.Scopevisio.OpenApi.Model.DimensionForm
 
 ## Properties
 

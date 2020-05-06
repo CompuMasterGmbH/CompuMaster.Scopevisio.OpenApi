@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.UserForm
+# CompuMaster.Scopevisio.OpenApi.Model.UserForm
 
 ## Properties
 

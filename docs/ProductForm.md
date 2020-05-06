@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.ProductForm
+# CompuMaster.Scopevisio.OpenApi.Model.ProductForm
 
 ## Properties
 

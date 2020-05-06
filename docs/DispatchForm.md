@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.DispatchForm
+# CompuMaster.Scopevisio.OpenApi.Model.DispatchForm
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.RevenueStatementAccountRow
+# CompuMaster.Scopevisio.OpenApi.Model.RevenueStatementAccountRow
 
 ## Properties
 

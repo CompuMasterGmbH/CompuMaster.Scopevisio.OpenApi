@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.BlogEntryForm
+# CompuMaster.Scopevisio.OpenApi.Model.BlogEntryForm
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.OrderForm
+# CompuMaster.Scopevisio.OpenApi.Model.OrderForm
 
 ## Properties
 

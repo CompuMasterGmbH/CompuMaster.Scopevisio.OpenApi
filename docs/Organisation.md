@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.Organisation
+# CompuMaster.Scopevisio.OpenApi.Model.Organisation
 
 ## Properties
 

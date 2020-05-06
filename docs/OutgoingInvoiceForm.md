@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.OutgoingInvoiceForm
+# CompuMaster.Scopevisio.OpenApi.Model.OutgoingInvoiceForm
 
 ## Properties
 

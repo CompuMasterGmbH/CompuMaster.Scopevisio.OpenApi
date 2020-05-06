@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.CashbookEntryForm
+# CompuMaster.Scopevisio.OpenApi.Model.CashbookEntryForm
 
 ## Properties
 

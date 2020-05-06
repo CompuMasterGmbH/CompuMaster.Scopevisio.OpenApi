@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.Teamwork
+# CompuMaster.Scopevisio.OpenApi.Model.Teamwork
 
 ## Properties
 

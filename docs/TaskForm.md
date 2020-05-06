@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.TaskForm
+# CompuMaster.Scopevisio.OpenApi.Model.TaskForm
 
 ## Properties
 

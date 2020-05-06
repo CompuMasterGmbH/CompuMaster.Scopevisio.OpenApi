@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.PostingRow
+# CompuMaster.Scopevisio.OpenApi.Model.PostingRow
 
 ## Properties
 

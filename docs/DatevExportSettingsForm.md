@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.DatevExportSettingsForm
+# CompuMaster.Scopevisio.OpenApi.Model.DatevExportSettingsForm
 
 ## Properties
 

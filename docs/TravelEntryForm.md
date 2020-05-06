@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.TravelEntryForm
+# CompuMaster.Scopevisio.OpenApi.Model.TravelEntryForm
 
 ## Properties
 

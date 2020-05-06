@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.OrganisationApi
+# CompuMaster.Scopevisio.OpenApi.Api.OrganisationApi
 
 All URIs are relative to *https://appload.scopevisio.com/rest*
 
@@ -21,9 +21,9 @@ Creates a Scopevisio organisation with the given name (if not existing) and the 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {

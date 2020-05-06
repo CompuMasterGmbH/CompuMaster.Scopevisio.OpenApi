@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.NumberRangeType
+# CompuMaster.Scopevisio.OpenApi.Model.NumberRangeType
 
 ## Properties
 

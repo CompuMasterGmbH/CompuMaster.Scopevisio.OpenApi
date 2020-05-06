@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.OpportunityForm
+# CompuMaster.Scopevisio.OpenApi.Model.OpportunityForm
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.Postings
+# CompuMaster.Scopevisio.OpenApi.Model.Postings
 
 ## Properties
 

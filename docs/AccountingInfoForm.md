@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.AccountingInfoForm
+# CompuMaster.Scopevisio.OpenApi.Model.AccountingInfoForm
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.ActivitiesApi
+# CompuMaster.Scopevisio.OpenApi.Api.ActivitiesApi
 
 All URIs are relative to *https://appload.scopevisio.com/rest*
 
@@ -21,9 +21,9 @@ Returns Events of Scopevisio.  Required profile(s): <i>Rechnungseingangsbuch (An
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Client;
+using CompuMaster.Scopevisio.OpenApi.Model;
 
 namespace Example
 {

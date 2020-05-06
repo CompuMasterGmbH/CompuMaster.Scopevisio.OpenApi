@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.DimensionEntryValueForm
+# CompuMaster.Scopevisio.OpenApi.Model.DimensionEntryValueForm
 
 ## Properties
 

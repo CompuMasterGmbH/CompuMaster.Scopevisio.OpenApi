@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.CustomField
+# CompuMaster.Scopevisio.OpenApi.Model.CustomField
 
 ## Properties
 

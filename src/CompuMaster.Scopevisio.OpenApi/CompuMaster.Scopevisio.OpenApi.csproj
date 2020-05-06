@@ -69,7 +69,6 @@ Contact: support@scopevisio.com
   <ItemGroup>
     <Compile Include="**\*.cs" Exclude="obj\**" />
     <None Include="app.config" />
-    <None Include="GlobalSuppressions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

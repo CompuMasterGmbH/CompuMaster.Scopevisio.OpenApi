@@ -833,16 +833,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             JapanischJapan = 97,
 
             /// <summary>
-            /// Enum JapanischJapan for value: Japanisch (Japan
+            /// Enum JapanischJapan for value: Japanisch (Japan,JP)
             /// </summary>
-            [EnumMember(Value = "Japanisch (Japan")]
-            JapanischJapan2 = 98,
-
-            /// <summary>
-            /// Enum JP for value: JP)
-            /// </summary>
-            [EnumMember(Value = "JP)")]
-            JP = 99,
+            [EnumMember(Value = "Japanisch (Japan,JP)")]
+            JapanischJapanJP = 98,
 
             /// <summary>
             /// Enum Koreanisch for value: Koreanisch
@@ -947,16 +941,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             NorwegischNorwegen = 116,
 
             /// <summary>
-            /// Enum NorwegischNorwegen for value: Norwegisch (Norwegen
+            /// Enum NorwegischNorwegen for value: Norwegisch (Norwegen,Nynorsk)
             /// </summary>
-            [EnumMember(Value = "Norwegisch (Norwegen")]
-            NorwegischNorwegen2 = 117,
-
-            /// <summary>
-            /// Enum Nynorsk for value: Nynorsk)
-            /// </summary>
-            [EnumMember(Value = "Nynorsk)")]
-            Nynorsk = 118,
+            [EnumMember(Value = "Norwegisch (Norwegen,Nynorsk)")]
+            NorwegischNorwegenNynorsk = 117,
 
             /// <summary>
             /// Enum Polnisch for value: Polnisch
@@ -1091,16 +1079,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             ThaiThailand = 140,
 
             /// <summary>
-            /// Enum ThaiThailand for value: Thai (Thailand
+            /// Enum ThaiThailand for value: Thai (Thailand,TH)
             /// </summary>
-            [EnumMember(Value = "Thai (Thailand")]
-            ThaiThailand2 = 141,
-
-            /// <summary>
-            /// Enum TH for value: TH)
-            /// </summary>
-            [EnumMember(Value = "TH)")]
-            TH = 142,
+            [EnumMember(Value = "Thai (Thailand,TH)")]
+            ThaiThailandTH = 141,
 
             /// <summary>
             /// Enum Trkisch for value: Türkisch

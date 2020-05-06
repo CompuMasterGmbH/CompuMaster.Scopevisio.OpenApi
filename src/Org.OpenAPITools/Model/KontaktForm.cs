@@ -836,7 +836,7 @@ namespace Org.OpenAPITools.Model
             /// Enum JapanischJapan for value: Japanisch (Japan
             /// </summary>
             [EnumMember(Value = "Japanisch (Japan")]
-            JapanischJapan = 98,
+            JapanischJapan2 = 98,
 
             /// <summary>
             /// Enum JP for value: JP)
@@ -950,7 +950,7 @@ namespace Org.OpenAPITools.Model
             /// Enum NorwegischNorwegen for value: Norwegisch (Norwegen
             /// </summary>
             [EnumMember(Value = "Norwegisch (Norwegen")]
-            NorwegischNorwegen = 117,
+            NorwegischNorwegen2 = 117,
 
             /// <summary>
             /// Enum Nynorsk for value: Nynorsk)
@@ -1094,7 +1094,7 @@ namespace Org.OpenAPITools.Model
             /// Enum ThaiThailand for value: Thai (Thailand
             /// </summary>
             [EnumMember(Value = "Thai (Thailand")]
-            ThaiThailand = 141,
+            ThaiThailand2 = 141,
 
             /// <summary>
             /// Enum TH for value: TH)

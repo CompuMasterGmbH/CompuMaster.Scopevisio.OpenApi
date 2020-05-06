@@ -2,7 +2,7 @@
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace CompuMaster.Scopevisio.OpenApi.Models
+namespace CompuMaster.Scopevisio.OpenScopeApi.Models
 {
     using System;
     using System.Linq;

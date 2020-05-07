@@ -126,7 +126,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TokenWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
+        ApiResponse<Model.TokenResponse> TokenWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -189,7 +189,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </remarks>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RevokeTokenAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<object>> RevokeTokenAsyncWithHttpInfo ();
         /// <summary>
         /// Access token
         /// </summary>
@@ -232,7 +232,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TokenAsyncWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
+        System.Threading.Tasks.Task<ApiResponse<Model.TokenResponse>> TokenAsyncWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
         #endregion Asynchronous Operations
     }
 
@@ -794,7 +794,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> TokenWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
+        public ApiResponse<Model.TokenResponse> TokenWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
         {
             // verify the required parameter 'grantType' is set
             if (grantType == null)
@@ -851,9 +851,17 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            Model.TokenResponse TokenResult = null;
+            if (localVarStatusCode == (int)System.Net.HttpStatusCode.OK)
+            {
+                //apply token to current configuration instance
+                TokenResult = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.TokenResponse>(localVarResponse.Content);
+                this.Configuration.AccessToken = TokenResult.AccessToken;
+            }
+
+            return new ApiResponse<Model.TokenResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                TokenResult);
         }
 
         /// <summary>
@@ -896,7 +904,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> TokenAsyncWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<Model.TokenResponse>> TokenAsyncWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
         {
             // verify the required parameter 'grantType' is set
             if (grantType == null)
@@ -953,9 +961,17 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            Model.TokenResponse TokenResult = null;
+            if (localVarStatusCode == (int)System.Net.HttpStatusCode.OK)
+            {
+                //apply token to current configuration instance
+                TokenResult = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.TokenResponse>(localVarResponse.Content);
+                this.Configuration.AccessToken = TokenResult.AccessToken;
+            }
+
+            return new ApiResponse<Model.TokenResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                TokenResult);
         }
 
     }

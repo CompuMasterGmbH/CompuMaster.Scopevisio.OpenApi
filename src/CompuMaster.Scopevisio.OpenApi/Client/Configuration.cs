@@ -114,7 +114,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "OpenAPI-Generator/1.0.0/csharp";
+            UserAgent = "CompuMaster OpenScope/0.1.0/.Net";
             BasePath = "https://appload.scopevisio.com/rest";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -187,7 +187,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
             string tempFolderPath = null,
             string dateTimeFormat = null,
             int timeout = 100000,
-            string userAgent = "OpenAPI-Generator/1.0.0/csharp"
+            string userAgent = "CompuMaster OpenScope/0.1.0/.Net"
             // ReSharper restore UnusedParameter.Local
             )
         {

@@ -104,7 +104,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns></returns>
-        void Token (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long organisationId = default(long), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
+        void Token (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
 
         /// <summary>
         /// Access token
@@ -126,7 +126,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TokenWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long organisationId = default(long), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
+        ApiResponse<Object> TokenWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -210,7 +210,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TokenAsync (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long organisationId = default(long), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
+        System.Threading.Tasks.Task TokenAsync (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
 
         /// <summary>
         /// Access token
@@ -232,7 +232,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TokenAsyncWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long organisationId = default(long), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
+        System.Threading.Tasks.Task<ApiResponse<Object>> TokenAsyncWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string));
         #endregion Asynchronous Operations
     }
 
@@ -772,7 +772,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns></returns>
-        public void Token (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long organisationId = default(long), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
+        public void Token (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
         {
              TokenWithHttpInfo(grantType, customer, clientId, clientSecret, username, organisationId, organisation, password, totpResponse, refreshToken, code, requestcookie);
         }
@@ -794,7 +794,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> TokenWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long organisationId = default(long), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
+        public ApiResponse<Object> TokenWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
         {
             // verify the required parameter 'grantType' is set
             if (grantType == null)
@@ -873,7 +873,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TokenAsync (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long organisationId = default(long), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
+        public async System.Threading.Tasks.Task TokenAsync (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
         {
              await TokenAsyncWithHttpInfo(grantType, customer, clientId, clientSecret, username, organisationId, organisation, password, totpResponse, refreshToken, code, requestcookie);
 
@@ -896,7 +896,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="code">Authorization code, required if grant_type&#x3D;authorization_code (optional)</param>
         /// <param name="requestcookie">Whether to set access token in cookie (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> TokenAsyncWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long organisationId = default(long), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> TokenAsyncWithHttpInfo (string grantType, string customer, string clientId = default(string), string clientSecret = default(string), string username = default(string), long? organisationId = default(long?), string organisation = default(string), string password = default(string), string totpResponse = default(string), string refreshToken = default(string), string code = default(string), string requestcookie = default(string))
         {
             // verify the required parameter 'grantType' is set
             if (grantType == null)

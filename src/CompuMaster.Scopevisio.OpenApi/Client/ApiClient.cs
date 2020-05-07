@@ -254,6 +254,18 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
                 // https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx#Anchor_8
                 // For example: 2009-06-15T13:45:30.0000000
                 return ((DateTimeOffset)obj).ToString (Configuration.DateTimeFormat);
+            else if ((obj is long?) || (obj is int?) || (obj is Int16?) || (obj is byte?))
+            {
+                long? wert = (long?)obj;
+                if (wert.HasValue == false)
+                    {
+                    return "";
+                }
+                else
+                { 
+                    return wert.ToString(); 
+                }
+            }
             else if (obj is bool)
                 return (bool)obj ? "true" : "false";
             else if (obj is IList)

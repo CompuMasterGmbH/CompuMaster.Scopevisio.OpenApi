@@ -260,6 +260,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         public virtual string UserAgent { get; set; }
 
         /// <summary>
+        /// Gets or sets the client number (HTTP basic authentication).
+        /// </summary>
+        /// <value>The client number.</value>
+        public virtual string ClientNumber { get; set; }
+
+        /// <summary>
         /// Gets or sets the username (HTTP basic authentication).
         /// </summary>
         /// <value>The username.</value>

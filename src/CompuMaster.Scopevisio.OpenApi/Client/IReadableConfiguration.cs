@@ -43,6 +43,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         string BasePath { get; }
 
         /// <summary>
+        /// Gets the client number.
+        /// </summary>
+        /// <value>Client number.</value>
+        string ClientNumber { get; }
+
+        /// <summary>
         /// Gets the date time format.
         /// </summary>
         /// <value>Date time foramt.</value>

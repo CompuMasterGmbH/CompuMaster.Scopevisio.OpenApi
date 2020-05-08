@@ -102,7 +102,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         public void GetTeamworkTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //bool force = null;
+            //bool? force = null;
             //instance.GetTeamworkToken(force);
             
         }

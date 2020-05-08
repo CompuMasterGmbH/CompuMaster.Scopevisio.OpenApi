@@ -57,7 +57,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// name
         /// </summary>
         /// <value>name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
 
         /// <summary>

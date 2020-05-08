@@ -208,14 +208,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// First name
         /// </summary>
         /// <value>First name</value>
-        [DataMember(Name="firstName", EmitDefaultValue=false)]
+        [DataMember(Name="firstName", EmitDefaultValue=true)]
         public string FirstName { get; set; }
 
         /// <summary>
         /// Last name
         /// </summary>
         /// <value>Last name</value>
-        [DataMember(Name="lastName", EmitDefaultValue=false)]
+        [DataMember(Name="lastName", EmitDefaultValue=true)]
         public string LastName { get; set; }
 
 
@@ -223,7 +223,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// Email address used as username
         /// </summary>
         /// <value>Email address used as username</value>
-        [DataMember(Name="email", EmitDefaultValue=false)]
+        [DataMember(Name="email", EmitDefaultValue=true)]
         public string Email { get; set; }
 
         /// <summary>

@@ -85,7 +85,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// the json data to be imported
         /// </summary>
         /// <value>the json data to be imported</value>
-        [DataMember(Name="json", EmitDefaultValue=false)]
+        [DataMember(Name="json", EmitDefaultValue=true)]
         public string Json { get; set; }
 
         /// <summary>

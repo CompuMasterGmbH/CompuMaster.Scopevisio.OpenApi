@@ -87,7 +87,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// Email content as eml data. If encoding is set to base64, then the value of the parameter must be a base64 encoded eml.
         /// </summary>
         /// <value>Email content as eml data. If encoding is set to base64, then the value of the parameter must be a base64 encoded eml.</value>
-        [DataMember(Name="eml", EmitDefaultValue=false)]
+        [DataMember(Name="eml", EmitDefaultValue=true)]
         public string Eml { get; set; }
 
         /// <summary>

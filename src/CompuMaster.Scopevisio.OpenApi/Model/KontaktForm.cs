@@ -833,7 +833,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             JapanischJapan = 97,
 
             /// <summary>
-            /// Enum JapanischJapan for value: Japanisch (Japan,JP)
+            /// Enum JapanischJapanJP for value: Japanisch (Japan,JP)
             /// </summary>
             [EnumMember(Value = "Japanisch (Japan,JP)")]
             JapanischJapanJP = 98,
@@ -842,313 +842,313 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             /// Enum Koreanisch for value: Koreanisch
             /// </summary>
             [EnumMember(Value = "Koreanisch")]
-            Koreanisch = 100,
+            Koreanisch = 99,
 
             /// <summary>
             /// Enum KoreanischSdkorea for value: Koreanisch (Südkorea)
             /// </summary>
             [EnumMember(Value = "Koreanisch (Südkorea)")]
-            KoreanischSdkorea = 101,
+            KoreanischSdkorea = 100,
 
             /// <summary>
             /// Enum Litauisch for value: Litauisch
             /// </summary>
             [EnumMember(Value = "Litauisch")]
-            Litauisch = 102,
+            Litauisch = 101,
 
             /// <summary>
             /// Enum LitauischLitauen for value: Litauisch (Litauen)
             /// </summary>
             [EnumMember(Value = "Litauisch (Litauen)")]
-            LitauischLitauen = 103,
+            LitauischLitauen = 102,
 
             /// <summary>
             /// Enum Lettisch for value: Lettisch
             /// </summary>
             [EnumMember(Value = "Lettisch")]
-            Lettisch = 104,
+            Lettisch = 103,
 
             /// <summary>
             /// Enum LettischLettland for value: Lettisch (Lettland)
             /// </summary>
             [EnumMember(Value = "Lettisch (Lettland)")]
-            LettischLettland = 105,
+            LettischLettland = 104,
 
             /// <summary>
             /// Enum Mazedonisch for value: Mazedonisch
             /// </summary>
             [EnumMember(Value = "Mazedonisch")]
-            Mazedonisch = 106,
+            Mazedonisch = 105,
 
             /// <summary>
             /// Enum MazedonischMazedonien for value: Mazedonisch (Mazedonien)
             /// </summary>
             [EnumMember(Value = "Mazedonisch (Mazedonien)")]
-            MazedonischMazedonien = 107,
+            MazedonischMazedonien = 106,
 
             /// <summary>
             /// Enum Malay for value: Malay
             /// </summary>
             [EnumMember(Value = "Malay")]
-            Malay = 108,
+            Malay = 107,
 
             /// <summary>
             /// Enum MalayMalaysia for value: Malay (Malaysia)
             /// </summary>
             [EnumMember(Value = "Malay (Malaysia)")]
-            MalayMalaysia = 109,
+            MalayMalaysia = 108,
 
             /// <summary>
             /// Enum Maltesisch for value: Maltesisch
             /// </summary>
             [EnumMember(Value = "Maltesisch")]
-            Maltesisch = 110,
+            Maltesisch = 109,
 
             /// <summary>
             /// Enum MaltesischMalta for value: Maltesisch (Malta)
             /// </summary>
             [EnumMember(Value = "Maltesisch (Malta)")]
-            MaltesischMalta = 111,
+            MaltesischMalta = 110,
 
             /// <summary>
             /// Enum Niederlndisch for value: Niederländisch
             /// </summary>
             [EnumMember(Value = "Niederländisch")]
-            Niederlndisch = 112,
+            Niederlndisch = 111,
 
             /// <summary>
             /// Enum NiederlndischBelgien for value: Niederländisch (Belgien)
             /// </summary>
             [EnumMember(Value = "Niederländisch (Belgien)")]
-            NiederlndischBelgien = 113,
+            NiederlndischBelgien = 112,
 
             /// <summary>
             /// Enum NiederlndischNiederlande for value: Niederländisch (Niederlande)
             /// </summary>
             [EnumMember(Value = "Niederländisch (Niederlande)")]
-            NiederlndischNiederlande = 114,
+            NiederlndischNiederlande = 113,
 
             /// <summary>
             /// Enum Norwegisch for value: Norwegisch
             /// </summary>
             [EnumMember(Value = "Norwegisch")]
-            Norwegisch = 115,
+            Norwegisch = 114,
 
             /// <summary>
             /// Enum NorwegischNorwegen for value: Norwegisch (Norwegen)
             /// </summary>
             [EnumMember(Value = "Norwegisch (Norwegen)")]
-            NorwegischNorwegen = 116,
+            NorwegischNorwegen = 115,
 
             /// <summary>
-            /// Enum NorwegischNorwegen for value: Norwegisch (Norwegen,Nynorsk)
+            /// Enum NorwegischNorwegenNynorsk for value: Norwegisch (Norwegen,Nynorsk)
             /// </summary>
             [EnumMember(Value = "Norwegisch (Norwegen,Nynorsk)")]
-            NorwegischNorwegenNynorsk = 117,
+            NorwegischNorwegenNynorsk = 116,
 
             /// <summary>
             /// Enum Polnisch for value: Polnisch
             /// </summary>
             [EnumMember(Value = "Polnisch")]
-            Polnisch = 119,
+            Polnisch = 117,
 
             /// <summary>
             /// Enum PolnischPolen for value: Polnisch (Polen)
             /// </summary>
             [EnumMember(Value = "Polnisch (Polen)")]
-            PolnischPolen = 120,
+            PolnischPolen = 118,
 
             /// <summary>
             /// Enum Portugiesisch for value: Portugiesisch
             /// </summary>
             [EnumMember(Value = "Portugiesisch")]
-            Portugiesisch = 121,
+            Portugiesisch = 119,
 
             /// <summary>
             /// Enum PortugiesischBrasilien for value: Portugiesisch (Brasilien)
             /// </summary>
             [EnumMember(Value = "Portugiesisch (Brasilien)")]
-            PortugiesischBrasilien = 122,
+            PortugiesischBrasilien = 120,
 
             /// <summary>
             /// Enum PortugiesischPortugal for value: Portugiesisch (Portugal)
             /// </summary>
             [EnumMember(Value = "Portugiesisch (Portugal)")]
-            PortugiesischPortugal = 123,
+            PortugiesischPortugal = 121,
 
             /// <summary>
             /// Enum Rumnisch for value: Rumänisch
             /// </summary>
             [EnumMember(Value = "Rumänisch")]
-            Rumnisch = 124,
+            Rumnisch = 122,
 
             /// <summary>
             /// Enum RumnischRumnien for value: Rumänisch (Rumänien)
             /// </summary>
             [EnumMember(Value = "Rumänisch (Rumänien)")]
-            RumnischRumnien = 125,
+            RumnischRumnien = 123,
 
             /// <summary>
             /// Enum Russisch for value: Russisch
             /// </summary>
             [EnumMember(Value = "Russisch")]
-            Russisch = 126,
+            Russisch = 124,
 
             /// <summary>
             /// Enum RussischRussland for value: Russisch (Russland)
             /// </summary>
             [EnumMember(Value = "Russisch (Russland)")]
-            RussischRussland = 127,
+            RussischRussland = 125,
 
             /// <summary>
             /// Enum Slowakisch for value: Slowakisch
             /// </summary>
             [EnumMember(Value = "Slowakisch")]
-            Slowakisch = 128,
+            Slowakisch = 126,
 
             /// <summary>
             /// Enum SlowakischSlowakei for value: Slowakisch (Slowakei)
             /// </summary>
             [EnumMember(Value = "Slowakisch (Slowakei)")]
-            SlowakischSlowakei = 129,
+            SlowakischSlowakei = 127,
 
             /// <summary>
             /// Enum Slowenisch for value: Slowenisch
             /// </summary>
             [EnumMember(Value = "Slowenisch")]
-            Slowenisch = 130,
+            Slowenisch = 128,
 
             /// <summary>
             /// Enum SlowenischSlowenien for value: Slowenisch (Slowenien)
             /// </summary>
             [EnumMember(Value = "Slowenisch (Slowenien)")]
-            SlowenischSlowenien = 131,
+            SlowenischSlowenien = 129,
 
             /// <summary>
             /// Enum Albanisch for value: Albanisch
             /// </summary>
             [EnumMember(Value = "Albanisch")]
-            Albanisch = 132,
+            Albanisch = 130,
 
             /// <summary>
             /// Enum AlbanischAlbanien for value: Albanisch (Albanien)
             /// </summary>
             [EnumMember(Value = "Albanisch (Albanien)")]
-            AlbanischAlbanien = 133,
+            AlbanischAlbanien = 131,
 
             /// <summary>
             /// Enum Serbisch for value: Serbisch
             /// </summary>
             [EnumMember(Value = "Serbisch")]
-            Serbisch = 134,
+            Serbisch = 132,
 
             /// <summary>
             /// Enum SerbischBosnienundHerzegowina for value: Serbisch (Bosnien und Herzegowina)
             /// </summary>
             [EnumMember(Value = "Serbisch (Bosnien und Herzegowina)")]
-            SerbischBosnienundHerzegowina = 135,
+            SerbischBosnienundHerzegowina = 133,
 
             /// <summary>
             /// Enum SerbischSerbienundMontenegro for value: Serbisch (Serbien und Montenegro)
             /// </summary>
             [EnumMember(Value = "Serbisch (Serbien und Montenegro)")]
-            SerbischSerbienundMontenegro = 136,
+            SerbischSerbienundMontenegro = 134,
 
             /// <summary>
             /// Enum Schwedisch for value: Schwedisch
             /// </summary>
             [EnumMember(Value = "Schwedisch")]
-            Schwedisch = 137,
+            Schwedisch = 135,
 
             /// <summary>
             /// Enum SchwedischSchweden for value: Schwedisch (Schweden)
             /// </summary>
             [EnumMember(Value = "Schwedisch (Schweden)")]
-            SchwedischSchweden = 138,
+            SchwedischSchweden = 136,
 
             /// <summary>
             /// Enum Thai for value: Thai
             /// </summary>
             [EnumMember(Value = "Thai")]
-            Thai = 139,
+            Thai = 137,
 
             /// <summary>
             /// Enum ThaiThailand for value: Thai (Thailand)
             /// </summary>
             [EnumMember(Value = "Thai (Thailand)")]
-            ThaiThailand = 140,
+            ThaiThailand = 138,
 
             /// <summary>
-            /// Enum ThaiThailand for value: Thai (Thailand,TH)
+            /// Enum ThaiThailandTH for value: Thai (Thailand,TH)
             /// </summary>
             [EnumMember(Value = "Thai (Thailand,TH)")]
-            ThaiThailandTH = 141,
+            ThaiThailandTH = 139,
 
             /// <summary>
             /// Enum Trkisch for value: Türkisch
             /// </summary>
             [EnumMember(Value = "Türkisch")]
-            Trkisch = 143,
+            Trkisch = 140,
 
             /// <summary>
             /// Enum TrkischTrkei for value: Türkisch (Türkei)
             /// </summary>
             [EnumMember(Value = "Türkisch (Türkei)")]
-            TrkischTrkei = 144,
+            TrkischTrkei = 141,
 
             /// <summary>
             /// Enum Ukrainisch for value: Ukrainisch
             /// </summary>
             [EnumMember(Value = "Ukrainisch")]
-            Ukrainisch = 145,
+            Ukrainisch = 142,
 
             /// <summary>
             /// Enum UkrainischUkraine for value: Ukrainisch (Ukraine)
             /// </summary>
             [EnumMember(Value = "Ukrainisch (Ukraine)")]
-            UkrainischUkraine = 146,
+            UkrainischUkraine = 143,
 
             /// <summary>
             /// Enum Vietnamesisch for value: Vietnamesisch
             /// </summary>
             [EnumMember(Value = "Vietnamesisch")]
-            Vietnamesisch = 147,
+            Vietnamesisch = 144,
 
             /// <summary>
             /// Enum VietnamesischVietnam for value: Vietnamesisch (Vietnam)
             /// </summary>
             [EnumMember(Value = "Vietnamesisch (Vietnam)")]
-            VietnamesischVietnam = 148,
+            VietnamesischVietnam = 145,
 
             /// <summary>
             /// Enum Chinesisch for value: Chinesisch
             /// </summary>
             [EnumMember(Value = "Chinesisch")]
-            Chinesisch = 149,
+            Chinesisch = 146,
 
             /// <summary>
             /// Enum ChinesischChina for value: Chinesisch (China)
             /// </summary>
             [EnumMember(Value = "Chinesisch (China)")]
-            ChinesischChina = 150,
+            ChinesischChina = 147,
 
             /// <summary>
             /// Enum ChinesischHongkong for value: Chinesisch (Hongkong)
             /// </summary>
             [EnumMember(Value = "Chinesisch (Hongkong)")]
-            ChinesischHongkong = 151,
+            ChinesischHongkong = 148,
 
             /// <summary>
             /// Enum ChinesischSingapur for value: Chinesisch (Singapur)
             /// </summary>
             [EnumMember(Value = "Chinesisch (Singapur)")]
-            ChinesischSingapur = 152,
+            ChinesischSingapur = 149,
 
             /// <summary>
             /// Enum ChinesischTaiwan for value: Chinesisch (Taiwan)
             /// </summary>
             [EnumMember(Value = "Chinesisch (Taiwan)")]
-            ChinesischTaiwan = 153
+            ChinesischTaiwan = 150
 
         }
 
@@ -1854,7 +1854,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// true &#x3D; Person, false &#x3D; Gesellschaft. Evaluated only when creating a contact.
         /// </summary>
         /// <value>true &#x3D; Person, false &#x3D; Gesellschaft. Evaluated only when creating a contact.</value>
-        [DataMember(Name="person", EmitDefaultValue=false)]
+        [DataMember(Name="person", EmitDefaultValue=true)]
         public bool Person { get; set; }
 
 
@@ -1863,7 +1863,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// Name/Gesellschaftsname
         /// </summary>
         /// <value>Name/Gesellschaftsname</value>
-        [DataMember(Name="lastname", EmitDefaultValue=false)]
+        [DataMember(Name="lastname", EmitDefaultValue=true)]
         public string Lastname { get; set; }
 
         /// <summary>

@@ -352,7 +352,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="revenueType">revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; (optional)</param>
         /// <param name="searchSpecification">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. &lt;b&gt;Please consider: the fields \\\&quot;month\\\&quot;,\\\&quot;monthRevenue\\\&quot;,\\\&quot;id\\\&quot; are excluded from the search.&lt;/b&gt; (optional)</param>
         /// <returns>Object</returns>
-        Object GetProjectRevenue (long projectStartFrom, long projectStartTo, long revenueType = default(long), string searchSpecification = default(string));
+        Object GetProjectRevenue (long projectStartFrom, long projectStartTo, long? revenueType = default(long?), string searchSpecification = default(string));
 
         /// <summary>
         /// Get project revenue
@@ -366,7 +366,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="revenueType">revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; (optional)</param>
         /// <param name="searchSpecification">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. &lt;b&gt;Please consider: the fields \\\&quot;month\\\&quot;,\\\&quot;monthRevenue\\\&quot;,\\\&quot;id\\\&quot; are excluded from the search.&lt;/b&gt; (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> GetProjectRevenueWithHttpInfo (long projectStartFrom, long projectStartTo, long revenueType = default(long), string searchSpecification = default(string));
+        ApiResponse<Object> GetProjectRevenueWithHttpInfo (long projectStartFrom, long projectStartTo, long? revenueType = default(long?), string searchSpecification = default(string));
         /// <summary>
         /// projects
         /// </summary>
@@ -835,7 +835,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="revenueType">revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; (optional)</param>
         /// <param name="searchSpecification">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. &lt;b&gt;Please consider: the fields \\\&quot;month\\\&quot;,\\\&quot;monthRevenue\\\&quot;,\\\&quot;id\\\&quot; are excluded from the search.&lt;/b&gt; (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> GetProjectRevenueAsync (long projectStartFrom, long projectStartTo, long revenueType = default(long), string searchSpecification = default(string));
+        System.Threading.Tasks.Task<Object> GetProjectRevenueAsync (long projectStartFrom, long projectStartTo, long? revenueType = default(long?), string searchSpecification = default(string));
 
         /// <summary>
         /// Get project revenue
@@ -849,7 +849,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="revenueType">revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; (optional)</param>
         /// <param name="searchSpecification">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. &lt;b&gt;Please consider: the fields \\\&quot;month\\\&quot;,\\\&quot;monthRevenue\\\&quot;,\\\&quot;id\\\&quot; are excluded from the search.&lt;/b&gt; (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetProjectRevenueAsyncWithHttpInfo (long projectStartFrom, long projectStartTo, long revenueType = default(long), string searchSpecification = default(string));
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetProjectRevenueAsyncWithHttpInfo (long projectStartFrom, long projectStartTo, long? revenueType = default(long?), string searchSpecification = default(string));
         /// <summary>
         /// projects
         /// </summary>
@@ -3294,7 +3294,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="revenueType">revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; (optional)</param>
         /// <param name="searchSpecification">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. &lt;b&gt;Please consider: the fields \\\&quot;month\\\&quot;,\\\&quot;monthRevenue\\\&quot;,\\\&quot;id\\\&quot; are excluded from the search.&lt;/b&gt; (optional)</param>
         /// <returns>Object</returns>
-        public Object GetProjectRevenue (long projectStartFrom, long projectStartTo, long revenueType = default(long), string searchSpecification = default(string))
+        public Object GetProjectRevenue (long projectStartFrom, long projectStartTo, long? revenueType = default(long?), string searchSpecification = default(string))
         {
              ApiResponse<Object> localVarResponse = GetProjectRevenueWithHttpInfo(projectStartFrom, projectStartTo, revenueType, searchSpecification);
              return localVarResponse.Data;
@@ -3309,7 +3309,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="revenueType">revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; (optional)</param>
         /// <param name="searchSpecification">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. &lt;b&gt;Please consider: the fields \\\&quot;month\\\&quot;,\\\&quot;monthRevenue\\\&quot;,\\\&quot;id\\\&quot; are excluded from the search.&lt;/b&gt; (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse<Object> GetProjectRevenueWithHttpInfo (long projectStartFrom, long projectStartTo, long revenueType = default(long), string searchSpecification = default(string))
+        public ApiResponse<Object> GetProjectRevenueWithHttpInfo (long projectStartFrom, long projectStartTo, long? revenueType = default(long?), string searchSpecification = default(string))
         {
             // verify the required parameter 'projectStartFrom' is set
             if (projectStartFrom == null)
@@ -3379,7 +3379,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="revenueType">revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; (optional)</param>
         /// <param name="searchSpecification">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. &lt;b&gt;Please consider: the fields \\\&quot;month\\\&quot;,\\\&quot;monthRevenue\\\&quot;,\\\&quot;id\\\&quot; are excluded from the search.&lt;/b&gt; (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetProjectRevenueAsync (long projectStartFrom, long projectStartTo, long revenueType = default(long), string searchSpecification = default(string))
+        public async System.Threading.Tasks.Task<Object> GetProjectRevenueAsync (long projectStartFrom, long projectStartTo, long? revenueType = default(long?), string searchSpecification = default(string))
         {
              ApiResponse<Object> localVarResponse = await GetProjectRevenueAsyncWithHttpInfo(projectStartFrom, projectStartTo, revenueType, searchSpecification);
              return localVarResponse.Data;
@@ -3395,7 +3395,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="revenueType">revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; (optional)</param>
         /// <param name="searchSpecification">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. &lt;b&gt;Please consider: the fields \\\&quot;month\\\&quot;,\\\&quot;monthRevenue\\\&quot;,\\\&quot;id\\\&quot; are excluded from the search.&lt;/b&gt; (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetProjectRevenueAsyncWithHttpInfo (long projectStartFrom, long projectStartTo, long revenueType = default(long), string searchSpecification = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetProjectRevenueAsyncWithHttpInfo (long projectStartFrom, long projectStartTo, long? revenueType = default(long?), string searchSpecification = default(string))
         {
             // verify the required parameter 'projectStartFrom' is set
             if (projectStartFrom == null)

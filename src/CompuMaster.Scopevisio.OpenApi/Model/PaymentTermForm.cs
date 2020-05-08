@@ -69,7 +69,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// name (Bezeichnung). The name must be unique.
         /// </summary>
         /// <value>name (Bezeichnung). The name must be unique.</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
 
         /// <summary>

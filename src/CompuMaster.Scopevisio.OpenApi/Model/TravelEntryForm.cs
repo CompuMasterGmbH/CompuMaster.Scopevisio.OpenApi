@@ -178,7 +178,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// Id of contact (Reisender)
         /// </summary>
         /// <value>Id of contact (Reisender)</value>
-        [DataMember(Name="employeeId", EmitDefaultValue=false)]
+        [DataMember(Name="employeeId", EmitDefaultValue=true)]
         public long EmployeeId { get; set; }
 
 
@@ -221,14 +221,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// start timestamp(Reisebeginn).\&quot;startTs\&quot; is a mandatory field. If not given it is not work.
         /// </summary>
         /// <value>start timestamp(Reisebeginn).\&quot;startTs\&quot; is a mandatory field. If not given it is not work.</value>
-        [DataMember(Name="startTs", EmitDefaultValue=false)]
+        [DataMember(Name="startTs", EmitDefaultValue=true)]
         public long StartTs { get; set; }
 
         /// <summary>
         /// end timestamp(Reiseende).\&quot;endTs\&quot; is a mandatory field. If not given it is not work.
         /// </summary>
         /// <value>end timestamp(Reiseende).\&quot;endTs\&quot; is a mandatory field. If not given it is not work.</value>
-        [DataMember(Name="endTs", EmitDefaultValue=false)]
+        [DataMember(Name="endTs", EmitDefaultValue=true)]
         public long EndTs { get; set; }
 
         /// <summary>

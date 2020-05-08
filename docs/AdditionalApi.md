@@ -234,7 +234,7 @@ void (empty response body)
 
 ## GetTeamworkToken
 
-> void GetTeamworkToken (bool force = null)
+> void GetTeamworkToken (bool? force = null)
 
 Teamwork token
 
@@ -260,7 +260,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new AdditionalApi(Configuration.Default);
-            var force = true;  // bool | Force retrieving new teamworktoken and not returning existing one. (optional) 
+            var force = true;  // bool? | Force retrieving new teamworktoken and not returning existing one. (optional) 
 
             try
             {
@@ -283,7 +283,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **force** | **bool**| Force retrieving new teamworktoken and not returning existing one. | [optional] 
+ **force** | **bool?**| Force retrieving new teamworktoken and not returning existing one. | [optional] 
 
 ### Return type
 

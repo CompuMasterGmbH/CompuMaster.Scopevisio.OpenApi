@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetReport
 
-> void GetReport (string type, string startDate, string endDate, string reportName = null, string outputFormat = null, bool includeHeader = null, bool includeZeroValued = null)
+> void GetReport (string type, string startDate, string endDate, string reportName = null, string outputFormat = null, bool? includeHeader = null, bool? includeZeroValued = null)
 
 Exports accounting reports
 
@@ -41,8 +41,8 @@ namespace Example
             var endDate = endDate_example;  // string | End date. Format: <code>dd.MM.yyyy</code>
             var reportName = reportName_example;  // string | Report name, applies only for type bilanz, guv, bwa (optional) 
             var outputFormat = outputFormat_example;  // string | Output format (optional)  (default to csv)
-            var includeHeader = true;  // bool | Trigger: Include header in csv export (optional) 
-            var includeZeroValued = true;  // bool | Trigger: Include zero values in export (optional) 
+            var includeHeader = true;  // bool? | Trigger: Include header in csv export (optional) 
+            var includeZeroValued = true;  // bool? | Trigger: Include zero values in export (optional) 
 
             try
             {
@@ -70,8 +70,8 @@ Name | Type | Description  | Notes
  **endDate** | **string**| End date. Format: &lt;code&gt;dd.MM.yyyy&lt;/code&gt; | 
  **reportName** | **string**| Report name, applies only for type bilanz, guv, bwa | [optional] 
  **outputFormat** | **string**| Output format | [optional] [default to csv]
- **includeHeader** | **bool**| Trigger: Include header in csv export | [optional] 
- **includeZeroValued** | **bool**| Trigger: Include zero values in export | [optional] 
+ **includeHeader** | **bool?**| Trigger: Include header in csv export | [optional] 
+ **includeZeroValued** | **bool?**| Trigger: Include zero values in export | [optional] 
 
 ### Return type
 

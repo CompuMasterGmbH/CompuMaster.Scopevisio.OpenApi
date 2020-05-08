@@ -106,7 +106,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         public void GetUsersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //bool onlyActive = null;
+            //bool? onlyActive = null;
             //instance.GetUsers(onlyActive);
             
         }

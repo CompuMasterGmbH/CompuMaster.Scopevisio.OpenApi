@@ -78,7 +78,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// file data in Base64
         /// </summary>
         /// <value>file data in Base64</value>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name="data", EmitDefaultValue=true)]
         public string Data { get; set; }
 
         /// <summary>

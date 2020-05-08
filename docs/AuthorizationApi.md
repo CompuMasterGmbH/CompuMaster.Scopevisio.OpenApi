@@ -237,7 +237,7 @@ void (empty response body)
 
 ## Token
 
-> void Token (string grantType, string customer, string clientId = null, string clientSecret = null, string username = null, long organisationId = null, string organisation = null, string password = null, string totpResponse = null, string refreshToken = null, string code = null, string requestcookie = null)
+> void Token (string grantType, string customer, string clientId = null, string clientSecret = null, string username = null, long? organisationId = null, string organisation = null, string password = null, string totpResponse = null, string refreshToken = null, string code = null, string requestcookie = null)
 
 Access token
 
@@ -265,7 +265,7 @@ namespace Example
             var clientId = clientId_example;  // string | Client ID, if not set, will revert to \\\"sv\\\" (optional) 
             var clientSecret = clientSecret_example;  // string | Client secret (optional) 
             var username = username_example;  // string | Scopevisio user login, required if grant_type=password (optional) 
-            var organisationId = 789;  // long | Scopevisio organisation id (optional) 
+            var organisationId = 789;  // long? | Scopevisio organisation id (optional) 
             var organisation = organisation_example;  // string | Scopevisio organisation name (optional) 
             var password = password_example;  // string | Scopevisio user password, required if grant_type=password (optional) 
             var totpResponse = totpResponse_example;  // string | Scopeviso user one time password, required only if activated (optional) 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
  **clientId** | **string**| Client ID, if not set, will revert to \\\&quot;sv\\\&quot; | [optional] 
  **clientSecret** | **string**| Client secret | [optional] 
  **username** | **string**| Scopevisio user login, required if grant_type&#x3D;password | [optional] 
- **organisationId** | **long**| Scopevisio organisation id | [optional] 
+ **organisationId** | **long?**| Scopevisio organisation id | [optional] 
  **organisation** | **string**| Scopevisio organisation name | [optional] 
  **password** | **string**| Scopevisio user password, required if grant_type&#x3D;password | [optional] 
  **totpResponse** | **string**| Scopeviso user one time password, required only if activated | [optional] 

@@ -85,7 +85,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// frequency
         /// </summary>
         /// <value>frequency</value>
-        [DataMember(Name="frequency", EmitDefaultValue=false)]
+        [DataMember(Name="frequency", EmitDefaultValue=true)]
         public FrequencyEnum Frequency { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RecurringInvoiceForm" /> class.
@@ -147,14 +147,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// validFrom (gültig von), the validFrom as epoch timestamp in milliseconds. The time of the day has no importance for the validFrom date.
         /// </summary>
         /// <value>validFrom (gültig von), the validFrom as epoch timestamp in milliseconds. The time of the day has no importance for the validFrom date.</value>
-        [DataMember(Name="validFrom", EmitDefaultValue=false)]
+        [DataMember(Name="validFrom", EmitDefaultValue=true)]
         public long ValidFrom { get; set; }
 
         /// <summary>
         /// validTo (gültig bis), the validTo as epoch timestamp in milliseconds. The time of the day has no importance for the validTo date. 
         /// </summary>
         /// <value>validTo (gültig bis), the validTo as epoch timestamp in milliseconds. The time of the day has no importance for the validTo date. </value>
-        [DataMember(Name="validTo", EmitDefaultValue=false)]
+        [DataMember(Name="validTo", EmitDefaultValue=true)]
         public long ValidTo { get; set; }
 
 
@@ -162,7 +162,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// nextInvoiceDate (nächste Rechnung), the nextInvoiceDate as epoch timestamp in milliseconds. The time of the day has no importance for the nextInvoiceDate date.
         /// </summary>
         /// <value>nextInvoiceDate (nächste Rechnung), the nextInvoiceDate as epoch timestamp in milliseconds. The time of the day has no importance for the nextInvoiceDate date.</value>
-        [DataMember(Name="nextInvoiceDate", EmitDefaultValue=false)]
+        [DataMember(Name="nextInvoiceDate", EmitDefaultValue=true)]
         public long NextInvoiceDate { get; set; }
 
         /// <summary>

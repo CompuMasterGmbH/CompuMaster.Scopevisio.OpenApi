@@ -248,7 +248,7 @@ void (empty response body)
 
 ## GetUsers
 
-> void GetUsers (bool onlyActive = null)
+> void GetUsers (bool? onlyActive = null)
 
 Returns all users
 
@@ -274,7 +274,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new UserApi(Configuration.Default);
-            var onlyActive = true;  // bool | If set to true, deleted users are not returned. (optional) 
+            var onlyActive = true;  // bool? | If set to true, deleted users are not returned. (optional) 
 
             try
             {
@@ -297,7 +297,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **onlyActive** | **bool**| If set to true, deleted users are not returned. | [optional] 
+ **onlyActive** | **bool?**| If set to true, deleted users are not returned. | [optional] 
 
 ### Return type
 

@@ -146,7 +146,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// organisationName. The name of the organisation to be created.
         /// </summary>
         /// <value>organisationName. The name of the organisation to be created.</value>
-        [DataMember(Name="organisationName", EmitDefaultValue=false)]
+        [DataMember(Name="organisationName", EmitDefaultValue=true)]
         public string OrganisationName { get; set; }
 
 

@@ -57,7 +57,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// Assigns the mail with the given mailId to the contact with the given contactIdOrLegacyNumber
         /// </summary>
         /// <value>Assigns the mail with the given mailId to the contact with the given contactIdOrLegacyNumber</value>
-        [DataMember(Name="mailId", EmitDefaultValue=false)]
+        [DataMember(Name="mailId", EmitDefaultValue=true)]
         public long MailId { get; set; }
 
         /// <summary>

@@ -251,7 +251,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             // TODO uncomment below to test the method and replace null with proper value
             //long projectStartFrom = null;
             //long projectStartTo = null;
-            //long revenueType = null;
+            //long? revenueType = null;
             //string searchSpecification = null;
             //var response = instance.GetProjectRevenue(projectStartFrom, projectStartTo, revenueType, searchSpecification);
             //Assert.IsInstanceOf(typeof(Object), response, "response is Object");

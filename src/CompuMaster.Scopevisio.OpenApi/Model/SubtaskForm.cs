@@ -100,7 +100,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// Id der Aufgabe für die die Tätigkeit erstellt wird
         /// </summary>
         /// <value>Id der Aufgabe für die die Tätigkeit erstellt wird</value>
-        [DataMember(Name="taskId", EmitDefaultValue=false)]
+        [DataMember(Name="taskId", EmitDefaultValue=true)]
         public long TaskId { get; set; }
 
         /// <summary>

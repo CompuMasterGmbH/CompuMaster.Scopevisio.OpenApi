@@ -38,7 +38,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="includeHeader">Trigger: Include header in csv export (optional)</param>
         /// <param name="includeZeroValued">Trigger: Include zero values in export (optional)</param>
         /// <returns></returns>
-        void GetReport (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool includeHeader = default(bool), bool includeZeroValued = default(bool));
+        void GetReport (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool? includeHeader = default(bool?), bool? includeZeroValued = default(bool?));
 
         /// <summary>
         /// Exports accounting reports
@@ -55,7 +55,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="includeHeader">Trigger: Include header in csv export (optional)</param>
         /// <param name="includeZeroValued">Trigger: Include zero values in export (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetReportWithHttpInfo (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool includeHeader = default(bool), bool includeZeroValued = default(bool));
+        ApiResponse<Object> GetReportWithHttpInfo (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool? includeHeader = default(bool?), bool? includeZeroValued = default(bool?));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -73,7 +73,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="includeHeader">Trigger: Include header in csv export (optional)</param>
         /// <param name="includeZeroValued">Trigger: Include zero values in export (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetReportAsync (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool includeHeader = default(bool), bool includeZeroValued = default(bool));
+        System.Threading.Tasks.Task GetReportAsync (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool? includeHeader = default(bool?), bool? includeZeroValued = default(bool?));
 
         /// <summary>
         /// Exports accounting reports
@@ -90,7 +90,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="includeHeader">Trigger: Include header in csv export (optional)</param>
         /// <param name="includeZeroValued">Trigger: Include zero values in export (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetReportAsyncWithHttpInfo (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool includeHeader = default(bool), bool includeZeroValued = default(bool));
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetReportAsyncWithHttpInfo (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool? includeHeader = default(bool?), bool? includeZeroValued = default(bool?));
         #endregion Asynchronous Operations
     }
 
@@ -214,7 +214,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="includeHeader">Trigger: Include header in csv export (optional)</param>
         /// <param name="includeZeroValued">Trigger: Include zero values in export (optional)</param>
         /// <returns></returns>
-        public void GetReport (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool includeHeader = default(bool), bool includeZeroValued = default(bool))
+        public void GetReport (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool? includeHeader = default(bool?), bool? includeZeroValued = default(bool?))
         {
              GetReportWithHttpInfo(type, startDate, endDate, reportName, outputFormat, includeHeader, includeZeroValued);
         }
@@ -231,7 +231,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="includeHeader">Trigger: Include header in csv export (optional)</param>
         /// <param name="includeZeroValued">Trigger: Include zero values in export (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetReportWithHttpInfo (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool includeHeader = default(bool), bool includeZeroValued = default(bool))
+        public ApiResponse<Object> GetReportWithHttpInfo (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool? includeHeader = default(bool?), bool? includeZeroValued = default(bool?))
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -308,7 +308,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="includeHeader">Trigger: Include header in csv export (optional)</param>
         /// <param name="includeZeroValued">Trigger: Include zero values in export (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetReportAsync (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool includeHeader = default(bool), bool includeZeroValued = default(bool))
+        public async System.Threading.Tasks.Task GetReportAsync (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool? includeHeader = default(bool?), bool? includeZeroValued = default(bool?))
         {
              await GetReportAsyncWithHttpInfo(type, startDate, endDate, reportName, outputFormat, includeHeader, includeZeroValued);
 
@@ -326,7 +326,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="includeHeader">Trigger: Include header in csv export (optional)</param>
         /// <param name="includeZeroValued">Trigger: Include zero values in export (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetReportAsyncWithHttpInfo (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool includeHeader = default(bool), bool includeZeroValued = default(bool))
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetReportAsyncWithHttpInfo (string type, string startDate, string endDate, string reportName = default(string), string outputFormat = default(string), bool? includeHeader = default(bool?), bool? includeZeroValued = default(bool?))
         {
             // verify the required parameter 'type' is set
             if (type == null)

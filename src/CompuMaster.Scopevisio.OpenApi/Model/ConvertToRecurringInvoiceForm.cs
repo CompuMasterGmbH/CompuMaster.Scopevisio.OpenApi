@@ -85,7 +85,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// frequency
         /// </summary>
         /// <value>frequency</value>
-        [DataMember(Name="frequency", EmitDefaultValue=false)]
+        [DataMember(Name="frequency", EmitDefaultValue=true)]
         public FrequencyEnum Frequency { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertToRecurringInvoiceForm" /> class.
@@ -147,14 +147,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// validFrom
         /// </summary>
         /// <value>validFrom</value>
-        [DataMember(Name="validFrom", EmitDefaultValue=false)]
+        [DataMember(Name="validFrom", EmitDefaultValue=true)]
         public long ValidFrom { get; set; }
 
         /// <summary>
         /// validTo
         /// </summary>
         /// <value>validTo</value>
-        [DataMember(Name="validTo", EmitDefaultValue=false)]
+        [DataMember(Name="validTo", EmitDefaultValue=true)]
         public long ValidTo { get; set; }
 
 
@@ -162,7 +162,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// nextInvoiceDate
         /// </summary>
         /// <value>nextInvoiceDate</value>
-        [DataMember(Name="nextInvoiceDate", EmitDefaultValue=false)]
+        [DataMember(Name="nextInvoiceDate", EmitDefaultValue=true)]
         public long NextInvoiceDate { get; set; }
 
         /// <summary>

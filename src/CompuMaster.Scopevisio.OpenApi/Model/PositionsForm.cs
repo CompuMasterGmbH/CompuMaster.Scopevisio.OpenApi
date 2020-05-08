@@ -74,7 +74,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// positionsForm. Positions for outgoing invoice
         /// </summary>
         /// <value>positionsForm. Positions for outgoing invoice</value>
-        [DataMember(Name="positions", EmitDefaultValue=false)]
+        [DataMember(Name="positions", EmitDefaultValue=true)]
         public List<OutgoingInvoicePositionForm> Positions { get; set; }
 
         /// <summary>

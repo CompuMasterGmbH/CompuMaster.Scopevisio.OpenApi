@@ -68,14 +68,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// allocationAccountNumber (Verrechnunskonto Nummer)
         /// </summary>
         /// <value>allocationAccountNumber (Verrechnunskonto Nummer)</value>
-        [DataMember(Name="allocationAccountNumber", EmitDefaultValue=false)]
+        [DataMember(Name="allocationAccountNumber", EmitDefaultValue=true)]
         public string AllocationAccountNumber { get; set; }
 
         /// <summary>
         /// settlementAccountNumber (Erlöskonto Nummer)
         /// </summary>
         /// <value>settlementAccountNumber (Erlöskonto Nummer)</value>
-        [DataMember(Name="settlementAccountNumber", EmitDefaultValue=false)]
+        [DataMember(Name="settlementAccountNumber", EmitDefaultValue=true)]
         public string SettlementAccountNumber { get; set; }
 
         /// <summary>

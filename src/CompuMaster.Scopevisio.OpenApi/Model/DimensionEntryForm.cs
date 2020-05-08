@@ -68,14 +68,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// Number
         /// </summary>
         /// <value>Number</value>
-        [DataMember(Name="number", EmitDefaultValue=false)]
+        [DataMember(Name="number", EmitDefaultValue=true)]
         public long Number { get; set; }
 
         /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
 
         /// <summary>

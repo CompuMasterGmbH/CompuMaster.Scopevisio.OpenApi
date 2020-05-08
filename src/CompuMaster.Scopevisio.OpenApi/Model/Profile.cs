@@ -67,13 +67,13 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Organisation
         /// </summary>
-        [DataMember(Name="organisation", EmitDefaultValue=false)]
+        [DataMember(Name="organisation", EmitDefaultValue=true)]
         public string Organisation { get; set; }
 
         /// <summary>

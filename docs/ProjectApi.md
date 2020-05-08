@@ -1145,7 +1145,7 @@ Name | Type | Description  | Notes
 
 ## GetProjectRevenue
 
-> Object GetProjectRevenue (long projectStartFrom, long projectStartTo, long revenueType = null, string searchSpecification = null)
+> Object GetProjectRevenue (long projectStartFrom, long projectStartTo, long? revenueType = null, string searchSpecification = null)
 
 Get project revenue
 
@@ -1173,7 +1173,7 @@ namespace Example
             var apiInstance = new ProjectApi(Configuration.Default);
             var projectStartFrom = 789;  // long | After which date the project start date should be. It must be provided as an epoch timestamp in milliseconds.
             var projectStartTo = 789;  // long | Before which date the project start date should be. It must be provided as an epoch timestamp in milliseconds.
-            var revenueType = 789;  // long | revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 = Planung, 1 = Realisierung, 2 = Abweichung, if not provided revenueType is set to \\\"Planung\\\" (optional) 
+            var revenueType = 789;  // long? | revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 = Planung, 1 = Realisierung, 2 = Abweichung, if not provided revenueType is set to \\\"Planung\\\" (optional) 
             var searchSpecification = searchSpecification_example;  // string | search filter in JSON format. See also <a href='../browser/index.html#!/searchscope'>our search documentation</a>. <b>Please consider: the fields \\\"month\\\",\\\"monthRevenue\\\",\\\"id\\\" are excluded from the search.</b> (optional) 
 
             try
@@ -1200,7 +1200,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectStartFrom** | **long**| After which date the project start date should be. It must be provided as an epoch timestamp in milliseconds. | 
  **projectStartTo** | **long**| Before which date the project start date should be. It must be provided as an epoch timestamp in milliseconds. | 
- **revenueType** | **long**| revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; | [optional] 
+ **revenueType** | **long?**| revenueType(Umsatzart), the wished revenue Type. (Umsatzart), 0 &#x3D; Planung, 1 &#x3D; Realisierung, 2 &#x3D; Abweichung, if not provided revenueType is set to \\\&quot;Planung\\\&quot; | [optional] 
  **searchSpecification** | **string**| search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. &lt;b&gt;Please consider: the fields \\\&quot;month\\\&quot;,\\\&quot;monthRevenue\\\&quot;,\\\&quot;id\\\&quot; are excluded from the search.&lt;/b&gt; | [optional] 
 
 ### Return type

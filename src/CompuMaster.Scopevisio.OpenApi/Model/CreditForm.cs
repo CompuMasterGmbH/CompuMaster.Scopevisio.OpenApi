@@ -180,7 +180,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// customerContactId (Lead/Interessent/Kunde). Sets also customerPersonalAccountId, customerPersonalAccountNumber, customerPersonalAccountName, customerPersonalAccountExternalNumber, customerName, customerNameExtra, customerNumber, customerContactName, customerContactCustomerNumber. Must be set if project is not mandatory. Ignored otherwise.
         /// </summary>
         /// <value>customerContactId (Lead/Interessent/Kunde). Sets also customerPersonalAccountId, customerPersonalAccountNumber, customerPersonalAccountName, customerPersonalAccountExternalNumber, customerName, customerNameExtra, customerNumber, customerContactName, customerContactCustomerNumber. Must be set if project is not mandatory. Ignored otherwise.</value>
-        [DataMember(Name="customerContactId", EmitDefaultValue=false)]
+        [DataMember(Name="customerContactId", EmitDefaultValue=true)]
         public long CustomerContactId { get; set; }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// documentDate (PZ-/Angebots-/Auftrags-/Rechnungs-/GS-/LS-Datum). If not given, it is set to the current date. Sets also documentDateMonth.
         /// </summary>
         /// <value>documentDate (PZ-/Angebots-/Auftrags-/Rechnungs-/GS-/LS-Datum). If not given, it is set to the current date. Sets also documentDateMonth.</value>
-        [DataMember(Name="documentDate", EmitDefaultValue=false)]
+        [DataMember(Name="documentDate", EmitDefaultValue=true)]
         public long DocumentDate { get; set; }
 
         /// <summary>

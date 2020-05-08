@@ -89,7 +89,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Force retrieving new teamworktoken and not returning existing one. (optional)</param>
         /// <returns></returns>
-        void GetTeamworkToken (bool force = default(bool));
+        void GetTeamworkToken (bool? force = default(bool?));
 
         /// <summary>
         /// Teamwork token
@@ -100,7 +100,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Force retrieving new teamworktoken and not returning existing one. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetTeamworkTokenWithHttpInfo (bool force = default(bool));
+        ApiResponse<Object> GetTeamworkTokenWithHttpInfo (bool? force = default(bool?));
         /// <summary>
         /// retrieve deployment version infos
         /// </summary>
@@ -226,7 +226,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Force retrieving new teamworktoken and not returning existing one. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetTeamworkTokenAsync (bool force = default(bool));
+        System.Threading.Tasks.Task GetTeamworkTokenAsync (bool? force = default(bool?));
 
         /// <summary>
         /// Teamwork token
@@ -237,7 +237,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Force retrieving new teamworktoken and not returning existing one. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetTeamworkTokenAsyncWithHttpInfo (bool force = default(bool));
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetTeamworkTokenAsyncWithHttpInfo (bool? force = default(bool?));
         /// <summary>
         /// retrieve deployment version infos
         /// </summary>
@@ -799,7 +799,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Force retrieving new teamworktoken and not returning existing one. (optional)</param>
         /// <returns></returns>
-        public void GetTeamworkToken (bool force = default(bool))
+        public void GetTeamworkToken (bool? force = default(bool?))
         {
              GetTeamworkTokenWithHttpInfo(force);
         }
@@ -810,7 +810,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Force retrieving new teamworktoken and not returning existing one. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetTeamworkTokenWithHttpInfo (bool force = default(bool))
+        public ApiResponse<Object> GetTeamworkTokenWithHttpInfo (bool? force = default(bool?))
         {
 
             var localVarPath = "/teamworktoken";
@@ -866,7 +866,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Force retrieving new teamworktoken and not returning existing one. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetTeamworkTokenAsync (bool force = default(bool))
+        public async System.Threading.Tasks.Task GetTeamworkTokenAsync (bool? force = default(bool?))
         {
              await GetTeamworkTokenAsyncWithHttpInfo(force);
 
@@ -878,7 +878,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="force">Force retrieving new teamworktoken and not returning existing one. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetTeamworkTokenAsyncWithHttpInfo (bool force = default(bool))
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetTeamworkTokenAsyncWithHttpInfo (bool? force = default(bool?))
         {
 
             var localVarPath = "/teamworktoken";

@@ -79,7 +79,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// The account type (Kontoart).
         /// </summary>
         /// <value>The account type (Kontoart).</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
+        [DataMember(Name="type", EmitDefaultValue=true)]
         public TypeEnum Type { get; set; }
         /// <summary>
         /// The account category (Kontokennzeichen).
@@ -379,14 +379,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// impersonal account number
         /// </summary>
         /// <value>impersonal account number</value>
-        [DataMember(Name="number", EmitDefaultValue=false)]
+        [DataMember(Name="number", EmitDefaultValue=true)]
         public string Number { get; set; }
 
         /// <summary>
         /// impersonal account name
         /// </summary>
         /// <value>impersonal account name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
 
 

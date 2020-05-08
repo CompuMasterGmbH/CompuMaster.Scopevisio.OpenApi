@@ -177,7 +177,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// XML import document
         /// </summary>
         /// <value>XML import document</value>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name="data", EmitDefaultValue=true)]
         public string Data { get; set; }
 
         /// <summary>

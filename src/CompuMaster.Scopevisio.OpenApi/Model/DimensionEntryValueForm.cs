@@ -70,14 +70,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// dimensionNumber (e.g. 1 (Kostenstelle), 2 (Kostenträger), etc.
         /// </summary>
         /// <value>dimensionNumber (e.g. 1 (Kostenstelle), 2 (Kostenträger), etc.</value>
-        [DataMember(Name="dimensionNumber", EmitDefaultValue=false)]
+        [DataMember(Name="dimensionNumber", EmitDefaultValue=true)]
         public long DimensionNumber { get; set; }
 
         /// <summary>
         /// DimensionEntryNumber
         /// </summary>
         /// <value>DimensionEntryNumber</value>
-        [DataMember(Name="dimensionEntryNumber", EmitDefaultValue=false)]
+        [DataMember(Name="dimensionEntryNumber", EmitDefaultValue=true)]
         public long DimensionEntryNumber { get; set; }
 
         /// <summary>

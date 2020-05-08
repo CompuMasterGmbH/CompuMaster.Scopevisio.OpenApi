@@ -84,14 +84,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// cashbookId (Ref-Nummer Kasse)
         /// </summary>
         /// <value>cashbookId (Ref-Nummer Kasse)</value>
-        [DataMember(Name="cashbookId", EmitDefaultValue=false)]
+        [DataMember(Name="cashbookId", EmitDefaultValue=true)]
         public long CashbookId { get; set; }
 
         /// <summary>
         /// documentDate(Datum), epoch timestamp in milliseconds
         /// </summary>
         /// <value>documentDate(Datum), epoch timestamp in milliseconds</value>
-        [DataMember(Name="documentDate", EmitDefaultValue=false)]
+        [DataMember(Name="documentDate", EmitDefaultValue=true)]
         public long DocumentDate { get; set; }
 
         /// <summary>

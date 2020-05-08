@@ -109,7 +109,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             //string clientId = null;
             //string clientSecret = null;
             //string username = null;
-            //long organisationId = null;
+            //long? organisationId = null;
             //string organisation = null;
             //string password = null;
             //string totpResponse = null;

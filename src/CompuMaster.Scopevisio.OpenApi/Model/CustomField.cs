@@ -68,13 +68,13 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// See our &lt;a href&#x3D;&#39;../browser/index.html#!/documentation#cf&#39;&gt;documentation &lt;/a&gt; for how the names are put together.
         /// </summary>
         /// <value>See our &lt;a href&#x3D;&#39;../browser/index.html#!/documentation#cf&#39;&gt;documentation &lt;/a&gt; for how the names are put together.</value>
-        [DataMember(Name="customFieldName", EmitDefaultValue=false)]
+        [DataMember(Name="customFieldName", EmitDefaultValue=true)]
         public string CustomFieldName { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomFieldValue
         /// </summary>
-        [DataMember(Name="customFieldValue", EmitDefaultValue=false)]
+        [DataMember(Name="customFieldValue", EmitDefaultValue=true)]
         public Object CustomFieldValue { get; set; }
 
         /// <summary>

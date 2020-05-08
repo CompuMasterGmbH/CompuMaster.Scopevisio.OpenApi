@@ -96,7 +96,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns></returns>
-        void GetUsers (bool onlyActive = default(bool));
+        void GetUsers (bool? onlyActive = default(bool?));
 
         /// <summary>
         /// Returns all users
@@ -107,7 +107,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetUsersWithHttpInfo (bool onlyActive = default(bool));
+        ApiResponse<Object> GetUsersWithHttpInfo (bool? onlyActive = default(bool?));
         /// <summary>
         /// Updates the given users
         /// </summary>
@@ -203,7 +203,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetUsersAsync (bool onlyActive = default(bool));
+        System.Threading.Tasks.Task GetUsersAsync (bool? onlyActive = default(bool?));
 
         /// <summary>
         /// Returns all users
@@ -214,7 +214,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersAsyncWithHttpInfo (bool onlyActive = default(bool));
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersAsyncWithHttpInfo (bool? onlyActive = default(bool?));
         /// <summary>
         /// Updates the given users
         /// </summary>
@@ -786,7 +786,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns></returns>
-        public void GetUsers (bool onlyActive = default(bool))
+        public void GetUsers (bool? onlyActive = default(bool?))
         {
              GetUsersWithHttpInfo(onlyActive);
         }
@@ -797,7 +797,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetUsersWithHttpInfo (bool onlyActive = default(bool))
+        public ApiResponse<Object> GetUsersWithHttpInfo (bool? onlyActive = default(bool?))
         {
 
             var localVarPath = "/users";
@@ -853,7 +853,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetUsersAsync (bool onlyActive = default(bool))
+        public async System.Threading.Tasks.Task GetUsersAsync (bool? onlyActive = default(bool?))
         {
              await GetUsersAsyncWithHttpInfo(onlyActive);
 
@@ -865,7 +865,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersAsyncWithHttpInfo (bool onlyActive = default(bool))
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersAsyncWithHttpInfo (bool? onlyActive = default(bool?))
         {
 
             var localVarPath = "/users";

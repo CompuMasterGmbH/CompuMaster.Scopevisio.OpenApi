@@ -74,8 +74,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             //string endDate = null;
             //string reportName = null;
             //string outputFormat = null;
-            //bool includeHeader = null;
-            //bool includeZeroValued = null;
+            //bool? includeHeader = null;
+            //bool? includeZeroValued = null;
             //instance.GetReport(type, startDate, endDate, reportName, outputFormat, includeHeader, includeZeroValued);
             
         }

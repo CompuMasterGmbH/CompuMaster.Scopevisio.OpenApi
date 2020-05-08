@@ -607,7 +607,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// name
         /// </summary>
         /// <value>name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
 
 
@@ -624,7 +624,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// contactId (Projektadressat)
         /// </summary>
         /// <value>contactId (Projektadressat)</value>
-        [DataMember(Name="contactId", EmitDefaultValue=false)]
+        [DataMember(Name="contactId", EmitDefaultValue=true)]
         public long ContactId { get; set; }
 
         /// <summary>

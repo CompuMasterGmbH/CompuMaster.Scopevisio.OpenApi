@@ -66,7 +66,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// A DATEV-Importfile (EXTF) in Base64 format.
         /// </summary>
         /// <value>A DATEV-Importfile (EXTF) in Base64 format.</value>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name="data", EmitDefaultValue=true)]
         public string Data { get; set; }
 
         /// <summary>

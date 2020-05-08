@@ -253,7 +253,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// Unit(Einheit). For more untits please check the Scopevisio client application, catalog Abrechnungsbelege -&gt; Einheit.
         /// </summary>
         /// <value>Unit(Einheit). For more untits please check the Scopevisio client application, catalog Abrechnungsbelege -&gt; Einheit.</value>
-        [DataMember(Name="unit", EmitDefaultValue=false)]
+        [DataMember(Name="unit", EmitDefaultValue=true)]
         public UnitEnum Unit { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductForm" /> class.

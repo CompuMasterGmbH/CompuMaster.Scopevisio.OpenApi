@@ -128,7 +128,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// posting date
         /// </summary>
         /// <value>posting date</value>
-        [DataMember(Name="postingDate", EmitDefaultValue=false)]
+        [DataMember(Name="postingDate", EmitDefaultValue=true)]
         public long PostingDate { get; set; }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// document number
         /// </summary>
         /// <value>document number</value>
-        [DataMember(Name="documentNumber", EmitDefaultValue=false)]
+        [DataMember(Name="documentNumber", EmitDefaultValue=true)]
         public string DocumentNumber { get; set; }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// account (personal or impersonal account)
         /// </summary>
         /// <value>account (personal or impersonal account)</value>
-        [DataMember(Name="account", EmitDefaultValue=false)]
+        [DataMember(Name="account", EmitDefaultValue=true)]
         public string Account { get; set; }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// amount
         /// </summary>
         /// <value>amount</value>
-        [DataMember(Name="amount", EmitDefaultValue=false)]
+        [DataMember(Name="amount", EmitDefaultValue=true)]
         public decimal Amount { get; set; }
 
         /// <summary>

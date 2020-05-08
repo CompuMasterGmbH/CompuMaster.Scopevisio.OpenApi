@@ -65,7 +65,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// <summary>
         /// Gets or Sets _TeamworkRole
         /// </summary>
-        [DataMember(Name="teamworkRole", EmitDefaultValue=false)]
+        [DataMember(Name="teamworkRole", EmitDefaultValue=true)]
         public TeamworkRoleEnum _TeamworkRole { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamworkRole" /> class.
@@ -105,7 +105,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// <summary>
         /// Gets or Sets Organisation
         /// </summary>
-        [DataMember(Name="organisation", EmitDefaultValue=false)]
+        [DataMember(Name="organisation", EmitDefaultValue=true)]
         public string Organisation { get; set; }
 
         /// <summary>

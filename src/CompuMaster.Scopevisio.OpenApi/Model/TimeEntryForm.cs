@@ -125,7 +125,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// Id of the user contact (Aus Benutzerkontakt)
         /// </summary>
         /// <value>Id of the user contact (Aus Benutzerkontakt)</value>
-        [DataMember(Name="employeeId", EmitDefaultValue=false)]
+        [DataMember(Name="employeeId", EmitDefaultValue=true)]
         public long EmployeeId { get; set; }
 
         /// <summary>

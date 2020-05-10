@@ -71,5 +71,5 @@ namespace Example
 ## Licensing
 
 This library is dual licensed:
-* Community edition is licensed under [AGPL 3.0](LICENSE.md)
+* Community edition is licensed under [AGPL 3.0](LICENSE)
 * For commercial licensing, please contact info@compumaster.de

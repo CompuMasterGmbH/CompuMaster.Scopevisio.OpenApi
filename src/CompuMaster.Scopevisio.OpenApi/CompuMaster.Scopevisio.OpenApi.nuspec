@@ -8,10 +8,10 @@
         <owners>$author$</owners>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <developmentDependency>false</developmentDependency>
-        <description>Client access library for the OpenScope API https://www.openscope.de/ (REST web API interface provided by Scopevisio AG, https://www.scopevisio.com/), library generated from a Swagger/OpenAPI doc at https://appload.scopevisio.com/rest/swagger.json</description>
+        <description>Client access library for the OpenScope API https://www.openscope.de/ (REST web API interface provided by Scopevisio AG, https://www.scopevisio.com/), library generated from Swagger/OpenAPI doc at https://appload.scopevisio.com/rest/swagger.json</description>
 		<copyright>2020 CompuMaster GmbH</copyright>
 		<tags>CompuMaster camm Scopevisio Handwerkervisio CompuMaster.Scopevisio.OpenApi</tags>
-		<licenseUrl>https://raw.githubusercontent.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi/master/LICENSE.md</licenseUrl>
+		<licenseUrl>https://raw.githubusercontent.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi/master/LICENSE</licenseUrl>
 		<projectUrl>https://github.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi/master/logo_64x64.png</iconUrl>
         <dependencies>

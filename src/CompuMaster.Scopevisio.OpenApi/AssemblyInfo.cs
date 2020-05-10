@@ -2,7 +2,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Scopevisio OpenAPI Library")]
-[assembly: AssemblyDescription("Client access library for the OpenScope API https://www.openscope.de/ (REST web API interface provided by Scopevisio AG, https://www.scopevisio.com/), library generated from a Swagger/OpenAPI doc at https://appload.scopevisio.com/rest/swagger.json")]
+[assembly: AssemblyDescription("Client access library for the OpenScope API https://www.openscope.de/ (REST web API interface provided by Scopevisio AG, https://www.scopevisio.com/), library generated from Swagger/OpenAPI doc at https://appload.scopevisio.com/rest/swagger.json")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CompuMaster")]
 [assembly: AssemblyProduct("CompuMaster Scopevisio OpenAPI Library")]

@@ -266,3 +266,10 @@ Class | Method | HTTP request | Description
  - [Model.User](docs/User.md)
  - [Model.UserForm](docs/UserForm.md)
 
+## Documentation for Authorization
+
+### oauth
+
+- **Type**: OAuth
+- **Flow**: accessCode
+

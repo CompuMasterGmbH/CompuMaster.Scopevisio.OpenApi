@@ -61,13 +61,6 @@ namespace Example
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
 - [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0 or later
 
-## Documentation for Authorization
-
-### oauth
-
-- **Type**: OAuth
-- **Flow**: accessCode
-
 ## Licensing
 
 This library is dual licensed:

@@ -1,42 +1,30 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <!-- The identifier that must be unique within the hosting gallery -->
         <id>$id$</id>
-        <title>OpenAPI Library</title>
-
-        <!-- The package version number that is used when resolving dependencies -->
+		<title>$title$</title>
         <version>$version$</version>
-
-        <!-- Authors contain text that appears directly on the gallery -->
         <authors>$author$</authors>
-
-        <!-- Owners are typically nuget.org identities that allow gallery
-             users to earily find other packages by the same owners.  -->
         <owners>$author$</owners>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <developmentDependency>false</developmentDependency>
-
-        <!-- The description can be used in package manager UI. Note that the
-             nuget.org gallery uses information you add in the portal. -->
-        <description>A library generated from a OpenAPI doc</description>
-        <copyright>http://www.scopevisio.com</copyright>
-        <licenseUrl>https://www.scopevisio.com</licenseUrl>
-
-        <!-- Dependencies are automatically installed when the package is installed -->
+        <description>Client access library for the OpenScope API https://www.openscope.de/ (REST web API interface provided by Scopevisio AG, https://www.scopevisio.com/), library generated from a Swagger/OpenAPI doc at https://appload.scopevisio.com/rest/swagger.json</description>
+		<copyright>2020 CompuMaster GmbH</copyright>
+		<tags>CompuMaster camm Scopevisio Handwerkervisio CompuMaster.Scopevisio.OpenApi</tags>
+		<licenseUrl>https://raw.githubusercontent.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi/master/LICENSE.md</licenseUrl>
+		<projectUrl>https://github.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi/master/logo_64x64.png</iconUrl>
         <dependencies>
-
             <dependency id="NewtonSoft.Json" version="12.0.3" />
             <dependency id="JsonSubTypes" version="1.6.0" />
             <dependency id="RestSharp" version="105.1.0" />
-
         </dependencies>
     </metadata>
+	<!--
     <files>
-
-        <!-- A readme.txt will be displayed when the package is installed -->
+        <comment "!- - A readme.txt will be displayed when the package is installed - -" />
         <file src="..\..\README.md" target="" />
         <file src="..\..\docs\**\*.*" target="docs" />
-
     </files>
+	-->
 </package>

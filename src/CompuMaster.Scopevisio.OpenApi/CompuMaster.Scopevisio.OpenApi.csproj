@@ -63,7 +63,105 @@ Contact: support@scopevisio.com
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" Exclude="obj\**" />
+    <Compile Include="Api\AccountingApi.cs" />
+    <Compile Include="Api\ActivitiesApi.cs" />
+    <Compile Include="Api\AdditionalApi.cs" />
+    <Compile Include="Api\AuthorizationApi.cs" />
+    <Compile Include="Api\CashbookApi.cs" />
+    <Compile Include="Api\ContactApi.cs" />
+    <Compile Include="Api\CreditApi.cs" />
+    <Compile Include="Api\DispatchApi.cs" />
+    <Compile Include="Api\HumanResourcesApi.cs" />
+    <Compile Include="Api\IncomingInvoiceApi.cs" />
+    <Compile Include="Api\OfferApi.cs" />
+    <Compile Include="Api\OpportunityApi.cs" />
+    <Compile Include="Api\OrderApi.cs" />
+    <Compile Include="Api\OrganisationApi.cs" />
+    <Compile Include="Api\OutgoingInvoiceApi.cs" />
+    <Compile Include="Api\ProductApi.cs" />
+    <Compile Include="Api\ProjectApi.cs" />
+    <Compile Include="Api\RecurringInvoiceApi.cs" />
+    <Compile Include="Api\ReportApi.cs" />
+    <Compile Include="Api\TaskApi.cs" />
+    <Compile Include="Api\TeamworkApi.cs" />
+    <Compile Include="Api\UserApi.cs" />
+    <Compile Include="Client\ApiClient.cs" />
+    <Compile Include="Client\ApiException.cs" />
+    <Compile Include="Client\ApiResponse.cs" />
+    <Compile Include="Client\Configuration.cs" />
+    <Compile Include="Client\ExceptionFactory.cs" />
+    <Compile Include="Client\GlobalConfiguration.cs" />
+    <Compile Include="Client\IApiAccessor.cs" />
+    <Compile Include="Client\IReadableConfiguration.cs" />
+    <Compile Include="Client\OpenAPIDateConverter.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\AccountInfo.cs" />
+    <Compile Include="Model\AccountingInfoForm.cs" />
+    <Compile Include="Model\AssignMailForm.cs" />
+    <Compile Include="Model\BankConnectionForm.cs" />
+    <Compile Include="Model\BankStatementForm.cs" />
+    <Compile Include="Model\BlogEntryForm.cs" />
+    <Compile Include="Model\CashbookEntryForm.cs" />
+    <Compile Include="Model\ContactPropertyForm.cs" />
+    <Compile Include="Model\ConvertToRecurringInvoiceForm.cs" />
+    <Compile Include="Model\CreditForm.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\CustomField.cs" />
+    <Compile Include="Model\DatevExportSettingsForm.cs" />
+    <Compile Include="Model\DatevPostings.cs" />
+    <Compile Include="Model\DimensionEntryForm.cs" />
+    <Compile Include="Model\DimensionEntryValueForm.cs" />
+    <Compile Include="Model\DimensionForm.cs" />
+    <Compile Include="Model\DispatchForm.cs" />
+    <Compile Include="Model\Employer.cs" />
+    <Compile Include="Model\FileForm.cs" />
+    <Compile Include="Model\ImpersonalAccountRow.cs" />
+    <Compile Include="Model\ImpersonalAccountsForm.cs" />
+    <Compile Include="Model\IncomingInvoiceForm.cs" />
+    <Compile Include="Model\IncomingMailForm.cs" />
+    <Compile Include="Model\KontaktForm.cs" />
+    <Compile Include="Model\License.cs" />
+    <Compile Include="Model\ManagedDataForm.cs" />
+    <Compile Include="Model\NumberRangeType.cs" />
+    <Compile Include="Model\OfferForm.cs" />
+    <Compile Include="Model\OpportunityForm.cs" />
+    <Compile Include="Model\OrderForm.cs" />
+    <Compile Include="Model\Organisation.cs" />
+    <Compile Include="Model\OrganisationForm.cs" />
+    <Compile Include="Model\OutgoingInvoice.cs" />
+    <Compile Include="Model\OutgoingInvoiceForm.cs" />
+    <Compile Include="Model\OutgoingInvoiceImportForm.cs" />
+    <Compile Include="Model\OutgoingInvoiceImportResult.cs" />
+    <Compile Include="Model\OutgoingInvoicePositionForm.cs" />
+    <Compile Include="Model\PaymentTermForm.cs" />
+    <Compile Include="Model\PersonalAccountForm.cs" />
+    <Compile Include="Model\PositionsForm.cs" />
+    <Compile Include="Model\PostingRow.cs" />
+    <Compile Include="Model\Postings.cs" />
+    <Compile Include="Model\ProductForm.cs" />
+    <Compile Include="Model\ProductGroupForm.cs" />
+    <Compile Include="Model\Profile.cs" />
+    <Compile Include="Model\ProjectEmployeeForm.cs" />
+    <Compile Include="Model\ProjectForm.cs" />
+    <Compile Include="Model\RecurringInvoiceForm.cs" />
+    <Compile Include="Model\RevenueStatementAccountRow.cs" />
+    <Compile Include="Model\RevenueStatementAccountsForm.cs" />
+    <Compile Include="Model\SalesProjectForm.cs" />
+    <Compile Include="Model\SubtaskForm.cs" />
+    <Compile Include="Model\TaskForm.cs" />
+    <Compile Include="Model\Teamwork.cs" />
+    <Compile Include="Model\TeamworkFileForm.cs" />
+    <Compile Include="Model\TeamworkRole.cs" />
+    <Compile Include="Model\TimeEntryForm.cs" />
+    <Compile Include="Model\Hello.cs" />
+    <Compile Include="Model\Version.cs" />
+    <Compile Include="Model\TokenResponse.cs" />
+    <Compile Include="Model\TravelEntryForm.cs" />
+    <Compile Include="Model\UpdatePersonalAccountForm.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserForm.cs" />
+    <Compile Include="AssemblyInfo.cs" />
     <None Include="app.config" />
     <None Include="_CreateNewNuGetPackage\Config.ps1" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\CreateNuGetPackage.ps1" />
@@ -76,6 +174,9 @@ Contact: support@scopevisio.com
   </ItemGroup>
   <ItemGroup>
     <None Include="_CreateNewNuGetPackage\DoNotModify\NuGet.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

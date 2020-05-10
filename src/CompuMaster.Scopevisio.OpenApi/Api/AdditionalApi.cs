@@ -119,7 +119,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </remarks>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetVersionWithHttpInfo ();
+        ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version> GetVersionWithHttpInfo ();
         /// <summary>
         /// simple hello world call. 
         /// </summary>
@@ -138,7 +138,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </remarks>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HelloJsonWithHttpInfo ();
+        ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello> HelloJsonWithHttpInfo ();
         /// <summary>
         /// organisations
         /// </summary>
@@ -256,7 +256,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </remarks>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetVersionAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version>> GetVersionAsyncWithHttpInfo ();
         /// <summary>
         /// simple hello world call. 
         /// </summary>
@@ -275,7 +275,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </remarks>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HelloJsonAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello>> HelloJsonAsyncWithHttpInfo ();
         /// <summary>
         /// organisations
         /// </summary>
@@ -943,7 +943,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetVersionWithHttpInfo ()
+        public ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version> GetVersionWithHttpInfo ()
         {
 
             var localVarPath = "/version";
@@ -987,9 +987,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            CompuMaster.Scopevisio.OpenApi.Model.Version result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarResponse.Content);
+
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                result);
         }
 
         /// <summary>
@@ -1008,7 +1010,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetVersionAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version>> GetVersionAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/version";
@@ -1052,9 +1054,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            CompuMaster.Scopevisio.OpenApi.Model.Version result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarResponse.Content);
+
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                result);
         }
 
         /// <summary>
@@ -1072,7 +1076,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HelloJsonWithHttpInfo ()
+        public ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello> HelloJsonWithHttpInfo ()
         {
 
             var localVarPath = "/hello";
@@ -1116,9 +1120,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            CompuMaster.Scopevisio.OpenApi.Model.Hello result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarResponse.Content);
+
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                result);
         }
 
         /// <summary>
@@ -1137,7 +1143,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HelloJsonAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello>> HelloJsonAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/hello";
@@ -1181,9 +1187,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            CompuMaster.Scopevisio.OpenApi.Model.Hello result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarResponse.Content);
+            
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                result);
         }
 
         /// <summary>

@@ -272,6 +272,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         public virtual string Username { get; set; }
 
         /// <summary>
+        /// Gets or sets the name of the organisation (HTTP basic authentication).
+        /// </summary>
+        /// <value>The organisation name.</value>
+        public virtual string OrganisationName { get; set; }
+
+        /// <summary>
         /// Gets or sets the password (HTTP basic authentication).
         /// </summary>
         /// <value>The password.</value>

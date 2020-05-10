@@ -68,3 +68,8 @@ namespace Example
 - **Type**: OAuth
 - **Flow**: accessCode
 
+## Licensing
+
+This library is dual licensed:
+* Community edition is licensed under AGPL 3.0
+* For commercial licensing, please contact info@compumaster.de

@@ -29,7 +29,7 @@ namespace ConsoleSampleApp
             }
             catch (ApiException e)
             {
-                System.Diagnostics.Debug.Print("Exception when calling AccountingApi.AddDimensionEntry: " + e.Message);
+                System.Diagnostics.Debug.Print("Exception when calling API: " + e.Message);
                 System.Diagnostics.Debug.Print("Status Code: " + e.ErrorCode);
                 System.Diagnostics.Debug.Print(e.StackTrace);
             }

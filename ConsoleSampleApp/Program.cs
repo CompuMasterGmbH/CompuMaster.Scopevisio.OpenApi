@@ -3,9 +3,6 @@ using CompuMaster.Scopevisio.OpenApi.Api;
 using CompuMaster.Scopevisio.OpenApi.Client;
 using CompuMaster.Scopevisio.OpenApi.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleSampleApp
@@ -21,42 +18,51 @@ namespace ConsoleSampleApp
             Console.WriteLine("Please enter password: ");
             string password = Console.ReadLine();
 
+            username = "report@bierdeckel-kalkulation.de";
+            password = "PWe}VA_6eqX6(W8$~d)PVHe&";
+            customerno = "2036092";
+
+            OpenScopeApiClient OpenScopeClient = new OpenScopeApiClient();
             try
             {
-                Request1AuthorizeAndGetAccessToken(username, customerno, password);
-                Request2GetInterfaceVersion();
-                Request3HelloWorld();
+                OpenScopeClient.AuthorizeWithUserCredentials(username, customerno, password);
+                System.Console.WriteLine("Authorization successful, future requests can be executed with access token:\n" + OpenScopeClient.Token.AccessToken);
+                System.Console.WriteLine();
+
+                CompuMaster.Scopevisio.OpenApi.Model.Version VersionResult = OpenScopeClient.AdditionalApi.GetVersionWithHttpInfo().Data;
+                System.Console.WriteLine("Interface version=" + VersionResult.ToString());
+                System.Console.WriteLine();
+
+                CompuMaster.Scopevisio.OpenApi.Model.Hello HelloResult = OpenScopeClient.AdditionalApi.HelloJsonWithHttpInfo().Data;
+                System.Console.WriteLine("Hello world=" + HelloResult.HelloMessage);
+                System.Console.WriteLine();
+
+                Task<CompuMaster.Scopevisio.OpenApi.Model.Hello> t = HelloTask(OpenScopeClient);
+                t.Wait();
+                System.Console.WriteLine("Async hello world=" + t.Result.HelloMessage);
+                System.Console.WriteLine();
             }
             catch (ApiException e)
             {
-                System.Diagnostics.Debug.Print("Exception when calling API: " + e.Message);
-                System.Diagnostics.Debug.Print("Status Code: " + e.ErrorCode);
-                System.Diagnostics.Debug.Print(e.StackTrace);
+                 System.Console.WriteLine("Exception when calling API: " + e.Message);
+                 System.Console.WriteLine("Status Code: " + e.ErrorCode);
+                 System.Console.WriteLine(e.StackTrace);
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine("Exception: " + e.ToString());
             }
         }
 
-        static void Request1AuthorizeAndGetAccessToken(string username, string customerNo, string password)
+        /// <summary>
+        /// Sample of async call
+        /// </summary>
+        /// <param name="openScopeClient"></param>
+        /// <returns></returns>
+        static async Task<CompuMaster.Scopevisio.OpenApi.Model.Hello> HelloTask(OpenScopeApiClient openScopeClient)
         {
-            var AuthApi = new CompuMaster.Scopevisio.OpenApi.Api.AuthorizationApi();
-            CompuMaster.Scopevisio.OpenApi.Model.TokenResponse TokenResult = AuthApi.TokenWithHttpInfo("password", customerNo, null, null, username, null, null, password, null, null, null, null).Data;
-            string AccessToken = TokenResult.AccessToken;
-            System.Console.WriteLine("Authorization successful, future requests can be executed with access token:\n" + AccessToken);
-            System.Console.WriteLine();
+            ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello> HelloResponse = await openScopeClient.AdditionalApi.HelloJsonAsyncWithHttpInfo();
+            return HelloResponse.Data;
         }
-
-        static void Request2GetInterfaceVersion()
-        {
-            var AdditionalApi = new CompuMaster.Scopevisio.OpenApi.Api.AdditionalApi();
-            CompuMaster.Scopevisio.OpenApi.Model.Version result = AdditionalApi.GetVersionWithHttpInfo().Data;
-            System.Console.WriteLine("Interface version=" + result.ToString());
-        }
-
-        static void Request3HelloWorld()
-        {
-            var AdditionalApi = new CompuMaster.Scopevisio.OpenApi.Api.AdditionalApi();
-            CompuMaster.Scopevisio.OpenApi.Model.Hello result = AdditionalApi.HelloJsonWithHttpInfo().Data;
-            System.Console.WriteLine("Hello world=" + result.HelloInfo);
-        }
-
     }
 }

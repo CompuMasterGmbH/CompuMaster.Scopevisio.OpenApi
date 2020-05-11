@@ -93,6 +93,7 @@ Contact: support@scopevisio.com
     <Compile Include="Client\GlobalConfiguration.cs" />
     <Compile Include="Client\IApiAccessor.cs" />
     <Compile Include="Client\IReadableConfiguration.cs" />
+    <Compile Include="Client\ScopevisioDateTimeConverter.cs" />
     <Compile Include="Client\OpenAPIDateConverter.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Model\Account.cs" />
@@ -162,6 +163,7 @@ Contact: support@scopevisio.com
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserForm.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="OpenScopeApiClient.cs" />
     <None Include="app.config" />
     <None Include="_CreateNewNuGetPackage\Config.ps1" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\CreateNuGetPackage.ps1" />

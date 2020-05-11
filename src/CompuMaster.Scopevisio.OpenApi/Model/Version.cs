@@ -35,10 +35,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// <param name="commitDate">Commit date</param>
         public Version(string buildDate = default(string), long buildNumber = default(long), string commitHash = default(string), string commitDate = default(string))
         {
-            this.BuildDate = buildDate;
+            this.buildDate = buildDate;
             this.BuildNumber = buildNumber;
             this.CommitHash = commitHash;
-            this.CommitDate = commitDate;
+            this.commitDate = commitDate;
         }
 
 
@@ -47,7 +47,22 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// </summary>
         /// <value>Build date</value>
         [DataMember(Name= "buildDate", EmitDefaultValue=false)]
-        public string BuildDate { get; set; }
+        private string buildDate { get; set; }
+
+        /// <summary>
+        /// Build date
+        /// </summary>
+        /// <value>Build date</value>
+        public DateTime BuildDate {
+            get 
+            {
+                return DateTime.ParseExact(this.buildDate, "yyyyMMddHHmm", System.Globalization.CultureInfo.InvariantCulture);
+            }            
+            set
+            {
+                this.buildDate = value.ToString("yyyyMMddHHmm", System.Globalization.CultureInfo.InvariantCulture);
+            }
+        }
 
         /// <summary>
         /// Build number
@@ -68,7 +83,22 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// </summary>
         /// <value>Commit date</value>
         [DataMember(Name= "commitDate", EmitDefaultValue=false)]
-        public string CommitDate { get; set; }
+        private string commitDate { get; set; }
+
+        /// <summary>
+        /// Commit date
+        /// </summary>
+        public DateTime CommitDate
+        {
+            get
+            {
+                return Client.ScopevisioDateTimeConverter.ToDate(this.commitDate);
+            }
+            set
+            {
+                this.commitDate = Client.ScopevisioDateTimeConverter.ToString(value);
+            }
+        }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -82,7 +112,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             sb.Append("  BuildNumber: ").Append(BuildNumber).Append("\n");
             sb.Append("  CommitHash:  ").Append(CommitHash).Append("\n");
             sb.Append("  CommitDate:  ").Append(CommitDate).Append("\n");
-            sb.Append("}\n");
+            sb.Append("}");
             return sb.ToString();
         }
   

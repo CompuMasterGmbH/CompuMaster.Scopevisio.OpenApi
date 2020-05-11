@@ -32,7 +32,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// <param name="hello">Hello</param>
         public Hello(string hello = default(string))
         {
-            this.HelloInfo = hello;
+            this.HelloMessage = hello;
         }
 
 
@@ -41,7 +41,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// </summary>
         /// <value>Hello</value>
         [DataMember(Name= "hello", EmitDefaultValue=false)]
-        public string HelloInfo { get; set; }
+        public string HelloMessage { get; set; }
 
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Hello {\n");
-            sb.Append("  HelloInfo:   ").Append(HelloInfo).Append("\n");
+            sb.Append("  HelloInfo:   ").Append(HelloMessage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
 
             return 
                 (
-                    this.HelloInfo == input.HelloInfo ||
-                    (this.HelloInfo != null &&
-                    this.HelloInfo.Equals(input.HelloInfo))
+                    this.HelloMessage == input.HelloMessage ||
+                    (this.HelloMessage != null &&
+                    this.HelloMessage.Equals(input.HelloMessage))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.HelloInfo != null)
-                    hashCode = hashCode * 59 + this.HelloInfo.GetHashCode();
+                if (this.HelloMessage != null)
+                    hashCode = hashCode * 59 + this.HelloMessage.GetHashCode();
                 return hashCode;
             }
         }

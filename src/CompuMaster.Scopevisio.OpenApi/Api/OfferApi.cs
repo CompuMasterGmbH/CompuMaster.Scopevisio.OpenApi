@@ -67,7 +67,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// Gets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        public String GetBasePath()
+        internal String GetBasePath()
         {
             return this.Configuration.ApiClient.RestClient.BaseUrl.ToString();
         }

@@ -39,7 +39,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [SetUp]
         public void Init()
         {
-            instance = new HumanResourcesApi();
+            instance = new HumanResourcesApi(new TestConfig());
         }
 
         /// <summary>

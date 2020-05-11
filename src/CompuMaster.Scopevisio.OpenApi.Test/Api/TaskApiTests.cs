@@ -40,7 +40,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [SetUp]
         public void Init()
         {
-            instance = new TaskApi();
+            instance = new TaskApi(new TestConfig());
         }
 
         /// <summary>

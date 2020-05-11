@@ -40,7 +40,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [SetUp]
         public void Init()
         {
-            instance = new IncomingInvoiceApi();
+            instance = new IncomingInvoiceApi(new TestConfig());
         }
 
         /// <summary>

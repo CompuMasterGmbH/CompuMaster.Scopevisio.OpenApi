@@ -39,7 +39,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [SetUp]
         public void Init()
         {
-            instance = new ReportApi();
+            instance = new ReportApi(new TestConfig());
         }
 
         /// <summary>

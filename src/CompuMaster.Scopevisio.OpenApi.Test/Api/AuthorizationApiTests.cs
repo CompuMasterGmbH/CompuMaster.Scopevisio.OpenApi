@@ -19,6 +19,7 @@ using NUnit.Framework;
 
 using CompuMaster.Scopevisio.OpenApi.Client;
 using CompuMaster.Scopevisio.OpenApi.Api;
+using CompuMaster.Scopevisio.OpenApi.Test;
 
 namespace CompuMaster.Scopevisio.OpenApi.Test
 {
@@ -39,7 +40,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [SetUp]
         public void Init()
         {
-            instance = new AuthorizationApi();
+            instance = new AuthorizationApi(new TestConfig(true));
         }
 
         /// <summary>
@@ -58,10 +59,15 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         public void InstanceTest()
         {
             // TODO uncomment below to test 'IsInstanceOf' AuthorizationApi
-            //Assert.IsInstanceOf(typeof(AuthorizationApi), instance);
+            Assert.IsInstanceOf(typeof(AuthorizationApi), instance);
+            Assert.IsNotEmpty(instance.Configuration.Username);
+            Assert.IsNotEmpty(instance.Configuration.ClientNumber);
+            Assert.IsNotEmpty(instance.Configuration.Password);
+            Assert.IsNull(instance.Configuration.OrganisationName);
+            Assert.IsNull(instance.Configuration.AccessToken);
         }
 
-        
+
         /// <summary>
         /// Test ChangeOrganisationById
         /// </summary>
@@ -117,7 +123,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             //string code = null;
             //string requestcookie = null;
             //instance.Token(grantType, customer, clientId, clientSecret, username, organisationId, organisation, password, totpResponse, refreshToken, code, requestcookie);
-            
+            CompuMaster.Scopevisio.OpenApi.Model.TokenResponse result = instance.TokenWithHttpInfo("password", instance.Configuration.ClientNumber, null, null, instance.Configuration.Username, null, instance.Configuration.OrganisationName, instance.Configuration.Password, null, null, null, null).Data;
+            Assert.IsNotEmpty(result.AccessToken);
+            Assert.IsNotEmpty(result.RefreshToken);
+            Assert.AreEqual(Model.TokenResponse.TokenTypeEnum.Bearer, result.TokenType);
+            Assert.IsNotEmpty(instance.Configuration.AccessToken);
+            //Assert.IsNotEmpty(instance.Configuration.RefreshToken);
         }
         
     }

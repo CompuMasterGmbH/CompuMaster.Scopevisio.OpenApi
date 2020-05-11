@@ -16,7 +16,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
     /// <summary>
     /// Represents a readable-only configuration contract.
     /// </summary>
-    public interface IReadableConfiguration
+    internal interface IReadableConfiguration
     {
         /// <summary>
         /// Gets the access token.

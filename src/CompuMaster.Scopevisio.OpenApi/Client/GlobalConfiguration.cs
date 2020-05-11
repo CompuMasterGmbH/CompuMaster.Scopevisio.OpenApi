@@ -27,7 +27,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
     /// A customized implementation via partial class may reside in another file and may
     /// be excluded from automatic generation via a .openapi-generator-ignore file.
     /// </remarks>
-    public partial class GlobalConfiguration : Configuration
+    internal partial class GlobalConfiguration : Configuration
     {
 
     }

@@ -42,7 +42,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// <param name="statusCode">HTTP status code.</param>
         /// <param name="headers">HTTP headers.</param>
         /// <param name="data">Data (parsed HTTP body)</param>
-        public ApiResponse(int statusCode, IDictionary<string, string> headers, T data)
+        internal ApiResponse(int statusCode, IDictionary<string, string> headers, T data)
         {
             this.StatusCode= statusCode;
             this.Headers = headers;

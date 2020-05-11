@@ -20,7 +20,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
     /// <summary>
     /// Represents configuration aspects required to interact with the API endpoints.
     /// </summary>
-    public interface IApiAccessor
+    internal interface IApiAccessor
     {
         /// <summary>
         /// Gets or sets the configuration object

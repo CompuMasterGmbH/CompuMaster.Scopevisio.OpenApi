@@ -5,7 +5,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
     /// <summary>
     /// Converter for Scopevisio datetime strings
     /// </summary>
-    public class ScopevisioDateTimeConverter 
+    internal class ScopevisioDateTimeConverter 
     {
         /// <summary>
         /// Convert DateTime to Scopevisio datetime string

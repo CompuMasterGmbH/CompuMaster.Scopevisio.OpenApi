@@ -175,7 +175,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// <param name="timeout">HTTP connection timeout (in milliseconds)</param>
         /// <param name="userAgent">HTTP user agent</param>
         [Obsolete("Use explicit object construction and setting of properties.", true)]
-        public Configuration(
+        internal Configuration(
             // ReSharper disable UnusedParameter.Local
             ApiClient apiClient = null,
             IDictionary<string, string> defaultHeader = null,
@@ -200,7 +200,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// <param name="apiClient">Api client.</param>
         [Obsolete("This constructor caused unexpected sharing of static data. It is no longer supported.", true)]
         // ReSharper disable once UnusedParameter.Local
-        public Configuration(ApiClient apiClient)
+        internal Configuration(ApiClient apiClient)
         {
 
         }
@@ -214,7 +214,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// <summary>
         /// Gets an instance of an ApiClient for this configuration
         /// </summary>
-        public virtual ApiClient ApiClient
+        internal virtual ApiClient ApiClient
         {
             get
             {
@@ -418,7 +418,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// Creates a new <see cref="ApiClient" /> based on this <see cref="Configuration" /> instance.
         /// </summary>
         /// <returns></returns>
-        public ApiClient CreateApiClient()
+        internal ApiClient CreateApiClient()
         {
             return new ApiClient(BasePath) { Configuration = this };
         }

@@ -26,7 +26,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
     /// <summary>
     /// API client is mainly responsible for making the HTTP call to the API backend.
     /// </summary>
-    public partial class ApiClient
+    internal partial class ApiClient
     {
         private JsonSerializerSettings serializerSettings = new JsonSerializerSettings
         {

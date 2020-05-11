@@ -76,7 +76,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <value>The base path</value>
         [Obsolete("SetBasePath is deprecated, please do 'Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
-        public void SetBasePath(String basePath)
+        internal void SetBasePath(String basePath)
         {
             // do nothing
         }
@@ -108,7 +108,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <returns>Dictionary of HTTP header</returns>
         [Obsolete("DefaultHeader is deprecated, please use Configuration.DefaultHeader instead.")]
-        public IDictionary<String, String> DefaultHeader()
+        internal IDictionary<String, String> DefaultHeader()
         {
             return new ReadOnlyDictionary<string, string>(this.Configuration.DefaultHeader);
         }
@@ -120,7 +120,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="value">Header field value.</param>
         /// <returns></returns>
         [Obsolete("AddDefaultHeader is deprecated, please use Configuration.AddDefaultHeader instead.")]
-        public void AddDefaultHeader(string key, string value)
+        internal void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
         }

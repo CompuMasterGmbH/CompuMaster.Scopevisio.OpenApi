@@ -145,6 +145,7 @@ Contact: support@scopevisio.com
     <Compile Include="Model\Profile.cs" />
     <Compile Include="Model\ProjectEmployeeForm.cs" />
     <Compile Include="Model\ProjectForm.cs" />
+    <Compile Include="Model\Records.cs" />
     <Compile Include="Model\RecurringInvoiceForm.cs" />
     <Compile Include="Model\RevenueStatementAccountRow.cs" />
     <Compile Include="Model\RevenueStatementAccountsForm.cs" />

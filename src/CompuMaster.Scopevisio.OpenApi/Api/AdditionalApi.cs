@@ -875,18 +875,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// organisations Returns organisations of a customers instance the user has access to.  No profiles required.
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void OrganisationJson ()
-        {
-             OrganisationJsonWithHttpInfo();
-        }
-
-        /// <summary>
-        /// organisations Returns organisations of a customers instance the user has access to.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> OrganisationJsonWithHttpInfo ()
+        public ApiResponse<Model.Records<Model.Organisation>> OrganisationJsonWithHttpInfo ()
         {
 
             var localVarPath = "/organisations";
@@ -930,20 +920,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            Model.Records<Model.Organisation> results = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.Records<Model.Organisation>>(localVarResponse.Content);
+
+            return new ApiResponse<Model.Records<Model.Organisation>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// organisations Returns organisations of a customers instance the user has access to.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task OrganisationJsonAsync ()
-        {
-             await OrganisationJsonAsyncWithHttpInfo();
-
+                results);
         }
 
         /// <summary>
@@ -951,7 +932,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> OrganisationJsonAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Model.Records<Model.Organisation>>> OrganisationJsonAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/organisations";
@@ -995,9 +976,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            Model.Records<Model.Organisation> results = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.Records<Model.Organisation>>(localVarResponse.Content);
+
+            return new ApiResponse<Model.Records<Model.Organisation>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                results);
         }
 
     }

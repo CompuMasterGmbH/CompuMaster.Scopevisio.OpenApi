@@ -40,6 +40,18 @@ namespace ConsoleSampleApp
                 t.Wait();
                 System.Console.WriteLine("Async hello world=" + t.Result.HelloMessage);
                 System.Console.WriteLine();
+
+                CompuMaster.Scopevisio.OpenApi.Model.Records<CompuMaster.Scopevisio.OpenApi.Model.Organisation> OrganisationResult = OpenScopeClient.AdditionalApi.OrganisationJsonWithHttpInfo().Data;
+                foreach (CompuMaster.Scopevisio.OpenApi.Model.Organisation Org in OrganisationResult.Items)
+                {
+                    System.Console.WriteLine("Org[" + OrganisationResult.Items.IndexOf(Org) + "]");
+                    System.Console.WriteLine("  Org.ID=" + Org.Id);
+                    System.Console.WriteLine("  Org.Name=" + Org.Name);
+                    System.Console.WriteLine("  Org.TeamworkTenant.ID=" + Org.TeamworkTenantId);
+                    System.Console.WriteLine("  Org.TeamworkTenant.Name=" + Org.TeamworkTenantName);
+                    System.Console.WriteLine();
+                }
+
             }
             catch (ApiException e)
             {

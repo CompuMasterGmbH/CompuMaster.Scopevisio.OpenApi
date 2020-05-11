@@ -21,60 +21,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IOrganisationApi : IApiAccessor
-    {
-        #region Synchronous Operations
-        /// <summary>
-        /// Creates a Scopevisio organisation.
-        /// </summary>
-        /// <remarks>
-        /// Creates a Scopevisio organisation with the given name (if not existing) and the given scoa (standard chart of accounts). &lt;strong&gt;The scoa set up takes some time. Please make sure you set your timeout to at least 5 min.&lt;/strong&gt; Required profiles: &lt;i&gt;Organisation (Bearbeiten)&lt;/i&gt;
-        /// </remarks>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns></returns>
-        void CreateOrganisation (OrganisationForm body = default(OrganisationForm));
-
-        /// <summary>
-        /// Creates a Scopevisio organisation.
-        /// </summary>
-        /// <remarks>
-        /// Creates a Scopevisio organisation with the given name (if not existing) and the given scoa (standard chart of accounts). &lt;strong&gt;The scoa set up takes some time. Please make sure you set your timeout to at least 5 min.&lt;/strong&gt; Required profiles: &lt;i&gt;Organisation (Bearbeiten)&lt;/i&gt;
-        /// </remarks>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateOrganisationWithHttpInfo (OrganisationForm body = default(OrganisationForm));
-        #endregion Synchronous Operations
-        #region Asynchronous Operations
-        /// <summary>
-        /// Creates a Scopevisio organisation.
-        /// </summary>
-        /// <remarks>
-        /// Creates a Scopevisio organisation with the given name (if not existing) and the given scoa (standard chart of accounts). &lt;strong&gt;The scoa set up takes some time. Please make sure you set your timeout to at least 5 min.&lt;/strong&gt; Required profiles: &lt;i&gt;Organisation (Bearbeiten)&lt;/i&gt;
-        /// </remarks>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateOrganisationAsync (OrganisationForm body = default(OrganisationForm));
-
-        /// <summary>
-        /// Creates a Scopevisio organisation.
-        /// </summary>
-        /// <remarks>
-        /// Creates a Scopevisio organisation with the given name (if not existing) and the given scoa (standard chart of accounts). &lt;strong&gt;The scoa set up takes some time. Please make sure you set your timeout to at least 5 min.&lt;/strong&gt; Required profiles: &lt;i&gt;Organisation (Bearbeiten)&lt;/i&gt;
-        /// </remarks>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateOrganisationAsyncWithHttpInfo (OrganisationForm body = default(OrganisationForm));
-        #endregion Asynchronous Operations
-    }
-
-    /// <summary>
-    /// Represents a collection of functions to interact with the API endpoints
-    /// </summary>
-    public partial class OrganisationApi : IOrganisationApi
+    public partial class OrganisationApi 
     {
         private CompuMaster.Scopevisio.OpenApi.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 

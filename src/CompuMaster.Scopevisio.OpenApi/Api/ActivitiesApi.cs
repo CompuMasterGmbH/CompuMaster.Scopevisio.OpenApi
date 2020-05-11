@@ -20,60 +20,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IActivitiesApi : IApiAccessor
-    {
-        #region Synchronous Operations
-        /// <summary>
-        /// events
-        /// </summary>
-        /// <remarks>
-        /// Returns Events of Scopevisio.  Required profile(s): &lt;i&gt;Rechnungseingangsbuch (Anzeigen)&lt;/i&gt;.
-        /// </remarks>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">search filter in JSON format (optional)</param>
-        /// <returns></returns>
-        void GetEvents (string body = default(string));
-
-        /// <summary>
-        /// events
-        /// </summary>
-        /// <remarks>
-        /// Returns Events of Scopevisio.  Required profile(s): &lt;i&gt;Rechnungseingangsbuch (Anzeigen)&lt;/i&gt;.
-        /// </remarks>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">search filter in JSON format (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetEventsWithHttpInfo (string body = default(string));
-        #endregion Synchronous Operations
-        #region Asynchronous Operations
-        /// <summary>
-        /// events
-        /// </summary>
-        /// <remarks>
-        /// Returns Events of Scopevisio.  Required profile(s): &lt;i&gt;Rechnungseingangsbuch (Anzeigen)&lt;/i&gt;.
-        /// </remarks>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">search filter in JSON format (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetEventsAsync (string body = default(string));
-
-        /// <summary>
-        /// events
-        /// </summary>
-        /// <remarks>
-        /// Returns Events of Scopevisio.  Required profile(s): &lt;i&gt;Rechnungseingangsbuch (Anzeigen)&lt;/i&gt;.
-        /// </remarks>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">search filter in JSON format (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetEventsAsyncWithHttpInfo (string body = default(string));
-        #endregion Asynchronous Operations
-    }
-
-    /// <summary>
-    /// Represents a collection of functions to interact with the API endpoints
-    /// </summary>
-    public partial class ActivitiesApi : IActivitiesApi
+    public partial class ActivitiesApi  
     {
         private CompuMaster.Scopevisio.OpenApi.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 

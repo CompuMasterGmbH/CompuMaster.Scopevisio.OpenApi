@@ -28,7 +28,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
     /// </summary>
     internal partial class ApiClient
     {
-        private JsonSerializerSettings serializerSettings = new JsonSerializerSettings
+        private readonly JsonSerializerSettings serializerSettings = new JsonSerializerSettings
         {
             ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
         };
@@ -82,12 +82,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
             Configuration = Client.Configuration.Default;
         }
 
-        /// <summary>
-        /// Gets or sets the default API client for making HTTP calls.
-        /// </summary>
-        /// <value>The default API client.</value>
-        [Obsolete("ApiClient.Default is deprecated, please use 'Configuration.Default.ApiClient' instead.")]
-        public static ApiClient Default;
+        ///// <summary>
+        ///// Gets or sets the default API client for making HTTP calls.
+        ///// </summary>
+        ///// <value>The default API client.</value>
+        //[Obsolete("ApiClient.Default is deprecated, please use 'Configuration.Default.ApiClient' instead.")]
+        //public static ApiClient Default;
 
         /// <summary>
         /// Gets or sets an instance of the IReadableConfiguration.
@@ -204,7 +204,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
                 pathParams, contentType);
             RestClient.UserAgent = Configuration.UserAgent;
             InterceptRequest(request);
-            var response = await RestClient.ExecuteTaskAsync(request);
+            //var response = await RestClient.ExecuteTaskAsync(request);
+            var response = await RestClient.ExecuteAsync(request);
             InterceptResponse(request, response);
             return (Object)response;
         }
@@ -466,7 +467,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
 
             if (input == null)
             {
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
             }
 
             if (input.Length <= maxLength)
@@ -512,6 +513,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// Convert params to key/value pairs. 
         /// Use collectionFormat to properly format lists and collections.
         /// </summary>
+        /// <param name="collectionFormat"></param>
         /// <param name="name">Key name.</param>
         /// <param name="value">Value object.</param>
         /// <returns>A list of KeyValuePairs</returns>

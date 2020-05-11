@@ -9,7 +9,7 @@ namespace ConsoleSampleApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             System.Console.WriteLine("PLEASE NOTE: Following user input will be buffered in directory " + System.IO.Path.GetTempPath());
             string username = InputLine("username");

@@ -35,10 +35,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// <param name="commitDate">Commit date</param>
         public Version(string buildDate = default(string), long buildNumber = default(long), string commitHash = default(string), string commitDate = default(string))
         {
-            this.buildDate = buildDate;
+            this.BuildDateString = buildDate;
             this.BuildNumber = buildNumber;
             this.CommitHash = commitHash;
-            this.commitDate = commitDate;
+            this.CommitDateString = commitDate;
         }
 
 
@@ -47,7 +47,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// </summary>
         /// <value>Build date</value>
         [DataMember(Name= "buildDate", EmitDefaultValue=false)]
-        private string buildDate { get; set; }
+        private string BuildDateString { get; set; }
 
         /// <summary>
         /// Build date
@@ -56,11 +56,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         public DateTime BuildDate {
             get 
             {
-                return DateTime.ParseExact(this.buildDate, "yyyyMMddHHmm", System.Globalization.CultureInfo.InvariantCulture);
+                return DateTime.ParseExact(this.BuildDateString, "yyyyMMddHHmm", System.Globalization.CultureInfo.InvariantCulture);
             }            
             set
             {
-                this.buildDate = value.ToString("yyyyMMddHHmm", System.Globalization.CultureInfo.InvariantCulture);
+                this.BuildDateString = value.ToString("yyyyMMddHHmm", System.Globalization.CultureInfo.InvariantCulture);
             }
         }
 
@@ -83,7 +83,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// </summary>
         /// <value>Commit date</value>
         [DataMember(Name= "commitDate", EmitDefaultValue=false)]
-        private string commitDate { get; set; }
+        private string CommitDateString { get; set; }
 
         /// <summary>
         /// Commit date
@@ -92,11 +92,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         {
             get
             {
-                return Client.ScopevisioDateTimeConverter.ToDate(this.commitDate);
+                return Client.ScopevisioDateTimeConverter.ToDate(this.CommitDateString);
             }
             set
             {
-                this.commitDate = Client.ScopevisioDateTimeConverter.ToString(value);
+                this.CommitDateString = Client.ScopevisioDateTimeConverter.ToString(value);
             }
         }
 

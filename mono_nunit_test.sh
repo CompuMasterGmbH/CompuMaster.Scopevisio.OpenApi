@@ -18,5 +18,5 @@ echo "[INFO] Install NUnit Console 3.x runners via NuGet"
 mono nuget.exe install NUnit.ConsoleRunner -Version 3.10.0 -OutputDirectory packages
 
 echo "[INFO] Build the solution and run the unit test"
-xbuild /p:Configuration=Debug /p:Platform="Any CPU" /p:PostBuildEvent="" CompuMaster.Scopevisio.OpenApi.sln && \
+msbuild /p:Configuration=Debug /p:Platform="Any CPU" /p:PostBuildEvent="" CompuMaster.Scopevisio.OpenApi.sln && \
     mono ./packages/NUnit.ConsoleRunner.3.10.0/tools/nunit3-console.exe src/CompuMaster.Scopevisio.OpenApi.Test/bin/Debug/CompuMaster.Scopevisio.OpenApi.Test.dll

@@ -651,16 +651,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// retrieve deployment version infos Returns deployment version infos.  No profiles required.
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetVersion ()
-        {
-             GetVersionWithHttpInfo();
-        }
-
-        /// <summary>
-        /// retrieve deployment version infos Returns deployment version infos.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version> GetVersionWithHttpInfo ()
         {
@@ -711,17 +701,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 result);
-        }
-
-        /// <summary>
-        /// retrieve deployment version infos Returns deployment version infos.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetVersionAsync ()
-        {
-             await GetVersionAsyncWithHttpInfo();
-
         }
 
         /// <summary>
@@ -784,16 +763,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// simple hello world call.  Returns &#39;Hello world&#39; test data.  No profiles required.
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void HelloJson ()
-        {
-             HelloJsonWithHttpInfo();
-        }
-
-        /// <summary>
-        /// simple hello world call.  Returns &#39;Hello world&#39; test data.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello> HelloJsonWithHttpInfo ()
         {
@@ -844,17 +813,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 result);
-        }
-
-        /// <summary>
-        /// simple hello world call.  Returns &#39;Hello world&#39; test data.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HelloJsonAsync ()
-        {
-             await HelloJsonAsyncWithHttpInfo();
-
         }
 
         /// <summary>

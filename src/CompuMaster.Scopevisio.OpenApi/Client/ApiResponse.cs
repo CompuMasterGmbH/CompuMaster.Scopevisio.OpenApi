@@ -31,6 +31,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         public IDictionary<string, string> Headers { get; private set; }
 
         /// <summary>
+        /// Gets or sets the raw JSON result
+        /// </summary>
+        public string RawJsonContent { get; private set; }
+
+        /// <summary>
         /// Gets or sets the data (parsed HTTP body)
         /// </summary>
         /// <value>The data.</value>
@@ -41,11 +46,13 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// </summary>
         /// <param name="statusCode">HTTP status code.</param>
         /// <param name="headers">HTTP headers.</param>
+        /// <param name="rawJsonContent">Raw JSON result.</param>
         /// <param name="data">Data (parsed HTTP body)</param>
-        internal ApiResponse(int statusCode, IDictionary<string, string> headers, T data)
+        internal ApiResponse(int statusCode, IDictionary<string, string> headers, string rawJsonContent, T data)
         {
             this.StatusCode= statusCode;
             this.Headers = headers;
+            this.RawJsonContent = rawJsonContent;
             this.Data = data;
         }
 

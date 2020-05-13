@@ -79,20 +79,47 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void GetApplicationContextTest()
         {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.GetApplicationContext();
-            
+            Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext> result = instance.GetApplicationContextWithHttpInfo();
+            Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
+            System.Console.WriteLine("RAW JSON:");
+            System.Console.WriteLine(result.RawJsonContent);
+            System.Console.WriteLine("/RAW JSON\r\n");
+            System.Console.WriteLine(result.Data.ToString());
+
+            Assert.IsNotEmpty(result.Data.Customer.Name);
+            Assert.IsNotEmpty(result.Data.Customer.PublicId);
+            Assert.IsNotEmpty(result.Data.Customer.Status);
+            Assert.NotZero(result.Data.Organisation.Id);
+            Assert.IsNotEmpty(result.Data.Organisation.Name);
+            Assert.IsNotEmpty(result.Data.Organisation.TeamworkTenantId);
+            Assert.IsNotEmpty(result.Data.Organisation.TeamworkTenantName);
+            Assert.IsNotEmpty(result.Data.User.Uid);
+            Assert.IsNotEmpty(result.Data.User.Status);
+            Assert.IsNotEmpty(result.Data.User.Login);
+            Assert.IsNotEmpty(result.Data.Teamwork.TeamworkAppRootUrl);
         }
-        
+
         /// <summary>
         /// Test GetLicences
         /// </summary>
         [Test]
         public void GetLicencesTest()
         {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.GetLicences();
-            
+            Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]> result = instance.GetLicencesWithHttpInfo();
+            Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
+            System.Console.WriteLine("RAW JSON:");
+            System.Console.WriteLine(result.RawJsonContent);
+            System.Console.WriteLine("/RAW JSON\r\n");
+            System.Console.WriteLine(result.Data.ToString());
+
+            foreach (CompuMaster.Scopevisio.OpenApi.Model.License lic in result.Data)
+            {
+                System.Console.WriteLine(lic);
+                Assert.IsNotEmpty(lic.Type);
+                Assert.IsNotEmpty(lic.AssignedToUid);
+                Assert.IsNotEmpty(lic.AssignedToEmail);
+            }
+            Assert.NotZero(result.Data.Length);
         }
         
         /// <summary>
@@ -102,11 +129,17 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         public void GetTeamworkTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //bool? force = null;
-            //instance.GetTeamworkToken(force);
-            
+            bool? force = null;
+            Client.ApiResponse<Object> result = instance.GetTeamworkTokenWithHttpInfo(force);
+            Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
+            System.Console.WriteLine("RAW JSON:");
+            System.Console.WriteLine(result.RawJsonContent);
+            System.Console.WriteLine("/RAW JSON\r\n");
+            System.Console.WriteLine(result.Data.ToString());
+
+            //System.Console.WriteLine(instance.GetTeamworkTokenWithHttpInfo(force).Data);
         }
-        
+
         /// <summary>
         /// Test GetVersion
         /// </summary>
@@ -114,11 +147,17 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         public void GetVersionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            CompuMaster.Scopevisio.OpenApi.Model.Version result = instance.GetVersionWithHttpInfo().Data;
-            Assert.Greater(new DateTime(2020, 05, 01), result.BuildDate);
-            Assert.Greater(10000, result.BuildNumber);
-            Assert.Greater(new DateTime(2020, 05, 01), result.CommitDate);
-            Assert.IsNotEmpty(result.CommitHash);
+            Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version> result = instance.GetVersionWithHttpInfo();
+            Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
+            System.Console.WriteLine("RAW JSON:");
+            System.Console.WriteLine(result.RawJsonContent);
+            System.Console.WriteLine("/RAW JSON\r\n");
+            System.Console.WriteLine(result.Data.ToString());
+
+            Assert.Less(new DateTime(2020, 05, 01), result.Data.BuildDate);
+            Assert.Less(10000, result.Data.BuildNumber);
+            Assert.Less(new DateTime(2020, 05, 01), result.Data.CommitDate);
+            Assert.IsNotEmpty(result.Data.CommitHash);
         }
 
         /// <summary>
@@ -128,8 +167,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         public void HelloJsonTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            CompuMaster.Scopevisio.OpenApi.Model.Hello result = instance.HelloJsonWithHttpInfo().Data;
-            Assert.AreEqual(new TestConfig().Username, result.HelloMessage);
+            Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello> result = instance.HelloJsonWithHttpInfo();
+            Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
+            System.Console.WriteLine("RAW JSON:");
+            System.Console.WriteLine(result.RawJsonContent);
+            System.Console.WriteLine("/RAW JSON\r\n");
+            System.Console.WriteLine(result.Data.ToString());
+
+            Assert.AreEqual(new TestConfig().Username, result.Data.HelloMessage);
         }
         
         /// <summary>
@@ -139,10 +184,17 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         public void OrganisationJsonTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.OrganisationJson();
-            
+            Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Records<CompuMaster.Scopevisio.OpenApi.Model.Organisation>> result= instance.OrganisationJsonWithHttpInfo();
+            Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
+            System.Console.WriteLine("RAW JSON:");
+            System.Console.WriteLine(result.RawJsonContent);
+            System.Console.WriteLine("/RAW JSON\r\n");
+            System.Console.WriteLine(result.Data.ToString());
+
+            Assert.NotZero(result.Data.Items.Count);
+            Assert.NotZero(result.Data.Items[0].Id);
         }
-        
+
     }
 
 }

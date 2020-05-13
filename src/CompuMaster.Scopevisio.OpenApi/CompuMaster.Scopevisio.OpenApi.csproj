@@ -145,6 +145,7 @@ Contact: support@scopevisio.com
     <Compile Include="Model\Profile.cs" />
     <Compile Include="Model\ProjectEmployeeForm.cs" />
     <Compile Include="Model\ProjectForm.cs" />
+    <Compile Include="Model\ApplicationContext.cs" />
     <Compile Include="Model\Records.cs" />
     <Compile Include="Model\RecurringInvoiceForm.cs" />
     <Compile Include="Model\RevenueStatementAccountRow.cs" />
@@ -164,6 +165,7 @@ Contact: support@scopevisio.com
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserForm.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Tools.cs" />
     <Compile Include="OpenScopeApiClient.cs" />
     <None Include="app.config" />
     <None Include="_CreateNewNuGetPackage\Config.ps1" />

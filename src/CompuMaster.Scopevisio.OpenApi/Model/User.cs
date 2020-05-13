@@ -90,7 +90,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("}\n");
+            sb.Append("}");
             return sb.ToString();
         }
   

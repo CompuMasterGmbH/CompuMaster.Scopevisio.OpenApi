@@ -72,7 +72,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("}\n");
+            sb.Append("}");
             return sb.ToString();
         }
   

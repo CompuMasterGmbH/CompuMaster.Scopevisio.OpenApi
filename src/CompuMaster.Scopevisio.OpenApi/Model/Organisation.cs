@@ -81,7 +81,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  TeamworkTenantId: ").Append(TeamworkTenantId).Append("\n");
             sb.Append("  TeamworkTenantName: ").Append(TeamworkTenantName).Append("\n");
-            sb.Append("}\n");
+            sb.Append("}");
             return sb.ToString();
         }
   

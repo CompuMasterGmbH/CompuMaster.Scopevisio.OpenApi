@@ -54,7 +54,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             var sb = new StringBuilder();
             sb.Append("class Teamwork {\n");
             sb.Append("  TeamworkAppRootUrl: ").Append(TeamworkAppRootUrl).Append("\n");
-            sb.Append("}\n");
+            sb.Append("}");
             return sb.ToString();
         }
   

@@ -30,5 +30,21 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         /// </summary>
         [DataMember(Name = "records", EmitDefaultValue = false)]
         public IList<T> Items { get; set; }
+
+        /// <summary>
+        /// Returns the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class Records<" + typeof(T).Name + "> {\n");
+            foreach (T Item in this.Items)
+            {
+                sb.Append(Item.ToString().Indent()).Append("\n");
+            }
+            sb.Append("}");
+            return sb.ToString();
+        }
     }
 }

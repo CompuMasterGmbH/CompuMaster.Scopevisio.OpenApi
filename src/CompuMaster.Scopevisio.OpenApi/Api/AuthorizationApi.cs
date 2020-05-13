@@ -192,7 +192,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -263,7 +264,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -333,7 +335,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -404,7 +407,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -468,7 +472,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -533,7 +538,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -642,6 +648,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Model.TokenResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Content,
                 TokenResult);
         }
 
@@ -752,6 +759,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Model.TokenResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Content,
                 TokenResult);
         }
 

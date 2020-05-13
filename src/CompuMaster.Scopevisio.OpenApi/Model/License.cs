@@ -52,18 +52,30 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             }
             
         }
-        
+
+        /// <summary>
+        /// Gets or Sets assignedToUid
+        /// </summary>
+        [DataMember(Name = "assignedToUid", EmitDefaultValue = true)]
+        public string AssignedToUid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets assignedToEmail
+        /// </summary>
+        [DataMember(Name = "assignedToEmail", EmitDefaultValue = true)]
+        public string AssignedToEmail { get; set; }
+
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=true)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets ValidTill
         /// </summary>
         [DataMember(Name="validTill", EmitDefaultValue=false)]
-        public long ValidTill { get; private set; }
+        public long? ValidTill { get; private set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -75,7 +87,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             sb.Append("class License {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ValidTill: ").Append(ValidTill).Append("\n");
-            sb.Append("}\n");
+            sb.Append("  AssignedToUid: ").Append(AssignedToUid).Append("\n");
+            sb.Append("  AssignedToEmail: ").Append(AssignedToEmail).Append("\n");
+            sb.Append("}");
             return sb.ToString();
         }
   
@@ -113,11 +127,21 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
-                ) && 
+                ) &&
                 (
                     this.ValidTill == input.ValidTill ||
                     (this.ValidTill != null &&
                     this.ValidTill.Equals(input.ValidTill))
+                ) &&
+                (
+                    this.AssignedToUid == input.AssignedToUid ||
+                    (this.AssignedToUid != null &&
+                    this.AssignedToUid.Equals(input.AssignedToUid))
+                ) &&
+                (
+                    this.AssignedToEmail == input.AssignedToEmail ||
+                    (this.AssignedToEmail != null &&
+                    this.AssignedToEmail.Equals(input.AssignedToEmail))
                 );
         }
 
@@ -134,6 +158,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.ValidTill != null)
                     hashCode = hashCode * 59 + this.ValidTill.GetHashCode();
+                if (this.AssignedToUid != null)
+                    hashCode = hashCode * 59 + this.AssignedToUid.GetHashCode();
+                if (this.AssignedToEmail != null)
+                    hashCode = hashCode * 59 + this.AssignedToEmail.GetHashCode();
                 return hashCode;
             }
         }

@@ -186,7 +186,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -251,17 +252,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
-        }
-
-        /// <summary>
-        /// customer account information Returns customer and user account info.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetApplicationContext ()
-        {
-             GetApplicationContextWithHttpInfo();
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -269,7 +261,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetApplicationContextWithHttpInfo ()
+        public ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext> GetApplicationContextWithHttpInfo ()
         {
 
             var localVarPath = "/myaccount";
@@ -313,20 +305,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>(localVarResponse.Content);
+
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
-        }
-
-        /// <summary>
-        /// customer account information Returns customer and user account info.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetApplicationContextAsync ()
-        {
-             await GetApplicationContextAsyncWithHttpInfo();
-
+                localVarResponse.Content,
+                result);
         }
 
         /// <summary>
@@ -334,7 +318,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetApplicationContextAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>> GetApplicationContextAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/myaccount";
@@ -378,19 +362,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
-        }
+            CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>(localVarResponse.Content);
 
-        /// <summary>
-        /// Scopevisio licences  Returns the available Scopevisio licences and the assigned users.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void GetLicences ()
-        {
-             GetLicencesWithHttpInfo();
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Content,
+                result);
         }
 
         /// <summary>
@@ -398,7 +375,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetLicencesWithHttpInfo ()
+        public ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]> GetLicencesWithHttpInfo ()
         {
 
             var localVarPath = "/licences";
@@ -442,20 +419,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            CompuMaster.Scopevisio.OpenApi.Model.License[] result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.License[]>(localVarResponse.Content);
+
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
-        }
-
-        /// <summary>
-        /// Scopevisio licences  Returns the available Scopevisio licences and the assigned users.  No profiles required.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetLicencesAsync ()
-        {
-             await GetLicencesAsyncWithHttpInfo();
-
+                localVarResponse.Content,
+                result);
         }
 
         /// <summary>
@@ -463,7 +432,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetLicencesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]>> GetLicencesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/licences";
@@ -507,9 +476,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            CompuMaster.Scopevisio.OpenApi.Model.License[] result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.License[]>(localVarResponse.Content);
+
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                result);
         }
 
         /// <summary>
@@ -576,7 +548,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -644,7 +617,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content);
+                localVarResponse.Content,
+                null);
         }
 
         /// <summary>
@@ -700,6 +674,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Content,
                 result);
         }
 
@@ -756,6 +731,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Content,
                 result);
         }
 
@@ -812,6 +788,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Content,
                 result);
         }
 
@@ -868,6 +845,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Content,
                 result);
         }
 
@@ -924,6 +902,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Model.Records<Model.Organisation>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Content,
                 results);
         }
 
@@ -980,6 +959,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             return new ApiResponse<Model.Records<Model.Organisation>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                localVarResponse.Content,
                 results);
         }
 

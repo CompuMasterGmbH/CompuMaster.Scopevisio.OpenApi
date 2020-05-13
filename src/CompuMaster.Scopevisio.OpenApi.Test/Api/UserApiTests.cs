@@ -105,10 +105,30 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void GetUsersTest()
         {
-            // TODO uncomment below to test the method and replace null with proper value
-            //bool? onlyActive = null;
-            //instance.GetUsers(onlyActive);
-            
+            bool? onlyActive = null;
+            try
+            {
+                Client.ApiResponse<Model.Records<Model.User>> result = instance.GetUsersWithHttpInfo(onlyActive);
+                Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
+
+                System.Console.WriteLine("RAW JSON");
+                System.Console.WriteLine(result.RawJsonContent);
+                System.Console.WriteLine("/RAW JSON\r\n");
+
+                System.Console.WriteLine("User:ToString()");
+                System.Console.WriteLine(result.Data.ToString());
+                System.Console.WriteLine("/User:ToString()\r\n");
+
+                Assert.NotZero(result.Data.Items.Count);
+                Assert.IsNotEmpty(result.Data.Items[0].Uid);
+                Assert.IsNotEmpty(result.Data.Items[0].LastName);
+                Assert.IsNotEmpty(result.Data.Items[0].Login);
+                int AllContactsCount = result.Data.Items.Count;
+            }
+            catch (Client.ApiException e)
+            {
+                Assert.AreEqual(403, e.ErrorCode); //Error calling GetUsers: {"timestamp":1589404582218,"status":403,"url":"https://appload.scopevisio.com/rest/users","message":"Missing profile. Require read access for any of: enterprise.Users"}
+            }
         }
         
         /// <summary>

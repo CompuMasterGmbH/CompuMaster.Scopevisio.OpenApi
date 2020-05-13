@@ -96,6 +96,7 @@ Contact: support@scopevisio.com
     <Compile Include="Client\ScopevisioDateTimeConverter.cs" />
     <Compile Include="Client\OpenAPIDateConverter.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Model\Contact.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\AccountInfo.cs" />
     <Compile Include="Model\AccountingInfoForm.cs" />
@@ -145,6 +146,7 @@ Contact: support@scopevisio.com
     <Compile Include="Model\Profile.cs" />
     <Compile Include="Model\ProjectEmployeeForm.cs" />
     <Compile Include="Model\ProjectForm.cs" />
+    <Compile Include="Model\RecordCollection.cs" />
     <Compile Include="Model\Records.cs" />
     <Compile Include="Model\RecurringInvoiceForm.cs" />
     <Compile Include="Model\RevenueStatementAccountRow.cs" />

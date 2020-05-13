@@ -1998,19 +1998,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. (optional)</param>
-        /// <returns></returns>
-        public void GetContacts (string body = default(string))
-        {
-             GetContactsWithHttpInfo(body);
-        }
-
-        /// <summary>
-        /// contacts Returns Scopevisio contacts.  Required profile(s): &lt;i&gt;Kontakte (Anzeigen)&lt;/i&gt;.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetContactsWithHttpInfo (string body = default(string))
+        public ApiResponse<Model.RecordCollection<Contact>> GetContactsWithHttpInfo (string body = default(string))
         {
 
             var localVarPath = "/contacts";
@@ -2063,22 +2052,13 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            Model.Records<Newtonsoft.Json.Linq.JObject> results = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.Records<Newtonsoft.Json.Linq.JObject>>(localVarResponse.Content);
+            Model.RecordCollection<Contact> contactResults = new Model.RecordCollection<Contact>(results);
+
+            return new ApiResponse<Model.RecordCollection<Contact>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 localVarResponse.Content,
-                null);
-        }
-
-        /// <summary>
-        /// contacts Returns Scopevisio contacts.  Required profile(s): &lt;i&gt;Kontakte (Anzeigen)&lt;/i&gt;.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetContactsAsync (string body = default(string))
-        {
-             await GetContactsAsyncWithHttpInfo(body);
-
+                contactResults);
         }
 
         /// <summary>
@@ -2087,7 +2067,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetContactsAsyncWithHttpInfo (string body = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<Model.RecordCollection<Contact>>> GetContactsAsyncWithHttpInfo (string body = default(string))
         {
 
             var localVarPath = "/contacts";
@@ -2140,10 +2120,13 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            Model.Records<Newtonsoft.Json.Linq.JObject> results = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.Records<Newtonsoft.Json.Linq.JObject>>(localVarResponse.Content);
+            Model.RecordCollection<Contact> contactResults = new Model.RecordCollection<Contact>(results);
+
+            return new ApiResponse<Model.RecordCollection<Contact>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 localVarResponse.Content,
-                null);
+                contactResults);
         }
 
         /// <summary>
@@ -2769,6 +2752,5 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 localVarResponse.Content,
                 null);
         }
-
     }
 }

@@ -224,12 +224,37 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void GetContactsTest()
         {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string body = null;
-            //instance.GetContacts(body);
+            string body = null;
+            Client.ApiResponse<Model.RecordCollection<Contact>> result = instance.GetContactsWithHttpInfo(body);
+            Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
             
+            System.Console.WriteLine("RAW JSON");
+            System.Console.WriteLine(result.RawJsonContent);
+            System.Console.WriteLine("/RAW JSON\r\n");
+
+            System.Console.WriteLine("Contact:ToOverviewTable()");
+            System.Console.WriteLine(result.Data.ToOverviewTable());
+            System.Console.WriteLine("/Contact:ToOverviewTable()\r\n");
+
+            System.Console.WriteLine("Contact:ToString()");
+            System.Console.WriteLine(result.Data.ToString());
+            System.Console.WriteLine("/Contact:ToString()\r\n");
+
+            Assert.NotZero(result.Data.Items.Count);
+            Assert.NotZero(result.Data.Items[0].Id);
+            Assert.IsNotEmpty(result.Data.Items[0].LastName);
+            Assert.IsNotEmpty(result.Data.Items[0].OwnerUid);
+            int AllContactsCount = result.Data.Items.Count;
+
+            body = "scopevisio";
+            result = instance.GetContactsWithHttpInfo(("{\"lastname\":\"scopevisio\"}"));
+            Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
+            Assert.GreaterOrEqual(result.Data.Items.Count, 1);
+            Assert.Less(result.Data.Items.Count, AllContactsCount);
+            Assert.IsNotEmpty(result.Data.Items[0].LastName);
+            Assert.IsTrue(result.Data.Items[0].LastName.ToLowerInvariant().Contains(body));
         }
-        
+
         /// <summary>
         /// Test GetImage
         /// </summary>

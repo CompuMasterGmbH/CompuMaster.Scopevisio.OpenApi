@@ -57,8 +57,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void InstanceTest()
         {
-            // TODO uncomment below to test 'IsInstanceOf' TeamworkApi
-            //Assert.IsInstanceOf(typeof(TeamworkApi), instance);
+            Assert.IsInstanceOf(typeof(TeamworkApi), instance);
         }
 
         

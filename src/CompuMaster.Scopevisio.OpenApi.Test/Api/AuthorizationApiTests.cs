@@ -58,7 +58,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void InstanceTest()
         {
-            // TODO uncomment below to test 'IsInstanceOf' AuthorizationApi
             Assert.IsInstanceOf(typeof(AuthorizationApi), instance);
             Assert.IsNotEmpty(instance.Configuration.Username);
             Assert.IsNotEmpty(instance.Configuration.ClientNumber);

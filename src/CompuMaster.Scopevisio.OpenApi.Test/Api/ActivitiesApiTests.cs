@@ -57,8 +57,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void InstanceTest()
         {
-            // TODO uncomment below to test 'IsInstanceOf' ActivitiesApi
-            //Assert.IsInstanceOf(typeof(ActivitiesApi), instance);
+            Assert.IsInstanceOf(typeof(ActivitiesApi), instance);
         }
 
         

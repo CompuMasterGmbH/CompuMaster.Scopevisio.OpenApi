@@ -78,7 +78,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void GetApplicationContextTest()
         {
-            Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext> result = instance.GetApplicationContextWithHttpInfo();
+            Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo> result = instance.GetApplicationContextWithHttpInfo();
             Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
             System.Console.WriteLine("RAW JSON:");
             System.Console.WriteLine(result.RawJsonContent);
@@ -127,7 +127,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void GetTeamworkTokenTest()
         {
-            // TODO uncomment below to test the method and replace null with proper value
             bool? force = null;
             Client.ApiResponse<Object> result = instance.GetTeamworkTokenWithHttpInfo(force);
             Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
@@ -145,7 +144,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void GetVersionTest()
         {
-            // TODO uncomment below to test the method and replace null with proper value
             Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version> result = instance.GetVersionWithHttpInfo();
             Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
             System.Console.WriteLine("RAW JSON:");
@@ -165,7 +163,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void HelloJsonTest()
         {
-            // TODO uncomment below to test the method and replace null with proper value
             Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello> result = instance.HelloJsonWithHttpInfo();
             Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
             System.Console.WriteLine("RAW JSON:");
@@ -182,7 +179,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         [Test]
         public void OrganisationJsonTest()
         {
-            // TODO uncomment below to test the method and replace null with proper value
             Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Records<CompuMaster.Scopevisio.OpenApi.Model.Organisation>> result= instance.OrganisationJsonWithHttpInfo();
             Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
             System.Console.WriteLine("RAW JSON:");

@@ -261,7 +261,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext> GetApplicationContextWithHttpInfo ()
+        public ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo> GetApplicationContextWithHttpInfo ()
         {
 
             var localVarPath = "/myaccount";
@@ -305,9 +305,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>(localVarResponse.Content);
+            CompuMaster.Scopevisio.OpenApi.Model.AccountInfo result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo>(localVarResponse.Content);
 
-            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>(localVarStatusCode,
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 localVarResponse.Content,
                 result);
@@ -318,7 +318,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>> GetApplicationContextAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo>> GetApplicationContextAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/myaccount";
@@ -362,9 +362,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>(localVarResponse.Content);
+            CompuMaster.Scopevisio.OpenApi.Model.AccountInfo result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo>(localVarResponse.Content);
 
-            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.ApplicationContext>(localVarStatusCode,
+            return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 localVarResponse.Content,
                 result);

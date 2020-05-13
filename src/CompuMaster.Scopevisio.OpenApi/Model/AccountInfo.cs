@@ -77,11 +77,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AccountInfo {\n");
-            sb.Append("  Customer: ").Append(Customer).Append("\n");
-            sb.Append("  Organisation: ").Append(Organisation).Append("\n");
-            sb.Append("  User: ").Append(User).Append("\n");
-            sb.Append("  Teamwork: ").Append(Teamwork).Append("\n");
-            sb.Append("}\n");
+            sb.Append("  Customer:\n").Append(Customer.ToString().Indent()).Append("\n");
+            sb.Append("  Organisation:\n").Append(Organisation.ToString().Indent()).Append("\n");
+            sb.Append("  User:\n").Append(User.ToString().Indent()).Append("\n");
+            sb.Append("  Teamwork:\n").Append(Teamwork.ToString().Indent()).Append("\n");
+            sb.Append("}");
             return sb.ToString();
         }
   

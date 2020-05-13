@@ -27,6 +27,7 @@ namespace CompuMaster.Scopevisio.OpenApi
             this.Config = config;
             this.AuthorizationApi = new Api.AuthorizationApi(this.Config);
             this.AdditionalApi = new Api.AdditionalApi(this.Config);
+#pragma warning disable CS0618 // Typ oder Element ist veraltet
             this.AccountingApi = new Api.AccountingApi(this.Config);
             this.ActivitiesApi = new Api.ActivitiesApi(this.Config);
             this.CashbookApi = new Api.CashbookApi(this.Config);
@@ -47,6 +48,7 @@ namespace CompuMaster.Scopevisio.OpenApi
             this.TaskApi = new Api.TaskApi(this.Config);
             this.TeamworkApi = new Api.TeamworkApi(this.Config);
             this.UserApi = new Api.UserApi(this.Config);
+#pragma warning restore CS0618 // Typ oder Element ist veraltet
         }
 
         /// <summary>
@@ -72,91 +74,109 @@ namespace CompuMaster.Scopevisio.OpenApi
         /// <summary>
         /// Accounting API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.AccountingApi AccountingApi { get; set; }
 
         /// <summary>
         /// Activities API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.ActivitiesApi ActivitiesApi { get; set; }
 
         /// <summary>
         /// Cashbook API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.CashbookApi CashbookApi { get; set; }
 
         /// <summary>
         /// Contact API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.ContactApi ContactApi { get; set; }
 
         /// <summary>
         /// Credit API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.CreditApi CreditApi { get; set; }
 
         /// <summary>
         /// Dispatch API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.DispatchApi DispatchApi { get; set; }
 
         /// <summary>
         /// Human resources API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.HumanResourcesApi HumanResourcesApi { get; set; }
 
         /// <summary>
         /// Incoming invoice API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.IncomingInvoiceApi IncomingInvoiceApi { get; set; }
 
         /// <summary>
         /// Offer API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.OfferApi OfferApi { get; set; }
 
         /// <summary>
         /// Opportunity API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.OpportunityApi OpportunityApi { get; set; }
 
         /// <summary>
         /// Order API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.OrderApi OrderApi { get; set; }
 
         /// <summary>
         /// Organization API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.OrganisationApi OrganisationApi { get; set; }
 
         /// <summary>
         /// Outgoing invoice API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.OutgoingInvoiceApi OutgoingInvoiceApi { get; set; }
 
         /// <summary>
         /// Product API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.ProductApi ProductApi { get; set; }
 
         /// <summary>
         /// Project API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.ProjectApi ProjectApi { get; set; }
 
         /// <summary>
         /// Recurring invoice API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.RecurringInvoiceApi RecurringInvoiceApi { get; set; }
 
         /// <summary>
         /// Report API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.ReportApi ReportApi { get; set; }
 
         /// <summary>
         /// Task API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.TaskApi TaskApi { get; set; }
 
         /// <summary>
@@ -167,6 +187,7 @@ namespace CompuMaster.Scopevisio.OpenApi
         /// <summary>
         /// User API methods
         /// </summary>
+        [Obsolete("Unstable or incomplete implementation", false)]
         public Api.UserApi UserApi { get; set; }
 
         /// <summary>

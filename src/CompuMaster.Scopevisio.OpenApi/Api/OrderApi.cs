@@ -21,6 +21,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
+    [Obsolete("Unstable or incomplete implementation", false)]
     public partial class OrderApi 
     {
         private CompuMaster.Scopevisio.OpenApi.Client.ExceptionFactory _exceptionFactory = (name, response) => null;

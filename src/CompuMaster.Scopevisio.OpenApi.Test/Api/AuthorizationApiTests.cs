@@ -130,7 +130,19 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             Assert.IsNotEmpty(instance.Configuration.AccessToken);
             //Assert.IsNotEmpty(instance.Configuration.RefreshToken);
         }
-        
+
+        /// <summary>
+        /// Test Token and re-authenticate in a 2nd request
+        /// </summary>
+        [Test]
+        public void TokenWorkflowTest_MultiHttpRequests()
+        {
+            this.TokenTest();
+            Assert.IsNotEmpty(instance.Configuration.AccessToken);
+            Assert.IsNotEmpty(new Api.AdditionalApi(new TestConfig()).HelloJsonWithHttpInfo().Data.HelloMessage);
+        }
+
+
     }
 
 }

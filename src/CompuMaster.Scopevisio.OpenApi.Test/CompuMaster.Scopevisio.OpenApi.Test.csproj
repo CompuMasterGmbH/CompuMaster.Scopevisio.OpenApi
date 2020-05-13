@@ -66,7 +66,29 @@ Contact: support@scopevisio.com
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" Exclude="obj\**" />
+    <Compile Include="Api\AccountingApiTests.cs" />
+    <Compile Include="Api\ActivitiesApiTests.cs" />
+    <Compile Include="Api\AdditionalApiTests.cs" />
+    <Compile Include="Api\AuthorizationApiTests.cs" />
+    <Compile Include="Api\CashbookApiTests.cs" />
+    <Compile Include="Api\ContactApiTests.cs" />
+    <Compile Include="Api\CreditApiTests.cs" />
+    <Compile Include="Api\DispatchApiTests.cs" />
+    <Compile Include="Api\HumanResourcesApiTests.cs" />
+    <Compile Include="Api\IncomingInvoiceApiTests.cs" />
+    <Compile Include="Api\OfferApiTests.cs" />
+    <Compile Include="Api\OpportunityApiTests.cs" />
+    <Compile Include="Api\OrderApiTests.cs" />
+    <Compile Include="Api\OrganisationApiTests.cs" />
+    <Compile Include="Api\OutgoingInvoiceApiTests.cs" />
+    <Compile Include="Api\ProductApiTests.cs" />
+    <Compile Include="Api\ProjectApiTests.cs" />
+    <Compile Include="Api\RecurringInvoiceApiTests.cs" />
+    <Compile Include="Api\ReportApiTests.cs" />
+    <Compile Include="Api\TaskApiTests.cs" />
+    <Compile Include="Api\TeamworkApiTests.cs" />
+    <Compile Include="Api\UserApiTests.cs" />
+    <Compile Include="TestConfig.cs" />
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

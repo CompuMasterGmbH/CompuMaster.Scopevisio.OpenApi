@@ -16,7 +16,12 @@ namespace CompuMaster.Scopevisio.OpenApi
             if (string.IsNullOrWhiteSpace(value))
                 return String.Empty;
             else
-                return "    " + value.Replace("\n", "\n    ");
+            {
+                string result = "    " + value.Replace("\n", "\n    ");
+                if (result.EndsWith("\n    "))
+                    result = result.Substring(0, result.Length - ("\n    ".Length - 1));
+                return result;
+            }
         }
     }
 }

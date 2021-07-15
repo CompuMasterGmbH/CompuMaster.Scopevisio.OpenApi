@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+	<AssemblyName>CompuMaster.Scopevisio.OpenApi.Test</AssemblyName>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="JUnitTestLogger4GitHub" Version="1.1.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="NUnit" Version="3.13.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="coverlet.collector" Version="3.0.2" />
+	  <PackageReference Include="JsonSubTypes" Version="1.8.0" />
+	  <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	  <PackageReference Include="RestSharp" Version="106.11.4.0" />
+	  <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+	  <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\CompuMaster.Scopevisio.OpenApi\CompuMaster.Scopevisio.OpenApi.csproj" />
+  </ItemGroup>
+
+</Project>

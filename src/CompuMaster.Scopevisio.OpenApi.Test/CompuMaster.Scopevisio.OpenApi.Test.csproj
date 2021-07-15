@@ -92,17 +92,17 @@ Contact: support@scopevisio.com
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\CompuMaster.Scopevisio.OpenApi\CompuMaster.Scopevisio.OpenApi.csproj">
-      <Project>{87401C65-DA22-45D5-A4E5-697F23C9E4A7}</Project>
-      <Name>CompuMaster.Scopevisio.OpenApi</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompuMaster.Scopevisio.OpenApi\CompuMaster.Scopevisio.OpenApi.csproj">
+      <Project>{59c6f37b-4487-49d0-9b64-c8b9e772272c}</Project>
+      <Name>CompuMaster.Scopevisio.OpenApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

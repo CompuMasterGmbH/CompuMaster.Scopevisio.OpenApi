@@ -60,6 +60,7 @@
 	<PropertyGroup>
 	<NoWarn>CS0472, CA1825, CA1031, IDE0034</NoWarn>
 	<ApplicationIcon>favicon.ico</ApplicationIcon>
+	<PackageIconUrl />
   </PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
 	  <DocumentationFile>bin\Release\CompuMaster.Scopevisio.OpenApi.xml</DocumentationFile>
@@ -83,5 +84,18 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".\logo_64x64.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo_64x64.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>

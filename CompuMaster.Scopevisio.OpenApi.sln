@@ -6,8 +6,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompuMaster.Scopevisio.Open
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompuMaster.Scopevisio.OpenApi.Test.NetStandard", "src\CompuMaster.Scopevisio.OpenApi.Test.NetStandard\CompuMaster.Scopevisio.OpenApi.Test.NetStandard.csproj", "{8CA7D7C9-425E-4F8E-BD06-74DDD04D79E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompuMaster.Scopevisio.OpenApi.Test.NetFramework", "src\CompuMaster.Scopevisio.OpenApi.Test.NetFramework\CompuMaster.Scopevisio.OpenApi.Test.NetFramework.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSampleApp", "src\ConsoleSampleApp\ConsoleSampleApp.csproj", "{612F8DBB-46C3-430B-9083-FD25DBB15275}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8FDD29A3-7D26-48C7-8C27-922FEEED0B24}"

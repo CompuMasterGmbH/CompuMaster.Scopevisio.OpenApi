@@ -59,7 +59,14 @@
   </PropertyGroup>
 	<PropertyGroup>
 	<NoWarn>CS0472, CA1825, CA1031, IDE0034</NoWarn>
+	<ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+	  <DocumentationFile>bin\Release\CompuMaster.Scopevisio.OpenApi.xml</DocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+	  <DocumentationFile>bin\Debug\CompuMaster.Scopevisio.OpenApi.xml</DocumentationFile>
+	</PropertyGroup>
   <ItemGroup>
     <PackageReference Include="JsonSubTypes" Version="1.8.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />

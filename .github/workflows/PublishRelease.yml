@@ -23,7 +23,7 @@ env:
     # Name of build project which creates required output for packaging/deployment
     BUILD_PROJECT: CompuMaster.Scopevisio.OpenApi/CompuMaster.Scopevisio.OpenApi.csproj
     # Name of directory (e.g. "bin") containing the subdirectory (e.g. "CI_CD") with all output files (*.dll)
-    BUILD_OUTPUT_BASEDIR: CompuMaster.Scopevisio.OpenApi/bin
+    BUILD_OUTPUT_BASEDIR: src/CompuMaster.Scopevisio.OpenApi/bin
 
 jobs:
     publish:

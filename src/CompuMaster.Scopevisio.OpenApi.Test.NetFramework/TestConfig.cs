@@ -48,6 +48,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         /// <returns></returns>
         static string InputLine(string fieldName)
         {
+            string EnvVarName = "TEST_" + fieldName.ToUpperInvariant();
+            if (!string.IsNullOrWhiteSpace(System.Environment.GetEnvironmentVariable(EnvVarName)))
+                return System.Environment.GetEnvironmentVariable(EnvVarName);
+
             string BufferFile = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "~Buffer.Sample." + fieldName.GetHashCode().ToString() + ".tmp");
             string DefaultValue;
             if (System.IO.File.Exists(BufferFile))
@@ -57,17 +61,19 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
 
             if (!string.IsNullOrWhiteSpace(DefaultValue))
                 return DefaultValue;
-            
-            Console.WriteLine("Please enter " + fieldName + " [" + DefaultValue + "]: ");
-            string UserInput = Console.ReadLine();
 
-            if (string.IsNullOrWhiteSpace(UserInput))
-                return DefaultValue;
-            else
-            {
-                System.IO.File.WriteAllText(BufferFile, UserInput);
-                return UserInput;
-            }
+            throw new InvalidOperationException("Missing persisted input for field \"" + fieldName + "\", use environment variable " + EnvVarName + " or write to disk by code with method PersistInputValue()");
+        }
+
+        /// <summary>
+        /// Buffer (write) an input value to disk (to temp path)
+        /// </summary>
+        /// <param name="fieldName"></param>
+        /// <param name="value"></param>
+        static void PersistInputValue(string fieldName, string value)
+        {
+            string BufferFile = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "~Buffer.Sample." + fieldName.GetHashCode().ToString() + ".tmp");
+            System.IO.File.WriteAllText(BufferFile, value);
         }
 
         /// <summary>

@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\CompuMaster.Scopevisio.OpenApi\CompuMaster.Scopevisio.OpenApi.csproj" />
+    <ProjectReference Include="..\CompuMaster.Scopevisio.OpenApi\CompuMaster.Scopevisio.OpenApi.csproj" />
   </ItemGroup>
 
 </Project>

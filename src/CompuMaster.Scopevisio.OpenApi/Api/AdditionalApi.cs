@@ -519,6 +519,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -546,10 +547,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
+            CompuMaster.Scopevisio.OpenApi.Model.TeamworkToken result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.TeamworkToken>(localVarResponse.Content);
+
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 localVarResponse.Content,
-                null);
+                result);
         }
 
         /// <summary>
@@ -588,6 +591,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -615,10 +619,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
+            CompuMaster.Scopevisio.OpenApi.Model.TeamworkToken result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.TeamworkToken>(localVarResponse.Content);
+
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 localVarResponse.Content,
-                null);
+                result);
         }
 
         /// <summary>

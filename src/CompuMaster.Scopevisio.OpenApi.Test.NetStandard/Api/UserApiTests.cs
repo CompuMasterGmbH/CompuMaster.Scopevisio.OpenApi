@@ -108,7 +108,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             bool? onlyActive = null;
             try
             {
-                Client.ApiResponse<Model.Records<Model.User>> result = instance.GetUsersWithHttpInfo(onlyActive);
+                Client.ApiResponse<List<Model.User>> result = instance.GetUsersWithHttpInfo(onlyActive);
                 Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
 
                 System.Console.WriteLine("RAW JSON");
@@ -119,11 +119,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
                 System.Console.WriteLine(result.Data.ToString());
                 System.Console.WriteLine("/User:ToString()\r\n");
 
-                Assert.NotZero(result.Data.Items.Count);
-                Assert.IsNotEmpty(result.Data.Items[0].Uid);
-                Assert.IsNotEmpty(result.Data.Items[0].LastName);
-                Assert.IsNotEmpty(result.Data.Items[0].Login);
-                int AllContactsCount = result.Data.Items.Count;
+                Assert.NotZero(result.Data.Count);
+                Assert.IsNotEmpty(result.Data[0].Uid);
+                Assert.IsNotEmpty(result.Data[0].LastName);
+                Assert.IsNotEmpty(result.Data[0].Login);
+                int AllContactsCount = result.Data.Count;
             }
             catch (Client.ApiException e)
             {

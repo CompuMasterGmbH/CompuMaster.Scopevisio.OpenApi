@@ -250,7 +250,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             result = instance.GetContactsWithHttpInfo(("{\"lastname\":\"scopevisio\"}"));
             Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
             Assert.GreaterOrEqual(result.Data.Items.Count, 1);
-            Assert.Less(result.Data.Items.Count, AllContactsCount);
+            Assert.LessOrEqual(result.Data.Items.Count, AllContactsCount);
             Assert.IsNotEmpty(result.Data.Items[0].LastName);
             Assert.IsTrue(result.Data.Items[0].LastName.ToLowerInvariant().Contains(body));
         }

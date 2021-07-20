@@ -572,7 +572,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Model.Records<Model.User>> GetUsersWithHttpInfo (bool? onlyActive = default(bool?))
+        public ApiResponse<List<Model.User>> GetUsersWithHttpInfo (bool? onlyActive = default(bool?))
         {
 
             var localVarPath = "/users";
@@ -617,9 +617,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            Model.Records<Model.User> results = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.Records<Model.User>>(localVarResponse.Content);
+            List<Model.User> results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Model.User>>(localVarResponse.Content);
 
-            return new ApiResponse<Model.Records<Model.User>>(localVarStatusCode,
+            return new ApiResponse<List<Model.User>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 localVarResponse.Content,
                 results);
@@ -631,7 +631,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="onlyActive">If set to true, deleted users are not returned. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Model.Records<Model.User>>> GetUsersAsyncWithHttpInfo (bool? onlyActive = default(bool?))
+        public async System.Threading.Tasks.Task<ApiResponse<List<Model.User>>> GetUsersAsyncWithHttpInfo (bool? onlyActive = default(bool?))
         {
 
             var localVarPath = "/users";
@@ -676,9 +676,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 if (exception != null) throw exception;
             }
 
-            Model.Records<Model.User> results = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.Records<Model.User>>(localVarResponse.Content);
+            List<Model.User> results = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Model.User>>(localVarResponse.Content);
 
-            return new ApiResponse<Model.Records<Model.User>>(localVarStatusCode,
+            return new ApiResponse<List<Model.User>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 localVarResponse.Content,
                 results);

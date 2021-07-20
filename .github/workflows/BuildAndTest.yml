@@ -47,6 +47,8 @@ jobs:
 
         env:
             RESULTS_PATH: TestResults.xml
+            TEST_USERNAME: ${{ secrets.TEST_USERNAME }}
+            TEST_CUSTOMERNO: ${{ secrets.TEST_CUSTOMERNO }}
 
         steps:
             - name: Checkout

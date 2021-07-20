@@ -49,7 +49,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         /// <returns></returns>
         static string InputLine(string fieldName)
         {
-            string EnvVarName = "TEST_" + fieldName.ToUpperInvariant();
+            string EnvVarName = "TEST_" + fieldName.Replace(" ", "").Replace(".", "").ToUpperInvariant();
             if (!string.IsNullOrWhiteSpace(System.Environment.GetEnvironmentVariable(EnvVarName)))
                 return System.Environment.GetEnvironmentVariable(EnvVarName);
 

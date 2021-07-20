@@ -83,7 +83,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
                 return DefaultValue;
 
             throw new InvalidOperationException("Missing persisted input for field \"" + fieldName + "\", use environment variable " + EnvVarName + " or write to disk by code with method PersistInputValue()\r\n" + 
-                "Ex. run following customized batch to create local temp-files-cache for credentials:\r\n" +
+                "Ex. run following customized batch to create local temp-files-cache for credentials (works on WKSxxxx workstations only):\r\n" +
                 "@echo off\r\n" +
                 "SET TEST_USERNAME=xy@abc.login\r\n" +
                 "SET TEST_CUSTOMERNO=1234567\r\n" +

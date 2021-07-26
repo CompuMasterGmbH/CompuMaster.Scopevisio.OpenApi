@@ -157,6 +157,29 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             Assert.IsNotEmpty(result.Data.CommitHash);
         }
 
+        [Test]
+        public void CheckScopvisioContextInfo()
+        {
+            CompuMaster.Scopevisio.OpenApi.Model.Version VersionResult = instance.GetVersionWithHttpInfo().Data;
+            CompuMaster.Scopevisio.OpenApi.Model.Records<CompuMaster.Scopevisio.OpenApi.Model.Organisation> OrganisationResult = instance.OrganisationJsonWithHttpInfo().Data;
+
+            Assert.NotZero(OrganisationResult.Items.Count);
+            foreach (CompuMaster.Scopevisio.OpenApi.Model.Organisation Org in OrganisationResult.Items)
+            {
+                Assert.NotNull(Org.Id);
+                Assert.NotNull(Org.Name);
+                if (Org.Name != "Scopevisio Demo AG")
+                {
+                    //Assert.NotNull(Org.TeamworkTenantId, Org.Name);
+                    //Assert.NotNull(Org.TeamworkTenantName, Org.Name);
+                }
+            }
+
+            CompuMaster.Scopevisio.OpenApi.Model.AccountInfo ScopevisioAppContext = instance.GetApplicationContextWithHttpInfo().Data;
+            Assert.NotNull(ScopevisioAppContext.ToString());
+        }
+
+
         /// <summary>
         /// Test HelloJson
         /// </summary>

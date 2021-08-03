@@ -120,5 +120,5 @@ Async hello world=jon.doe@foo.bar
 ## Licensing
 
 This library is dual licensed:
-* Community edition is licensed under [AGPL 3.0](LICENSE)
+* Community edition is licensed under [MIT](LICENSE)
 * For commercial licensing, please contact info@compumaster.de

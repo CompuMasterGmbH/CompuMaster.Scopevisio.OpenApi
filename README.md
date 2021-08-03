@@ -113,9 +113,9 @@ Async hello world=jon.doe@foo.bar
 
 ## Dependencies
 
-- [RestSharp](https://www.nuget.org/packages/RestSharp) - 105.1.0 or later
-- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
-- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0 or later
+- [RestSharp](https://www.nuget.org/packages/RestSharp) 
+- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) 
+- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) 
 
 ## Licensing
 

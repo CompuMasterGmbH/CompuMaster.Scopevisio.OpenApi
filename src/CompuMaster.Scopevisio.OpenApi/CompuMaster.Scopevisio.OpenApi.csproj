@@ -4,10 +4,10 @@
 		<RootNamespace>CompuMaster.Scopevisio.OpenApi</RootNamespace>
 		<AssemblyName>CompuMaster.Scopevisio.OpenApi</AssemblyName>
 		<TargetFrameworks>netstandard2.0;netcoreapp3.1;net5.0;net48</TargetFrameworks>
-		<Version>2021.07.20.102</Version>
+		<Version>2022.04.01.100</Version>
 		<Authors>Jochen Wezel</Authors>
 		<Company>CompuMaster GmbH</Company>
-		<Copyright>2019-2021 CompuMaster GmbH</Copyright>
+		<Copyright>2019-2022 CompuMaster GmbH</Copyright>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Description>Client access library for the OpenScope API https://www.openscope.de/ (REST web API interface provided by Scopevisio AG, https://www.scopevisio.com/), library generated from Swagger/OpenAPI doc at https://appload.scopevisio.com/rest/swagger.json</Description>
 		<PackageProjectUrl>https://github.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi</PackageProjectUrl>
@@ -63,7 +63,7 @@
 	<PackageIconUrl />
   </PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-	  <DocumentationFile>bin\Release\CompuMaster.Scopevisio.OpenApi.xml</DocumentationFile>
+	  <DocumentationFile></DocumentationFile>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
 	  <DocumentationFile>bin\Debug\CompuMaster.Scopevisio.OpenApi.xml</DocumentationFile>

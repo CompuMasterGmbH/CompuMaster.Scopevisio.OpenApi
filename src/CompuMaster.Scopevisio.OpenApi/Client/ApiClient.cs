@@ -163,7 +163,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
 
             if (postBody != null) // http body (model or byte[]) parameter
             {
-                request.AddParameter(contentType, postBody, ParameterType.RequestBody);
+                request.AddBody(postBody, contentType);
+                //request.AddParameter(contentType, postBody, ParameterType.RequestBody);
             }
 
             return request;

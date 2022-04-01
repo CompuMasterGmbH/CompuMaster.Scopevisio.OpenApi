@@ -1978,9 +1978,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// contacts Returns Scopevisio contacts.  Required profile(s): &lt;i&gt;Kontakte (Anzeigen)&lt;/i&gt;.
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. (optional)</param>
+        /// <param name="jsonSearchExpression">search filter in JSON format. See also https://appload.scopevisio.com/static/browser/index.html#!/searchscope </param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Model.RecordCollection<Contact>> GetContactsWithHttpInfo (string body = default(string))
+        public ApiResponse<Model.RecordCollection<Contact>> GetContactsWithHttpInfo (string jsonSearchExpression = default(string))
         {
 
             var localVarPath = "/contacts";
@@ -2004,14 +2004,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
+            localVarPostBody = jsonSearchExpression; 
 
             // authentication (oauth) required
             // oauth required

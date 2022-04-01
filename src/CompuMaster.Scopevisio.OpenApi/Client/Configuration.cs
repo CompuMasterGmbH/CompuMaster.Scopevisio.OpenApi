@@ -29,7 +29,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.0.0";
+        public string Version { get { return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(); } }
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -114,7 +114,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "CompuMaster OpenScope/" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + " (.Net)";
+            UserAgent = "CompuMaster OpenScope/" + this.Version + " (.Net)";
             BasePath = "https://appload.scopevisio.com/rest";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();

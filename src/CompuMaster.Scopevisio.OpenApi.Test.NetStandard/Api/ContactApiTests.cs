@@ -246,13 +246,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             Assert.IsNotEmpty(result.Data.Items[0].OwnerUid);
             int AllContactsCount = result.Data.Items.Count;
 
-            body = "scopevisio";
-            result = instance.GetContactsWithHttpInfo(("{\"lastname\":\"scopevisio\"}"));
+            result = instance.GetContactsWithHttpInfo(@"{""search"" : [{""field"":""lastname"",""value"":""scopevisio"",""operator"":""startswith""}]}");
             Assert.AreEqual((int)System.Net.HttpStatusCode.OK, result.StatusCode);
-            Assert.GreaterOrEqual(result.Data.Items.Count, 1);
+            Assert.AreEqual(1, result.Data.Items.Count);
             Assert.LessOrEqual(result.Data.Items.Count, AllContactsCount);
             Assert.IsNotEmpty(result.Data.Items[0].LastName);
-            Assert.IsTrue(result.Data.Items[0].LastName.ToLowerInvariant().Contains(body));
+            Assert.IsTrue(result.Data.Items[0].LastName.ToLowerInvariant().Contains("scopevisio"));
         }
 
         /// <summary>

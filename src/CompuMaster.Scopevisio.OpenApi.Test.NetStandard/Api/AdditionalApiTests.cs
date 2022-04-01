@@ -139,6 +139,23 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         }
 
         /// <summary>
+        /// Write environment variables to temp file on disk for later re-use in unit testing
+        /// </summary>
+        [Test, Explicit("Run only to persist login credentials on dev workstation")]
+        public void PersistInputValue()
+        {
+            System.Console.WriteLine("Environment TEST_USERNAME=" + System.Environment.GetEnvironmentVariable("TEST_USERNAME"));
+            var tconfig = new CompuMaster.Scopevisio.OpenApi.Test.TestConfig(true);
+            System.Console.WriteLine("Environment written to disk for future use at local dev workstation:");
+            System.Console.WriteLine("- ClientNumber=" + tconfig.ClientNumber);
+            System.Console.WriteLine("- Username=" + tconfig.Username);
+            if (tconfig.Password != null && tconfig.Password != "")
+                System.Console.WriteLine("- Password=********************");
+            else 
+                System.Console.WriteLine("- Password=");
+        }
+
+        /// <summary>
         /// Test GetVersion
         /// </summary>
         [Test]
@@ -152,7 +169,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             System.Console.WriteLine(result.Data.ToString());
 
             Assert.Less(new DateTime(2020, 05, 01), result.Data.BuildDate);
-            Assert.Less(10000, result.Data.BuildNumber);
+            Assert.Less(0, result.Data.BuildNumber);
+            Assert.Less(result.Data.BuildNumber, 65535);
             Assert.Less(new DateTime(2020, 05, 01), result.Data.CommitDate);
             Assert.IsNotEmpty(result.Data.CommitHash);
         }

@@ -65,25 +65,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         }
 
         /// <summary>
-        /// Gets the base path of the API client.
-        /// </summary>
-        /// <value>The base path</value>
-        internal String GetBasePath()
-        {
-            return this.Configuration.ApiClient.RestClient.BaseUrl.ToString();
-        }
-
-        /// <summary>
-        /// Sets the base path of the API client.
-        /// </summary>
-        /// <value>The base path</value>
-        [Obsolete("SetBasePath is deprecated, please do 'Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
-        internal void SetBasePath(String basePath)
-        {
-            // do nothing
-        }
-
-        /// <summary>
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
@@ -184,8 +165,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -260,8 +241,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;

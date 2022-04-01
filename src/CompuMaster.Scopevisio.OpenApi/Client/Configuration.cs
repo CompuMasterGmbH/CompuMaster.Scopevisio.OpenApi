@@ -29,7 +29,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.0.0";
+        public string Version { get { return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(); } }
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -114,7 +114,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "CompuMaster OpenScope/0.1.0/.Net";
+            UserAgent = "CompuMaster OpenScope/" + this.Version + " (.Net)";
             BasePath = "https://appload.scopevisio.com/rest";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -159,52 +159,6 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
                 ApiKeyPrefix.Add(keyValuePair);
             }
         }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration" /> class with different settings
-        /// </summary>
-        /// <param name="apiClient">Api client</param>
-        /// <param name="defaultHeader">Dictionary of default HTTP header</param>
-        /// <param name="username">Username</param>
-        /// <param name="password">Password</param>
-        /// <param name="accessToken">accessToken</param>
-        /// <param name="apiKey">Dictionary of API key</param>
-        /// <param name="apiKeyPrefix">Dictionary of API key prefix</param>
-        /// <param name="tempFolderPath">Temp folder path</param>
-        /// <param name="dateTimeFormat">DateTime format string</param>
-        /// <param name="timeout">HTTP connection timeout (in milliseconds)</param>
-        /// <param name="userAgent">HTTP user agent</param>
-        [Obsolete("Use explicit object construction and setting of properties.", true)]
-        internal Configuration(
-            // ReSharper disable UnusedParameter.Local
-            ApiClient apiClient = null,
-            IDictionary<string, string> defaultHeader = null,
-            string username = null,
-            string password = null,
-            string accessToken = null,
-            IDictionary<string, string> apiKey = null,
-            IDictionary<string, string> apiKeyPrefix = null,
-            string tempFolderPath = null,
-            string dateTimeFormat = null,
-            int timeout = 100000,
-            string userAgent = "CompuMaster OpenScope/0.1.0/.Net"
-            // ReSharper restore UnusedParameter.Local
-            )
-        {
-
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Configuration class.
-        /// </summary>
-        /// <param name="apiClient">Api client.</param>
-        [Obsolete("This constructor caused unexpected sharing of static data. It is no longer supported.", true)]
-        // ReSharper disable once UnusedParameter.Local
-        internal Configuration(ApiClient apiClient)
-        {
-
-        }
-
         #endregion Constructors
 
 
@@ -223,20 +177,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
             }
         }
 
-        private String _basePath = null;
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath {
-            get { return _basePath; }
-            set {
-                _basePath = value;
-                // pass-through to ApiClient if it's set.
-                if(_apiClient != null) {
-                    _apiClient.RestClient.BaseUrl = new Uri(_basePath);
-                }
-            }
-        }
+        public virtual string BasePath { get; set; }
 
         /// <summary>
         /// Gets or sets the default header.
@@ -246,12 +190,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// <summary>
         /// Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
         /// </summary>
-        public virtual int Timeout
-        {
-            
-            get { return ApiClient.RestClient.Timeout; }
-            set { ApiClient.RestClient.Timeout = value; }
-        }
+        public virtual int Timeout { get; set; }
 
         /// <summary>
         /// Gets or sets the HTTP user agent.

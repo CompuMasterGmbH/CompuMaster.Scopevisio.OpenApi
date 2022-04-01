@@ -148,7 +148,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             return 
                 (
                     this.BuildDate == input.BuildDate ||
-                    (this.BuildDate != null &&
+                    (this.BuildDate != DateTime.MinValue &&
                     this.BuildDate.Equals(input.BuildDate))
                 ) && 
                 (
@@ -162,7 +162,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
                 ) && 
                 (
                     this.CommitDate == input.CommitDate ||
-                    (this.CommitDate != null &&
+                    (this.CommitDate != DateTime.MinValue &&
                     this.CommitDate.Equals(input.CommitDate))
                 );
         }
@@ -176,12 +176,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.BuildDate != null)
+                if (this.BuildDate != DateTime.MinValue)
                     hashCode = hashCode * 59 + this.BuildDate.GetHashCode();
                 hashCode = hashCode * 59 + this.BuildNumber.GetHashCode();
                 if (this.CommitHash != null)
                     hashCode = hashCode * 59 + this.CommitHash.GetHashCode();
-                if (this.CommitDate != null)
+                if (this.CommitDate != DateTime.MinValue)
                     hashCode = hashCode * 59 + this.CommitDate.GetHashCode();
                 return hashCode;
             }

@@ -20,6 +20,9 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
+using RestSharp.Authenticators;
+using RestSharp.Extensions;
+using RestSharp.Serializers;
 
 namespace CompuMaster.Scopevisio.OpenApi.Client
 {
@@ -37,14 +40,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// Allows for extending request processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
-        partial void InterceptRequest(IRestRequest request);
+        partial void InterceptRequest(RestRequest request);
 
         /// <summary>
         /// Allows for extending response processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
         /// <param name="response">The RestSharp response object</param>
-        partial void InterceptResponse(IRestRequest request, IRestResponse response);
+        partial void InterceptResponse(RestRequest request, RestResponse response);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
@@ -77,10 +80,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");
-
-            RestClient = new RestClient(basePath);
+            
             Configuration = Client.Configuration.Default;
+            this.BasePath = basePath;
         }
+
+        public string BasePath { get; set; }
 
         ///// <summary>
         ///// Gets or sets the default API client for making HTTP calls.
@@ -100,11 +105,30 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// </remarks>
         public IReadableConfiguration Configuration { get; set; }
 
+        private RestClient _restClient;
         /// <summary>
         /// Gets or sets the RestClient.
         /// </summary>
         /// <value>An instance of the RestClient</value>
-        public RestClient RestClient { get; set; }
+        public RestClient RestClient 
+        { 
+            get
+            {
+                if (_restClient == null)
+                {
+                    var Options = new RestClientOptions(this.BasePath);
+                    Options.Timeout = this.Configuration.Timeout;
+                    Options.UserAgent = this.Configuration.UserAgent;
+
+                    RestClient = new RestClient(Options);
+                }
+                return _restClient;
+            }
+            set 
+            {
+                this._restClient = value;
+            }
+        }
 
         // Creates and sets up a RestRequest prior to a call.
         private RestRequest PrepareRequest(
@@ -158,7 +182,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// <param name="pathParams">Path parameters.</param>
         /// <param name="contentType">Content Type of the request</param>
         /// <returns>Object</returns>
-        public Object CallApi(
+        public RestResponse CallApi(
             String path, RestSharp.Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
             Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
@@ -168,18 +192,18 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
                 pathParams, contentType);
 
-            // set timeout
-            
-            RestClient.Timeout = Configuration.Timeout;
-            // set user agent
-            RestClient.UserAgent = Configuration.UserAgent;
-
             InterceptRequest(request);
-            var response = RestClient.Execute(request);
+            //var response = RestClient.ExecuteAsync(request).Result;
+            //var response = RestClient.Execute(request);
+            var syncTask = RestClient.ExecuteAsync(request);
+            syncTask.RunSynchronously();
+            var response = syncTask.Result;
+
             InterceptResponse(request, response);
 
-            return (Object) response;
+            return (RestResponse) response;
         }
+
         /// <summary>
         /// Makes the asynchronous HTTP request.
         /// </summary>
@@ -193,7 +217,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// <param name="pathParams">Path parameters.</param>
         /// <param name="contentType">Content type.</param>
         /// <returns>The Task instance.</returns>
-        public async System.Threading.Tasks.Task<Object> CallApiAsync(
+        public async System.Threading.Tasks.Task<RestResponse> CallApiAsync(
             String path, RestSharp.Method method, List<KeyValuePair<String, String>> queryParams, Object postBody,
             Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
@@ -202,12 +226,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
             var request = PrepareRequest(
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
                 pathParams, contentType);
-            RestClient.UserAgent = Configuration.UserAgent;
             InterceptRequest(request);
             //var response = await RestClient.ExecuteTaskAsync(request);
             var response = await RestClient.ExecuteAsync(request);
             InterceptResponse(request, response);
-            return (Object)response;
+            return (RestResponse)response;
         }
 
         /// <summary>
@@ -290,9 +313,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// <param name="response">The HTTP response.</param>
         /// <param name="type">Object type.</param>
         /// <returns>Object representation of the JSON string.</returns>
-        public object Deserialize(IRestResponse response, Type type)
+        public object Deserialize(RestResponse response, Type type)
         {
-            IList<Parameter> headers = response.Headers;
+            IReadOnlyCollection<Parameter> headers = response.Headers;
             if (type == typeof(byte[])) // return byte array
             {
                 return response.RawBytes;

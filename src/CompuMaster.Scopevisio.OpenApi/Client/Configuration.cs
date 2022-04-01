@@ -223,20 +223,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
             }
         }
 
-        private String _basePath = null;
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath {
-            get { return _basePath; }
-            set {
-                _basePath = value;
-                // pass-through to ApiClient if it's set.
-                if(_apiClient != null) {
-                    _apiClient.RestClient.BaseUrl = new Uri(_basePath);
-                }
-            }
-        }
+        public virtual string BasePath { get; set; }
 
         /// <summary>
         /// Gets or sets the default header.
@@ -246,12 +236,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// <summary>
         /// Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
         /// </summary>
-        public virtual int Timeout
-        {
-            
-            get { return ApiClient.RestClient.Timeout; }
-            set { ApiClient.RestClient.Timeout = value; }
-        }
+        public virtual int Timeout { get; set; }
 
         /// <summary>
         /// Gets or sets the HTTP user agent.

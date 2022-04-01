@@ -196,7 +196,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
             //var response = RestClient.ExecuteAsync(request).Result;
             //var response = RestClient.Execute(request);
             var syncTask = RestClient.ExecuteAsync(request);
-            syncTask.RunSynchronously();
+            //syncTask.RunSynchronously();
             var response = syncTask.Result;
 
             InterceptResponse(request, response);

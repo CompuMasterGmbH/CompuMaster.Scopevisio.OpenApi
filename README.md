@@ -117,8 +117,3 @@ Async hello world=jon.doe@foo.bar
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) 
 - [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) 
 
-## Licensing
-
-This library is dual licensed:
-* Community edition is licensed under [MIT](LICENSE)
-* For commercial licensing, please contact info@compumaster.de

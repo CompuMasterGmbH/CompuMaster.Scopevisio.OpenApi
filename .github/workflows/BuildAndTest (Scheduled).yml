@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build and Test (Scheduled)
 
 # PREREQUISITES FOR PUSH-BACK OF TEST RESULTS
 # Please note: test project usually required nuget package JUnitTestLogger
@@ -10,14 +10,9 @@ name: Build and Test
 
 # Controls when the action will run.
 on:
-    # Triggers the workflow on push or pull request events but only for the master branch
-    push:
-        branches: [master]
-    pull_request:
-        branches: [master]
-
-    # Allows you to run this workflow manually from the Actions tab
-    workflow_dispatch:
+    # Run every week on sunday to test Scopevisio OpenScope API
+    schedule:
+    - cron: "0 22 * * 6"
 
 env:
     # Path to the solution file relative to the root of the project

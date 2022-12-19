@@ -101,7 +101,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         /// <summary>
         /// Test GetLicences
         /// </summary>
-        [Test]
+        //[Test]
+        [Obsolete("Interface removed by Scopevisio")]
         public void GetLicencesTest()
         {
             Client.ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]> result = instance.GetLicencesWithHttpInfo();

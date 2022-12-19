@@ -356,6 +356,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        [Obsolete("Interface removed by Scopevisio")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]> GetLicencesWithHttpInfo ()
         {
 
@@ -413,6 +415,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// </summary>
         /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        [Obsolete("Interface removed by Scopevisio")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public async System.Threading.Tasks.Task<ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]>> GetLicencesAsyncWithHttpInfo ()
         {
 

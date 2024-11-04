@@ -117,7 +117,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
                 if (_restClient == null)
                 {
                     var Options = new RestClientOptions(this.BasePath);
-                    Options.Timeout = this.Configuration.Timeout;
+                    Options.Timeout =new TimeSpan(0,0,0,0, this.Configuration.Timeout);
                     Options.UserAgent = this.Configuration.UserAgent;
 
                     RestClient = new RestClient(Options);

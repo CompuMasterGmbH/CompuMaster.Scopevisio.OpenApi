@@ -88,7 +88,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
                 "SET TEST_USERNAME=xy@abc.login\r\n" +
                 "SET TEST_CUSTOMERNO=1234567\r\n" +
                 "SET TEST_PASSWORD=xxxxxxx(encode with leading ^-char )\r\n" +
-                @"dotnet test --filter ""FullyQualifiedName=CompuMaster.Scopevisio.OpenApi.Test.AdditionalApiTests.PersistInputValue"" --framework net5.0"
+                @"dotnet test --filter ""FullyQualifiedName=CompuMaster.Scopevisio.OpenApi.Test.AdditionalApiTests.PersistInputValue"" --framework net8.0"
                 );
         }
 

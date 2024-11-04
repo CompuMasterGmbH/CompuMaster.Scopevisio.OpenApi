@@ -186,3 +186,4 @@ $RECYCLE.BIN/
 **/*.sln.ide
 .vs
 dotnet_test.cmd
+dotnet-test-persist-cmscopevisioteamwork.cmd

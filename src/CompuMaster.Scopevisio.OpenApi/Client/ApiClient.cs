@@ -113,9 +113,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
                 if (_restClient == null)
                 {
                     if (this.Configuration.HttpClient != null)
-                        RestClient = new RestClient(this.ConfiguredRestClientOptions());
-                    else
                         RestClient = new RestClient(this.Configuration.HttpClient, this.ConfiguredRestClientOptions());
+                    else
+                        RestClient = new RestClient(this.ConfiguredRestClientOptions());
                 }
                 return _restClient;
             }

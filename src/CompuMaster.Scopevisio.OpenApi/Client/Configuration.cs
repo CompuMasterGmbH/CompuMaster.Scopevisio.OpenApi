@@ -18,10 +18,18 @@ using System.Text;
 
 namespace CompuMaster.Scopevisio.OpenApi.Client
 {
+    public partial class Configuration
+    {
+        /// <summary>
+        /// The http client for creating the RestClient
+        /// </summary>
+        public System.Net.Http.HttpClient HttpClient { get; set; }
+    }
+
     /// <summary>
     /// Represents a set of configuration settings
     /// </summary>
-    public class Configuration : IReadableConfiguration
+    public partial class Configuration : IReadableConfiguration
     {
         #region Constants
 

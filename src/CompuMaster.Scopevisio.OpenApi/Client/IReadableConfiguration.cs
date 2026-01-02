@@ -13,10 +13,18 @@ using System.Collections.Generic;
 
 namespace CompuMaster.Scopevisio.OpenApi.Client
 {
+    internal partial interface IReadableConfiguration
+    {
+        /// <summary>
+        /// The http client for creating the RestClient
+        /// </summary>
+        System.Net.Http.HttpClient HttpClient { get; }
+    }
+
     /// <summary>
     /// Represents a readable-only configuration contract.
     /// </summary>
-    internal interface IReadableConfiguration
+    internal partial interface IReadableConfiguration
     {
         /// <summary>
         /// Gets the access token.

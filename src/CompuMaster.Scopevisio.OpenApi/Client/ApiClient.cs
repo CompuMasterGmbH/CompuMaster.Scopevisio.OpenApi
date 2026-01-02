@@ -53,10 +53,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         /// Initializes a new instance of the <see cref="ApiClient" /> class
         /// with default configuration.
         /// </summary>
-        public ApiClient()
-        {
-            Configuration = CompuMaster.Scopevisio.OpenApi.Client.Configuration.Default;
-            RestClient = new RestClient("https://appload.scopevisio.com/rest");
+        public ApiClient() : this("https://appload.scopevisio.com/rest")
+        { 
         }
 
         /// <summary>
@@ -67,8 +65,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         public ApiClient(Configuration config)
         {
             Configuration = config ?? CompuMaster.Scopevisio.OpenApi.Client.Configuration.Default;
-
-            RestClient = new RestClient(Configuration.BasePath);
+            this.BasePath = Configuration.BasePath;
         }
 
         /// <summary>
@@ -79,8 +76,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
         public ApiClient(String basePath = "https://appload.scopevisio.com/rest")
         {
            if (String.IsNullOrEmpty(basePath))
-                throw new ArgumentException("basePath cannot be empty");
-            
+                throw new ArgumentException("basePath cannot be empty");            
             Configuration = Client.Configuration.Default;
             this.BasePath = basePath;
         }
@@ -116,11 +112,10 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
             {
                 if (_restClient == null)
                 {
-                    var Options = new RestClientOptions(this.BasePath);
-                    Options.Timeout =new TimeSpan(0,0,0,0, this.Configuration.Timeout);
-                    Options.UserAgent = this.Configuration.UserAgent;
-
-                    RestClient = new RestClient(Options);
+                    if (this.Configuration.HttpClient != null)
+                        RestClient = new RestClient(this.ConfiguredRestClientOptions());
+                    else
+                        RestClient = new RestClient(this.Configuration.HttpClient, this.ConfiguredRestClientOptions());
                 }
                 return _restClient;
             }
@@ -128,6 +123,14 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
             {
                 this._restClient = value;
             }
+        }
+
+        protected virtual RestClientOptions ConfiguredRestClientOptions()
+        {
+            var Options = new RestClientOptions(this.BasePath);
+            Options.Timeout = new TimeSpan(0, 0, 0, 0, this.Configuration.Timeout);
+            Options.UserAgent = this.Configuration.UserAgent;
+            return Options;
         }
 
         // Creates and sets up a RestRequest prior to a call.

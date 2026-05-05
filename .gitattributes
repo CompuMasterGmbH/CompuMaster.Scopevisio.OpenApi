@@ -1,4 +1,4 @@
-###############################################################################
+﻿###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
@@ -61,3 +61,19 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+* text=auto eol=crlf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.nupkg binary
+*.snk binary
+*.pfx binary
+*.xls binary
+*.xlsx binary
+*.doc binary
+*.docx binary
+*.ppt binary
+*.pptx binary

@@ -8,3 +8,8 @@ dotnet_diagnostic.CA1825.severity = silent
 
 # CA1031: Do not catch general exception types
 dotnet_diagnostic.CA1031.severity = silent
+# Text file defaults for this repository
+[*]
+charset = utf-8-bom
+end_of_line = crlf
+insert_final_newline = true

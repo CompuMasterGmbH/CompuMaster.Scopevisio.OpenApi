@@ -9,7 +9,7 @@ namespace CompuMaster.Scopevisio.OpenApi
     /// <summary>
     /// Client for accessing the OpenScope API at https://appload.scopevisio.com/rest/swagger.json
     /// </summary>
-    public class OpenScopeApiClient
+    public partial class OpenScopeApiClient
     {
         /// <summary>
         /// Create a new client instance for the OpenScope API REST web service at https://appload.scopevisio.com/rest/swagger.json

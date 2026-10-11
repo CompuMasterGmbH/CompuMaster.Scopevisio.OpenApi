@@ -6,12 +6,12 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 197,
-    "matching_routes": 192,
-    "missing_routes": 131,
+    "source_routes": 201,
+    "matching_routes": 196,
+    "missing_routes": 127,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 171,
-    "source_http_methods": 400,
+    "source_routes_on_unstable_classes": 175,
+    "source_http_methods": 408,
     "status_counts": {
       "deferred": 323
     },
@@ -30,7 +30,7 @@
       "Order": 1,
       "OutgoingInvoice": 5,
       "Product": 1,
-      "Project": 7,
+      "Project": 3,
       "RecurringInvoice": 1,
       "Report": 1,
       "Reportsheet": 2
@@ -6665,10 +6665,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.GetProjectResourceDetailsAsyncWithHttpInfo",
+        "ProjectApi.GetProjectResourceDetailsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -6715,10 +6718,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.GetProjectRevenueDetailsAsyncWithHttpInfo",
+        "ProjectApi.GetProjectRevenueDetailsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -13566,10 +13572,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.SearchProjectResourcesAsyncWithHttpInfo",
+        "ProjectApi.SearchProjectResourcesWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -13687,10 +13696,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.SearchProjectRevenuesAsyncWithHttpInfo",
+        "ProjectApi.SearchProjectRevenuesWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -26404,6 +26416,390 @@
         [
           "POST",
           "/timeentryrunentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectResourceDetails",
+      "access": "public",
+      "return_type": "ProjectResourcesResponse",
+      "parameters": "long projectId, string fields = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectResourceDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectResourceDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<ProjectResourcesResponse>",
+      "parameters": "long projectId, string fields = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/project/{projectId}/projectresources"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectResourceDetailsAsync",
+      "access": "public",
+      "return_type": "Task<ProjectResourcesResponse>",
+      "parameters": "long projectId, string fields, CancellationToken cancellationToken",
+      "line": 53,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectResourceDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectResourceDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectResourcesResponse>>",
+      "parameters": "long projectId, string fields = null",
+      "line": 59,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectResourceDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectResourceDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectResourcesResponse>>",
+      "parameters": "long projectId, string fields, CancellationToken cancellationToken",
+      "line": 69,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/project/{projectId}/projectresources"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectRevenueDetails",
+      "access": "public",
+      "return_type": "ProjectRevenuesResponse",
+      "parameters": "long projectId, string fields = null, ProjectRevenueType? revenueType = null",
+      "line": 92,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectRevenueDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectRevenueDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<ProjectRevenuesResponse>",
+      "parameters": "long projectId, string fields = null, ProjectRevenueType? revenueType = null",
+      "line": 99,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/project/{projectId}/projectrevenue"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectRevenueDetailsAsync",
+      "access": "public",
+      "return_type": "Task<ProjectRevenuesResponse>",
+      "parameters": "long projectId, string fields, ProjectRevenueType? revenueType, CancellationToken cancellationToken",
+      "line": 126,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectRevenueDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectRevenueDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectRevenuesResponse>>",
+      "parameters": "long projectId, string fields = null, ProjectRevenueType? revenueType = null",
+      "line": 132,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectRevenueDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectRevenueDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectRevenuesResponse>>",
+      "parameters": "long projectId, string fields, ProjectRevenueType? revenueType, CancellationToken cancellationToken",
+      "line": 143,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/project/{projectId}/projectrevenue"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResources",
+      "access": "public",
+      "return_type": "ProjectResourcesResponse",
+      "parameters": "ProjectResourcesSearchRequest query",
+      "line": 167,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectResourcesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResourcesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<ProjectResourcesResponse>",
+      "parameters": "ProjectResourcesSearchRequest query",
+      "line": 174,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectresources/v2"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResourcesAsync",
+      "access": "public",
+      "return_type": "Task<ProjectResourcesResponse>",
+      "parameters": "ProjectResourcesSearchRequest query, CancellationToken cancellationToken",
+      "line": 198,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectResourcesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResourcesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectResourcesResponse>>",
+      "parameters": "ProjectResourcesSearchRequest query",
+      "line": 204,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectResourcesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResourcesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectResourcesResponse>>",
+      "parameters": "ProjectResourcesSearchRequest query, CancellationToken cancellationToken",
+      "line": 213,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectresources/v2"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenues",
+      "access": "public",
+      "return_type": "ProjectRevenuesResponse",
+      "parameters": "ProjectRevenuesSearchRequest query",
+      "line": 237,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectRevenuesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenuesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<ProjectRevenuesResponse>",
+      "parameters": "ProjectRevenuesSearchRequest query",
+      "line": 244,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectrevenue/v2"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenuesAsync",
+      "access": "public",
+      "return_type": "Task<ProjectRevenuesResponse>",
+      "parameters": "ProjectRevenuesSearchRequest query, CancellationToken cancellationToken",
+      "line": 269,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectRevenuesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenuesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectRevenuesResponse>>",
+      "parameters": "ProjectRevenuesSearchRequest query",
+      "line": 275,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectRevenuesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ResourceRevenue.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenuesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectRevenuesResponse>>",
+      "parameters": "ProjectRevenuesSearchRequest query, CancellationToken cancellationToken",
+      "line": 284,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectrevenue/v2"
         ]
       ],
       "delegates": [],

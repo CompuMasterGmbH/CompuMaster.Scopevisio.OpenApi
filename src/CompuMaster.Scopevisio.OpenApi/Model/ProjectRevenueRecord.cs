@@ -21,7 +21,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
 
         /// <summary>Gets the revenue type.</summary>
         /// <value>The value, or null when absent or JSON null.</value>
-        public ProjectRevenueType? RevenueType { get { long? value = Value<long?>("revenueType"); return value.HasValue ? (ProjectRevenueType?)value.Value : null; } }
+        public long? RevenueType { get { return Value<long?>("revenueType"); } }
 
         /// <summary>Gets the project identifier.</summary>
         /// <value>The value, or null when absent or JSON null.</value>

@@ -1,4 +1,4 @@
-/* 
+﻿/*
  * Scopevisio OpenScope REST API
  *
  * <p>This is an interactive API reference for the Scopevisio REST API.</p><p>Below you will see the main sections of the API. Click each section in order to see the endpoints that are available in that category and use the 'Try it out' button to make API calls.</p><p>For endpoints that require authentication you can click the lock symbol in the top right of the endpoint description, which will take you to a login form.</p><h3>Authentication</h3><p>In order to use the \"Try it out\" function in Swagger you need your own Scopevisio account. If you have not set up a Scopevisio user account already you can do so <a href='https://www.scopevisio.com' target='_blank'>here</a>.</p><h3>Example Application</h3><p>We also have an example application you can reach <a href='../browser/index.html'> here </a>. Usage requires a Scopevisio account.</p><h3>Search Documentation</h3><p>Our documentation regarding <a href='../browser/index.html#!/searchscope'>search specification and paging  </a>.</p><h3>General Documentation</h3><p>Our general documentation can be found <a href='../browser/index.html#!/documentation'> here </a>.</p>
@@ -2035,72 +2035,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 contactResults);
         }
 
-        /// <summary>
-        /// contacts Returns Scopevisio contacts.  Required profile(s): &lt;i&gt;Kontakte (Anzeigen)&lt;/i&gt;.
-        /// </summary>
-        /// <exception cref="CompuMaster.Scopevisio.OpenApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">search filter in JSON format. See also &lt;a href&#x3D;&#39;../browser/index.html#!/searchscope&#39;&gt;our search documentation&lt;/a&gt;. (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <inheritdoc cref="GetContactsAsyncWithHttpInfo(string, System.Threading.CancellationToken)"/>
+        /// <remarks>Uses <see cref="System.Threading.CancellationToken.None"/>. The optional null filter keeps the existing empty-request default.</remarks>
         public async System.Threading.Tasks.Task<ApiResponse<Model.RecordCollection<Contact>>> GetContactsAsyncWithHttpInfo (string body = default(string))
         {
-
-            var localVarPath = "/contacts";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (oauth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetContacts", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            Model.Records<Newtonsoft.Json.Linq.JObject> results = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.Records<Newtonsoft.Json.Linq.JObject>>(localVarResponse.Content);
-            Model.RecordCollection<Contact> contactResults = new Model.RecordCollection<Contact>(results);
-
-            return new ApiResponse<Model.RecordCollection<Contact>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                localVarResponse.Content,
-                contactResults);
+            return await GetContactsAsyncWithHttpInfo(body, System.Threading.CancellationToken.None).ConfigureAwait(false);
         }
 
         /// <summary>

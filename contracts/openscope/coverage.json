@@ -6,12 +6,12 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 189,
-    "matching_routes": 184,
-    "missing_routes": 139,
+    "source_routes": 192,
+    "matching_routes": 187,
+    "missing_routes": 136,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 164,
-    "source_http_methods": 378,
+    "source_routes_on_unstable_classes": 167,
+    "source_http_methods": 390,
     "status_counts": {
       "deferred": 323
     },
@@ -19,7 +19,7 @@
       "Accounting": 42,
       "Additional": 1,
       "Campaign": 2,
-      "Contact": 4,
+      "Contact": 3,
       "Credit": 1,
       "Data sources": 52,
       "Dispatch": 1,
@@ -31,11 +31,11 @@
       "Order": 1,
       "OutgoingInvoice": 5,
       "Product": 1,
-      "Project": 10,
+      "Project": 9,
       "RecurringInvoice": 1,
       "Report": 1,
       "Reportsheet": 2,
-      "Task": 2
+      "Task": 1
     },
     "duplicate_operation_ids": {}
   },
@@ -8800,10 +8800,13 @@
         "Contact"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ContactApi.SearchContactCommentsAsyncWithHttpInfo",
+        "ContactApi.SearchContactCommentsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "contactIdOrLegacyNumber",
@@ -8958,7 +8961,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ContactApi.GetContactsAsyncWithHttpInfo",
-        "ContactApi.GetContactsWithHttpInfo"
+        "ContactApi.GetContactsWithHttpInfo",
+        "ContactApi.SearchContactsAsyncWithHttpInfo",
+        "ContactApi.SearchContactsWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -13147,10 +13152,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.SearchProjectCommentsAsyncWithHttpInfo",
+        "ProjectApi.SearchProjectCommentsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "projectId",
@@ -13718,7 +13726,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.GetProjectsAsyncWithHttpInfo",
-        "ProjectApi.GetProjectsWithHttpInfo"
+        "ProjectApi.GetProjectsWithHttpInfo",
+        "ProjectApi.SearchProjectsAsyncWithHttpInfo",
+        "ProjectApi.SearchProjectsWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -14565,10 +14575,13 @@
         "Task"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "TaskApi.SearchTaskCommentsAsyncWithHttpInfo",
+        "TaskApi.SearchTaskCommentsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "taskId",
@@ -14675,7 +14688,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TaskApi.GetTasksAsyncWithHttpInfo",
-        "TaskApi.GetTasksWithHttpInfo"
+        "TaskApi.GetTasksWithHttpInfo",
+        "TaskApi.SearchTasksAsyncWithHttpInfo",
+        "TaskApi.SearchTasksWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -19521,6 +19536,198 @@
         [
           "POST",
           "/contacts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContacts",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchContactsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContactsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contacts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContactsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchContactsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContactsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchContactsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContactsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contacts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContactComments",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string contactIdOrLegacyNumber, SearchRequest query = null",
+      "line": 81,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchContactCommentsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContactCommentsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string contactIdOrLegacyNumber, SearchRequest query = null",
+      "line": 88,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{contactIdOrLegacyNumber}/comments"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContactCommentsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string contactIdOrLegacyNumber, SearchRequest query, CancellationToken cancellationToken",
+      "line": 111,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchContactCommentsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContactCommentsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string contactIdOrLegacyNumber, SearchRequest query = null",
+      "line": 117,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchContactCommentsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Search.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "SearchContactCommentsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string contactIdOrLegacyNumber, SearchRequest query, CancellationToken cancellationToken",
+      "line": 127,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{contactIdOrLegacyNumber}/comments"
         ]
       ],
       "delegates": [],
@@ -25807,6 +26014,198 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjects",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projects"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projects"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectComments",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long projectId, SearchRequest query = null",
+      "line": 80,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectCommentsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectCommentsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long projectId, SearchRequest query = null",
+      "line": 87,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/comments"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectCommentsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long projectId, SearchRequest query, CancellationToken cancellationToken",
+      "line": 109,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectCommentsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectCommentsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long projectId, SearchRequest query = null",
+      "line": 115,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectCommentsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectCommentsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long projectId, SearchRequest query, CancellationToken cancellationToken",
+      "line": 125,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/comments"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.cs",
       "class": "ProjectApi",
       "class_access": "public",
@@ -28218,6 +28617,198 @@
         [
           "GET",
           "/reports/{type}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTasks",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTasksWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTasksWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/tasks"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTasksAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTasksAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTasksAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTasksAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTasksAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/tasks"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTaskComments",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long taskId, SearchRequest query = null",
+      "line": 80,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTaskCommentsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTaskCommentsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long taskId, SearchRequest query = null",
+      "line": 87,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{taskId}/comments"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTaskCommentsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long taskId, SearchRequest query, CancellationToken cancellationToken",
+      "line": 109,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTaskCommentsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTaskCommentsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long taskId, SearchRequest query = null",
+      "line": 115,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTaskCommentsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.Search.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "SearchTaskCommentsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long taskId, SearchRequest query, CancellationToken cancellationToken",
+      "line": 125,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{taskId}/comments"
         ]
       ],
       "delegates": [],

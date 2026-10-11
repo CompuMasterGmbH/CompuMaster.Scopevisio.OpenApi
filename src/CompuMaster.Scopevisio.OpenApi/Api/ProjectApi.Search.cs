@@ -14,7 +14,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <summary>Searches projects and retains the complete JSON response.</summary>
         /// <param name="query">The optional search object, or null to omit the request body.</param>
         /// <returns>The JSON result, including records, metadata or a count scalar; null for an empty response.</returns>
-        /// <remarks>Requires the server's project read permissions. No fixed response schema is declared by the manufacturer.</remarks>
+        /// <remarks>Requires the server's project read permissions. No fixed response schema is declared by the manufacturer. Fractional values use .NET decimal precision and may round; raw JSON remains exact.</remarks>
         /// <exception cref="ApiException">The configured exception factory rejects the HTTP response.</exception>
         /// <exception cref="Newtonsoft.Json.JsonException">The response is invalid JSON or a fractional value exceeds the decimal range.</exception>
         public JToken SearchProjects(SearchRequest query = null)
@@ -74,7 +74,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="projectId">The project master ID.</param>
         /// <param name="query">The optional search object, or null to omit the request body.</param>
         /// <returns>The JSON result, including records, metadata or a count scalar; null for an empty response.</returns>
-        /// <remarks>Requires the server's project and comment read permissions. No fixed response schema is declared by the manufacturer.</remarks>
+        /// <remarks>Requires the server's project and comment read permissions. No fixed response schema is declared by the manufacturer. Fractional values use .NET decimal precision and may round; raw JSON remains exact.</remarks>
         /// <exception cref="ApiException">The configured exception factory rejects the HTTP response.</exception>
         /// <exception cref="Newtonsoft.Json.JsonException">The response is invalid JSON or a fractional value exceeds the decimal range.</exception>
         public JToken SearchProjectComments(long projectId, SearchRequest query = null)

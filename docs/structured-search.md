@@ -37,7 +37,7 @@ The [manufacturer search documentation](https://help.scopevisio.com/en/articles/
 
 ## Results, errors and cancellation
 
-Results retain unknown fields, paging metadata, nulls, arrays and count scalars. Integers retain their JSON integer representation; fractional numbers are parsed as decimals and date strings remain strings. Fractional values outside the .NET decimal range and invalid JSON raise the original JSON parsing exception. Empty response bodies produce null data; JSON null remains a JSON-null token. The raw response always remains available in `RawJsonContent`.
+Results retain unknown fields, paging metadata, nulls, arrays and count scalars. Integers retain their JSON integer representation; fractional numbers use .NET decimal precision (about 28–29 significant digits), and date strings remain strings. Higher-precision fractions and very small exponent values may round or underflow; this is not arbitrary decimal precision. RawJsonContent retains the exact input for callers requiring a different numeric representation. Fractional values outside the .NET decimal range and invalid JSON raise the original JSON parsing exception. Empty response bodies produce null data; JSON null remains a JSON-null token. The raw response always remains available in `RawJsonContent`.
 
 Each group's existing exception factory runs before JSON parsing and receives the new search method name. Its exception is thrown unchanged. Bearer authorization uses the existing configuration; no global serializer or authorization state is modified.
 

@@ -43,6 +43,21 @@ class InventoryTests(unittest.TestCase):
         self.assertTrue(methods[0]["deserializes_response"])
         self.assertEqual(methods[1]["delegates"], ["ReadWithHttpInfo"])
 
+    def test_jsonconvert_deserialization_including_nested_generics_is_recognized(self):
+        for expression in ("JsonConvert.DeserializeObject(response)",
+                           "JsonConvert.DeserializeObject < Records<JObject> > (response)",
+                           "client.Deserialize < Dictionary<string, List<Contact>> > (response)"):
+            with self.subTest(expression=expression):
+                methods = extract(source().replace("client.Deserialize(response)", expression), "fixture.cs")
+                self.assertTrue(methods[0]["deserializes_response"])
+
+    def test_comments_and_strings_do_not_claim_response_deserialization(self):
+        for expression in ('"Deserialize("; // JsonConvert.DeserializeObject<Records<JObject>>(response)',
+                           'null; /* client.Deserialize(response) */'):
+            with self.subTest(expression=expression):
+                methods = extract(source().replace("client.Deserialize(response)", expression), "fixture.cs")
+                self.assertFalse(methods[0]["deserializes_response"])
+
     def test_internal_methods_and_internal_classes_are_not_public_coverage(self):
         for api in (source(access="internal"), source(class_access="internal")):
             report = build_report(spec(), {"fixture.cs": api}, "", "hash")

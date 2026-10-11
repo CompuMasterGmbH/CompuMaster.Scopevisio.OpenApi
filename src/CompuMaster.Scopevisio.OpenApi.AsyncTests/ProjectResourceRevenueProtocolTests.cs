@@ -248,6 +248,61 @@ namespace CompuMaster.Scopevisio.OpenApi.AsyncTests
             }
         }
 
+        [Test]
+        public async Task ImportedRevenueTokensAreValidatedBeforeHttp(
+            [Values("2.1", "-0.1", "true", "false", "\"2\"", "3", "-1", "4294967296", "9999999999999999999999999999999999999999", "{}", "[]")] string json,
+            [Values(false, true)] bool copyConstructor, [Values(0, 2)] int mode)
+        {
+            var handler = new Handler(token => Task.FromResult(Response(HttpStatusCode.OK, RevenueJson)));
+            using (var transport = new HttpClient(handler))
+            {
+                var source = new JObject { ["projectStartFrom"] = "2026-01-01", ["projectStartTo"] = "2026-12-31", ["revenueType"] = JToken.Parse(json) };
+                var query = copyConstructor ? new ProjectRevenuesSearchRequest(source) :
+                    new ProjectRevenuesSearchRequest { ProjectStartFrom = "2026-01-01", ProjectStartTo = "2026-12-31" };
+                if (!copyConstructor) query["revenueType"] = JToken.Parse(json);
+                Exception actual = null;
+                try { await Invoke(3, mode, new ProjectApi(ConfigurationFor(transport)), query, null, null, CancellationToken.None); }
+                catch (Exception error) { actual = error; }
+                Assert.That(actual, Is.TypeOf<ArgumentOutOfRangeException>(), "A raw non-integer token must not be rounded or coerced for validation.");
+                Assert.That(handler.Calls, Is.Zero);
+                Assert.That(query["revenueType"].ToString(Formatting.None), Is.EqualTo(json));
+            }
+        }
+
+        [Test]
+        public async Task RawDateBoundsMustBeStringsBeforeHttp([Values(2, 3)] int route,
+            [Values("20260101", "true")] string json, [Values(0, 2)] int mode)
+        {
+            var handler = new Handler(token => Task.FromResult(Response(HttpStatusCode.OK, IsRevenue(route) ? RevenueJson : ResourceJson)));
+            using (var transport = new HttpClient(handler))
+            {
+                var query = (JObject)ValidQuery(route);
+                query["projectStartFrom"] = JToken.Parse(json);
+                Exception actual = null;
+                try { await Invoke(route, mode, new ProjectApi(ConfigurationFor(transport)), query, null, null, CancellationToken.None); }
+                catch (Exception error) { actual = error; }
+                Assert.That(actual, Is.TypeOf<ArgumentException>(), "A raw date value must not be coerced to a string only for validation.");
+                Assert.That(handler.Calls, Is.Zero);
+                Assert.That(query["projectStartFrom"].ToString(Formatting.None), Is.EqualTo(json));
+            }
+        }
+
+        [Test]
+        public async Task RawRevenueOmissionAndExplicitNullRemainCallerControlled([Values(false, true)] bool explicitNull, [Values(0, 2)] int mode)
+        {
+            var handler = new Handler(token => Task.FromResult(Response(HttpStatusCode.OK, RevenueJson)));
+            using (var transport = new HttpClient(handler))
+            {
+                var query = new ProjectRevenuesSearchRequest { ProjectStartFrom = "2026-01-01", ProjectStartTo = "2026-12-31" };
+                if (explicitNull) query["revenueType"] = JValue.CreateNull();
+                Assert.That(query.RevenueType, Is.Null);
+                await Invoke(3, mode, new ProjectApi(ConfigurationFor(transport)), query, null, null, CancellationToken.None);
+                var sent = JObject.Parse(handler.Body);
+                if (explicitNull) Assert.That(sent["revenueType"].Type, Is.EqualTo(JTokenType.Null));
+                else Assert.That(sent.Property("revenueType"), Is.Null);
+            }
+        }
+
         private static bool IsRevenue(int route) { return route == 1 || route == 3; }
         private static object ValidQuery(int route)
         {

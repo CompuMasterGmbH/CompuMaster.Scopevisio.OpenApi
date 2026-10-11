@@ -6,19 +6,19 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 201,
-    "matching_routes": 196,
-    "missing_routes": 127,
+    "source_routes": 205,
+    "matching_routes": 200,
+    "missing_routes": 123,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 175,
-    "source_http_methods": 408,
+    "source_routes_on_unstable_classes": 179,
+    "source_http_methods": 416,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
       "Accounting": 42,
       "Campaign": 2,
-      "Contact": 2,
+      "Contact": 1,
       "Credit": 1,
       "Data sources": 52,
       "Dispatch": 1,
@@ -30,7 +30,6 @@
       "Order": 1,
       "OutgoingInvoice": 5,
       "Product": 1,
-      "Project": 3,
       "RecurringInvoice": 1,
       "Report": 1,
       "Reportsheet": 2
@@ -388,10 +387,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.RemoveTimeEntryByLegacyNumberAsyncWithHttpInfo",
+        "ProjectApi.RemoveTimeEntryByLegacyNumberWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "legacynumber",
@@ -430,10 +432,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.RemoveTimeEntryAsyncWithHttpInfo",
+        "ProjectApi.RemoveTimeEntryWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "id",
@@ -8224,10 +8229,13 @@
         "Contact"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ContactApi.ModifyContactFieldsAsyncWithHttpInfo",
+        "ContactApi.ModifyContactFieldsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "contactId",
@@ -13476,10 +13484,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.CreateProjectResourceAsyncWithHttpInfo",
+        "ProjectApi.CreateProjectResourceWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "content in JSON format",
@@ -19657,6 +19668,102 @@
         [
           "POST",
           "/contacts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Modification.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "ModifyContactFields",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string contactId, ContactModification modification",
+      "line": 24,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ModifyContactFieldsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Modification.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "ModifyContactFieldsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string contactId, ContactModification modification",
+      "line": 31,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PATCH",
+          "/contact/modify/{contactId}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Modification.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "ModifyContactFieldsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string contactId, ContactModification modification, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ModifyContactFieldsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Modification.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "ModifyContactFieldsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string contactId, ContactModification modification",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ModifyContactFieldsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.Modification.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "ModifyContactFieldsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string contactId, ContactModification modification, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PATCH",
+          "/contact/modify/{contactId}"
         ]
       ],
       "delegates": [],
@@ -26231,6 +26338,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CreateResource.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectResource",
+      "access": "public",
+      "return_type": "ProjectResourceCreationResponse",
+      "parameters": "ProjectResourceCreationRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProjectResourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CreateResource.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectResourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<ProjectResourceCreationResponse>",
+      "parameters": "ProjectResourceCreationRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectresource/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CreateResource.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectResourceAsync",
+      "access": "public",
+      "return_type": "Task<ProjectResourceCreationResponse>",
+      "parameters": "ProjectResourceCreationRequest request, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProjectResourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CreateResource.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectResourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectResourceCreationResponse>>",
+      "parameters": "ProjectResourceCreationRequest request",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProjectResourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CreateResource.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectResourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ProjectResourceCreationResponse>>",
+      "parameters": "ProjectResourceCreationRequest request, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectresource/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
       "class": "ProjectApi",
       "class_access": "public",
@@ -26416,6 +26619,198 @@
         [
           "POST",
           "/timeentryrunentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntry",
+      "access": "public",
+      "return_type": "void",
+      "parameters": "string id",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RemoveTimeEntryWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntryWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string id",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "DELETE",
+          "/timeentry/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntryAsync",
+      "access": "public",
+      "return_type": "Task",
+      "parameters": "string id, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RemoveTimeEntryAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string id",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RemoveTimeEntryAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string id, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "DELETE",
+          "/timeentry/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntryByLegacyNumber",
+      "access": "public",
+      "return_type": "void",
+      "parameters": "string legacyNumber",
+      "line": 82,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RemoveTimeEntryByLegacyNumberWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntryByLegacyNumberWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string legacyNumber",
+      "line": 89,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "DELETE",
+          "/timeentry/legacynumber/{legacynumber}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntryByLegacyNumberAsync",
+      "access": "public",
+      "return_type": "Task",
+      "parameters": "string legacyNumber, CancellationToken cancellationToken",
+      "line": 110,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RemoveTimeEntryByLegacyNumberAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntryByLegacyNumberAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string legacyNumber",
+      "line": 116,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RemoveTimeEntryByLegacyNumberAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.RemoveTimeEntries.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "RemoveTimeEntryByLegacyNumberAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string legacyNumber, CancellationToken cancellationToken",
+      "line": 125,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "DELETE",
+          "/timeentry/legacynumber/{legacynumber}"
         ]
       ],
       "delegates": [],

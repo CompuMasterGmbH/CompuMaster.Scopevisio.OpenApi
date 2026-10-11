@@ -14,7 +14,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <summary>Searches contacts and retains the complete JSON response.</summary>
         /// <param name="query">The optional search object, or null to omit the request body.</param>
         /// <returns>The JSON result, including records, metadata or a count scalar; null for an empty response.</returns>
-        /// <remarks>Requires the server's contact read permissions. No fixed response schema is declared by the manufacturer.</remarks>
+        /// <remarks>Requires the server's contact read permissions. No fixed response schema is declared by the manufacturer. Fractional values use .NET decimal precision and may round; raw JSON remains exact.</remarks>
         /// <exception cref="ApiException">The configured exception factory rejects the HTTP response.</exception>
         /// <exception cref="Newtonsoft.Json.JsonException">The response is invalid JSON or a fractional value exceeds the decimal range.</exception>
         public JToken SearchContacts(SearchRequest query = null)
@@ -74,7 +74,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="contactIdOrLegacyNumber">The contact master ID or legacy number.</param>
         /// <param name="query">The optional search object, or null to omit the request body.</param>
         /// <returns>The JSON result, including records, metadata or a count scalar; null for an empty response.</returns>
-        /// <remarks>Requires the server's contact and comment read permissions. No fixed response schema is declared by the manufacturer.</remarks>
+        /// <remarks>Requires the server's contact and comment read permissions. No fixed response schema is declared by the manufacturer. Fractional values use .NET decimal precision and may round; raw JSON remains exact.</remarks>
         /// <exception cref="ApiException">The configured exception factory rejects the HTTP response.</exception>
         /// <exception cref="Newtonsoft.Json.JsonException">The response is invalid JSON or a fractional value exceeds the decimal range.</exception>
         /// <exception cref="ArgumentException">The contact identifier is null or empty.</exception>

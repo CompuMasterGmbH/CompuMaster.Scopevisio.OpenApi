@@ -25,18 +25,18 @@ python tools/contract_coverage.py
 git diff -- contracts/openscope/coverage.json
 ```
 
-These commands do not retrieve the contract, authenticate, read local test configuration or access a DMS server. Python checks are fully offline; .NET restore may access NuGet. The dedicated Contract Coverage workflow runs only these isolated checks. The existing Build and Test workflow includes real Authorization requests; obtaining green inventory checks does not authorize that workflow or local integration tests. The initial groundwork PR uses a `[skip ci]` commit marker to prevent automatic real-server tests without an exclusive window. It therefore has local verification evidence and requires coordinated CI before merge. The offline workflow is available for future contract checks after it is merged.
+These commands do not retrieve the contract, authenticate, read local test configuration or access a DMS server. Python checks are fully offline; .NET restore may access NuGet. The dedicated Contract Coverage workflow runs only these isolated checks. The existing Build and Test workflow includes real Authorization requests; obtaining green inventory checks does not authorize that workflow or local integration tests. The groundwork PR was merged with user-authorized `[skip ci]` after essential local verification. Subsequent batches may use the same explicit authorization; report local checks accurately and do not claim skipped CI as successful. The isolated offline workflow remains available. Real-server workflows still require coordinated exclusive access.
 
 [coverage.json](../contracts/openscope/coverage.json) contains every current operation, inherited and operation parameters, request/response contracts and security references into the pinned snapshot. Each row has an explicit status, reason and implementation phase. All 323 operations initially remain **deferred** for complete contract/live verification. Public source routes are evidence of exposure, not a supported-status assertion. Nothing has been marked unavailable based merely on documentation absence.
 
 | Observation | Count |
 |---|---:|
-| Existing distinct method/normalized-path routes | 192 |
-| Current routes matched | 187 |
-| Current routes missing | 136 |
+| Existing distinct method/normalized-path routes | 197 |
+| Current routes matched | 192 |
+| Current routes missing | 131 |
 | Legacy routes absent from current documentation | 5 |
-| Routes in classes marked unstable/incomplete | 167 |
-| Direct HTTP method implementations, including cancellation partials | 390 |
+| Routes in classes marked unstable/incomplete | 171 |
+| Direct HTTP method implementations, including cancellation partials | 400 |
 
 The source inventory includes all API files, public/internal class and method access, result type, parameters, direct response deserialization, native cancellation parameters, facade properties, unstable annotations and WithHttpInfo wrapper delegates. It includes handwritten changes embedded in generated files, notably ContactApi's typed results, as well as `AuthorizationApi.Cancellation.cs` and `AdditionalApi.Cancellation.cs`. It rejects unparsed HTTP calls and calls appearing outside the known API/transport boundary. Fixture tests cover visibility, comments/string braces, placeholder normalization, delegates, legacy routes and ambiguous input.
 

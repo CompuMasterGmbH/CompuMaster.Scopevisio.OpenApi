@@ -231,6 +231,30 @@ namespace CompuMaster.Scopevisio.OpenApi.AsyncTests
             }
         }
 
+        [TestCase("0.123456789012345678901234567891", "0.1234567890123456789012345679")]
+        [TestCase("1e-40", "0")]
+        public async Task DecimalPrecisionIsBoundedButRawJsonRetainsTheOriginalNumber(string json, string rounded)
+        {
+            var handler = new FakePrecisionHandler(json);
+            using (var transport = new HttpClient(handler))
+            {
+                var api = new ContactApi(ConfigurationFor(transport));
+                var result = await api.SearchContactsAsyncWithHttpInfo();
+                Assert.That(result.RawJsonContent, Is.EqualTo(json));
+                Assert.That(result.Data.Value<decimal>(), Is.EqualTo(decimal.Parse(rounded, System.Globalization.CultureInfo.InvariantCulture)));
+            }
+        }
+
+        private sealed class FakePrecisionHandler : HttpMessageHandler
+        {
+            private readonly string body;
+            internal FakePrecisionHandler(string body) { this.body = body; }
+            protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken token)
+            {
+                return Task.FromResult(Response(HttpStatusCode.OK, body));
+            }
+        }
+
         private static SearchRequest Query()
         {
             return new SearchRequest {

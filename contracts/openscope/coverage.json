@@ -6,20 +6,19 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 192,
-    "matching_routes": 187,
-    "missing_routes": 136,
+    "source_routes": 197,
+    "matching_routes": 192,
+    "missing_routes": 131,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 167,
-    "source_http_methods": 390,
+    "source_routes_on_unstable_classes": 171,
+    "source_http_methods": 400,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
       "Accounting": 42,
-      "Additional": 1,
       "Campaign": 2,
-      "Contact": 3,
+      "Contact": 2,
       "Credit": 1,
       "Data sources": 52,
       "Dispatch": 1,
@@ -31,11 +30,10 @@
       "Order": 1,
       "OutgoingInvoice": 5,
       "Product": 1,
-      "Project": 9,
+      "Project": 7,
       "RecurringInvoice": 1,
       "Report": 1,
-      "Reportsheet": 2,
-      "Task": 1
+      "Reportsheet": 2
     },
     "duplicate_operation_ids": {}
   },
@@ -638,10 +636,13 @@
         "Additional"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "1-contract-and-transport",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AdditionalApi.GetStatisticsUnitsAsyncWithHttpInfo",
+        "AdditionalApi.GetStatisticsUnitsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "language",
@@ -783,10 +784,13 @@
         "Contact"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ContactApi.GetChildOrganisationContactsAsyncWithHttpInfo",
+        "ContactApi.GetChildOrganisationContactsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -9730,10 +9734,13 @@
         "Task"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "TaskApi.GetFiltersAsyncWithHttpInfo",
+        "TaskApi.GetFiltersWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "type",
@@ -15009,10 +15016,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.SearchTimeEntryRunEntriesAsyncWithHttpInfo",
+        "ProjectApi.SearchTimeEntryRunEntriesWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "search filter in JSON format. See also <a target='_blank' href='https://help.scopevisio.com/de/articles/467360-search-scope-documentation'>our search documentation</a>.",
@@ -15043,10 +15053,13 @@
         "Project"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProjectApi.SearchTimeEntryRunsAsyncWithHttpInfo",
+        "ProjectApi.SearchTimeEntryRunsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "search filter in JSON format. See also <a target='_blank' href='https://help.scopevisio.com/de/articles/467360-search-scope-documentation'>our search documentation</a>.",
@@ -18595,6 +18608,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ReadOperations.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetStatisticsUnits",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string language = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStatisticsUnitsWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ReadOperations.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetStatisticsUnitsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string language = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/catalog/accounting/statisticsunit"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ReadOperations.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetStatisticsUnitsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string language, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStatisticsUnitsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ReadOperations.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetStatisticsUnitsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string language = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStatisticsUnitsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ReadOperations.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetStatisticsUnitsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string language, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/catalog/accounting/statisticsunit"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.cs",
       "class": "AdditionalApi",
       "class_access": "public",
@@ -19536,6 +19645,102 @@
         [
           "POST",
           "/contacts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ReadOperations.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetChildOrganisationContacts",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetChildOrganisationContactsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ReadOperations.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetChildOrganisationContactsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/childOrganisations"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ReadOperations.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetChildOrganisationContactsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetChildOrganisationContactsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ReadOperations.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetChildOrganisationContactsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetChildOrganisationContactsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ReadOperations.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetChildOrganisationContactsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/childOrganisations"
         ]
       ],
       "delegates": [],
@@ -26014,6 +26219,198 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRuns",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTimeEntryRunsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRunsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentryruns"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRunsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 48,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTimeEntryRunsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRunsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 54,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTimeEntryRunsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRunsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 63,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentryruns"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRunEntries",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 81,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTimeEntryRunEntriesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRunEntriesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 88,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentryrunentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRunEntriesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 109,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTimeEntryRunEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRunEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 115,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTimeEntryRunEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntryRunEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 124,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentryrunentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.Search.cs",
       "class": "ProjectApi",
       "class_access": "public",
@@ -28617,6 +29014,102 @@
         [
           "GET",
           "/reports/{type}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.ReadOperations.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetFilters",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string type",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFiltersWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.ReadOperations.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetFiltersWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string type",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/filters/{type}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.ReadOperations.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetFiltersAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string type, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFiltersAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.ReadOperations.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetFiltersAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string type",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFiltersAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.ReadOperations.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetFiltersAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string type, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/filters/{type}"
         ]
       ],
       "delegates": [],

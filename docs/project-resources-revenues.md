@@ -15,7 +15,7 @@ Each method offers synchronous typed data, WithHttpInfo, async convenience and e
 
 GET methods require the project master ID. Null field selection and revenue type are omitted; the server retains its defaults. Explicit empty fields and planning type zero are transmitted. ProjectRevenueType distinguishes Planning, Realization and Deviation; values outside the documented zero-to-two range fail before HTTP I/O.
 
-POST methods require a typed request with both ProjectStartFrom and ProjectStartTo. Missing/blank bounds fail before transport. Dates remain caller-supplied strings: the vendor pattern/examples use yyyy-MM-dd while its descriptions also mention dd.MM.yyyy. The SDK documents this inconsistency without reinterpreting dates or asserting that both forms are accepted by every server.
+POST methods require a typed request with both ProjectStartFrom and ProjectStartTo. Missing/blank bounds and raw values of a non-string JSON type fail before transport. Revenue type values imported through constructors/indexers must be JSON integer tokens in the documented zero-to-two range; fractions, booleans, strings and out-of-range integers are rejected without rounding or coercion. Omitted and explicit-null low-level revenue fields remain distinct and unchanged; live acceptance of explicit JSON null is not established. Dates remain caller-supplied strings: the vendor pattern/examples use yyyy-MM-dd while its descriptions also mention dd.MM.yyyy. The SDK documents this inconsistency without reinterpreting dates or asserting that both forms are accepted by every server.
 
 ```csharp
 var request = new ProjectRevenuesSearchRequest

@@ -36,9 +36,20 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
 
         /// <summary>Gets or sets the requested project revenue type.</summary>
         /// <value>The optional type, or null to retain the server's planning default.</value>
+        /// <exception cref="ArgumentOutOfRangeException">A non-null stored JSON value is not an integer between zero and two.</exception>
         public ProjectRevenueType? RevenueType
         {
-            get { int? value = Value<int?>("revenueType"); return value.HasValue ? (ProjectRevenueType?)value.Value : null; }
+            get
+            {
+                var token = this["revenueType"];
+                if (token == null || token.Type == JTokenType.Null) return null;
+                int value;
+                if (token.Type != JTokenType.Integer ||
+                    !int.TryParse(token.ToString(Newtonsoft.Json.Formatting.None), System.Globalization.NumberStyles.Integer,
+                        System.Globalization.CultureInfo.InvariantCulture, out value) || value < 0 || value > 2)
+                    throw new ArgumentOutOfRangeException(nameof(RevenueType), "The revenue type must be a JSON integer between zero and two.");
+                return (ProjectRevenueType)value;
+            }
             set { SetOptional("revenueType", value.HasValue ? new JValue((int)value.Value) : null); }
         }
 

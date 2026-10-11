@@ -163,7 +163,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="ApiException">The configured exception factory rejects the HTTP response.</exception>
         /// <exception cref="Newtonsoft.Json.JsonException">The response is invalid JSON, has an invalid envelope, or contains a fractional value exceeding the decimal range.</exception>
         /// <exception cref="ArgumentNullException">The required query is null.</exception>
-        /// <exception cref="ArgumentException">A required project-start date bound is missing.</exception>
+        /// <exception cref="ArgumentException">A required project-start date bound is missing or is not a JSON string.</exception>
         public ProjectResourcesResponse SearchProjectResources(ProjectResourcesSearchRequest query)
         {
             return SearchProjectResourcesWithHttpInfo(query).Data;
@@ -174,8 +174,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         public ApiResponse<ProjectResourcesResponse> SearchProjectResourcesWithHttpInfo(ProjectResourcesSearchRequest query)
         {
             if (query == null) throw new ArgumentNullException(nameof(query));
-            if (string.IsNullOrWhiteSpace(query.ProjectStartFrom) || string.IsNullOrWhiteSpace(query.ProjectStartTo))
-                throw new ArgumentException("Both project-start date bounds are required.", nameof(query));
+            ValidateProjectDateBounds(query);
             var localVarPath = "/projectresources/v2";
             var queryParams = new List<KeyValuePair<string, string>>();
             var response = Configuration.ApiClient.CallApi(localVarPath, Method.Post,
@@ -214,8 +213,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         {
             cancellationToken.ThrowIfCancellationRequested();
             if (query == null) throw new ArgumentNullException(nameof(query));
-            if (string.IsNullOrWhiteSpace(query.ProjectStartFrom) || string.IsNullOrWhiteSpace(query.ProjectStartTo))
-                throw new ArgumentException("Both project-start date bounds are required.", nameof(query));
+            ValidateProjectDateBounds(query);
             var localVarPath = "/projectresources/v2";
             var queryParams = new List<KeyValuePair<string, string>>();
             var response = await Configuration.ApiClient.CallApiAsync(localVarPath, Method.Post,
@@ -232,7 +230,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <exception cref="ApiException">The configured exception factory rejects the HTTP response.</exception>
         /// <exception cref="Newtonsoft.Json.JsonException">The response is invalid JSON, has an invalid envelope, or contains a fractional value exceeding the decimal range.</exception>
         /// <exception cref="ArgumentNullException">The required query is null.</exception>
-        /// <exception cref="ArgumentException">A required project-start date bound is missing.</exception>
+        /// <exception cref="ArgumentException">A required project-start date bound is missing or is not a JSON string.</exception>
         /// <exception cref="ArgumentOutOfRangeException">The revenue type is outside the documented range.</exception>
         public ProjectRevenuesResponse SearchProjectRevenues(ProjectRevenuesSearchRequest query)
         {
@@ -244,8 +242,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         public ApiResponse<ProjectRevenuesResponse> SearchProjectRevenuesWithHttpInfo(ProjectRevenuesSearchRequest query)
         {
             if (query == null) throw new ArgumentNullException(nameof(query));
-            if (string.IsNullOrWhiteSpace(query.ProjectStartFrom) || string.IsNullOrWhiteSpace(query.ProjectStartTo))
-                throw new ArgumentException("Both project-start date bounds are required.", nameof(query));
+            ValidateProjectDateBounds(query);
             ValidateProjectRevenueType(query.RevenueType);
             var localVarPath = "/projectrevenue/v2";
             var queryParams = new List<KeyValuePair<string, string>>();
@@ -285,8 +282,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         {
             cancellationToken.ThrowIfCancellationRequested();
             if (query == null) throw new ArgumentNullException(nameof(query));
-            if (string.IsNullOrWhiteSpace(query.ProjectStartFrom) || string.IsNullOrWhiteSpace(query.ProjectStartTo))
-                throw new ArgumentException("Both project-start date bounds are required.", nameof(query));
+            ValidateProjectDateBounds(query);
             ValidateProjectRevenueType(query.RevenueType);
             var localVarPath = "/projectrevenue/v2";
             var queryParams = new List<KeyValuePair<string, string>>();
@@ -295,6 +291,16 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
                 new Dictionary<string, string>(), new Dictionary<string, FileParameter>(),
                 new Dictionary<string, string>(), "application/json", cancellationToken).ConfigureAwait(false);
             return WrapProjectResponse(SearchJsonResponse.Parse("SearchProjectRevenues", response, ExceptionFactory), data => new ProjectRevenuesResponse(data));
+        }
+
+        private static void ValidateProjectDateBounds(JObject query)
+        {
+            foreach (var name in new[] { "projectStartFrom", "projectStartTo" })
+            {
+                var value = query[name];
+                if (value == null || value.Type != JTokenType.String || string.IsNullOrWhiteSpace(value.Value<string>()))
+                    throw new ArgumentException("Both project-start date bounds must be non-blank JSON strings.", nameof(query));
+            }
         }
 
         private static void ValidateProjectRevenueType(ProjectRevenueType? revenueType)

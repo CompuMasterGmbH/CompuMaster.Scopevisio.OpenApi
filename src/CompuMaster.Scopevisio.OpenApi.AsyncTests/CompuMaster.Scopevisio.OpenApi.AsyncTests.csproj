@@ -9,4 +9,7 @@
     <PackageReference Include="NUnit3TestAdapter" Version="6.2.0" />
     <ProjectReference Include="../CompuMaster.Scopevisio.OpenApi/CompuMaster.Scopevisio.OpenApi.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="../../contracts/openscope/coverage.json" Link="coverage.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

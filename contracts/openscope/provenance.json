@@ -1,0 +1,46 @@
+﻿{
+  "source": "https://appload.scopevisio.com/rest/openapi.json",
+  "retrieved_on": "2026-10-11",
+  "http_method": "GET",
+  "authentication": "none",
+  "raw_sha256": "255abeb5af135eac55380d3ed5213e25c6d55c59663cf0730b273ba0ce90293c",
+  "repository_sha256": "40060e2bbbf187b5d6f8a0397bc97a5e09e8c8cf5d548644d676b16e8f13c339",
+  "repository_format": "Parsed JSON, 2-space indentation, UTF-8 BOM, CRLF, final newline. Raw response bytes are not committed.",
+  "sdk_baseline_commit": "a72dde455591cef65425b953bc6a6d56d6b03baf",
+  "sdk_baseline_package": "CompuMaster.Scopevisio.OpenApi 2026.10.07.0",
+  "previous_snapshot_raw_sha256": "b5bfa4e8a1b90e1a31e417370024ef66b14f3d12bf5df9697b11f257c94fd2f6",
+  "previous_snapshot_date": "2026-10-10",
+  "changes_since_previous_snapshot": [
+    {
+      "pointer": "/components/schemas/CreditForm/properties/postingDate/example",
+      "previous": 1791294942655,
+      "current": 1791294919524
+    },
+    {
+      "pointer": "/components/schemas/MaterialPostingRow/example",
+      "previous": "{\"productId\":23456,\"productNumber\":\"AB-12341\",\"quantity\":5,\"warehouseId\":23456,\"contactId\":27719,\"amount\":100,\"price\":20,\"projectId\":100385,\"dimension1\":1001,\"dimension2\":2001,\"dimension3\":3001,\"postingTs\":\"1791294942667\"}",
+      "current": "{\"productId\":23456,\"productNumber\":\"AB-12341\",\"quantity\":5,\"warehouseId\":23456,\"contactId\":27719,\"amount\":100,\"price\":20,\"projectId\":100385,\"dimension1\":1001,\"dimension2\":2001,\"dimension3\":3001,\"postingTs\":\"1791294919534\"}"
+    },
+    {
+      "pointer": "/components/schemas/MaterialPostingRow/properties/postingTs/example",
+      "previous": 1791294942667,
+      "current": 1791294919534
+    },
+    {
+      "pointer": "/components/schemas/OfferForm/properties/valutaDate/example",
+      "previous": 1791294942669,
+      "current": 1791294919599
+    },
+    {
+      "pointer": "/components/schemas/OutgoingInvoiceForm/properties/postingDate/example",
+      "previous": 1791294942673,
+      "current": 1791294919603
+    },
+    {
+      "pointer": "/components/schemas/TaskForm/properties/reminderDateTS/example",
+      "previous": 1791294942685,
+      "current": 1791294919625
+    }
+  ],
+  "note": "The raw vendor hash is evidence of this retrieval, not a stable API version identifier. Review semantic changes before updating the pin."
+}

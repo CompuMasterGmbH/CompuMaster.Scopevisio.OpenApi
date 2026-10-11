@@ -1,0 +1,41 @@
+﻿name: Contract Coverage (Offline)
+
+on:
+  push:
+    paths:
+      - 'contracts/openscope/**'
+      - 'tools/contract_coverage.py'
+      - 'tools/test_contract_coverage.py'
+      - 'src/CompuMaster.Scopevisio.OpenApi/**'
+      - 'src/CompuMaster.Scopevisio.OpenApi.AsyncTests/**'
+      - '.github/workflows/ContractCoverage.yml'
+  pull_request:
+    paths:
+      - 'contracts/openscope/**'
+      - 'tools/contract_coverage.py'
+      - 'tools/test_contract_coverage.py'
+      - 'src/CompuMaster.Scopevisio.OpenApi/**'
+      - 'src/CompuMaster.Scopevisio.OpenApi.AsyncTests/**'
+      - '.github/workflows/ContractCoverage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test conservative source extraction
+        run: python -m unittest discover -s tools -p test_contract_coverage.py -v
+      - name: Verify pinned contract and reproducible report
+        run: python tools/contract_coverage.py --check
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Verify compiled API accessibility and isolated authorization
+        run: dotnet test src/CompuMaster.Scopevisio.OpenApi.AsyncTests/CompuMaster.Scopevisio.OpenApi.AsyncTests.csproj -f net8.0 --logger 'console;verbosity=quiet'

@@ -72,7 +72,7 @@ def extract(source, file):
             "parameters": " ".join(source[match.start(4):match.end(4)].split()),
             "line": source[:match.start(1)].count("\n") + 1,
             "native_cancellation_parameter": "CancellationToken" in parameters,
-            "deserializes_response": "Deserialize(" in body,
+            "deserializes_response": bool(re.search(r"\b(?:Deserialize|DeserializeObject)\s*(?:<[^;{}()]+>)?\s*\(", body_mask)),
             "routes": calls,
             "delegates": sorted(set(re.findall(r"\b(\w+(?:WithHttpInfo))\s*\(", body_mask))) if not calls else [],
         })

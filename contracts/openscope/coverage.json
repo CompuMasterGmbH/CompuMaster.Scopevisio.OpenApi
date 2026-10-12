@@ -6,18 +6,18 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 320,
-    "matching_routes": 315,
-    "missing_routes": 8,
+    "source_routes": 323,
+    "matching_routes": 318,
+    "missing_routes": 5,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 290,
-    "source_http_methods": 648,
+    "source_routes_on_unstable_classes": 293,
+    "source_http_methods": 654,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
       "Material management (BETA)": 4,
-      "OutgoingInvoice": 4
+      "OutgoingInvoice": 1
     },
     "duplicate_operation_ids": {}
   },
@@ -12669,10 +12669,13 @@
         "OutgoingInvoice"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "OutgoingInvoiceApi.DeleteOutgoingInvoicePositionsAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.DeleteOutgoingInvoicePositionsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -12738,10 +12741,13 @@
         "OutgoingInvoice"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "OutgoingInvoiceApi.UpdateAllOutgoingInvoicePositionsAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.UpdateAllOutgoingInvoicePositionsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -12771,10 +12777,13 @@
         "OutgoingInvoice"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "OutgoingInvoiceApi.UpdateOutgoingInvoicePositionsAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.UpdateOutgoingInvoicePositionsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -30593,6 +30602,294 @@
         [
           "POST",
           "/organisation/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DeleteOutgoingInvoicePositions",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "OutgoingInvoicePositionImportRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DeleteOutgoingInvoicePositionsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DeleteOutgoingInvoicePositionsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "OutgoingInvoicePositionImportRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoices/deletepositions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DeleteOutgoingInvoicePositionsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "OutgoingInvoicePositionImportRequest request, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DeleteOutgoingInvoicePositionsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DeleteOutgoingInvoicePositionsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OutgoingInvoicePositionImportRequest request = null",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DeleteOutgoingInvoicePositionsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DeleteOutgoingInvoicePositionsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OutgoingInvoicePositionImportRequest request, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoices/deletepositions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateAllOutgoingInvoicePositions",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "OutgoingInvoicePositionImportRequest request = null",
+      "line": 84,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateAllOutgoingInvoicePositionsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateAllOutgoingInvoicePositionsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "OutgoingInvoicePositionImportRequest request = null",
+      "line": 91,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoices/updateallpositions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateAllOutgoingInvoicePositionsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "OutgoingInvoicePositionImportRequest request, CancellationToken cancellationToken",
+      "line": 112,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateAllOutgoingInvoicePositionsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateAllOutgoingInvoicePositionsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OutgoingInvoicePositionImportRequest request = null",
+      "line": 118,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateAllOutgoingInvoicePositionsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateAllOutgoingInvoicePositionsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OutgoingInvoicePositionImportRequest request, CancellationToken cancellationToken",
+      "line": 127,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoices/updateallpositions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoicePositions",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "OutgoingInvoicePositionImportRequest request = null",
+      "line": 146,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateOutgoingInvoicePositionsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoicePositionsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "OutgoingInvoicePositionImportRequest request = null",
+      "line": 153,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoices/updatepositions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoicePositionsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "OutgoingInvoicePositionImportRequest request, CancellationToken cancellationToken",
+      "line": 174,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateOutgoingInvoicePositionsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoicePositionsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OutgoingInvoicePositionImportRequest request = null",
+      "line": 180,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateOutgoingInvoicePositionsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionImports.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoicePositionsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OutgoingInvoicePositionImportRequest request, CancellationToken cancellationToken",
+      "line": 189,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoices/updatepositions"
         ]
       ],
       "delegates": [],

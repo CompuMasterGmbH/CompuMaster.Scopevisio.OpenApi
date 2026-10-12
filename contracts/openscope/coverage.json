@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 702,
+    "source_http_methods": 708,
     "status_counts": {
       "deferred": 323
     },
@@ -1041,6 +1041,8 @@
       "phase": "2-contacts-projects-tasks",
       "public_source_route": true,
       "sdk_methods": [
+        "ContactApi.DownloadContactThumbnailAsyncWithHttpInfo",
+        "ContactApi.DownloadContactThumbnailWithHttpInfo",
         "ContactApi.GetImageAsyncWithHttpInfo",
         "ContactApi.GetImageWithHttpInfo"
       ],
@@ -5196,6 +5198,8 @@
       "phase": "3-accounting-invoices",
       "public_source_route": true,
       "sdk_methods": [
+        "IncomingInvoiceApi.DownloadIncomingInvoiceFileAsyncWithHttpInfo",
+        "IncomingInvoiceApi.DownloadIncomingInvoiceFileWithHttpInfo",
         "IncomingInvoiceApi.GetInvoiceFileAsyncWithHttpInfo",
         "IncomingInvoiceApi.GetInvoiceFileWithHttpInfo"
       ],
@@ -6333,6 +6337,8 @@
       "phase": "3-accounting-invoices",
       "public_source_route": true,
       "sdk_methods": [
+        "OutgoingInvoiceApi.DownloadOutgoingInvoiceFileAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.DownloadOutgoingInvoiceFileWithHttpInfo",
         "OutgoingInvoiceApi.GetOutgoingInvoiceFileAsyncWithHttpInfo",
         "OutgoingInvoiceApi.GetOutgoingInvoiceFileWithHttpInfo"
       ],
@@ -25538,6 +25544,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ThumbnailDownloads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "DownloadContactThumbnail",
+      "access": "public",
+      "return_type": "byte[]",
+      "parameters": "long id",
+      "line": 18,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadContactThumbnailWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ThumbnailDownloads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "DownloadContactThumbnailWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "long id",
+      "line": 25,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/thumb"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ThumbnailDownloads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "DownloadContactThumbnailAsync",
+      "access": "public",
+      "return_type": "Task<byte[]>",
+      "parameters": "long id, CancellationToken cancellationToken",
+      "line": 46,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadContactThumbnailAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ThumbnailDownloads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "DownloadContactThumbnailAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "long id",
+      "line": 52,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadContactThumbnailAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.ThumbnailDownloads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "DownloadContactThumbnailAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "long id, CancellationToken cancellationToken",
+      "line": 61,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/thumb"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.cs",
       "class": "ContactApi",
       "class_access": "public",
@@ -28540,6 +28642,102 @@
         [
           "POST",
           "/humanresourcesAvailability"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.FileDownloads.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadIncomingInvoiceFile",
+      "access": "public",
+      "return_type": "byte[]",
+      "parameters": "string idOrNumber",
+      "line": 18,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadIncomingInvoiceFileWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.FileDownloads.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadIncomingInvoiceFileWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "string idOrNumber",
+      "line": 25,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/incominginvoice/{idOrNumber}/file"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.FileDownloads.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadIncomingInvoiceFileAsync",
+      "access": "public",
+      "return_type": "Task<byte[]>",
+      "parameters": "string idOrNumber, CancellationToken cancellationToken",
+      "line": 48,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadIncomingInvoiceFileAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.FileDownloads.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadIncomingInvoiceFileAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "string idOrNumber",
+      "line": 54,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadIncomingInvoiceFileAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.FileDownloads.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadIncomingInvoiceFileAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "string idOrNumber, CancellationToken cancellationToken",
+      "line": 63,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/incominginvoice/{idOrNumber}/file"
         ]
       ],
       "delegates": [],
@@ -32092,6 +32290,102 @@
         [
           "POST",
           "/organisation/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.FileDownloads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadOutgoingInvoiceFile",
+      "access": "public",
+      "return_type": "byte[]",
+      "parameters": "string number",
+      "line": 18,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadOutgoingInvoiceFileWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.FileDownloads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadOutgoingInvoiceFileWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "string number",
+      "line": 25,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/{number}/file"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.FileDownloads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadOutgoingInvoiceFileAsync",
+      "access": "public",
+      "return_type": "Task<byte[]>",
+      "parameters": "string number, CancellationToken cancellationToken",
+      "line": 48,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadOutgoingInvoiceFileAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.FileDownloads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadOutgoingInvoiceFileAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "string number",
+      "line": 54,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadOutgoingInvoiceFileAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.FileDownloads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "DownloadOutgoingInvoiceFileAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "string number, CancellationToken cancellationToken",
+      "line": 63,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/{number}/file"
         ]
       ],
       "delegates": [],

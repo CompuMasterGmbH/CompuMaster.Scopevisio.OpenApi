@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 664,
+    "source_http_methods": 676,
     "status_counts": {
       "deferred": 323
     },
@@ -675,6 +675,8 @@
       "phase": "2-contacts-projects-tasks",
       "public_source_route": true,
       "sdk_methods": [
+        "ContactApi.GetContactPropertyDetailsAsyncWithHttpInfo",
+        "ContactApi.GetContactPropertyDetailsWithHttpInfo",
         "ContactApi.GetPropertyAsyncWithHttpInfo",
         "ContactApi.GetPropertyWithHttpInfo"
       ],
@@ -723,7 +725,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ContactApi.GetContactByIdAsyncWithHttpInfo",
-        "ContactApi.GetContactByIdWithHttpInfo"
+        "ContactApi.GetContactByIdWithHttpInfo",
+        "ContactApi.GetContactDetailsAsyncWithHttpInfo",
+        "ContactApi.GetContactDetailsWithHttpInfo"
       ],
       "parameters": [
         {
@@ -831,6 +835,8 @@
       "phase": "2-contacts-projects-tasks",
       "public_source_route": true,
       "sdk_methods": [
+        "ContactApi.GetContactEmployeeDetailsAsyncWithHttpInfo",
+        "ContactApi.GetContactEmployeeDetailsWithHttpInfo",
         "ContactApi.GetContactEmployeesAsyncWithHttpInfo",
         "ContactApi.GetContactEmployeesWithHttpInfo"
       ],
@@ -881,6 +887,8 @@
       "phase": "2-contacts-projects-tasks",
       "public_source_route": true,
       "sdk_methods": [
+        "ContactApi.GetContactEmployerDetailsAsyncWithHttpInfo",
+        "ContactApi.GetContactEmployerDetailsWithHttpInfo",
         "ContactApi.GetContactEmployersAsyncWithHttpInfo",
         "ContactApi.GetContactEmployersWithHttpInfo"
       ],
@@ -982,6 +990,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "ContactApi.GetContactPropertiesAsyncWithHttpInfo",
+        "ContactApi.GetContactPropertiesDetailsAsyncWithHttpInfo",
+        "ContactApi.GetContactPropertiesDetailsWithHttpInfo",
         "ContactApi.GetContactPropertiesWithHttpInfo"
       ],
       "parameters": [
@@ -1074,7 +1084,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ContactApi.GetContactByKeyIdentifierIdAsyncWithHttpInfo",
-        "ContactApi.GetContactByKeyIdentifierIdWithHttpInfo"
+        "ContactApi.GetContactByKeyIdentifierIdWithHttpInfo",
+        "ContactApi.GetContactDetailsByKeyIdentifierAsyncWithHttpInfo",
+        "ContactApi.GetContactDetailsByKeyIdentifierWithHttpInfo"
       ],
       "parameters": [
         {
@@ -24821,6 +24833,582 @@
         [
           "POST",
           "/contact/{contactIdOrLegacyNumber}/comments"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, string fields = null, bool? formatValues = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, string fields = null, bool? formatValues = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, string fields, bool? formatValues, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields = null, bool? formatValues = null",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields, bool? formatValues, CancellationToken cancellationToken",
+      "line": 72,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetailsByKeyIdentifier",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string keyIdentifier, string id, string fields = null",
+      "line": 96,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactDetailsByKeyIdentifierWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetailsByKeyIdentifierWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string keyIdentifier, string id, string fields = null",
+      "line": 103,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{keyIdentifier}/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetailsByKeyIdentifierAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string keyIdentifier, string id, string fields, CancellationToken cancellationToken",
+      "line": 131,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactDetailsByKeyIdentifierAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetailsByKeyIdentifierAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string keyIdentifier, string id, string fields = null",
+      "line": 137,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactDetailsByKeyIdentifierAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactDetailsByKeyIdentifierAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string keyIdentifier, string id, string fields, CancellationToken cancellationToken",
+      "line": 148,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{keyIdentifier}/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployeeDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, string fields = null",
+      "line": 172,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactEmployeeDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployeeDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, string fields = null",
+      "line": 179,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/employees"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployeeDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 203,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactEmployeeDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployeeDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields = null",
+      "line": 209,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactEmployeeDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployeeDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 219,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/employees"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployerDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, string fields = null",
+      "line": 240,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactEmployerDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployerDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, string fields = null",
+      "line": 247,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/employers"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployerDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 271,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactEmployerDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployerDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields = null",
+      "line": 277,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactEmployerDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEmployerDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 287,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/employers"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertiesDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, string fields = null",
+      "line": 308,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactPropertiesDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertiesDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, string fields = null",
+      "line": 315,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/properties"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertiesDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 339,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactPropertiesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertiesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields = null",
+      "line": 345,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactPropertiesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertiesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 355,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/properties"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertyDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long propertyId, string fields = null",
+      "line": 376,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactPropertyDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertyDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long propertyId, string fields = null",
+      "line": 383,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/contactProperty/{propertyId}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertyDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long propertyId, string fields, CancellationToken cancellationToken",
+      "line": 407,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactPropertyDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertyDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long propertyId, string fields = null",
+      "line": 413,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactPropertyDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.SelectedReads.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactPropertyDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long propertyId, string fields, CancellationToken cancellationToken",
+      "line": 423,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/contactProperty/{propertyId}"
         ]
       ],
       "delegates": [],

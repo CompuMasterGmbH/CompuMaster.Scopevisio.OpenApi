@@ -6,12 +6,12 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 265,
-    "matching_routes": 260,
-    "missing_routes": 63,
+    "source_routes": 267,
+    "matching_routes": 262,
+    "missing_routes": 61,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 239,
-    "source_http_methods": 536,
+    "source_routes_on_unstable_classes": 241,
+    "source_http_methods": 540,
     "status_counts": {
       "deferred": 323
     },
@@ -20,7 +20,7 @@
       "Campaign": 2,
       "Contact": 1,
       "Credit": 1,
-      "Data sources": 4,
+      "Data sources": 2,
       "Dispatch": 1,
       "HumanResources": 5,
       "IncomingInvoice": 2,
@@ -1488,10 +1488,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetBudgetGroupDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetBudgetGroupDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "budgetGroupName",
@@ -2694,10 +2697,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetPlanDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetPlanDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "planName",
@@ -34071,6 +34077,198 @@
         [
           "GET",
           "/datasource/travelEntryPositions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetBudgetGroupDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string budgetGroupName, string fields = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetBudgetGroupDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetBudgetGroupDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string budgetGroupName, string fields = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/budgetGroup"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetBudgetGroupDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string budgetGroupName, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetBudgetGroupDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetBudgetGroupDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string budgetGroupName, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetBudgetGroupDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetBudgetGroupDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string budgetGroupName, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/budgetGroup"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPlanDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string planName, string fields = null",
+      "line": 93,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPlanDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPlanDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string planName, string fields = null",
+      "line": 100,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/plan"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPlanDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string planName, string fields, CancellationToken cancellationToken",
+      "line": 125,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPlanDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPlanDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string planName, string fields = null",
+      "line": 131,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPlanDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.PlanningDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPlanDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string planName, string fields, CancellationToken cancellationToken",
+      "line": 141,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/plan"
         ]
       ],
       "delegates": [],

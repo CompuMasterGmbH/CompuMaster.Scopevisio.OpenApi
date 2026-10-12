@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 292,
-    "matching_routes": 287,
-    "missing_routes": 36,
+    "source_routes": 293,
+    "matching_routes": 288,
+    "missing_routes": 35,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 262,
-    "source_http_methods": 590,
+    "source_routes_on_unstable_classes": 263,
+    "source_http_methods": 594,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 22,
+      "Accounting": 21,
       "Contact": 1,
       "HumanResources": 3,
       "IncomingInvoice": 2,
@@ -5311,6 +5311,8 @@
       "phase": "3-accounting-invoices",
       "public_source_route": true,
       "sdk_methods": [
+        "AccountingApi.DownloadJournalEntryFileAsyncWithHttpInfo",
+        "AccountingApi.DownloadJournalEntryFileWithHttpInfo",
         "AccountingApi.GetGeneralJournalEntryFileAsyncWithHttpInfo",
         "AccountingApi.GetGeneralJournalEntryFileWithHttpInfo"
       ],
@@ -5352,10 +5354,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.DownloadStampedJournalEntryFileAsyncWithHttpInfo",
+        "AccountingApi.DownloadStampedJournalEntryFileWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "documentNumber",
@@ -16207,6 +16212,198 @@
     }
   ],
   "sdk_methods": [
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadJournalEntryFile",
+      "access": "public",
+      "return_type": "byte[]",
+      "parameters": "string documentNumber",
+      "line": 18,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadJournalEntryFileWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadJournalEntryFileWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "string documentNumber",
+      "line": 25,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/journal/{documentNumber}/file"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadJournalEntryFileAsync",
+      "access": "public",
+      "return_type": "Task<byte[]>",
+      "parameters": "string documentNumber, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadJournalEntryFileAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadJournalEntryFileAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "string documentNumber",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadJournalEntryFileAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadJournalEntryFileAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "string documentNumber, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/journal/{documentNumber}/file"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadStampedJournalEntryFile",
+      "access": "public",
+      "return_type": "byte[]",
+      "parameters": "string documentNumber",
+      "line": 81,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadStampedJournalEntryFileWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadStampedJournalEntryFileWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "string documentNumber",
+      "line": 88,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/journal/{documentNumber}/filewithstamp"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadStampedJournalEntryFileAsync",
+      "access": "public",
+      "return_type": "Task<byte[]>",
+      "parameters": "string documentNumber, CancellationToken cancellationToken",
+      "line": 110,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadStampedJournalEntryFileAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadStampedJournalEntryFileAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "string documentNumber",
+      "line": 116,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadStampedJournalEntryFileAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DownloadStampedJournalEntryFileAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "string documentNumber, CancellationToken cancellationToken",
+      "line": 125,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/journal/{documentNumber}/filewithstamp"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
     {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
       "class": "AccountingApi",

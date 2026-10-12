@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 700,
+    "source_http_methods": 702,
     "status_counts": {
       "deferred": 323
     },
@@ -4739,6 +4739,8 @@
       "phase": "3-accounting-invoices",
       "public_source_route": true,
       "sdk_methods": [
+        "AccountingApi.GetDimensionEntriesDetailsAsyncWithHttpInfo",
+        "AccountingApi.GetDimensionEntriesDetailsWithHttpInfo",
         "AccountingApi.GetDimensionReportEntriesAsyncWithHttpInfo",
         "AccountingApi.GetDimensionReportEntriesWithHttpInfo"
       ],
@@ -16532,6 +16534,102 @@
         [
           "POST",
           "/fiscalyears/edit"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.DimensionReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetDimensionEntriesDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string dimensionNameOrNumber, int? page = null, int? pageSize = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDimensionEntriesDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.DimensionReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetDimensionEntriesDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string dimensionNameOrNumber, int? page = null, int? pageSize = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/dimensions/{dimensionNameOrNumber}/dimensionentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.DimensionReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetDimensionEntriesDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string dimensionNameOrNumber, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDimensionEntriesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.DimensionReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetDimensionEntriesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string dimensionNameOrNumber, int? page = null, int? pageSize = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDimensionEntriesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.DimensionReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetDimensionEntriesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string dimensionNameOrNumber, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 75,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/dimensions/{dimensionNameOrNumber}/dimensionentries"
         ]
       ],
       "delegates": [],

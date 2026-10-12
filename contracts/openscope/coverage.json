@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 311,
-    "matching_routes": 306,
-    "missing_routes": 17,
+    "source_routes": 316,
+    "matching_routes": 311,
+    "missing_routes": 12,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 281,
-    "source_http_methods": 630,
+    "source_routes_on_unstable_classes": 286,
+    "source_http_methods": 640,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 9,
+      "Accounting": 4,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
     },
@@ -11318,10 +11318,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.ClearCreditorOpenItemsAsyncWithHttpInfo",
+        "AccountingApi.ClearCreditorOpenItemsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "Content in JSON format",
@@ -11402,10 +11405,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.RebookCreditorOpenItemsAsyncWithHttpInfo",
+        "AccountingApi.RebookCreditorOpenItemsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "Content in JSON format",
@@ -11495,10 +11501,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.ClearDebtorOpenItemsAsyncWithHttpInfo",
+        "AccountingApi.ClearDebtorOpenItemsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "Content in JSON format",
@@ -11579,10 +11588,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.RebookDebtorOpenItemsAsyncWithHttpInfo",
+        "AccountingApi.RebookDebtorOpenItemsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "Content in JSON format",
@@ -11672,10 +11684,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SetOpenItemReminderLevelsAsyncWithHttpInfo",
+        "AccountingApi.SetOpenItemReminderLevelsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "Request body with list of open items and their reminder levels",
@@ -17313,6 +17328,486 @@
         [
           "POST",
           "/mlexport/personal-account"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearCreditorOpenItems",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "OpenItemClearingRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ClearCreditorOpenItemsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearCreditorOpenItemsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "OpenItemClearingRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/creditor/clearing"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearCreditorOpenItemsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "OpenItemClearingRequest request, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ClearCreditorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearCreditorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemClearingRequest request",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ClearCreditorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearCreditorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemClearingRequest request, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/creditor/clearing"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearDebtorOpenItems",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "OpenItemClearingRequest request",
+      "line": 86,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ClearDebtorOpenItemsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearDebtorOpenItemsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "OpenItemClearingRequest request",
+      "line": 93,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/debitor/clearing"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearDebtorOpenItemsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "OpenItemClearingRequest request, CancellationToken cancellationToken",
+      "line": 114,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ClearDebtorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearDebtorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemClearingRequest request",
+      "line": 120,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ClearDebtorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ClearDebtorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemClearingRequest request, CancellationToken cancellationToken",
+      "line": 129,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/debitor/clearing"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookCreditorOpenItems",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "OpenItemRebookRequest request",
+      "line": 149,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RebookCreditorOpenItemsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookCreditorOpenItemsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "OpenItemRebookRequest request",
+      "line": 156,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/creditor/rebook"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookCreditorOpenItemsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "OpenItemRebookRequest request, CancellationToken cancellationToken",
+      "line": 177,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RebookCreditorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookCreditorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemRebookRequest request",
+      "line": 183,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RebookCreditorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookCreditorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemRebookRequest request, CancellationToken cancellationToken",
+      "line": 192,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/creditor/rebook"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookDebtorOpenItems",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "OpenItemRebookRequest request",
+      "line": 212,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RebookDebtorOpenItemsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookDebtorOpenItemsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "OpenItemRebookRequest request",
+      "line": 219,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/debitor/rebook"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookDebtorOpenItemsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "OpenItemRebookRequest request, CancellationToken cancellationToken",
+      "line": 240,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RebookDebtorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookDebtorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemRebookRequest request",
+      "line": 246,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "RebookDebtorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "RebookDebtorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemRebookRequest request, CancellationToken cancellationToken",
+      "line": 255,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/debitor/rebook"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SetOpenItemReminderLevels",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "OpenItemReminderLevelsRequest request",
+      "line": 275,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SetOpenItemReminderLevelsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SetOpenItemReminderLevelsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "OpenItemReminderLevelsRequest request",
+      "line": 282,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/setReminderLevel"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SetOpenItemReminderLevelsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "OpenItemReminderLevelsRequest request, CancellationToken cancellationToken",
+      "line": 303,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SetOpenItemReminderLevelsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SetOpenItemReminderLevelsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemReminderLevelsRequest request",
+      "line": 309,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SetOpenItemReminderLevelsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SetOpenItemReminderLevelsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "OpenItemReminderLevelsRequest request, CancellationToken cancellationToken",
+      "line": 318,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/setReminderLevel"
         ]
       ],
       "delegates": [],

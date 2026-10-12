@@ -27,6 +27,8 @@ namespace CompuMaster.Scopevisio.OpenApi
             this.Config = config;
             this.AuthorizationApi = new Api.AuthorizationApi(this.Config);
             this.AdditionalApi = new Api.AdditionalApi(this.Config);
+            this.CampaignApi = new Api.CampaignApi(this.Config);
+            this.ReportsheetApi = new Api.ReportsheetApi(this.Config);
 #pragma warning disable CS0618 // Typ oder Element ist veraltet
             this.AccountingApi = new Api.AccountingApi(this.Config);
             this.ActivitiesApi = new Api.ActivitiesApi(this.Config);
@@ -70,6 +72,15 @@ namespace CompuMaster.Scopevisio.OpenApi
         /// Additional API methods
         /// </summary>
         public Api.AdditionalApi AdditionalApi { get; set; }
+
+        /// <summary>Gets or sets the campaign read/search API group.</summary>
+        /// <value>The group initially using this client's constructor configuration; callers may replace it explicitly.</value>
+        public Api.CampaignApi CampaignApi { get; set; }
+
+        /// <summary>Gets or sets the reportsheet read/search API group.</summary>
+        /// <value>The group initially using this client's constructor configuration; callers may replace it explicitly.</value>
+        public Api.ReportsheetApi ReportsheetApi { get; set; }
+
 
         /// <summary>
         /// Accounting API methods

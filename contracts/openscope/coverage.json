@@ -6,26 +6,23 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 278,
-    "matching_routes": 273,
-    "missing_routes": 50,
+    "source_routes": 283,
+    "matching_routes": 278,
+    "missing_routes": 45,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 252,
-    "source_http_methods": 562,
+    "source_routes_on_unstable_classes": 253,
+    "source_http_methods": 572,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
       "Accounting": 30,
-      "Campaign": 2,
       "Contact": 1,
       "HumanResources": 3,
       "IncomingInvoice": 2,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4,
-      "Product": 1,
-      "Report": 1,
-      "Reportsheet": 2
+      "Report": 1
     },
     "duplicate_operation_ids": {}
   },
@@ -6655,10 +6652,13 @@
         "Product"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ProductApi.GetECommerceSkusAsyncWithHttpInfo",
+        "ProductApi.GetECommerceSkusWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -7448,10 +7448,13 @@
         "Reportsheet"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportsheetApi.GetReportsheetByNumberAsyncWithHttpInfo",
+        "ReportsheetApi.GetReportsheetByNumberWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -8569,10 +8572,13 @@
         "Campaign"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "CampaignApi.SearchCampaignRunEntriesAsyncWithHttpInfo",
+        "CampaignApi.SearchCampaignRunEntriesWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "campaignId",
@@ -8614,10 +8620,13 @@
         "Campaign"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "CampaignApi.SearchCampaignsAsyncWithHttpInfo",
+        "CampaignApi.SearchCampaignsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "search filter in JSON format. See also <a target='_blank' href='https://help.scopevisio.com/de/articles/467360-search-scope-documentation'>our search documentation</a>.",
@@ -14284,10 +14293,13 @@
         "Reportsheet"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportsheetApi.SearchReportsheetsAsyncWithHttpInfo",
+        "ReportsheetApi.SearchReportsheetsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "search filter in JSON format. See also <a target='_blank' href='../browser/index.html#!/searchscope'>our search documentation</a>.",
@@ -20780,6 +20792,198 @@
       "delegates": [
         "TokenAsyncWithHttpInfo"
       ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaigns",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCampaignsWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaignsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 62,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/campaigns"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaignsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 83,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCampaignsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaignsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 89,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCampaignsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaignsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 98,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/campaigns"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaignRunEntries",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long campaignId, SearchRequest query = null",
+      "line": 117,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCampaignRunEntriesWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaignRunEntriesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long campaignId, SearchRequest query = null",
+      "line": 124,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/campaign/{campaignId}/campaignRunEntries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaignRunEntriesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long campaignId, SearchRequest query, CancellationToken cancellationToken",
+      "line": 147,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCampaignRunEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaignRunEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long campaignId, SearchRequest query = null",
+      "line": 153,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCampaignRunEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CampaignApi.cs",
+      "class": "CampaignApi",
+      "class_access": "public",
+      "method": "SearchCampaignRunEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long campaignId, SearchRequest query, CancellationToken cancellationToken",
+      "line": 163,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/campaign/{campaignId}/campaignRunEntries"
+        ]
+      ],
+      "delegates": [],
       "unstable_class": false,
       "facade_property": true
     },
@@ -27995,6 +28199,102 @@
         [
           "POST",
           "/outgoinginvoice/{number}/post"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.ECommerceSkus.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetECommerceSkus",
+      "access": "public",
+      "return_type": "ECommerceSkusResponse",
+      "parameters": "long id, string fields = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetECommerceSkusWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.ECommerceSkus.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetECommerceSkusWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<ECommerceSkusResponse>",
+      "parameters": "long id, string fields = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/product/{id}/ecommerceskus"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.ECommerceSkus.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetECommerceSkusAsync",
+      "access": "public",
+      "return_type": "Task<ECommerceSkusResponse>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetECommerceSkusAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.ECommerceSkus.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetECommerceSkusAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ECommerceSkusResponse>>",
+      "parameters": "long id, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetECommerceSkusAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.ECommerceSkus.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetECommerceSkusAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<ECommerceSkusResponse>>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/product/{id}/ecommerceskus"
         ]
       ],
       "delegates": [],
@@ -37065,6 +37365,198 @@
       ],
       "delegates": [],
       "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "GetReportsheetByNumber",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetReportsheetByNumberWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "GetReportsheetByNumberWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/reportsheet/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "GetReportsheetByNumberAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 89,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetReportsheetByNumberAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "GetReportsheetByNumberAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 95,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetReportsheetByNumberAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "GetReportsheetByNumberAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 105,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/reportsheet/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "SearchReportsheets",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 126,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchReportsheetsWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "SearchReportsheetsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 133,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/reportsheets"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "SearchReportsheetsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 154,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchReportsheetsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "SearchReportsheetsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 160,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchReportsheetsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportsheetApi.cs",
+      "class": "ReportsheetApi",
+      "class_access": "public",
+      "method": "SearchReportsheetsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 169,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/reportsheets"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
       "facade_property": true
     },
     {

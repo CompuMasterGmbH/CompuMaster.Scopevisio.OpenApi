@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 284,
-    "matching_routes": 279,
-    "missing_routes": 44,
+    "source_routes": 288,
+    "matching_routes": 283,
+    "missing_routes": 40,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 254,
-    "source_http_methods": 574,
+    "source_routes_on_unstable_classes": 258,
+    "source_http_methods": 582,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 30,
+      "Accounting": 26,
       "Contact": 1,
       "HumanResources": 3,
       "IncomingInvoice": 2,
@@ -11318,10 +11318,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchCreditorPersonalJournalEntriesAsyncWithHttpInfo",
+        "AccountingApi.SearchCreditorPersonalJournalEntriesWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "(optional) Search filter in JSON format. See also <a target='_blank' href='https://help.scopevisio.com/de/articles/467360-search-scope-documentation'>our search documentation</a>.",
@@ -11399,10 +11402,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchCreditorOpenItemsAsyncWithHttpInfo",
+        "AccountingApi.SearchCreditorOpenItemsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "historicTs",
@@ -11489,10 +11495,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchDebtorPersonalJournalEntriesAsyncWithHttpInfo",
+        "AccountingApi.SearchDebtorPersonalJournalEntriesWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "(optional) Search filter in JSON format. See also <a target='_blank' href='https://help.scopevisio.com/de/articles/467360-search-scope-documentation'>our search documentation</a>.",
@@ -11570,10 +11579,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchDebtorOpenItemsAsyncWithHttpInfo",
+        "AccountingApi.SearchDebtorOpenItemsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "historicTs",
@@ -16183,6 +16195,390 @@
     }
   ],
   "sdk_methods": [
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorOpenItems",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null, long? historicTs = null, string accountNumber = null",
+      "line": 24,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCreditorOpenItemsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorOpenItemsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null, long? historicTs = null, string accountNumber = null",
+      "line": 31,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/creditors"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorOpenItemsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, long? historicTs, string accountNumber, CancellationToken cancellationToken",
+      "line": 57,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCreditorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null, long? historicTs = null, string accountNumber = null",
+      "line": 63,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCreditorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, long? historicTs, string accountNumber, CancellationToken cancellationToken",
+      "line": 74,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/creditors"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorOpenItems",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null, long? historicTs = null, string accountNumber = null",
+      "line": 97,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchDebtorOpenItemsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorOpenItemsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null, long? historicTs = null, string accountNumber = null",
+      "line": 104,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/debtors"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorOpenItemsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, long? historicTs, string accountNumber, CancellationToken cancellationToken",
+      "line": 130,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchDebtorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null, long? historicTs = null, string accountNumber = null",
+      "line": 136,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchDebtorOpenItemsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorOpenItemsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, long? historicTs, string accountNumber, CancellationToken cancellationToken",
+      "line": 147,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/debtors"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorPersonalJournalEntries",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 168,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCreditorPersonalJournalEntriesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorPersonalJournalEntriesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 175,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/creditor/list"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorPersonalJournalEntriesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 197,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCreditorPersonalJournalEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorPersonalJournalEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 203,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCreditorPersonalJournalEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchCreditorPersonalJournalEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 212,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/creditor/list"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorPersonalJournalEntries",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 231,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchDebtorPersonalJournalEntriesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorPersonalJournalEntriesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 238,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/debitor/list"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorPersonalJournalEntriesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 260,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchDebtorPersonalJournalEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorPersonalJournalEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 266,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchDebtorPersonalJournalEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchDebtorPersonalJournalEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 275,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/openitems/debitor/list"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
     {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
       "class": "AccountingApi",

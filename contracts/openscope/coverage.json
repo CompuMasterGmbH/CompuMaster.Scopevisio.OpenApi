@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 696,
+    "source_http_methods": 700,
     "status_counts": {
       "deferred": 323
     },
@@ -6827,6 +6827,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.GetProjectEmployeeAsyncWithHttpInfo",
+        "ProjectApi.GetProjectEmployeeDetailsAsyncWithHttpInfo",
+        "ProjectApi.GetProjectEmployeeDetailsWithHttpInfo",
         "ProjectApi.GetProjectEmployeeWithHttpInfo"
       ],
       "parameters": [
@@ -8239,6 +8241,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.GetTimeEntryAsyncWithHttpInfo",
+        "ProjectApi.GetTimeEntryDetailsAsyncWithHttpInfo",
+        "ProjectApi.GetTimeEntryDetailsWithHttpInfo",
         "ProjectApi.GetTimeEntryWithHttpInfo"
       ],
       "parameters": [
@@ -35587,6 +35591,198 @@
         [
           "GET",
           "/project/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetTimeEntryDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTimeEntryDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetTimeEntryDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/timeentry/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetTimeEntryDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTimeEntryDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetTimeEntryDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTimeEntryDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetTimeEntryDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/timeentry/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectEmployeeDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long employeeId, long projectId, string fields = null",
+      "line": 90,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectEmployeeDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectEmployeeDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long employeeId, long projectId, string fields = null",
+      "line": 97,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/project/{projectId}/projectemployee/{employeeId}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectEmployeeDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long employeeId, long projectId, string fields, CancellationToken cancellationToken",
+      "line": 123,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectEmployeeDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectEmployeeDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long employeeId, long projectId, string fields = null",
+      "line": 129,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectEmployeeDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.TimeAndEmployeeReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectEmployeeDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long employeeId, long projectId, string fields, CancellationToken cancellationToken",
+      "line": 140,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/project/{projectId}/projectemployee/{employeeId}"
         ]
       ],
       "delegates": [],

@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 302,
-    "matching_routes": 297,
-    "missing_routes": 26,
+    "source_routes": 305,
+    "matching_routes": 300,
+    "missing_routes": 23,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 272,
-    "source_http_methods": 612,
+    "source_routes_on_unstable_classes": 275,
+    "source_http_methods": 618,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 16,
+      "Accounting": 13,
       "IncomingInvoice": 2,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
@@ -15519,10 +15519,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.CreateTravelExtraPositionAsyncWithHttpInfo",
+        "AccountingApi.CreateTravelExtraPositionWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "content in JSON format, travelEntryId is required",
@@ -15557,10 +15560,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.CreateTravelOvernightPositionAsyncWithHttpInfo",
+        "AccountingApi.CreateTravelOvernightPositionWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "content in JSON format, travelEntryId is required",
@@ -15595,10 +15601,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.CreateTravelVehiclePositionAsyncWithHttpInfo",
+        "AccountingApi.CreateTravelVehiclePositionWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "content in JSON format, travelEntryId is required",
@@ -18631,6 +18640,294 @@
         [
           "GET",
           "/revenueaccounts/standard"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelExtraPosition",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "TravelPositionCreationRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTravelExtraPositionWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelExtraPositionWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "TravelPositionCreationRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/travelentry/position/extra/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelExtraPositionAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "TravelPositionCreationRequest request, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTravelExtraPositionAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelExtraPositionAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "TravelPositionCreationRequest request",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTravelExtraPositionAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelExtraPositionAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "TravelPositionCreationRequest request, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/travelentry/position/extra/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelOvernightPosition",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "TravelDistancePositionCreationRequest request",
+      "line": 86,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTravelOvernightPositionWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelOvernightPositionWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "TravelDistancePositionCreationRequest request",
+      "line": 93,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/travelentry/position/overnight/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelOvernightPositionAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "TravelDistancePositionCreationRequest request, CancellationToken cancellationToken",
+      "line": 114,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTravelOvernightPositionAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelOvernightPositionAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "TravelDistancePositionCreationRequest request",
+      "line": 120,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTravelOvernightPositionAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelOvernightPositionAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "TravelDistancePositionCreationRequest request, CancellationToken cancellationToken",
+      "line": 129,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/travelentry/position/overnight/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelVehiclePosition",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "TravelDistancePositionCreationRequest request",
+      "line": 149,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTravelVehiclePositionWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelVehiclePositionWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "TravelDistancePositionCreationRequest request",
+      "line": 156,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/travelentry/position/vehicle/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelVehiclePositionAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "TravelDistancePositionCreationRequest request, CancellationToken cancellationToken",
+      "line": 177,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTravelVehiclePositionAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelVehiclePositionAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "TravelDistancePositionCreationRequest request",
+      "line": 183,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTravelVehiclePositionAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.TravelPositionCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateTravelVehiclePositionAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "TravelDistancePositionCreationRequest request, CancellationToken cancellationToken",
+      "line": 192,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/travelentry/position/vehicle/new"
         ]
       ],
       "delegates": [],

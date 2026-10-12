@@ -6,12 +6,12 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 269,
-    "matching_routes": 264,
-    "missing_routes": 59,
+    "source_routes": 276,
+    "matching_routes": 271,
+    "missing_routes": 52,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 243,
-    "source_http_methods": 544,
+    "source_routes_on_unstable_classes": 250,
+    "source_http_methods": 558,
     "status_counts": {
       "deferred": 323
     },
@@ -19,17 +19,11 @@
       "Accounting": 30,
       "Campaign": 2,
       "Contact": 1,
-      "Credit": 1,
-      "Dispatch": 1,
       "HumanResources": 5,
       "IncomingInvoice": 2,
       "Material management (BETA)": 4,
-      "Offer": 1,
-      "Opportunity": 1,
-      "Order": 1,
-      "OutgoingInvoice": 5,
+      "OutgoingInvoice": 4,
       "Product": 1,
-      "RecurringInvoice": 1,
       "Report": 1,
       "Reportsheet": 2
     },
@@ -1143,10 +1137,13 @@
         "Credit"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "CreditApi.GetCreditPositionPageAsyncWithHttpInfo",
+        "CreditApi.GetCreditPositionPageWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -4789,10 +4786,13 @@
         "Dispatch"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "DispatchApi.GetDispatchPositionPageAsyncWithHttpInfo",
+        "DispatchApi.GetDispatchPositionPageWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -5469,10 +5469,13 @@
         "Offer"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "OfferApi.GetOfferPositionPageAsyncWithHttpInfo",
+        "OfferApi.GetOfferPositionPageWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -5702,10 +5705,13 @@
         "Opportunity"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "OpportunityApi.GetOpportunityPositionPageAsyncWithHttpInfo",
+        "OpportunityApi.GetOpportunityPositionPageWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -5885,10 +5891,13 @@
         "Order"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "OrderApi.GetOrderPositionPageAsyncWithHttpInfo",
+        "OrderApi.GetOrderPositionPageWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -6146,10 +6155,13 @@
         "OutgoingInvoice"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "OutgoingInvoiceApi.GetOutgoingInvoicePositionPageAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.GetOutgoingInvoicePositionPageWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -7127,10 +7139,13 @@
         "RecurringInvoice"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "RecurringInvoiceApi.GetRecurringInvoicePositionPageAsyncWithHttpInfo",
+        "RecurringInvoiceApi.GetRecurringInvoicePositionPageWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -22689,6 +22704,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PositionPages.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditPositionPage",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditPositionPageWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PositionPages.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditPositionPageWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 33,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/credit/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PositionPages.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditPositionPageAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PositionPages.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PositionPages.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 77,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/credit/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.cs",
       "class": "CreditApi",
       "class_access": "public",
@@ -23072,6 +23183,102 @@
         [
           "POST",
           "/credit/{number}/post"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.PositionPages.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchPositionPage",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchPositionPageWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.PositionPages.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchPositionPageWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 33,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/dispatch/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.PositionPages.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchPositionPageAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.PositionPages.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.PositionPages.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 77,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/dispatch/all/positions"
         ]
       ],
       "delegates": [],
@@ -23937,6 +24144,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.PositionPages.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferPositionPage",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferPositionPageWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.PositionPages.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferPositionPageWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 33,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/offer/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.PositionPages.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferPositionPageAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.PositionPages.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.PositionPages.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 77,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/offer/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.cs",
       "class": "OfferApi",
       "class_access": "public",
@@ -24639,6 +24942,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.PositionPages.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityPositionPage",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOpportunityPositionPageWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.PositionPages.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityPositionPageWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 33,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/opportunity/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.PositionPages.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityPositionPageAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOpportunityPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.PositionPages.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOpportunityPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.PositionPages.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 77,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/opportunity/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.cs",
       "class": "OpportunityApi",
       "class_access": "public",
@@ -25256,6 +25655,102 @@
         [
           "GET",
           "/opportunity/{number}/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.PositionPages.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderPositionPage",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderPositionPageWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.PositionPages.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderPositionPageWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 33,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/order/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.PositionPages.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderPositionPageAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.PositionPages.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderPositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.PositionPages.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderPositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 77,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/order/all/positions"
         ]
       ],
       "delegates": [],
@@ -26036,6 +26531,102 @@
         [
           "POST",
           "/organisation/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionPages.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoicePositionPage",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoicePositionPageWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionPages.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoicePositionPageWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 33,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionPages.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoicePositionPageAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoicePositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionPages.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoicePositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoicePositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PositionPages.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoicePositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 77,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/all/positions"
         ]
       ],
       "delegates": [],
@@ -30404,6 +30995,102 @@
         [
           "POST",
           "/timeentry/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.PositionPages.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoicePositionPage",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetRecurringInvoicePositionPageWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.PositionPages.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoicePositionPageWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 33,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/recurringinvoice/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.PositionPages.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoicePositionPageAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetRecurringInvoicePositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.PositionPages.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoicePositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null, int? page = null, int? pageSize = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetRecurringInvoicePositionPageAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.PositionPages.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoicePositionPageAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, int? page, int? pageSize, CancellationToken cancellationToken",
+      "line": 77,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/recurringinvoice/all/positions"
         ]
       ],
       "delegates": [],

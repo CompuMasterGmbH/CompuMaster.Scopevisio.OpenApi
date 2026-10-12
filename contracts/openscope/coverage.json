@@ -6,18 +6,18 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 294,
-    "matching_routes": 289,
-    "missing_routes": 34,
+    "source_routes": 295,
+    "matching_routes": 290,
+    "missing_routes": 33,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 264,
-    "source_http_methods": 596,
+    "source_routes_on_unstable_classes": 265,
+    "source_http_methods": 598,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
       "Accounting": 21,
-      "HumanResources": 3,
+      "HumanResources": 2,
       "IncomingInvoice": 2,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
@@ -10049,10 +10049,13 @@
         "HumanResources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "HumanResourcesApi.CreateHumanResourceAsyncWithHttpInfo",
+        "HumanResourcesApi.CreateHumanResourceWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "content in JSON format",
@@ -24890,6 +24893,102 @@
         [
           "POST",
           "/dispatches"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.CreateResource.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "CreateHumanResource",
+      "access": "public",
+      "return_type": "HumanResourceCreationResponse",
+      "parameters": "HumanResourceCreationRequest request",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateHumanResourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.CreateResource.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "CreateHumanResourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<HumanResourceCreationResponse>",
+      "parameters": "HumanResourceCreationRequest request",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/humanresource/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.CreateResource.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "CreateHumanResourceAsync",
+      "access": "public",
+      "return_type": "Task<HumanResourceCreationResponse>",
+      "parameters": "HumanResourceCreationRequest request, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateHumanResourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.CreateResource.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "CreateHumanResourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<HumanResourceCreationResponse>>",
+      "parameters": "HumanResourceCreationRequest request",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateHumanResourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.CreateResource.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "CreateHumanResourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<HumanResourceCreationResponse>>",
+      "parameters": "HumanResourceCreationRequest request, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/humanresource/new"
         ]
       ],
       "delegates": [],

@@ -127,12 +127,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="page">The optional zero-based page number; null retains the server default.</param>
         /// <param name="pageSize">The optional requested page size, sent unchanged; the server silently enforces a maximum of 1000.</param>
         /// <param name="country">The optional two-letter country ISO code; null uses the organisation's taxation country.</param>
-        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes except with preferred filtering; zero has undefined server behavior.</param>
-        /// <param name="active">The optional active filter; null retains the server default of false. Preferred product filtering is effectively active regardless of this value.</param>
+        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes; zero has undefined server behavior.</param>
+        /// <param name="active">The optional active filter; null retains the server default of false.</param>
         /// <param name="servicesRenderedDate">The optional date in dd.MM.yyyy format; null uses today's server date. It affects filtering when active is effective.</param>
         /// <returns>The typed response retaining unknown fields, or null for an empty body or JSON null.</returns>
         /// <remarks>Products using organisation-standard revenue accounts are omitted. No paging requests are performed automatically. The server enforces required accounting profiles and visibility. Optional values are sent unchanged; no client-side filter or date default is imposed. Fractional values use .NET decimal precision and may round; raw JSON remains exact. Numeric timestamps and type codes remain Int64 values.</remarks>
-        /// <exception cref="ArgumentException">A supplied date is invalid, or preferred filtering is combined with a negative VAT scope.</exception>
+        /// <exception cref="ArgumentException">A supplied date is invalid.</exception>
         /// <exception cref="ApiException">The configured exception factory rejects the response.</exception>
         /// <exception cref="JsonException">The response has invalid JSON or an incompatible root/records shape, or a fraction exceeds the decimal range.</exception>
         public RevenueAccountsResponse GetProductsRevenueAccounts(string fields = null, int? page = null, int? pageSize = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null)
@@ -180,8 +180,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="page">The optional zero-based page number; null retains the server default.</param>
         /// <param name="pageSize">The optional requested page size, sent unchanged; the server silently enforces a maximum of 1000.</param>
         /// <param name="country">The optional two-letter country ISO code; null uses the organisation's taxation country.</param>
-        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes except with preferred filtering; zero has undefined server behavior.</param>
-        /// <param name="active">The optional active filter; null retains the server default of false. Preferred product filtering is effectively active regardless of this value.</param>
+        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes; zero has undefined server behavior.</param>
+        /// <param name="active">The optional active filter; null retains the server default of false.</param>
         /// <param name="servicesRenderedDate">The optional date in dd.MM.yyyy format; null uses today's server date. It affects filtering when active is effective.</param>
         /// <param name="cancellationToken">The token used to cancel active HTTP I/O.</param>
         /// <exception cref="OperationCanceledException">The token is canceled before or during the request.</exception>
@@ -201,8 +201,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <param name="page">The optional zero-based page number; null retains the server default.</param>
         /// <param name="pageSize">The optional requested page size, sent unchanged; the server silently enforces a maximum of 1000.</param>
         /// <param name="country">The optional two-letter country ISO code; null uses the organisation's taxation country.</param>
-        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes except with preferred filtering; zero has undefined server behavior.</param>
-        /// <param name="active">The optional active filter; null retains the server default of false. Preferred product filtering is effectively active regardless of this value.</param>
+        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes; zero has undefined server behavior.</param>
+        /// <param name="active">The optional active filter; null retains the server default of false.</param>
         /// <param name="servicesRenderedDate">The optional date in dd.MM.yyyy format; null uses today's server date. It affects filtering when active is effective.</param>
         /// <param name="cancellationToken">The token used to cancel active HTTP I/O.</param>
         /// <exception cref="OperationCanceledException">The token is canceled before or during the request.</exception>
@@ -237,12 +237,12 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <summary>Retrieves standard revenue accounts for the active organisation.</summary>
         /// <param name="fields">The optional comma-separated selected fields; null omits the parameter, while an empty string is sent.</param>
         /// <param name="country">The optional two-letter country ISO code; null uses the organisation's taxation country.</param>
-        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes except with preferred filtering; zero has undefined server behavior.</param>
-        /// <param name="active">The optional active filter; null retains the server default of false. Preferred product filtering is effectively active regardless of this value.</param>
+        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes; zero has undefined server behavior.</param>
+        /// <param name="active">The optional active filter; null retains the server default of false.</param>
         /// <param name="servicesRenderedDate">The optional date in dd.MM.yyyy format; null uses today's server date. It affects filtering when active is effective.</param>
         /// <returns>The typed response retaining unknown fields, or null for an empty body or JSON null.</returns>
-        /// <remarks>These standard accounts do not enumerate every product using them. The server enforces required accounting profiles and visibility. Optional values are sent unchanged; no client-side filter or date default is imposed. Fractional values use .NET decimal precision and may round; raw JSON remains exact. Numeric timestamps and type codes remain Int64 values.</remarks>
-        /// <exception cref="ArgumentException">A supplied date is invalid, or preferred filtering is combined with a negative VAT scope.</exception>
+        /// <remarks>The server returns at most 5000 records and provides no paging parameter for this endpoint. These standard accounts do not enumerate every product using them. The server enforces required accounting profiles and visibility. Optional values are sent unchanged; no client-side filter or date default is imposed. Fractional values use .NET decimal precision and may round; raw JSON remains exact. Numeric timestamps and type codes remain Int64 values.</remarks>
+        /// <exception cref="ArgumentException">A supplied date is invalid.</exception>
         /// <exception cref="ApiException">The configured exception factory rejects the response.</exception>
         /// <exception cref="JsonException">The response has invalid JSON or an incompatible root/records shape, or a fraction exceeds the decimal range.</exception>
         public RevenueAccountsResponse GetStandardRevenueAccounts(string fields = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null)
@@ -284,8 +284,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <inheritdoc cref="GetStandardRevenueAccounts"/>
         /// <param name="fields">The optional comma-separated selected fields; null omits the parameter, while an empty string is sent.</param>
         /// <param name="country">The optional two-letter country ISO code; null uses the organisation's taxation country.</param>
-        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes except with preferred filtering; zero has undefined server behavior.</param>
-        /// <param name="active">The optional active filter; null retains the server default of false. Preferred product filtering is effectively active regardless of this value.</param>
+        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes; zero has undefined server behavior.</param>
+        /// <param name="active">The optional active filter; null retains the server default of false.</param>
         /// <param name="servicesRenderedDate">The optional date in dd.MM.yyyy format; null uses today's server date. It affects filtering when active is effective.</param>
         /// <param name="cancellationToken">The token used to cancel active HTTP I/O.</param>
         /// <exception cref="OperationCanceledException">The token is canceled before or during the request.</exception>
@@ -303,8 +303,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <inheritdoc cref="GetStandardRevenueAccountsWithHttpInfo"/>
         /// <param name="fields">The optional comma-separated selected fields; null omits the parameter, while an empty string is sent.</param>
         /// <param name="country">The optional two-letter country ISO code; null uses the organisation's taxation country.</param>
-        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes except with preferred filtering; zero has undefined server behavior.</param>
-        /// <param name="active">The optional active filter; null retains the server default of false. Preferred product filtering is effectively active regardless of this value.</param>
+        /// <param name="vatScope">The optional VAT case identifier; null uses the server default of 1. Negative values select all scopes; zero has undefined server behavior.</param>
+        /// <param name="active">The optional active filter; null retains the server default of false.</param>
         /// <param name="servicesRenderedDate">The optional date in dd.MM.yyyy format; null uses today's server date. It affects filtering when active is effective.</param>
         /// <param name="cancellationToken">The token used to cancel active HTTP I/O.</param>
         /// <exception cref="OperationCanceledException">The token is canceled before or during the request.</exception>

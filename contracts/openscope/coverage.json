@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 676,
+    "source_http_methods": 680,
     "status_counts": {
       "deferred": 323
     },
@@ -6757,6 +6757,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.GetProjectAsyncWithHttpInfo",
+        "ProjectApi.GetProjectDetailsAsyncWithHttpInfo",
+        "ProjectApi.GetProjectDetailsWithHttpInfo",
         "ProjectApi.GetProjectWithHttpInfo"
       ],
       "parameters": [
@@ -7904,6 +7906,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "TaskApi.GetTaskAsyncWithHttpInfo",
+        "TaskApi.GetTaskDetailsAsyncWithHttpInfo",
+        "TaskApi.GetTaskDetailsWithHttpInfo",
         "TaskApi.GetTaskWithHttpInfo"
       ],
       "parameters": [
@@ -34902,6 +34906,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.SelectedReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, string fields = null, bool? formatValues = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.SelectedReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, string fields = null, bool? formatValues = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/project/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.SelectedReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, string fields, bool? formatValues, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.SelectedReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields = null, bool? formatValues = null",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.SelectedReads.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields, bool? formatValues, CancellationToken cancellationToken",
+      "line": 72,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/project/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.cs",
       "class": "ProjectApi",
       "class_access": "public",
@@ -43013,6 +43113,102 @@
         [
           "POST",
           "/task/{taskId}/comments"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.SelectedReads.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetTaskDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTaskDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.SelectedReads.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetTaskDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/task/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.SelectedReads.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetTaskDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTaskDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.SelectedReads.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetTaskDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTaskDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.SelectedReads.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetTaskDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/task/{id}"
         ]
       ],
       "delegates": [],

@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 297,
-    "matching_routes": 292,
-    "missing_routes": 31,
+    "source_routes": 300,
+    "matching_routes": 295,
+    "missing_routes": 28,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 267,
-    "source_http_methods": 602,
+    "source_routes_on_unstable_classes": 270,
+    "source_http_methods": 608,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 21,
+      "Accounting": 18,
       "IncomingInvoice": 2,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
@@ -32,10 +32,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.DeleteAccountMappingAsyncWithHttpInfo",
+        "AccountingApi.DeleteAccountMappingWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "id",
@@ -8535,10 +8538,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.CreateAccountMappingAsyncWithHttpInfo",
+        "AccountingApi.CreateAccountMappingWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -15740,10 +15746,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.UpdateAccountMappingEntryAsyncWithHttpInfo",
+        "AccountingApi.UpdateAccountMappingEntryWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "id",
@@ -16408,6 +16417,294 @@
         [
           "GET",
           "/journal/{documentNumber}/filewithstamp"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateAccountMapping",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "AccountMappingCreationRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateAccountMappingWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateAccountMappingWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "AccountMappingCreationRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/accountmapping"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateAccountMappingAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "AccountMappingCreationRequest request, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateAccountMappingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateAccountMappingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "AccountMappingCreationRequest request = null",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateAccountMappingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateAccountMappingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "AccountMappingCreationRequest request, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/accountmapping"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateAccountMappingEntry",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, AccountMappingEntryUpdateRequest request = null",
+      "line": 85,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateAccountMappingEntryWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateAccountMappingEntryWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, AccountMappingEntryUpdateRequest request = null",
+      "line": 92,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/accountmapping/entry/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateAccountMappingEntryAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, AccountMappingEntryUpdateRequest request, CancellationToken cancellationToken",
+      "line": 115,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateAccountMappingEntryAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateAccountMappingEntryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, AccountMappingEntryUpdateRequest request = null",
+      "line": 121,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateAccountMappingEntryAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateAccountMappingEntryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, AccountMappingEntryUpdateRequest request, CancellationToken cancellationToken",
+      "line": 131,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/accountmapping/entry/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DeleteAccountMapping",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id",
+      "line": 150,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DeleteAccountMappingWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DeleteAccountMappingWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id",
+      "line": 157,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "DELETE",
+          "/accountmapping/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DeleteAccountMappingAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, CancellationToken cancellationToken",
+      "line": 178,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DeleteAccountMappingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DeleteAccountMappingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id",
+      "line": 184,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DeleteAccountMappingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MappingWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "DeleteAccountMappingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, CancellationToken cancellationToken",
+      "line": 193,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "DELETE",
+          "/accountmapping/{id}"
         ]
       ],
       "delegates": [],

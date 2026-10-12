@@ -29,6 +29,7 @@ namespace CompuMaster.Scopevisio.OpenApi
             this.AdditionalApi = new Api.AdditionalApi(this.Config);
             this.CampaignApi = new Api.CampaignApi(this.Config);
             this.ReportsheetApi = new Api.ReportsheetApi(this.Config);
+            this.MaterialManagementApi = new Api.MaterialManagementApi(this.Config);
 #pragma warning disable CS0618 // Typ oder Element ist veraltet
             this.AccountingApi = new Api.AccountingApi(this.Config);
             this.ActivitiesApi = new Api.ActivitiesApi(this.Config);
@@ -80,6 +81,10 @@ namespace CompuMaster.Scopevisio.OpenApi
         /// <summary>Gets or sets the reportsheet read/search API group.</summary>
         /// <value>The group initially using this client's constructor configuration; callers may replace it explicitly.</value>
         public Api.ReportsheetApi ReportsheetApi { get; set; }
+
+        /// <summary>Gets or sets the explicit material inventory and purchase workflow API group.</summary>
+        /// <value>The group initially sharing this client's constructor configuration; callers may replace it explicitly. The manufacturer marks these workflows BETA.</value>
+        public Api.MaterialManagementApi MaterialManagementApi { get; set; }
 
 
         /// <summary>

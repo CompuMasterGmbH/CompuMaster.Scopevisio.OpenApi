@@ -4,7 +4,7 @@ Tracked by [SDK #17](https://github.com/CompuMasterGmbH/CompuMaster.Scopevisio.O
 
 ## Pinned evidence
 
-[The manufacturer contract](https://appload.scopevisio.com/rest/openapi.json) was retrieved anonymously on 11 October 2026. [provenance.json](../contracts/openscope/provenance.json) records the raw-response hash, the repository-format hash, and all six differences from the 10 October research snapshot. These differences are example timestamp values in five schemas; paths, operations and schema shapes are unchanged. Retain the examples in the snapshot; do not silently strip vendor fields to make hashes match.
+[The manufacturer contract](https://appload.scopevisio.com/rest/openapi.json) was retrieved anonymously on 11 October 2026. [provenance.json](../contracts/openscope/provenance.json) records the raw-response hash, the repository-format hash, and all six differences from the 10 October research snapshot. These differences are example timestamp values in five schemas; paths, operations and schema shapes are unchanged. Retain the examples in the snapshot; do not silently strip vendor fields to make hashes match. An anonymous 12 October recheck found only six timestamp-example changes at the same pointers; route and schema shapes remain current. Its retrieval evidence is recorded in provenance.json; the immutable snapshot is retained.
 
 The checked contract has OpenAPI 3.0.1, API version 1.0.0, 294 paths, 323 HTTP operations and 156 schemas. The API version alone does not identify an immutable contract. Use the repository snapshot and SHA256 together. The JSON snapshot is reformatted to UTF-8 BOM/CRLF; its hash therefore differs from the raw response. The offline audit verifies the committed hash before extraction.
 
@@ -31,12 +31,12 @@ These commands do not retrieve the contract, authenticate, read local test confi
 
 | Observation | Count |
 |---|---:|
-| Existing distinct method/normalized-path routes | 205 |
-| Current routes matched | 200 |
-| Current routes missing | 123 |
+| Existing distinct method/normalized-path routes | 214 |
+| Current routes matched | 209 |
+| Current routes missing | 114 |
 | Legacy routes absent from current documentation | 5 |
-| Routes in classes marked unstable/incomplete | 179 |
-| Direct HTTP method implementations, including cancellation partials | 416 |
+| Routes in classes marked unstable/incomplete | 188 |
+| Direct HTTP method implementations, including cancellation partials | 434 |
 
 The source inventory includes all API files, public/internal class and method access, result type, parameters, direct response deserialization, native cancellation parameters, facade properties, unstable annotations and WithHttpInfo wrapper delegates. It includes handwritten changes embedded in generated files, notably ContactApi's typed results, as well as `AuthorizationApi.Cancellation.cs` and `AdditionalApi.Cancellation.cs`. It rejects unparsed HTTP calls and calls appearing outside the known API/transport boundary. Fixture tests cover visibility, comments/string braces, placeholder normalization, delegates, legacy routes and ambiguous input.
 

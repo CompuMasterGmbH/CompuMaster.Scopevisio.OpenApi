@@ -42,5 +42,23 @@
       "current": 1791294919625
     }
   ],
-  "note": "The raw vendor hash is evidence of this retrieval, not a stable API version identifier. Review semantic changes before updating the pin."
+  "note": "The raw vendor hash is evidence of this retrieval, not a stable API version identifier. Review semantic changes before updating the pin.",
+  "rechecks": [
+    {
+      "checked_on": "2026-10-12",
+      "http_status": 200,
+      "response_utf8_sha256": "47efe7f367e24849a8ed247a794729aea55ec8de1e226b512edd7af7c9a16557",
+      "paths": 294,
+      "semantic_changes": 0,
+      "changed_example_pointers": [
+        "/components/schemas/CreditForm/properties/postingDate/example",
+        "/components/schemas/MaterialPostingRow/example",
+        "/components/schemas/MaterialPostingRow/properties/postingTs/example",
+        "/components/schemas/OfferForm/properties/valutaDate/example",
+        "/components/schemas/OutgoingInvoiceForm/properties/postingDate/example",
+        "/components/schemas/TaskForm/properties/reminderDateTS/example"
+      ],
+      "note": "Anonymous GET response compared recursively against the committed snapshot. Only six timestamp-example values differ. Snapshot and its repository hash remain unchanged; the response UTF-8 hash is retrieval evidence, not a stable version."
+    }
+  ]
 }

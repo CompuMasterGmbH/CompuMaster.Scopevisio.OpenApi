@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 205,
-    "matching_routes": 200,
-    "missing_routes": 123,
+    "source_routes": 214,
+    "matching_routes": 209,
+    "missing_routes": 114,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 179,
-    "source_http_methods": 416,
+    "source_routes_on_unstable_classes": 188,
+    "source_http_methods": 434,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 42,
+      "Accounting": 33,
       "Campaign": 2,
       "Contact": 1,
       "Credit": 1,
@@ -577,10 +577,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.GetAccountMappingAsyncWithHttpInfo",
+        "AccountingApi.GetAccountMappingWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "accountingArea",
@@ -4864,10 +4867,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.GetFiscalYearsAsyncWithHttpInfo",
+        "AccountingApi.GetFiscalYearsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": null,
       "responses": {
@@ -4889,10 +4895,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.GetGainAndLossAdjustmentAccountsAsyncWithHttpInfo",
+        "AccountingApi.GetGainAndLossAdjustmentAccountsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "balanceDate",
@@ -7592,10 +7601,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.GetStatisticsAccountByNumberAsyncWithHttpInfo",
+        "AccountingApi.GetStatisticsAccountByNumberWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -7634,10 +7646,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.GetStatisticsPostingAsyncWithHttpInfo",
+        "AccountingApi.GetStatisticsPostingWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -8160,10 +8175,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.GetVatScopesAsyncWithHttpInfo",
+        "AccountingApi.GetVatScopesWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "active",
@@ -14255,10 +14273,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchStatisticsAccountsAsyncWithHttpInfo",
+        "AccountingApi.SearchStatisticsAccountsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "search filter in JSON format. See also <a target='_blank' href='https://help.scopevisio.com/de/articles/467360-search-scope-documentation'>our search documentation</a>.",
@@ -14289,10 +14310,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchStatisticsPostingsAsyncWithHttpInfo",
+        "AccountingApi.SearchStatisticsPostingsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "search filter in JSON format. See also <a target='_blank' href='https://help.scopevisio.com/de/articles/467360-search-scope-documentation'>our search documentation</a>.",
@@ -15211,10 +15235,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchTravelEntriesAsyncWithHttpInfo",
+        "AccountingApi.SearchTravelEntriesWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "search filter in JSON format. See also <a href='https://help.scopevisio.com/de/articles/467360-search-scope-documentation'>our search documentation</a>.",
@@ -15957,6 +15984,870 @@
     }
   ],
   "sdk_methods": [
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountMapping",
+      "access": "public",
+      "return_type": "AccountMappingResponse",
+      "parameters": "long? accountingArea = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetAccountMappingWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountMappingWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<AccountMappingResponse>",
+      "parameters": "long? accountingArea = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/accountmapping"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountMappingAsync",
+      "access": "public",
+      "return_type": "Task<AccountMappingResponse>",
+      "parameters": "long? accountingArea, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetAccountMappingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountMappingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<AccountMappingResponse>>",
+      "parameters": "long? accountingArea = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetAccountMappingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountMappingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<AccountMappingResponse>>",
+      "parameters": "long? accountingArea, CancellationToken cancellationToken",
+      "line": 67,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/accountmapping"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetFiscalYears",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "",
+      "line": 86,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFiscalYearsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetFiscalYearsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "",
+      "line": 93,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/fiscalyears"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetFiscalYearsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 113,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFiscalYearsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetFiscalYearsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "",
+      "line": 119,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFiscalYearsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetFiscalYearsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 127,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/fiscalyears"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetGainAndLossAdjustmentAccounts",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string balanceDate",
+      "line": 146,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetGainAndLossAdjustmentAccountsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetGainAndLossAdjustmentAccountsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string balanceDate",
+      "line": 153,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/gainandlossadjustmentaccounts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetGainAndLossAdjustmentAccountsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string balanceDate, CancellationToken cancellationToken",
+      "line": 176,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetGainAndLossAdjustmentAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetGainAndLossAdjustmentAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string balanceDate",
+      "line": 182,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetGainAndLossAdjustmentAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetGainAndLossAdjustmentAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string balanceDate, CancellationToken cancellationToken",
+      "line": 191,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/gainandlossadjustmentaccounts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsAccountByNumber",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 213,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStatisticsAccountByNumberWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsAccountByNumberWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 220,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/statisticsaccount/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsAccountByNumberAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 246,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStatisticsAccountByNumberAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsAccountByNumberAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 252,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStatisticsAccountByNumberAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsAccountByNumberAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 262,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/statisticsaccount/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsPosting",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long rowNumber, string fields = null",
+      "line": 285,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStatisticsPostingWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsPostingWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long rowNumber, string fields = null",
+      "line": 292,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/statisticspostings/{rowNumber}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsPostingAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long rowNumber, string fields, CancellationToken cancellationToken",
+      "line": 317,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStatisticsPostingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsPostingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long rowNumber, string fields = null",
+      "line": 323,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStatisticsPostingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStatisticsPostingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long rowNumber, string fields, CancellationToken cancellationToken",
+      "line": 333,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/statisticspostings/{rowNumber}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatScopes",
+      "access": "public",
+      "return_type": "VatScopesResponse",
+      "parameters": "bool? active = null",
+      "line": 354,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetVatScopesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatScopesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<VatScopesResponse>",
+      "parameters": "bool? active = null",
+      "line": 361,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/vatscopes"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatScopesAsync",
+      "access": "public",
+      "return_type": "Task<VatScopesResponse>",
+      "parameters": "bool? active, CancellationToken cancellationToken",
+      "line": 384,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetVatScopesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatScopesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<VatScopesResponse>>",
+      "parameters": "bool? active = null",
+      "line": 390,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetVatScopesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatScopesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<VatScopesResponse>>",
+      "parameters": "bool? active, CancellationToken cancellationToken",
+      "line": 399,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/vatscopes"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsAccounts",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 419,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchStatisticsAccountsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsAccountsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 426,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/statisticsaccounts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsAccountsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 447,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchStatisticsAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 453,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchStatisticsAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 462,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/statisticsaccounts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsPostings",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 480,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchStatisticsPostingsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsPostingsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 487,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/statisticspostings"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsPostingsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 508,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchStatisticsPostingsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsPostingsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 514,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchStatisticsPostingsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchStatisticsPostingsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 523,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/statisticspostings"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchTravelEntries",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 541,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTravelEntriesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchTravelEntriesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 548,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/travelentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchTravelEntriesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 569,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTravelEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchTravelEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 575,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTravelEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.Reads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchTravelEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 584,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/travelentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
     {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.cs",
       "class": "AccountingApi",

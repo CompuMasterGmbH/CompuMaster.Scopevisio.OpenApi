@@ -6,12 +6,12 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 224,
-    "matching_routes": 219,
-    "missing_routes": 104,
+    "source_routes": 236,
+    "matching_routes": 231,
+    "missing_routes": 92,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 198,
-    "source_http_methods": 454,
+    "source_routes_on_unstable_classes": 210,
+    "source_http_methods": 478,
     "status_counts": {
       "deferred": 323
     },
@@ -20,7 +20,7 @@
       "Campaign": 2,
       "Contact": 1,
       "Credit": 1,
-      "Data sources": 45,
+      "Data sources": 33,
       "Dispatch": 1,
       "HumanResources": 5,
       "IncomingInvoice": 2,
@@ -1646,10 +1646,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetContactConversionDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetContactConversionDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -1810,10 +1813,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetEventJournalDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetEventJournalDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -1862,10 +1868,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetExpenseDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetExpenseDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -1914,10 +1923,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetHumanResourceDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetHumanResourceDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -1974,10 +1986,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetHumanResourceAvailabilityDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetHumanResourceAvailabilityDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -2318,10 +2333,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetOpportunityDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetOpportunityDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -2594,10 +2612,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetPersonalJournalDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetPersonalJournalDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -3730,10 +3751,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetProjectDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetProjectDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -3894,10 +3918,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetSalesProjectDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetSalesProjectDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -4333,10 +4360,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetTimeEntryRunDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetTimeEntryRunDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -4385,10 +4415,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetTimeEntryRunEntryDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetTimeEntryRunEntryDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -4497,10 +4530,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetTravelEntryPositionsDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetTravelEntryPositionsDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -31608,6 +31644,1158 @@
         [
           "GET",
           "/datasource/auditLog"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetContactConversionDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactConversionDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetContactConversionDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/conversion"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetContactConversionDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactConversionDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetContactConversionDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactConversionDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetContactConversionDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 75,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/conversion"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetEventJournalDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 101,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetEventJournalDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetEventJournalDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 108,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/event"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetEventJournalDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 136,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetEventJournalDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetEventJournalDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 142,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetEventJournalDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetEventJournalDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 153,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/event"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetExpenseDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 179,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetExpenseDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetExpenseDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 186,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/expense"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetExpenseDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 214,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetExpenseDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetExpenseDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 220,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetExpenseDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetExpenseDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 231,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/expense"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, bool? hideTimeUnrestricted = null, string fields = null",
+      "line": 258,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, bool? hideTimeUnrestricted = null, string fields = null",
+      "line": 265,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/humanResource"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, bool? hideTimeUnrestricted, string fields, CancellationToken cancellationToken",
+      "line": 295,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? hideTimeUnrestricted = null, string fields = null",
+      "line": 301,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? hideTimeUnrestricted, string fields, CancellationToken cancellationToken",
+      "line": 313,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/humanResource"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailabilityDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 340,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceAvailabilityDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailabilityDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 347,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/humanResourceAvailability"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailabilityDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 375,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceAvailabilityDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailabilityDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 381,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceAvailabilityDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailabilityDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 392,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/humanResourceAvailability"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOpportunityDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 418,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOpportunityDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOpportunityDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 425,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/opportunity"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOpportunityDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 453,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOpportunityDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOpportunityDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 459,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOpportunityDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOpportunityDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 470,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/opportunity"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPersonalJournalDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 496,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPersonalJournalDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPersonalJournalDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 503,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/personalJournal"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPersonalJournalDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 531,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPersonalJournalDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPersonalJournalDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 537,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPersonalJournalDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetPersonalJournalDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 548,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/personalJournal"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetProjectDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 574,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetProjectDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 581,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/project"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetProjectDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 609,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetProjectDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 615,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetProjectDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 626,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/project"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetSalesProjectDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 652,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetSalesProjectDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetSalesProjectDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 659,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/salesProject"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetSalesProjectDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 687,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetSalesProjectDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetSalesProjectDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 693,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetSalesProjectDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetSalesProjectDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 704,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/salesProject"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 730,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTimeEntryRunDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 737,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/timeEntryRun"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 765,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTimeEntryRunDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 771,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTimeEntryRunDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 782,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/timeEntryRun"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunEntryDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 808,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTimeEntryRunEntryDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunEntryDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 815,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/timeEntryRunEntry"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunEntryDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 843,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTimeEntryRunEntryDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunEntryDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 849,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTimeEntryRunEntryDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTimeEntryRunEntryDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 860,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/timeEntryRunEntry"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTravelEntryPositionsDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 886,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTravelEntryPositionsDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTravelEntryPositionsDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 893,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/travelEntryPositions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTravelEntryPositionsDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 921,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTravelEntryPositionsDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTravelEntryPositionsDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields = null",
+      "line": 927,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTravelEntryPositionsDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.OperationalDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetTravelEntryPositionsDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, string fields, CancellationToken cancellationToken",
+      "line": 938,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/travelEntryPositions"
         ]
       ],
       "delegates": [],

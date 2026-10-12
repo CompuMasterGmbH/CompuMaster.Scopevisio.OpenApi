@@ -6,18 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 293,
-    "matching_routes": 288,
-    "missing_routes": 35,
+    "source_routes": 294,
+    "matching_routes": 289,
+    "missing_routes": 34,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 263,
-    "source_http_methods": 594,
+    "source_routes_on_unstable_classes": 264,
+    "source_http_methods": 596,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
       "Accounting": 21,
-      "Contact": 1,
       "HumanResources": 3,
       "IncomingInvoice": 2,
       "Material management (BETA)": 4,
@@ -931,10 +930,13 @@
         "Contact"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "2-contacts-projects-tasks",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ContactApi.GetContactEurodataInfoAsyncWithHttpInfo",
+        "ContactApi.GetContactEurodataInfoWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "id",
@@ -22227,6 +22229,102 @@
         [
           "POST",
           "/contacts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.EurodataInfo.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEurodataInfo",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactEurodataInfoWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.EurodataInfo.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEurodataInfoWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/eurodataInfo"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.EurodataInfo.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEurodataInfoAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactEurodataInfoAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.EurodataInfo.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEurodataInfoAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetContactEurodataInfoAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.EurodataInfo.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "GetContactEurodataInfoAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/contact/{id}/eurodataInfo"
         ]
       ],
       "delegates": [],

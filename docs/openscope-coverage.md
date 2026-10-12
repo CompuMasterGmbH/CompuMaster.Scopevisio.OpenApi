@@ -31,12 +31,12 @@ These commands do not retrieve the contract, authenticate, read local test confi
 
 | Observation | Count |
 |---|---:|
-| Existing distinct method/normalized-path routes | 293 |
-| Current routes matched | 288 |
-| Current routes missing | 35 |
+| Existing distinct method/normalized-path routes | 294 |
+| Current routes matched | 289 |
+| Current routes missing | 34 |
 | Legacy routes absent from current documentation | 5 |
-| Routes in classes marked unstable/incomplete | 263 |
-| Direct HTTP method implementations, including cancellation partials | 594 |
+| Routes in classes marked unstable/incomplete | 264 |
+| Direct HTTP method implementations, including cancellation partials | 596 |
 
 The source inventory includes all API files, public/internal class and method access, result type, parameters, direct response deserialization, native cancellation parameters, facade properties, unstable annotations and WithHttpInfo wrapper delegates. It includes handwritten changes embedded in generated files, notably ContactApi's typed results, as well as `AuthorizationApi.Cancellation.cs` and `AdditionalApi.Cancellation.cs`. It rejects unparsed HTTP calls and calls appearing outside the known API/transport boundary. Fixture tests cover visibility, comments/string braces, placeholder normalization, delegates, legacy routes and ambiguous input.
 

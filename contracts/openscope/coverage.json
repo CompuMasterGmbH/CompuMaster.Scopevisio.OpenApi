@@ -6,18 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 306,
-    "matching_routes": 301,
-    "missing_routes": 22,
+    "source_routes": 307,
+    "matching_routes": 302,
+    "missing_routes": 21,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 276,
-    "source_http_methods": 620,
+    "source_routes_on_unstable_classes": 277,
+    "source_http_methods": 622,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
       "Accounting": 13,
-      "IncomingInvoice": 1,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
     },
@@ -10315,10 +10314,13 @@
         "IncomingInvoice"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "IncomingInvoiceApi.UpdateIncomingInvoiceAsyncWithHttpInfo",
+        "IncomingInvoiceApi.UpdateIncomingInvoiceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "id",
@@ -26425,6 +26427,102 @@
         [
           "PUT",
           "/incominginvoice/{idOrNumber}/responsiblecontact"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Update.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateIncomingInvoice",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long id, IncomingInvoiceUpdateRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateIncomingInvoiceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Update.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateIncomingInvoiceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, IncomingInvoiceUpdateRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/incominginvoice/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Update.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateIncomingInvoiceAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, IncomingInvoiceUpdateRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateIncomingInvoiceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Update.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateIncomingInvoiceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, IncomingInvoiceUpdateRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateIncomingInvoiceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Update.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateIncomingInvoiceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, IncomingInvoiceUpdateRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/incominginvoice/{id}"
         ]
       ],
       "delegates": [],

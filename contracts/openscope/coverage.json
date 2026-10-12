@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 680,
+    "source_http_methods": 682,
     "status_counts": {
       "deferred": 323
     },
@@ -6601,6 +6601,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProductApi.GetProductAsyncWithHttpInfo",
+        "ProductApi.GetProductDetailsAsyncWithHttpInfo",
+        "ProductApi.GetProductDetailsWithHttpInfo",
         "ProductApi.GetProductWithHttpInfo"
       ],
       "parameters": [
@@ -33336,6 +33338,102 @@
         [
           "GET",
           "/product/{id}/ecommerceskus"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.SelectedReads.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id, string fields = null, bool? formatValues = null, bool? listExtended = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.SelectedReads.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id, string fields = null, bool? formatValues = null, bool? listExtended = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/product/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.SelectedReads.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, string fields, bool? formatValues, bool? listExtended, CancellationToken cancellationToken",
+      "line": 58,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.SelectedReads.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields = null, bool? formatValues = null, bool? listExtended = null",
+      "line": 64,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.SelectedReads.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, string fields, bool? formatValues, bool? listExtended, CancellationToken cancellationToken",
+      "line": 76,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/product/{id}"
         ]
       ],
       "delegates": [],

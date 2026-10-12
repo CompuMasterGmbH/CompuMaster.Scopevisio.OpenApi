@@ -6,18 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 323,
-    "matching_routes": 318,
-    "missing_routes": 5,
+    "source_routes": 324,
+    "matching_routes": 319,
+    "missing_routes": 4,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 293,
-    "source_http_methods": 654,
+    "source_routes_on_unstable_classes": 294,
+    "source_http_methods": 656,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Material management (BETA)": 4,
-      "OutgoingInvoice": 1
+      "Material management (BETA)": 4
     },
     "duplicate_operation_ids": {}
   },
@@ -12269,10 +12268,13 @@
         "OutgoingInvoice"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "OutgoingInvoiceApi.UpdateOutgoingInvoiceAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.UpdateOutgoingInvoiceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "number",
@@ -30986,6 +30988,102 @@
         [
           "GET",
           "/outgoinginvoice/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.Update.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoice",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, OutgoingInvoiceUpdateRequest request = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateOutgoingInvoiceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.Update.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoiceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, OutgoingInvoiceUpdateRequest request = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoice/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.Update.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoiceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, OutgoingInvoiceUpdateRequest request, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateOutgoingInvoiceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.Update.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoiceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, OutgoingInvoiceUpdateRequest request = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateOutgoingInvoiceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.Update.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateOutgoingInvoiceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, OutgoingInvoiceUpdateRequest request, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoice/{number}"
         ]
       ],
       "delegates": [],

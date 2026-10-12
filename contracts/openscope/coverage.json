@@ -6,12 +6,12 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 260,
-    "matching_routes": 255,
-    "missing_routes": 68,
+    "source_routes": 265,
+    "matching_routes": 260,
+    "missing_routes": 63,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 234,
-    "source_http_methods": 526,
+    "source_routes_on_unstable_classes": 239,
+    "source_http_methods": 536,
     "status_counts": {
       "deferred": 323
     },
@@ -20,7 +20,7 @@
       "Campaign": 2,
       "Contact": 1,
       "Credit": 1,
-      "Data sources": 9,
+      "Data sources": 4,
       "Dispatch": 1,
       "HumanResources": 5,
       "IncomingInvoice": 2,
@@ -3367,10 +3367,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetCreditNoteProductUsageDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetCreditNoteProductUsageDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -3443,10 +3446,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetDispatchProductUsageDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetDispatchProductUsageDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -3511,10 +3517,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetOfferProductUsageDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetOfferProductUsageDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -3650,10 +3659,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetOrderProductUsageDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetOrderProductUsageDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -3726,10 +3738,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetOutgoingInvoiceProductUsageDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetOutgoingInvoiceProductUsageDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -34056,6 +34071,486 @@
         [
           "GET",
           "/datasource/travelEntryPositions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetCreditNoteProductUsageDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditNoteProductUsageDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetCreditNoteProductUsageDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 33,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/creditNote"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetCreditNoteProductUsageDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, string currency, string accountingEntityNumbers, string fields, CancellationToken cancellationToken",
+      "line": 67,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditNoteProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetCreditNoteProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 73,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditNoteProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetCreditNoteProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, string currency, string accountingEntityNumbers, string fields, CancellationToken cancellationToken",
+      "line": 87,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/creditNote"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetDispatchProductUsageDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string fields = null",
+      "line": 118,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchProductUsageDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetDispatchProductUsageDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string fields = null",
+      "line": 125,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/dispatch"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetDispatchProductUsageDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, string currency, string fields, CancellationToken cancellationToken",
+      "line": 157,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetDispatchProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string fields = null",
+      "line": 163,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetDispatchProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, string currency, string fields, CancellationToken cancellationToken",
+      "line": 176,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/dispatch"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOfferProductUsageDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, bool? validOffersOnly = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 208,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferProductUsageDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOfferProductUsageDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, bool? validOffersOnly = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 215,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/offer"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOfferProductUsageDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, bool? validOffersOnly, string currency, string accountingEntityNumbers, string fields, CancellationToken cancellationToken",
+      "line": 251,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOfferProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, bool? validOffersOnly = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 257,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOfferProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, bool? validOffersOnly, string currency, string accountingEntityNumbers, string fields, CancellationToken cancellationToken",
+      "line": 272,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/offer"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOrderProductUsageDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 305,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderProductUsageDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOrderProductUsageDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 312,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/order"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOrderProductUsageDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, string currency, string accountingEntityNumbers, string fields, CancellationToken cancellationToken",
+      "line": 346,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOrderProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 352,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOrderProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, string currency, string accountingEntityNumbers, string fields, CancellationToken cancellationToken",
+      "line": 366,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/order"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceProductUsageDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 398,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceProductUsageDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceProductUsageDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 405,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/outgoingInvoice"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceProductUsageDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, string currency, string accountingEntityNumbers, string fields, CancellationToken cancellationToken",
+      "line": 439,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately = null, string currency = null, string accountingEntityNumbers = null, string fields = null",
+      "line": 445,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceProductUsageDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ProductUsageDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceProductUsageDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, bool? showCustomersSeparately, string currency, string accountingEntityNumbers, string fields, CancellationToken cancellationToken",
+      "line": 459,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/productUsage/outgoingInvoice"
         ]
       ],
       "delegates": [],

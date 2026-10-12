@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 682,
+    "source_http_methods": 694,
     "status_counts": {
       "deferred": 323
     },
@@ -1222,6 +1222,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "CreditApi.GetCreditAsyncWithHttpInfo",
+        "CreditApi.GetCreditDetailsAsyncWithHttpInfo",
+        "CreditApi.GetCreditDetailsWithHttpInfo",
         "CreditApi.GetCreditWithHttpInfo"
       ],
       "parameters": [
@@ -4871,6 +4873,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "DispatchApi.GetDispatchAsyncWithHttpInfo",
+        "DispatchApi.GetDispatchDetailsAsyncWithHttpInfo",
+        "DispatchApi.GetDispatchDetailsWithHttpInfo",
         "DispatchApi.GetDispatchWithHttpInfo"
       ],
       "parameters": [
@@ -5562,6 +5566,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "OfferApi.GetOfferAsyncWithHttpInfo",
+        "OfferApi.GetOfferDetailsAsyncWithHttpInfo",
+        "OfferApi.GetOfferDetailsWithHttpInfo",
         "OfferApi.GetOfferWithHttpInfo"
       ],
       "parameters": [
@@ -5984,6 +5990,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "OrderApi.GetOrderAsyncWithHttpInfo",
+        "OrderApi.GetOrderDetailsAsyncWithHttpInfo",
+        "OrderApi.GetOrderDetailsWithHttpInfo",
         "OrderApi.GetOrderWithHttpInfo"
       ],
       "parameters": [
@@ -6276,6 +6284,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "OutgoingInvoiceApi.GetOutgoingInvoiceAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.GetOutgoingInvoiceDetailsAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.GetOutgoingInvoiceDetailsWithHttpInfo",
         "OutgoingInvoiceApi.GetOutgoingInvoiceWithHttpInfo"
       ],
       "parameters": [
@@ -7245,6 +7255,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "RecurringInvoiceApi.GetRecurringInvoiceAsyncWithHttpInfo",
+        "RecurringInvoiceApi.GetRecurringInvoiceDetailsAsyncWithHttpInfo",
+        "RecurringInvoiceApi.GetRecurringInvoiceDetailsWithHttpInfo",
         "RecurringInvoiceApi.GetRecurringInvoiceWithHttpInfo"
       ],
       "parameters": [
@@ -26805,6 +26817,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.SelectedReads.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.SelectedReads.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/credit/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.SelectedReads.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.SelectedReads.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.SelectedReads.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/credit/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.cs",
       "class": "CreditApi",
       "class_access": "public",
@@ -27284,6 +27392,102 @@
         [
           "GET",
           "/dispatch/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.SelectedReads.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.SelectedReads.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/dispatch/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.SelectedReads.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.SelectedReads.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.SelectedReads.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/dispatch/{number}"
         ]
       ],
       "delegates": [],
@@ -29301,6 +29505,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.SelectedReads.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.SelectedReads.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/offer/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.SelectedReads.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.SelectedReads.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.SelectedReads.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/offer/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.cs",
       "class": "OfferApi",
       "class_access": "public",
@@ -30819,6 +31119,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.SelectedReads.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.SelectedReads.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/order/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.SelectedReads.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.SelectedReads.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.SelectedReads.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/order/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.cs",
       "class": "OrderApi",
       "class_access": "public",
@@ -31976,6 +32372,102 @@
         [
           "GET",
           "/outgoinginvoice/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.SelectedReads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.SelectedReads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.SelectedReads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.SelectedReads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.SelectedReads.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/{number}"
         ]
       ],
       "delegates": [],
@@ -36824,6 +37316,102 @@
         [
           "GET",
           "/recurringinvoice/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.SelectedReads.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoiceDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetRecurringInvoiceDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.SelectedReads.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoiceDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/recurringinvoice/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.SelectedReads.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoiceDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetRecurringInvoiceDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.SelectedReads.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoiceDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetRecurringInvoiceDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.SelectedReads.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "GetRecurringInvoiceDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/recurringinvoice/{number}"
         ]
       ],
       "delegates": [],

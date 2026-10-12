@@ -6,17 +6,16 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 316,
-    "matching_routes": 311,
-    "missing_routes": 12,
+    "source_routes": 320,
+    "matching_routes": 315,
+    "missing_routes": 8,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 286,
-    "source_http_methods": 640,
+    "source_routes_on_unstable_classes": 290,
+    "source_http_methods": 648,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 4,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
     },
@@ -9238,10 +9237,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.CorrectPostingXmlAsyncWithHttpInfo",
+        "AccountingApi.CorrectPostingXmlWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -12928,10 +12930,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.CancelPostingAsyncWithHttpInfo",
+        "AccountingApi.CancelPostingWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -12973,10 +12978,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.ImportPostingCorrectionsAsyncWithHttpInfo",
+        "AccountingApi.ImportPostingCorrectionsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -15899,10 +15907,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.UpdatePostingDocumentNumbersAsyncWithHttpInfo",
+        "AccountingApi.UpdatePostingDocumentNumbersWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -18192,6 +18203,390 @@
         [
           "POST",
           "/openitems/debitor/list"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CorrectPostingXml",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "PostingCorrectionXmlRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CorrectPostingXmlWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CorrectPostingXmlWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "PostingCorrectionXmlRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/correctpostings"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CorrectPostingXmlAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "PostingCorrectionXmlRequest request, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CorrectPostingXmlAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CorrectPostingXmlAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "PostingCorrectionXmlRequest request = null",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CorrectPostingXmlAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CorrectPostingXmlAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "PostingCorrectionXmlRequest request, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/correctpostings"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPosting",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "PostingCancellationRequest request = null",
+      "line": 84,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CancelPostingWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPostingWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "PostingCancellationRequest request = null",
+      "line": 91,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/posting/cancel"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPostingAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "PostingCancellationRequest request, CancellationToken cancellationToken",
+      "line": 112,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CancelPostingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPostingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "PostingCancellationRequest request = null",
+      "line": 118,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CancelPostingAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPostingAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "PostingCancellationRequest request, CancellationToken cancellationToken",
+      "line": 127,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/posting/cancel"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportPostingCorrections",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "PostingCorrectionImportRequest request = null",
+      "line": 146,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportPostingCorrectionsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportPostingCorrectionsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "PostingCorrectionImportRequest request = null",
+      "line": 153,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/postings/correction"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportPostingCorrectionsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "PostingCorrectionImportRequest request, CancellationToken cancellationToken",
+      "line": 174,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportPostingCorrectionsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportPostingCorrectionsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "PostingCorrectionImportRequest request = null",
+      "line": 180,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportPostingCorrectionsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportPostingCorrectionsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "PostingCorrectionImportRequest request, CancellationToken cancellationToken",
+      "line": 189,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/postings/correction"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePostingDocumentNumbers",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "PostingDocumentNumbersUpdateRequest request = null",
+      "line": 208,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdatePostingDocumentNumbersWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePostingDocumentNumbersWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "PostingDocumentNumbersUpdateRequest request = null",
+      "line": 215,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/postings/update"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePostingDocumentNumbersAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "PostingDocumentNumbersUpdateRequest request, CancellationToken cancellationToken",
+      "line": 236,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdatePostingDocumentNumbersAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePostingDocumentNumbersAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "PostingDocumentNumbersUpdateRequest request = null",
+      "line": 242,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdatePostingDocumentNumbersAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingMutations.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePostingDocumentNumbersAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "PostingDocumentNumbersUpdateRequest request, CancellationToken cancellationToken",
+      "line": 251,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/postings/update"
         ]
       ],
       "delegates": [],

@@ -6,18 +6,16 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 324,
-    "matching_routes": 319,
-    "missing_routes": 4,
+    "source_routes": 328,
+    "matching_routes": 323,
+    "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 656,
+    "source_http_methods": 664,
     "status_counts": {
       "deferred": 323
     },
-    "missing_by_tag": {
-      "Material management (BETA)": 4
-    },
+    "missing_by_tag": {},
     "duplicate_operation_ids": {}
   },
   "operations": [
@@ -10728,10 +10726,13 @@
         "Material management (BETA)"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "MaterialManagementApi.CreditMaterialInventoryAsyncWithHttpInfo",
+        "MaterialManagementApi.CreditMaterialInventoryWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -10768,10 +10769,13 @@
         "Material management (BETA)"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "MaterialManagementApi.CreateMaterialPurchaseDeliveryAsyncWithHttpInfo",
+        "MaterialManagementApi.CreateMaterialPurchaseDeliveryWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "content in JSON format",
@@ -10816,10 +10820,13 @@
         "Material management (BETA)"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "MaterialManagementApi.PostMaterialPurchaseDeliveryAsyncWithHttpInfo",
+        "MaterialManagementApi.PostMaterialPurchaseDeliveryWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "idOrDocumentNumber",
@@ -10873,10 +10880,13 @@
         "Material management (BETA)"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "MaterialManagementApi.CreateMaterialPurchaseOrderAsyncWithHttpInfo",
+        "MaterialManagementApi.CreateMaterialPurchaseOrderWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "content in JSON format",
@@ -28214,6 +28224,390 @@
       ],
       "delegates": [],
       "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreditMaterialInventory",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "MaterialInventoryCreditRequest request = null",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreditMaterialInventoryWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreditMaterialInventoryWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "MaterialInventoryCreditRequest request = null",
+      "line": 63,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/material/posting/credit"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreditMaterialInventoryAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "MaterialInventoryCreditRequest request, CancellationToken cancellationToken",
+      "line": 84,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreditMaterialInventoryAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreditMaterialInventoryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "MaterialInventoryCreditRequest request = null",
+      "line": 90,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreditMaterialInventoryAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreditMaterialInventoryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "MaterialInventoryCreditRequest request, CancellationToken cancellationToken",
+      "line": 99,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/material/posting/credit"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseDelivery",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "MaterialPurchaseDeliveryCreationRequest request",
+      "line": 119,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateMaterialPurchaseDeliveryWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseDeliveryWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "MaterialPurchaseDeliveryCreationRequest request",
+      "line": 126,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/material/purchasedelivery/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseDeliveryAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "MaterialPurchaseDeliveryCreationRequest request, CancellationToken cancellationToken",
+      "line": 147,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateMaterialPurchaseDeliveryAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseDeliveryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "MaterialPurchaseDeliveryCreationRequest request",
+      "line": 153,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateMaterialPurchaseDeliveryAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseDeliveryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "MaterialPurchaseDeliveryCreationRequest request, CancellationToken cancellationToken",
+      "line": 162,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/material/purchasedelivery/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "PostMaterialPurchaseDelivery",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string idOrDocumentNumber, MaterialPurchaseDeliveryPostingRequest request = null",
+      "line": 182,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "PostMaterialPurchaseDeliveryWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "PostMaterialPurchaseDeliveryWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string idOrDocumentNumber, MaterialPurchaseDeliveryPostingRequest request = null",
+      "line": 189,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/material/purchasedelivery/{idOrDocumentNumber}/post"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "PostMaterialPurchaseDeliveryAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string idOrDocumentNumber, MaterialPurchaseDeliveryPostingRequest request, CancellationToken cancellationToken",
+      "line": 213,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "PostMaterialPurchaseDeliveryAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "PostMaterialPurchaseDeliveryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string idOrDocumentNumber, MaterialPurchaseDeliveryPostingRequest request = null",
+      "line": 219,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "PostMaterialPurchaseDeliveryAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "PostMaterialPurchaseDeliveryAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string idOrDocumentNumber, MaterialPurchaseDeliveryPostingRequest request, CancellationToken cancellationToken",
+      "line": 229,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/material/purchasedelivery/{idOrDocumentNumber}/post"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseOrder",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "MaterialPurchaseOrderCreationRequest request",
+      "line": 251,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateMaterialPurchaseOrderWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseOrderWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "MaterialPurchaseOrderCreationRequest request",
+      "line": 258,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/material/purchaseorder/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseOrderAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "MaterialPurchaseOrderCreationRequest request, CancellationToken cancellationToken",
+      "line": 279,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateMaterialPurchaseOrderAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseOrderAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "MaterialPurchaseOrderCreationRequest request",
+      "line": 285,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateMaterialPurchaseOrderAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/MaterialManagementApi.cs",
+      "class": "MaterialManagementApi",
+      "class_access": "public",
+      "method": "CreateMaterialPurchaseOrderAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "MaterialPurchaseOrderCreationRequest request, CancellationToken cancellationToken",
+      "line": 294,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/material/purchaseorder/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
       "facade_property": true
     },
     {

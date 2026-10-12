@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 307,
-    "matching_routes": 302,
-    "missing_routes": 21,
+    "source_routes": 309,
+    "matching_routes": 304,
+    "missing_routes": 19,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 277,
-    "source_http_methods": 622,
+    "source_routes_on_unstable_classes": 279,
+    "source_http_methods": 626,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 13,
+      "Accounting": 11,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
     },
@@ -9931,10 +9931,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.ImportFiltersAsyncWithHttpInfo",
+        "AccountingApi.ImportFiltersWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -10014,10 +10017,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.EditFiscalYearStateAsyncWithHttpInfo",
+        "AccountingApi.EditFiscalYearStateWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -16251,6 +16257,198 @@
     }
   ],
   "sdk_methods": [
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportFilters",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "FilterImportRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportFiltersWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportFiltersWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "FilterImportRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/filter/import"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportFiltersAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "FilterImportRequest request, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportFiltersAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportFiltersAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "FilterImportRequest request = null",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportFiltersAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportFiltersAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "FilterImportRequest request, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/filter/import"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "EditFiscalYearState",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "FiscalYearStateRequest request = null",
+      "line": 84,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "EditFiscalYearStateWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "EditFiscalYearStateWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "FiscalYearStateRequest request = null",
+      "line": 91,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/fiscalyears/edit"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "EditFiscalYearStateAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "FiscalYearStateRequest request, CancellationToken cancellationToken",
+      "line": 112,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "EditFiscalYearStateAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "EditFiscalYearStateAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "FiscalYearStateRequest request = null",
+      "line": 118,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "EditFiscalYearStateAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "EditFiscalYearStateAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "FiscalYearStateRequest request, CancellationToken cancellationToken",
+      "line": 127,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/fiscalyears/edit"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
     {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.JournalDownloads.cs",
       "class": "AccountingApi",

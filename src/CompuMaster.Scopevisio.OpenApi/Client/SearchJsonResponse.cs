@@ -3,7 +3,6 @@ using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace CompuMaster.Scopevisio.OpenApi.Client
 {
@@ -19,6 +18,24 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
             return headers;
         }
 
+        internal static Dictionary<string, string> ResponseHeaders(RestResponse response)
+        {
+            var headers = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            if (response.Headers != null)
+                foreach (var header in response.Headers)
+                    AppendHeader(headers, header.Name, Convert.ToString(header.Value));
+            if (response.ContentHeaders != null)
+                foreach (var header in response.ContentHeaders)
+                    AppendHeader(headers, header.Name, Convert.ToString(header.Value));
+            return headers;
+        }
+
+        private static void AppendHeader(Dictionary<string, string> headers, string name, string value)
+        {
+            if (headers.TryGetValue(name, out var previous)) headers[name] = previous + "," + value;
+            else headers.Add(name, value);
+        }
+
         internal static ApiResponse<JToken> Parse(string method, RestResponse response, ExceptionFactory exceptionFactory)
         {
             Exception error = exceptionFactory?.Invoke(method, response);
@@ -31,10 +48,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Client
                     FloatParseHandling = FloatParseHandling.Decimal,
                     DateParseHandling = DateParseHandling.None
                 });
-            var headers = response.Headers == null ? new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) :
-                response.Headers.GroupBy(header => header.Name, StringComparer.OrdinalIgnoreCase)
-                    .ToDictionary(group => group.Key, group => string.Join(",", group.Select(header => Convert.ToString(header.Value))),
-                        StringComparer.OrdinalIgnoreCase);
+            var headers = ResponseHeaders(response);
             return new ApiResponse<JToken>((int)response.StatusCode, headers, response.Content, data);
         }
     }

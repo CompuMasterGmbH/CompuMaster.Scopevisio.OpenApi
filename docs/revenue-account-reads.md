@@ -1,0 +1,15 @@
+﻿# Product and standard revenue-account reads
+
+SDK #36/#17 adds GetProductRevenueAccounts (GET /revenueaccounts/product/{id}), GetProductsRevenueAccounts (GET /revenueaccounts/products) and GetStandardRevenueAccounts (GET /revenueaccounts/standard). Each has synchronous data/WithHttpInfo and native async variants with/without cancellation. Existing generated methods, public signatures, serializers, authorization and account selection are unchanged.
+
+Per-product reads return at most 1000 rows without a paging parameter. The products listing accepts zero-based page/pageSize; null retains server defaults, explicit requested values are sent unchanged, and the server silently caps pageSize at 1000. No automatic paging occurs. This listing omits products using organisation-standard accounts. Read standard accounts separately or use the manufacturer-documented product filter followed by per-product queries when required.
+
+Optional fields/country/VAT/active/preferred/date values retain null omission. False and empty query strings remain observable. Int64 product/VAT values use invariant formatting. Null country selects the organisation's taxation country; null VAT scope uses server default 1. Negative VAT selects all scopes. Explicit zero is sent without assigning meaning to its documented undefined server behavior.
+
+Preferred filtering implies effective active filtering on the server. Explicit active=false is sent unchanged. Documented preferred=true with negative VAT fails before HTTP. Supplied servicesRenderedDate must be valid dd.MM.yyyy; null uses today's server date. Dates affect effective active filtering, including preferred mode. No client-local date or timezone default is imposed.
+
+RevenueAccountsResponse/RevenueAccountRecord deeply copy JSON and retain all 34 schema fields with nullable typed access. Int64 IDs/type codes/epochs remain Int64; account numbers retain leading zeros. Unknown data remain accessible through JObject. Records returns a read-only list of copied records; omitted/null arrays return null, explicit empty arrays stay empty. Malformed roots/record shapes fail clearly. Empty body/JSON-null root yields null typed data with exact raw text retained. Fractions in unknown fields use .NET decimal precision (about 28–29 significant digits) and may round/underflow; RawJsonContent remains exact, and out-of-range fractions fail parsing.
+
+Raw/status/headers and exception hooks remain intact. Cancellation reaches HTTP I/O and each read sends once. The server enforces account profiles/product visibility. No creation, booking, VAT-matrix change or automatic retry is included.
+
+Authority: pinned 11 October contract, repository SHA256 40060e2bbbf187b5d6f8a0397bc97a5e09e8c8cf5d548644d676b16e8f13c339; 12 October anonymous recheck changed only six timestamp examples. Nine absent-workflow cases failed before implementation; 98 new isolated cases cover protocol/models/defaults/errors/cancellation on Windows net8.0/net48. Live profile/date/visibility acceptance remains in #36. User-authorized [skip ci] after essential local checks; no credentials/server resources/publication/downstream import.

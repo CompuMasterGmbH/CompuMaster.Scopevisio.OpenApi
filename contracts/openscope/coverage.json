@@ -27679,6 +27679,45 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacySearchCancellation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Object>>",
+      "parameters": "string body, CancellationToken cancellationToken",
+      "line": 20,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projects"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacySearchCancellation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "GetProjectsAsync",
+      "access": "public",
+      "return_type": "Task",
+      "parameters": "string body, CancellationToken cancellationToken",
+      "line": 79,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProjectsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.ReadOperations.cs",
       "class": "ProjectApi",
       "class_access": "public",
@@ -29855,7 +29894,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task",
       "parameters": "string body = default(string)",
-      "line": 2580,
+      "line": 2573,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -29873,16 +29912,13 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task<ApiResponse<Object>>",
       "parameters": "string body = default(string)",
-      "line": 2592,
+      "line": 2585,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
-      "routes": [
-        [
-          "POST",
-          "/projects"
-        ]
+      "routes": [],
+      "delegates": [
+        "GetProjectsAsyncWithHttpInfo"
       ],
-      "delegates": [],
       "unstable_class": true,
       "facade_property": true
     },
@@ -29894,7 +29930,7 @@
       "access": "public",
       "return_type": "void",
       "parameters": "long id, string fields = default(string)",
-      "line": 2658,
+      "line": 2597,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -29912,7 +29948,7 @@
       "access": "public",
       "return_type": "ApiResponse<Object>",
       "parameters": "long id, string fields = default(string)",
-      "line": 2670,
+      "line": 2609,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -29933,7 +29969,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task",
       "parameters": "long id, string fields = default(string)",
-      "line": 2732,
+      "line": 2671,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -29951,7 +29987,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task<ApiResponse<Object>>",
       "parameters": "long id, string fields = default(string)",
-      "line": 2745,
+      "line": 2684,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -29972,7 +30008,7 @@
       "access": "public",
       "return_type": "void",
       "parameters": "long id, ProjectForm body = default(ProjectForm)",
-      "line": 2807,
+      "line": 2746,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -29990,7 +30026,7 @@
       "access": "public",
       "return_type": "ApiResponse<Object>",
       "parameters": "long id, ProjectForm body = default(ProjectForm)",
-      "line": 2819,
+      "line": 2758,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -30011,7 +30047,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task",
       "parameters": "long id, ProjectForm body = default(ProjectForm)",
-      "line": 2889,
+      "line": 2828,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -30029,7 +30065,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task<ApiResponse<Object>>",
       "parameters": "long id, ProjectForm body = default(ProjectForm)",
-      "line": 2902,
+      "line": 2841,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -30050,7 +30086,7 @@
       "access": "public",
       "return_type": "void",
       "parameters": "long projectId, long employeeId, ProjectEmployeeForm body",
-      "line": 2973,
+      "line": 2912,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -30068,7 +30104,7 @@
       "access": "public",
       "return_type": "ApiResponse<Object>",
       "parameters": "long projectId, long employeeId, ProjectEmployeeForm body",
-      "line": 2986,
+      "line": 2925,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -30089,7 +30125,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task",
       "parameters": "long projectId, long employeeId, ProjectEmployeeForm body",
-      "line": 3063,
+      "line": 3002,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -30107,7 +30143,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task<ApiResponse<Object>>",
       "parameters": "long projectId, long employeeId, ProjectEmployeeForm body",
-      "line": 3077,
+      "line": 3016,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -30128,7 +30164,7 @@
       "access": "public",
       "return_type": "void",
       "parameters": "long id, SalesProjectForm body = default(SalesProjectForm)",
-      "line": 3153,
+      "line": 3092,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -30146,7 +30182,7 @@
       "access": "public",
       "return_type": "ApiResponse<Object>",
       "parameters": "long id, SalesProjectForm body = default(SalesProjectForm)",
-      "line": 3165,
+      "line": 3104,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -30167,7 +30203,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task",
       "parameters": "long id, SalesProjectForm body = default(SalesProjectForm)",
-      "line": 3235,
+      "line": 3174,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -30185,7 +30221,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task<ApiResponse<Object>>",
       "parameters": "long id, SalesProjectForm body = default(SalesProjectForm)",
-      "line": 3248,
+      "line": 3187,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -30206,7 +30242,7 @@
       "access": "public",
       "return_type": "void",
       "parameters": "long id, TimeEntryForm body = default(TimeEntryForm)",
-      "line": 3318,
+      "line": 3257,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -30224,7 +30260,7 @@
       "access": "public",
       "return_type": "ApiResponse<Object>",
       "parameters": "long id, TimeEntryForm body = default(TimeEntryForm)",
-      "line": 3330,
+      "line": 3269,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -30245,7 +30281,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task",
       "parameters": "long id, TimeEntryForm body = default(TimeEntryForm)",
-      "line": 3399,
+      "line": 3338,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -30263,7 +30299,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task<ApiResponse<Object>>",
       "parameters": "long id, TimeEntryForm body = default(TimeEntryForm)",
-      "line": 3412,
+      "line": 3351,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -32881,6 +32917,45 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.LegacySearchCancellation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetTasksAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Object>>",
+      "parameters": "string body, CancellationToken cancellationToken",
+      "line": 20,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/tasks"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.LegacySearchCancellation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetTasksAsync",
+      "access": "public",
+      "return_type": "Task",
+      "parameters": "string body, CancellationToken cancellationToken",
+      "line": 79,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTasksAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.ReadOperations.cs",
       "class": "TaskApi",
       "class_access": "public",
@@ -33839,7 +33914,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task",
       "parameters": "string body = default(string)",
-      "line": 1445,
+      "line": 1438,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -33857,16 +33932,13 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task<ApiResponse<Object>>",
       "parameters": "string body = default(string)",
-      "line": 1457,
+      "line": 1450,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
-      "routes": [
-        [
-          "POST",
-          "/tasks"
-        ]
+      "routes": [],
+      "delegates": [
+        "GetTasksAsyncWithHttpInfo"
       ],
-      "delegates": [],
       "unstable_class": true,
       "facade_property": true
     },
@@ -33878,7 +33950,7 @@
       "access": "public",
       "return_type": "void",
       "parameters": "long id, TaskForm body = default(TaskForm)",
-      "line": 1523,
+      "line": 1462,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -33896,7 +33968,7 @@
       "access": "public",
       "return_type": "ApiResponse<Object>",
       "parameters": "long id, TaskForm body = default(TaskForm)",
-      "line": 1535,
+      "line": 1474,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [
@@ -33917,7 +33989,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task",
       "parameters": "long id, TaskForm body = default(TaskForm)",
-      "line": 1604,
+      "line": 1543,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [],
@@ -33935,7 +34007,7 @@
       "access": "public",
       "return_type": "System.Threading.Tasks.Task<ApiResponse<Object>>",
       "parameters": "long id, TaskForm body = default(TaskForm)",
-      "line": 1617,
+      "line": 1556,
       "native_cancellation_parameter": false,
       "deserializes_response": false,
       "routes": [

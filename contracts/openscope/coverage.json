@@ -6,12 +6,12 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 283,
-    "matching_routes": 278,
-    "missing_routes": 45,
+    "source_routes": 284,
+    "matching_routes": 279,
+    "missing_routes": 44,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 253,
-    "source_http_methods": 572,
+    "source_routes_on_unstable_classes": 254,
+    "source_http_methods": 574,
     "status_counts": {
       "deferred": 323
     },
@@ -21,8 +21,7 @@
       "HumanResources": 3,
       "IncomingInvoice": 2,
       "Material management (BETA)": 4,
-      "OutgoingInvoice": 4,
-      "Report": 1
+      "OutgoingInvoice": 4
     },
     "duplicate_operation_ids": {}
   },
@@ -6968,10 +6967,13 @@
         "Report"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetFinancialReportByLayoutAsyncWithHttpInfo",
+        "ReportApi.GetFinancialReportByLayoutWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "type",
@@ -33155,6 +33157,102 @@
         [
           "GET",
           "/datasource/proReport"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.DirectFinancialReport.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportByLayout",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string definitionType, string name, string year, string month, string layoutName, FinancialReportDataSourceOptions options = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFinancialReportByLayoutWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.DirectFinancialReport.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportByLayoutWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string definitionType, string name, string year, string month, string layoutName, FinancialReportDataSourceOptions options = null",
+      "line": 35,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/proreport/{type}/{name}/{year}/{month}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.DirectFinancialReport.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportByLayoutAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string definitionType, string name, string year, string month, string layoutName, FinancialReportDataSourceOptions options, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFinancialReportByLayoutAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.DirectFinancialReport.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportByLayoutAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string definitionType, string name, string year, string month, string layoutName, FinancialReportDataSourceOptions options = null",
+      "line": 76,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFinancialReportByLayoutAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.DirectFinancialReport.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportByLayoutAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string definitionType, string name, string year, string month, string layoutName, FinancialReportDataSourceOptions options, CancellationToken cancellationToken",
+      "line": 90,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/proreport/{type}/{name}/{year}/{month}"
         ]
       ],
       "delegates": [],

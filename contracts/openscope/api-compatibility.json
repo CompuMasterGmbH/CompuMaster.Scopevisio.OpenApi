@@ -1,0 +1,100 @@
+﻿{
+  "baseline_commit": "a72dde455591cef65425b953bc6a6d56d6b03baf",
+  "current_commit": "ed5fec9d551631eccd6d8139191ade3cb7397468",
+  "sdk_source_tree": "cbce7555e4a951df2e1a301defe0ff378fcef218",
+  "baseline_archive_sha256": "6a7d95d425c3181234a3746453c0354be4df76f49a12acd0898a858cdb157545",
+  "tool_version": "10.0.100",
+  "tool_package_sha256": "7263e0dc9896d7092c2742a314fb9dd25a670b86968894e2e27982ec8b07a3af",
+  "checker_source_sha256": "0f60875126ac0361d469642fd19b8d4c4e1d071c765cdeae533a29ac756749e7",
+  "metadata_source_sha256": "d32c72d6c895c047a283a9b9de989c225fd9da6521281bb6ed80807d5b1f2792",
+  "metadata_project_sha256": "538d4e35b2a38b881ba3809e907aac711e9e4539c2dbb3888454cfdc263d7291",
+  "consumer_source_sha256": "e05998a2d348efd18ef668deda16c4ae80534539a4ac1e702c3365d1814c5e84",
+  "consumer_project_sha256": "882e8b0a63346577749a6ce0f7e0319bf6a90e95a24002846955d187ced51f25",
+  "exclusions_sha256": "1448ee5e5a5dff6cd5179f360136586979b38bc6cfbb2f0a1970472b24d93aea",
+  "dotnet_sdk": "10.0.401",
+  "excluded_compiler_attributes": [
+    "T:System.Diagnostics.DebuggerStepThroughAttribute",
+    "T:System.Runtime.CompilerServices.AsyncStateMachineAttribute"
+  ],
+  "comparisons": {
+    "netstandard2.0": {
+      "state": "passed",
+      "parameter_defaults_constants": "passed",
+      "baseline_sha256": "98eb906a2bdc6d991425484bfb7f58b67b2edd6df96e82972076d5cc9c1cba98",
+      "current_sha256": "16fadeeb36a318e3afe7622380101ea204f0f1f99c9b41744a001719ad2f7adb"
+    },
+    "net6.0": {
+      "state": "passed",
+      "parameter_defaults_constants": "passed",
+      "baseline_sha256": "2a46f259a64ea19e3251cef31f26797b43a9b56404ba8c26c3e51e1b38058a06",
+      "current_sha256": "b7477a6a6fcc3557e44beca50b02e99a53c21ddd8d114cf3029115dbc33d8dd7"
+    },
+    "net48": {
+      "state": "passed",
+      "parameter_defaults_constants": "passed",
+      "baseline_sha256": "dd91b9a17b24e6e8e65a7c846d8115838a0a3d112234b6c7727771ae210a34e7",
+      "current_sha256": "c8e52dc762ac0fc2594ed676cf911385fe50b5dc864aae2758969338732b29bf"
+    }
+  },
+  "checker_regressions": {
+    "additive": {
+      "expected_break": false,
+      "api_compat_exit_code": 0,
+      "metadata_exit_code": 0
+    },
+    "removed-public": {
+      "expected_break": true,
+      "api_compat_exit_code": 1,
+      "metadata_exit_code": 1
+    },
+    "removed-protected": {
+      "expected_break": true,
+      "api_compat_exit_code": 1,
+      "metadata_exit_code": 1
+    },
+    "parameter-name": {
+      "expected_break": true,
+      "api_compat_exit_code": 1,
+      "metadata_exit_code": 0
+    },
+    "parameter-default": {
+      "expected_break": true,
+      "api_compat_exit_code": 0,
+      "metadata_exit_code": 1
+    },
+    "optional-flag": {
+      "expected_break": true,
+      "api_compat_exit_code": 0,
+      "metadata_exit_code": 1
+    },
+    "enum-value": {
+      "expected_break": true,
+      "api_compat_exit_code": 1,
+      "metadata_exit_code": 1
+    },
+    "removed-attribute": {
+      "expected_break": true,
+      "api_compat_exit_code": 1,
+      "metadata_exit_code": 0
+    }
+  },
+  "standalone_consumers": {
+    "net8.0": {
+      "state": "passed",
+      "consumer_sha256": "0a5b07d27b65fc1888c62fe89ec54575c355ab532f53bc57c6fb267298a5b7d2",
+      "baseline_sdk_sha256": "2a46f259a64ea19e3251cef31f26797b43a9b56404ba8c26c3e51e1b38058a06",
+      "current_sdk_sha256": "b7477a6a6fcc3557e44beca50b02e99a53c21ddd8d114cf3029115dbc33d8dd7"
+    },
+    "net48": {
+      "state": "passed",
+      "consumer_sha256": "e51b8dad8d194195fa298111e24ebc8e3f9b5582cfea6ca86b5dff06146acbe9",
+      "baseline_sdk_sha256": "dd91b9a17b24e6e8e65a7c846d8115838a0a3d112234b6c7727771ae210a34e7",
+      "current_sdk_sha256": "c8e52dc762ac0fc2594ed676cf911385fe50b5dc864aae2758969338732b29bf"
+    }
+  },
+  "limitations": [
+    "Signature checks do not establish legacy wire contracts or server behavior.",
+    "Only compiler state-machine identity and debugger stepping metadata are excluded.",
+    "Live/profile/account acceptance, package publication and downstream adoption remain separate."
+  ]
+}

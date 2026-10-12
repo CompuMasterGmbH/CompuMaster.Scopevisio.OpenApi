@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 214,
-    "matching_routes": 209,
-    "missing_routes": 114,
+    "source_routes": 217,
+    "matching_routes": 212,
+    "missing_routes": 111,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 188,
-    "source_http_methods": 434,
+    "source_routes_on_unstable_classes": 191,
+    "source_http_methods": 440,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 33,
+      "Accounting": 30,
       "Campaign": 2,
       "Contact": 1,
       "Credit": 1,
@@ -7319,10 +7319,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.GetProductRevenueAccountsAsyncWithHttpInfo",
+        "AccountingApi.GetProductRevenueAccountsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "id",
@@ -7421,10 +7424,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.GetProductsRevenueAccountsAsyncWithHttpInfo",
+        "AccountingApi.GetProductsRevenueAccountsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -7520,10 +7526,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.GetStandardRevenueAccountsAsyncWithHttpInfo",
+        "AccountingApi.GetStandardRevenueAccountsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -16842,6 +16851,294 @@
         [
           "POST",
           "/travelentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductRevenueAccounts",
+      "access": "public",
+      "return_type": "RevenueAccountsResponse",
+      "parameters": "long productId, string fields = null, bool? preferred = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductRevenueAccountsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductRevenueAccountsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<RevenueAccountsResponse>",
+      "parameters": "long productId, string fields = null, bool? preferred = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null",
+      "line": 35,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/revenueaccounts/product/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductRevenueAccountsAsync",
+      "access": "public",
+      "return_type": "Task<RevenueAccountsResponse>",
+      "parameters": "long productId, string fields, bool? preferred, string country, long? vatScope, bool? active, string servicesRenderedDate, CancellationToken cancellationToken",
+      "line": 77,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductRevenueAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductRevenueAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<RevenueAccountsResponse>>",
+      "parameters": "long productId, string fields = null, bool? preferred = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null",
+      "line": 83,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductRevenueAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductRevenueAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<RevenueAccountsResponse>>",
+      "parameters": "long productId, string fields, bool? preferred, string country, long? vatScope, bool? active, string servicesRenderedDate, CancellationToken cancellationToken",
+      "line": 98,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/revenueaccounts/product/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductsRevenueAccounts",
+      "access": "public",
+      "return_type": "RevenueAccountsResponse",
+      "parameters": "string fields = null, int? page = null, int? pageSize = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null",
+      "line": 138,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductsRevenueAccountsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductsRevenueAccountsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<RevenueAccountsResponse>",
+      "parameters": "string fields = null, int? page = null, int? pageSize = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null",
+      "line": 145,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/revenueaccounts/products"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductsRevenueAccountsAsync",
+      "access": "public",
+      "return_type": "Task<RevenueAccountsResponse>",
+      "parameters": "string fields, int? page, int? pageSize, string country, long? vatScope, bool? active, string servicesRenderedDate, CancellationToken cancellationToken",
+      "line": 188,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductsRevenueAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductsRevenueAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<RevenueAccountsResponse>>",
+      "parameters": "string fields = null, int? page = null, int? pageSize = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null",
+      "line": 194,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductsRevenueAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetProductsRevenueAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<RevenueAccountsResponse>>",
+      "parameters": "string fields, int? page, int? pageSize, string country, long? vatScope, bool? active, string servicesRenderedDate, CancellationToken cancellationToken",
+      "line": 209,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/revenueaccounts/products"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStandardRevenueAccounts",
+      "access": "public",
+      "return_type": "RevenueAccountsResponse",
+      "parameters": "string fields = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null",
+      "line": 248,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStandardRevenueAccountsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStandardRevenueAccountsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<RevenueAccountsResponse>",
+      "parameters": "string fields = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null",
+      "line": 255,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/revenueaccounts/standard"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStandardRevenueAccountsAsync",
+      "access": "public",
+      "return_type": "Task<RevenueAccountsResponse>",
+      "parameters": "string fields, string country, long? vatScope, bool? active, string servicesRenderedDate, CancellationToken cancellationToken",
+      "line": 292,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStandardRevenueAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStandardRevenueAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<RevenueAccountsResponse>>",
+      "parameters": "string fields = null, string country = null, long? vatScope = null, bool? active = null, string servicesRenderedDate = null",
+      "line": 298,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetStandardRevenueAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueAccounts.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetStandardRevenueAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<RevenueAccountsResponse>>",
+      "parameters": "string fields, string country, long? vatScope, bool? active, string servicesRenderedDate, CancellationToken cancellationToken",
+      "line": 311,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/revenueaccounts/standard"
         ]
       ],
       "delegates": [],

@@ -48,7 +48,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             var records = Newtonsoft.Json.JsonConvert.DeserializeObject<Records<JObject>>(response.Content);
             var contacts = new RecordCollection<Contact>(records);
             return new ApiResponse<RecordCollection<Contact>>((int)response.StatusCode,
-                response.Headers.ToDictionary(header => header.Name, header => string.Join(",", header.Value)),
+                SearchJsonResponse.ResponseHeaders(response),
                 response.Content, contacts);
         }
     }

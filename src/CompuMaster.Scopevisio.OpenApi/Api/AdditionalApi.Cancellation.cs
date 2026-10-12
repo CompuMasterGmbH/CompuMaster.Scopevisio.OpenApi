@@ -60,7 +60,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.AccountInfo result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo>(localVarResponse.Content);
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }

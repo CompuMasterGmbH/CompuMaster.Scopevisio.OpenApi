@@ -1,0 +1,13 @@
+﻿# Legacy response-header collection
+
+Issue #104 fixes a response-processing failure under parent #17 and consuming CompuMasterGmbH/CompuMaster.Dms#90. A successful legacy HTTP-info call could throw ArgumentException when RestSharp exposed repeated header entries, for example two X-Fixture values. Content-Type, Content-Length and other content headers were omitted as well.
+
+Exactly 378 unsafe Headers.ToDictionary expressions in 27 existing API files are replaced by the established SearchJsonResponse.ResponseHeaders collector. These files span 22 existing API groups and five native cancellation partials. The collector includes both response and content headers, uses case-insensitive lookup and appends repeated values in their original response-then-content order. For example, response values first and second plus a content-header value third produce first,second,third.
+
+The public header contract remains IDictionary<string,string> with the existing comma-joining convention. This is not a new raw multi-header collection; consumers cannot assume that splitting on commas reconstructs values such as cookie dates. The original RestResponse header collections are not modified, so exception factories still receive original transport data.
+
+No public or protected API is added, removed or renamed. Requests, selectors, payload serialization, result deserialization, legacy null/Object/typed Data, raw response text, status, exception-hook ordering, native cancellation and caller token/account behavior remain unchanged. In particular, successful legacy token forms continue applying AccessToken to the selected Configuration before returning their typed token result. Header collection no longer turns that successful result into an unrelated duplicate-key failure.
+
+The touched historical source files are saved using required UTF-8 BOM/CRLF. Seventeen files previously lacked the BOM; their BOM and trailing space on the opening comment line are handled in a separate mechanical commit. There is no regeneration or broad formatting change. The subsequent behavior commit changes only the 378 audited header expressions plus focused fixtures/documentation.
+
+The regression first reproduces duplicate-key failures in 44 sync/async calls across all 22 historical API groups. Durable isolated cases cover those groups, typed contacts, all token forms, the remaining native cancellation partials, response/content headers, case-insensitive lookup, original deserialization/token state and untouched exception-factory diagnostics. Source inventory remains unchanged. All HTTP targets are intercepted .invalid handlers; these checks do not access a real account or GUI. Package publication, actual-server acceptance and downstream adoption remain separate.

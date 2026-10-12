@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 288,
-    "matching_routes": 283,
-    "missing_routes": 40,
+    "source_routes": 292,
+    "matching_routes": 287,
+    "missing_routes": 36,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 258,
-    "source_http_methods": 582,
+    "source_routes_on_unstable_classes": 262,
+    "source_http_methods": 590,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 26,
+      "Accounting": 22,
       "Contact": 1,
       "HumanResources": 3,
       "IncomingInvoice": 2,
@@ -10894,10 +10894,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchHypatosExportAsyncWithHttpInfo",
+        "AccountingApi.SearchHypatosExportWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "optional search/paging filter in JSON format, plus the optional <i>afterId</i> keyset cursor.",
@@ -10928,10 +10931,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchInvoiceExportAsyncWithHttpInfo",
+        "AccountingApi.SearchInvoiceExportWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "optional search/paging filter in JSON format, plus the optional <i>afterId</i> keyset cursor.",
@@ -10962,10 +10968,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchJournalExportAsyncWithHttpInfo",
+        "AccountingApi.SearchJournalExportWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "optional search/paging filter in JSON format, plus the optional posting-timestamp window <i>from</i>/<i>to</i> and the <i>afterRowNumber</i> keyset cursor.",
@@ -10996,10 +11005,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.SearchPersonalAccountExportAsyncWithHttpInfo",
+        "AccountingApi.SearchPersonalAccountExportWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "optional search/paging filter in JSON format, plus the optional <i>afterId</i> keyset cursor.",
@@ -16195,6 +16207,390 @@
     }
   ],
   "sdk_methods": [
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchHypatosExport",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "IdExportSearchRequest query = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchHypatosExportWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchHypatosExportWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "IdExportSearchRequest query = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/mlexport/hypatos"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchHypatosExportAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "IdExportSearchRequest query, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchHypatosExportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchHypatosExportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "IdExportSearchRequest query = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchHypatosExportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchHypatosExportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "IdExportSearchRequest query, CancellationToken cancellationToken",
+      "line": 67,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/mlexport/hypatos"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchInvoiceExport",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "IdExportSearchRequest query = null",
+      "line": 88,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchInvoiceExportWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchInvoiceExportWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "IdExportSearchRequest query = null",
+      "line": 95,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/mlexport/invoice"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchInvoiceExportAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "IdExportSearchRequest query, CancellationToken cancellationToken",
+      "line": 118,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchInvoiceExportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchInvoiceExportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "IdExportSearchRequest query = null",
+      "line": 124,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchInvoiceExportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchInvoiceExportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "IdExportSearchRequest query, CancellationToken cancellationToken",
+      "line": 133,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/mlexport/invoice"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchJournalExport",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "JournalExportSearchRequest query = null",
+      "line": 154,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchJournalExportWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchJournalExportWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "JournalExportSearchRequest query = null",
+      "line": 161,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/mlexport/journal"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchJournalExportAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "JournalExportSearchRequest query, CancellationToken cancellationToken",
+      "line": 184,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchJournalExportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchJournalExportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "JournalExportSearchRequest query = null",
+      "line": 190,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchJournalExportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchJournalExportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "JournalExportSearchRequest query, CancellationToken cancellationToken",
+      "line": 199,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/mlexport/journal"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchPersonalAccountExport",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "IdExportSearchRequest query = null",
+      "line": 220,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchPersonalAccountExportWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchPersonalAccountExportWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "IdExportSearchRequest query = null",
+      "line": 227,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/mlexport/personal-account"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchPersonalAccountExportAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "IdExportSearchRequest query, CancellationToken cancellationToken",
+      "line": 250,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchPersonalAccountExportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchPersonalAccountExportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "IdExportSearchRequest query = null",
+      "line": 256,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchPersonalAccountExportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.MlExportReads.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "SearchPersonalAccountExportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "IdExportSearchRequest query, CancellationToken cancellationToken",
+      "line": 265,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/mlexport/personal-account"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
     {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.OpenItemReads.cs",
       "class": "AccountingApi",

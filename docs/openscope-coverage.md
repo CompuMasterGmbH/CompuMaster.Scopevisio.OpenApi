@@ -36,7 +36,7 @@ These commands do not retrieve the contract, authenticate, read local test confi
 | Current routes missing | 0 |
 | Legacy routes absent from current documentation | 5 |
 | Routes in classes marked unstable/incomplete | 294 |
-| Direct HTTP method implementations, including cancellation partials | 694 |
+| Direct HTTP method implementations, including cancellation partials | 696 |
 
 The source inventory includes all API files, public/internal class and method access, result type, parameters, direct response deserialization, native cancellation parameters, facade properties, unstable annotations and WithHttpInfo wrapper delegates. It includes handwritten changes embedded in generated files, notably ContactApi's typed results, as well as `AuthorizationApi.Cancellation.cs` and `AdditionalApi.Cancellation.cs`. It rejects unparsed HTTP calls and calls appearing outside the known API/transport boundary. Fixture tests cover visibility, comments/string braces, placeholder normalization, delegates, legacy routes and ambiguous input.
 
@@ -47,6 +47,8 @@ Current operation IDs are unique in this snapshot, but repeated base names with 
 ## Generation boundary and review process
 
 The repository records OpenAPI Generator **4.3.1** in `.openapi-generator/VERSION`. It does not retain a complete immutable 2020 input/configuration/template recipe. The ignore file contains examples only and does not protect custom code. Full historical regeneration is therefore not presently reproducible. This PR establishes reproducible *inventory* generation, not a claim that replacing the SDK is safe.
+
+[Bounded read generation](bounded-read-generation.md) now pins the local tool, template, recipe, complete contract/path hashes and emitted source for GET task subtasks. Two fresh outputs match byte-for-byte and the offline workflow verifies the reviewed additive import. Unsupported shapes and unsafe output/colliding names fail; the historical full generation recipe remains unavailable.
 
 For every future bounded generation batch:
 

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 694,
+    "source_http_methods": 696,
     "status_counts": {
       "deferred": 323
     },
@@ -7968,6 +7968,8 @@
       "phase": "2-contacts-projects-tasks",
       "public_source_route": true,
       "sdk_methods": [
+        "TaskApi.GetSubtaskDetailsAsyncWithHttpInfo",
+        "TaskApi.GetSubtaskDetailsWithHttpInfo",
         "TaskApi.GetSubtasksAsyncWithHttpInfo",
         "TaskApi.GetSubtasksWithHttpInfo"
       ],
@@ -43476,6 +43478,102 @@
       ],
       "delegates": [],
       "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.GetSubtaskDetails.Generated.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetSubtaskDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long taskId",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetSubtaskDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.GetSubtaskDetails.Generated.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetSubtaskDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long taskId",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/task/{taskId}/subtasks"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.GetSubtaskDetails.Generated.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetSubtaskDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long taskId, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetSubtaskDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.GetSubtaskDetails.Generated.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetSubtaskDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long taskId",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetSubtaskDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.GetSubtaskDetails.Generated.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "GetSubtaskDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long taskId, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/task/{taskId}/subtasks"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
       "facade_property": true
     },
     {

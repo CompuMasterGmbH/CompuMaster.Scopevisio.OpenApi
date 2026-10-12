@@ -1,0 +1,80 @@
+﻿// Bounded read generator ${version}. Reviewed imports only.
+// Contract SHA256: ${contract_sha}. Operation SHA256: ${operation_sha}.
+using CompuMaster.Scopevisio.OpenApi.Client;
+using Newtonsoft.Json.Linq;
+using RestSharp;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CompuMaster.Scopevisio.OpenApi.Api
+{
+    public partial class ${class}
+    {
+        /// <summary>${summary}</summary>
+        /// <param name="${parameter}">${parameter_summary}</param>
+        /// <returns>The complete JSON response, or null for an empty response body.</returns>
+        /// <remarks>${remarks}</remarks>
+        /// <exception cref="ApiException">The configured exception factory rejects the response.</exception>
+        /// <exception cref="Newtonsoft.Json.JsonException">The response is invalid JSON or a fractional value exceeds the decimal range.</exception>
+        public JToken ${method}(long ${parameter})
+        {
+            return ${method}WithHttpInfo(${parameter}).Data;
+        }
+
+        /// <inheritdoc cref="${method}"/>
+        /// <returns>The status, headers, unchanged raw response and complete parsed JSON.</returns>
+        public ApiResponse<JToken> ${method}WithHttpInfo(long ${parameter})
+        {
+            var localVarPath = "${path}";
+            localVarPath = localVarPath.Replace("{${parameter}}", ${parameter}.ToString(CultureInfo.InvariantCulture));
+            var queryParams = new List<KeyValuePair<string, string>>();
+            var response = Configuration.ApiClient.CallApi(localVarPath, Method.Get,
+                queryParams, null, SearchJsonResponse.Headers(Configuration),
+                new Dictionary<string, string>(), new Dictionary<string, FileParameter>(),
+                new Dictionary<string, string>(), "application/json");
+            return SearchJsonResponse.Parse("${method}", response, ExceptionFactory);
+        }
+
+        /// <inheritdoc cref="${method}"/>
+        public Task<JToken> ${method}Async(long ${parameter})
+        {
+            return ${method}Async(${parameter}, CancellationToken.None);
+        }
+
+        /// <inheritdoc cref="${method}"/>
+        /// <param name="${parameter}">${parameter_summary}</param>
+        /// <param name="cancellationToken">The token used to cancel admission and native active HTTP I/O.</param>
+        /// <exception cref="OperationCanceledException">Cancellation is requested before or during the request.</exception>
+        public async Task<JToken> ${method}Async(long ${parameter}, CancellationToken cancellationToken)
+        {
+            return (await ${method}AsyncWithHttpInfo(${parameter}, cancellationToken).ConfigureAwait(false)).Data;
+        }
+
+        /// <inheritdoc cref="${method}WithHttpInfo"/>
+        public Task<ApiResponse<JToken>> ${method}AsyncWithHttpInfo(long ${parameter})
+        {
+            return ${method}AsyncWithHttpInfo(${parameter}, CancellationToken.None);
+        }
+
+        /// <inheritdoc cref="${method}WithHttpInfo"/>
+        /// <param name="${parameter}">${parameter_summary}</param>
+        /// <param name="cancellationToken">The token used to cancel admission and native active HTTP I/O.</param>
+        /// <exception cref="OperationCanceledException">Cancellation is requested before or during the request.</exception>
+        public async Task<ApiResponse<JToken>> ${method}AsyncWithHttpInfo(long ${parameter}, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            var localVarPath = "${path}";
+            localVarPath = localVarPath.Replace("{${parameter}}", ${parameter}.ToString(CultureInfo.InvariantCulture));
+            var queryParams = new List<KeyValuePair<string, string>>();
+            var response = await Configuration.ApiClient.CallApiAsync(localVarPath, Method.Get,
+                queryParams, null, SearchJsonResponse.Headers(Configuration),
+                new Dictionary<string, string>(), new Dictionary<string, FileParameter>(),
+                new Dictionary<string, string>(), "application/json", cancellationToken).ConfigureAwait(false);
+            return SearchJsonResponse.Parse("${method}", response, ExceptionFactory);
+        }
+
+    }
+}

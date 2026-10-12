@@ -6,6 +6,9 @@ on:
       - 'contracts/openscope/**'
       - 'tools/contract_coverage.py'
       - 'tools/test_contract_coverage.py'
+      - 'tools/generate_read_partials.py'
+      - 'tools/test_generate_read_partials.py'
+      - 'tools/templates/**'
       - 'src/CompuMaster.Scopevisio.OpenApi/**'
       - 'src/CompuMaster.Scopevisio.OpenApi.AsyncTests/**'
       - '.github/workflows/ContractCoverage.yml'
@@ -14,6 +17,9 @@ on:
       - 'contracts/openscope/**'
       - 'tools/contract_coverage.py'
       - 'tools/test_contract_coverage.py'
+      - 'tools/generate_read_partials.py'
+      - 'tools/test_generate_read_partials.py'
+      - 'tools/templates/**'
       - 'src/CompuMaster.Scopevisio.OpenApi/**'
       - 'src/CompuMaster.Scopevisio.OpenApi.AsyncTests/**'
       - '.github/workflows/ContractCoverage.yml'
@@ -32,10 +38,14 @@ jobs:
           python-version: '3.12'
       - name: Test conservative source extraction
         run: python -m unittest discover -s tools -p test_contract_coverage.py -v
+      - name: Test bounded generation and verify reviewed source import
+        run: |
+          python -m unittest discover -s tools -p test_generate_read_partials.py -v
+          python tools/generate_read_partials.py --check-import
       - name: Verify pinned contract and reproducible report
         run: python tools/contract_coverage.py --check
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
-      - name: Verify compiled API accessibility and isolated authorization
+      - name: Verify isolated SDK contracts and authorization
         run: dotnet test src/CompuMaster.Scopevisio.OpenApi.AsyncTests/CompuMaster.Scopevisio.OpenApi.AsyncTests.csproj -f net8.0 --logger 'console;verbosity=quiet'

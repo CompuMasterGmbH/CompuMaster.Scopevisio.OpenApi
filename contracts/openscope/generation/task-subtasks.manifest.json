@@ -1,0 +1,18 @@
+﻿{
+  "generator_version": 1,
+  "tool": "tools/generate_read_partials.py",
+  "tool_sha256": "0ab03153a3b5139cc11100b5e0b6576f63a5c46df3377eff33e00c760bc7ee63",
+  "support_tool": "tools/contract_coverage.py",
+  "support_tool_sha256": "52fdc7616b02ae03a152e6ddea182a273ec1ef514400f4287743bf2e2b910e79",
+  "recipe": "contracts/openscope/generation/task-subtasks.json",
+  "recipe_sha256": "1521701b4045abce20118d4a30bf1db809e675b2d463678bad292ffe58e8cb9b",
+  "contract": "contracts/openscope/openapi-2026-10-11.json",
+  "contract_sha256": "40060e2bbbf187b5d6f8a0397bc97a5e09e8c8cf5d548644d676b16e8f13c339",
+  "template": "tools/templates/selected-int64-read.cs.txt",
+  "template_sha256": "dda4c3b501d6510780b86d8d5b67966e9fc2fd40e76a203053e45822cae028be",
+  "operation": "GET /task/{taskId}/subtasks",
+  "operation_sha256": "5e121e88932433e7bd35a5ecb8cac6f155c7458cb31220b149c5713abf8cb410",
+  "import": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.GetSubtaskDetails.Generated.cs",
+  "generated_sha256": "2e55afadd0af1cf803df9376136ce8093696fb7d34f79c9598cc3fb47d201c11",
+  "boundary": "Fresh disposable output only; reviewed source import is a separate action."
+}

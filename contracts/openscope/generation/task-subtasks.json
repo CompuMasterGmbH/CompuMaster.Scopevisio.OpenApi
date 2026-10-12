@@ -1,0 +1,16 @@
+﻿{
+  "version": 1,
+  "contract": "contracts/openscope/openapi-2026-10-11.json",
+  "contract_sha256": "40060e2bbbf187b5d6f8a0397bc97a5e09e8c8cf5d548644d676b16e8f13c339",
+  "template": "tools/templates/selected-int64-read.cs.txt",
+  "template_sha256": "dda4c3b501d6510780b86d8d5b67966e9fc2fd40e76a203053e45822cae028be",
+  "path": "/task/{taskId}/subtasks",
+  "operation_sha256": "5e121e88932433e7bd35a5ecb8cac6f155c7458cb31220b149c5713abf8cb410",
+  "class": "TaskApi",
+  "method": "GetSubtaskDetails",
+  "parameter": "taskId",
+  "import": "Api/TaskApi.GetSubtaskDetails.Generated.cs",
+  "summary": "Retrieves the complete JSON subtasks of a selected task.",
+  "parameter_summary": "The explicitly selected task master identifier.",
+  "remarks": "The server requires the Aufgabe (Anzeigen) profile. The manufacturer declares no fixed success schema; HTTP 404 can mean a missing task or missing authorization. The original signed Int64 selection is sent unchanged. Existing generated methods retain their null-data behavior. Fractional values use .NET decimal precision and may round or exceed its range; raw JSON remains exact."
+}

@@ -6,12 +6,12 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 276,
-    "matching_routes": 271,
-    "missing_routes": 52,
+    "source_routes": 278,
+    "matching_routes": 273,
+    "missing_routes": 50,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 250,
-    "source_http_methods": 558,
+    "source_routes_on_unstable_classes": 252,
+    "source_http_methods": 562,
     "status_counts": {
       "deferred": 323
     },
@@ -19,7 +19,7 @@
       "Accounting": 30,
       "Campaign": 2,
       "Contact": 1,
-      "HumanResources": 5,
+      "HumanResources": 3,
       "IncomingInvoice": 2,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4,
@@ -5116,10 +5116,13 @@
         "HumanResources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "HumanResourcesApi.GetHumanResourceDetailsAsyncWithHttpInfo",
+        "HumanResourcesApi.GetHumanResourceDetailsWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "fields",
@@ -10162,10 +10165,13 @@
         "HumanResources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "HumanResourcesApi.GetHumanResourceAvailabilityAsyncWithHttpInfo",
+        "HumanResourcesApi.GetHumanResourceAvailabilityWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "content": {
@@ -23591,6 +23597,198 @@
         [
           "POST",
           "/dispatches"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDetails",
+      "access": "public",
+      "return_type": "HumanResourceRecord",
+      "parameters": "long id, string fields = null, bool? formatValues = null",
+      "line": 24,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<HumanResourceRecord>",
+      "parameters": "long id, string fields = null, bool? formatValues = null",
+      "line": 31,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/humanresource/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDetailsAsync",
+      "access": "public",
+      "return_type": "Task<HumanResourceRecord>",
+      "parameters": "long id, string fields, bool? formatValues, CancellationToken cancellationToken",
+      "line": 57,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<HumanResourceRecord>>",
+      "parameters": "long id, string fields = null, bool? formatValues = null",
+      "line": 63,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<HumanResourceRecord>>",
+      "parameters": "long id, string fields, bool? formatValues, CancellationToken cancellationToken",
+      "line": 74,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/humanresource/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailability",
+      "access": "public",
+      "return_type": "HumanResourceAvailabilityResponse",
+      "parameters": "HumanResourceAvailabilityRequest query",
+      "line": 96,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceAvailabilityWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailabilityWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<HumanResourceAvailabilityResponse>",
+      "parameters": "HumanResourceAvailabilityRequest query",
+      "line": 103,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/humanresourcesavailability/v2"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailabilityAsync",
+      "access": "public",
+      "return_type": "Task<HumanResourceAvailabilityResponse>",
+      "parameters": "HumanResourceAvailabilityRequest query, CancellationToken cancellationToken",
+      "line": 126,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceAvailabilityAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailabilityAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<HumanResourceAvailabilityResponse>>",
+      "parameters": "HumanResourceAvailabilityRequest query",
+      "line": 132,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHumanResourceAvailabilityAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Reads.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "GetHumanResourceAvailabilityAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<HumanResourceAvailabilityResponse>>",
+      "parameters": "HumanResourceAvailabilityRequest query, CancellationToken cancellationToken",
+      "line": 141,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/humanresourcesavailability/v2"
         ]
       ],
       "delegates": [],

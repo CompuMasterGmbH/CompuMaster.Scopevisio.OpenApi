@@ -213,7 +213,7 @@ namespace CompuMaster.Scopevisio.OpenApi.AsyncTests
 
         private static CompuMaster.Scopevisio.OpenApi.Model.SearchRequest Query()
         {
-            return new CompuMaster.Scopevisio.OpenApi.Model.SearchRequest(JObject.Parse("{\"page\":0,\"pageSize\":13,\"fields\":[\"rowNumber\",\"amount\"],\"formatValues\":false,\"count\":true,\"order\":[{\"field\":\"rowNumber\",\"direction\":\"asc\"}],\"search\":[{\"field\":\"number\",\"type\":\"eq\",\"value\":\"0001\"}],\"future\":{\"exact\":null}}"));
+            return new CompuMaster.Scopevisio.OpenApi.Model.SearchRequest(JObject.Parse("{\"page\":0,\"pageSize\":13,\"fields\":[\"rowNumber\",\"amount\"],\"formatValues\":false,\"count\":true,\"order\":[\"rowNumber = asc\"],\"search\":[{\"field\":\"number\",\"operator\":\"equal\",\"value\":\"0001\"}],\"future\":{\"exact\":null}}"));
         }
         private static async Task<ApiResponse<JToken>> Invoke(AccountingApi api, int route, int mode, bool explicitValues, CancellationToken token)
         {

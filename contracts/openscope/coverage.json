@@ -6,18 +6,18 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 305,
-    "matching_routes": 300,
-    "missing_routes": 23,
+    "source_routes": 306,
+    "matching_routes": 301,
+    "missing_routes": 22,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 275,
-    "source_http_methods": 618,
+    "source_routes_on_unstable_classes": 276,
+    "source_http_methods": 620,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
       "Accounting": 13,
-      "IncomingInvoice": 2,
+      "IncomingInvoice": 1,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
     },
@@ -15817,10 +15817,13 @@
         "IncomingInvoice"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "IncomingInvoiceApi.SetIncomingInvoiceResponsibleContactAsyncWithHttpInfo",
+        "IncomingInvoiceApi.SetIncomingInvoiceResponsibleContactWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "idOrNumber",
@@ -26326,6 +26329,102 @@
         [
           "POST",
           "/humanresourcesAvailability"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Responsibility.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SetIncomingInvoiceResponsibleContact",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string idOrNumber, IncomingInvoiceResponsibleContactRequest request = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SetIncomingInvoiceResponsibleContactWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Responsibility.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SetIncomingInvoiceResponsibleContactWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string idOrNumber, IncomingInvoiceResponsibleContactRequest request = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/incominginvoice/{idOrNumber}/responsiblecontact"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Responsibility.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SetIncomingInvoiceResponsibleContactAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string idOrNumber, IncomingInvoiceResponsibleContactRequest request, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SetIncomingInvoiceResponsibleContactAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Responsibility.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SetIncomingInvoiceResponsibleContactAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string idOrNumber, IncomingInvoiceResponsibleContactRequest request = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SetIncomingInvoiceResponsibleContactAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Responsibility.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SetIncomingInvoiceResponsibleContactAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string idOrNumber, IncomingInvoiceResponsibleContactRequest request, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/incominginvoice/{idOrNumber}/responsiblecontact"
         ]
       ],
       "delegates": [],

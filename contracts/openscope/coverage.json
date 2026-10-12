@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 309,
-    "matching_routes": 304,
-    "missing_routes": 19,
+    "source_routes": 311,
+    "matching_routes": 306,
+    "missing_routes": 17,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 279,
-    "source_http_methods": 626,
+    "source_routes_on_unstable_classes": 281,
+    "source_http_methods": 630,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 11,
+      "Accounting": 9,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
     },
@@ -14388,10 +14388,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.CreateProductRevenueAccountsAsyncWithHttpInfo",
+        "AccountingApi.CreateProductRevenueAccountsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "content in JSON format",
@@ -14602,10 +14605,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.CreateStatisticsPostingsAsyncWithHttpInfo",
+        "AccountingApi.CreateStatisticsPostingsWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "content in JSON format",
@@ -18843,6 +18849,198 @@
         [
           "GET",
           "/revenueaccounts/standard"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateProductRevenueAccounts",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "ProductRevenueAccountsCreationRequest request",
+      "line": 24,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProductRevenueAccountsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateProductRevenueAccountsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "ProductRevenueAccountsCreationRequest request",
+      "line": 31,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/revenueaccounts/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateProductRevenueAccountsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "ProductRevenueAccountsCreationRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProductRevenueAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateProductRevenueAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "ProductRevenueAccountsCreationRequest request",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProductRevenueAccountsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateProductRevenueAccountsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "ProductRevenueAccountsCreationRequest request, CancellationToken cancellationToken",
+      "line": 67,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/revenueaccounts/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateStatisticsPostings",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "StatisticsPostingsCreationRequest request",
+      "line": 87,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateStatisticsPostingsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateStatisticsPostingsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "StatisticsPostingsCreationRequest request",
+      "line": 94,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/statisticspostings/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateStatisticsPostingsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "StatisticsPostingsCreationRequest request, CancellationToken cancellationToken",
+      "line": 115,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateStatisticsPostingsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateStatisticsPostingsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "StatisticsPostingsCreationRequest request",
+      "line": 121,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateStatisticsPostingsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.RevenueStatisticsCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateStatisticsPostingsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "StatisticsPostingsCreationRequest request, CancellationToken cancellationToken",
+      "line": 130,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/statisticspostings/new"
         ]
       ],
       "delegates": [],

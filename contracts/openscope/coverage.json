@@ -6,17 +6,17 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 300,
-    "matching_routes": 295,
-    "missing_routes": 28,
+    "source_routes": 302,
+    "matching_routes": 297,
+    "missing_routes": 26,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 270,
-    "source_http_methods": 608,
+    "source_routes_on_unstable_classes": 272,
+    "source_http_methods": 612,
     "status_counts": {
       "deferred": 323
     },
     "missing_by_tag": {
-      "Accounting": 18,
+      "Accounting": 16,
       "IncomingInvoice": 2,
       "Material management (BETA)": 4,
       "OutgoingInvoice": 4
@@ -8498,10 +8498,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.UpdateVatMatrixEntriesAsyncWithHttpInfo",
+        "AccountingApi.UpdateVatMatrixEntriesWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "The vatmatrix entries in Json. An array of VAT (Value Added Tax) configuration objects that define tax rates and associated accounting settings.\nPATCH-Method will keep existing entries.\nEach entry contains:\n\nvatRate - The tax rate percentage (e.g., 15.4 for 15.4%)\ndatevKey - DATEV account assignment key for standard rate transactions\ndatevKeyReduced - DATEV account assignment key for reduced rate transactions\nvatKey - Internal VAT identification code (e.g., \"V19\")\nvatKeyDescription - Human-readable description of the VAT type (e.g., \"Vorsteuer 5,5%\" for 5.5% input tax)\nvatCode - Geographic scope of the VAT rule (e.g., \"Inland\" for domestic transactions)\npurchaseAccount - General ledger account number for purchase transactions\nsalesAccount - General ledger account number for sales transactions\nsalesNotDueAccount - General ledger account for sales not yet due (nullable)\ncashDiscountAccount - General ledger account number for cash discount handling\n\nMultiple VAT entries can be provided.",
@@ -15669,10 +15672,13 @@
         "Accounting"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "3-accounting-invoices",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "AccountingApi.ReplaceVatMatrixEntriesAsyncWithHttpInfo",
+        "AccountingApi.ReplaceVatMatrixEntriesWithHttpInfo"
+      ],
       "parameters": [],
       "request_body": {
         "description": "The vatmatrix entries in Json. An array of VAT (Value Added Tax) configuration objects that define tax rates and associated accounting settings.\nAttention: This Endpoint uses the POST-Method and will replace your entire Vatmatrix with the array of entries provided as input.\nEach entry contains:\n\nvatRate - The tax rate percentage (e.g., 15.4 for 15.4%)\ndatevKey - DATEV account assignment key for standard rate transactions\ndatevKeyReduced - DATEV account assignment key for reduced rate transactions\nvatKey - Internal VAT identification code (e.g., \"V19\")\nvatKeyDescription - Human-readable description of the VAT type (e.g., \"Vorsteuer 5,5%\" for 5.5% input tax)\nvatCode - Geographic scope of the VAT rule (e.g., \"Inland\" for domestic transactions)\npurchaseAccount - General ledger account number for purchase transactions\nsalesAccount - General ledger account number for sales transactions\nsalesNotDueAccount - General ledger account for sales not yet due (nullable)\ncashDiscountAccount - General ledger account number for cash discount handling\n\nMultiple VAT entries can be provided.",
@@ -18625,6 +18631,198 @@
         [
           "GET",
           "/revenueaccounts/standard"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ReplaceVatMatrixEntries",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "JArray entries = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ReplaceVatMatrixEntriesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ReplaceVatMatrixEntriesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "JArray entries = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/vatmatrixentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ReplaceVatMatrixEntriesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "JArray entries, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ReplaceVatMatrixEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ReplaceVatMatrixEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "JArray entries = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ReplaceVatMatrixEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ReplaceVatMatrixEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "JArray entries, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/vatmatrixentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateVatMatrixEntries",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "JArray entries = null",
+      "line": 83,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateVatMatrixEntriesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateVatMatrixEntriesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "JArray entries = null",
+      "line": 90,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PATCH",
+          "/vatmatrixentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateVatMatrixEntriesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "JArray entries, CancellationToken cancellationToken",
+      "line": 111,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateVatMatrixEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateVatMatrixEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "JArray entries = null",
+      "line": 117,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateVatMatrixEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.VatMatrixWrites.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateVatMatrixEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "JArray entries, CancellationToken cancellationToken",
+      "line": 126,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PATCH",
+          "/vatmatrixentries"
         ]
       ],
       "delegates": [],

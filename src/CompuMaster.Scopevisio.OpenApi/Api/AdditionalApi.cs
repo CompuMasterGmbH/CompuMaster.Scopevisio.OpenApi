@@ -166,7 +166,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 null);
         }
@@ -232,7 +232,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 null);
         }
@@ -289,7 +289,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.AccountInfo result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo>(localVarResponse.Content);
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.AccountInfo>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }
@@ -358,7 +358,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.License[] result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.License[]>(localVarResponse.Content);
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }
@@ -417,7 +417,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.License[] result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.License[]>(localVarResponse.Content);
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.License[]>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }
@@ -488,7 +488,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.TeamworkToken result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.TeamworkToken>(localVarResponse.Content);
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }
@@ -560,7 +560,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.TeamworkToken result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.TeamworkToken>(localVarResponse.Content);
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }
@@ -617,7 +617,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.Version result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarResponse.Content);
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }
@@ -674,7 +674,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.Version result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarResponse.Content);
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Version>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }
@@ -731,7 +731,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.Hello result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarResponse.Content);
 
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }
@@ -788,7 +788,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             CompuMaster.Scopevisio.OpenApi.Model.Hello result = Newtonsoft.Json.JsonConvert.DeserializeObject<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarResponse.Content);
             
             return new ApiResponse<CompuMaster.Scopevisio.OpenApi.Model.Hello>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 result);
         }
@@ -845,7 +845,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             Model.Records<Model.Organisation> results = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.Records<Model.Organisation>>(localVarResponse.Content);
 
             return new ApiResponse<Model.Records<Model.Organisation>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 results);
         }
@@ -902,7 +902,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             Model.Records<Model.Organisation> results = Newtonsoft.Json.JsonConvert.DeserializeObject<Model.Records<Model.Organisation>>(localVarResponse.Content);
 
             return new ApiResponse<Model.Records<Model.Organisation>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                SearchJsonResponse.ResponseHeaders(localVarResponse),
                 localVarResponse.Content,
                 results);
         }

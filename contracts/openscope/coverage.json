@@ -6,12 +6,12 @@
     "paths": 294,
     "operations": 323,
     "schemas": 156,
-    "source_routes": 267,
-    "matching_routes": 262,
-    "missing_routes": 61,
+    "source_routes": 269,
+    "matching_routes": 264,
+    "missing_routes": 59,
     "legacy_routes": 5,
-    "source_routes_on_unstable_classes": 241,
-    "source_http_methods": 540,
+    "source_routes_on_unstable_classes": 243,
+    "source_http_methods": 544,
     "status_counts": {
       "deferred": 323
     },
@@ -20,7 +20,6 @@
       "Campaign": 2,
       "Contact": 1,
       "Credit": 1,
-      "Data sources": 2,
       "Dispatch": 1,
       "HumanResources": 5,
       "IncomingInvoice": 2,
@@ -2116,10 +2115,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetGeneralJournalDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetGeneralJournalDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "startDate",
@@ -3168,10 +3170,13 @@
         "Data sources"
       ],
       "status": "deferred",
-      "reason": "No public source route found; implementation deferred to its ordered batch.",
+      "reason": "Public route exists; parameter, serialization, response and live behavior verification is deferred.",
       "phase": "4-remaining-groups",
-      "public_source_route": false,
-      "sdk_methods": [],
+      "public_source_route": true,
+      "sdk_methods": [
+        "ReportApi.GetFinancialReportDataSourceAsyncWithHttpInfo",
+        "ReportApi.GetFinancialReportDataSourceWithHttpInfo"
+      ],
       "parameters": [
         {
           "name": "month",
@@ -31773,6 +31778,198 @@
         [
           "GET",
           "/datasource/auditLog"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetGeneralJournalDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string startDate, string endDate, JournalDataSourceOptions options = null",
+      "line": 25,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetGeneralJournalDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetGeneralJournalDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string startDate, string endDate, JournalDataSourceOptions options = null",
+      "line": 32,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/journal"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetGeneralJournalDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string startDate, string endDate, JournalDataSourceOptions options, CancellationToken cancellationToken",
+      "line": 60,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetGeneralJournalDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetGeneralJournalDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, JournalDataSourceOptions options = null",
+      "line": 66,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetGeneralJournalDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetGeneralJournalDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string startDate, string endDate, JournalDataSourceOptions options, CancellationToken cancellationToken",
+      "line": 77,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/journal"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportDataSource",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "int month, int year, long definitionType, string definitionName, string layoutName, FinancialReportDataSourceOptions options = null",
+      "line": 107,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFinancialReportDataSourceWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportDataSourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "int month, int year, long definitionType, string definitionName, string layoutName, FinancialReportDataSourceOptions options = null",
+      "line": 114,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/proReport"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportDataSourceAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "int month, int year, long definitionType, string definitionName, string layoutName, FinancialReportDataSourceOptions options, CancellationToken cancellationToken",
+      "line": 149,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFinancialReportDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "int month, int year, long definitionType, string definitionName, string layoutName, FinancialReportDataSourceOptions options = null",
+      "line": 155,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetFinancialReportDataSourceAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.ConfigurableDataSources.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "GetFinancialReportDataSourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "int month, int year, long definitionType, string definitionName, string layoutName, FinancialReportDataSourceOptions options, CancellationToken cancellationToken",
+      "line": 169,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/datasource/proReport"
         ]
       ],
       "delegates": [],

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 764,
+    "source_http_methods": 772,
     "status_counts": {
       "deferred": 323
     },
@@ -5119,6 +5119,8 @@
       "phase": "1-contract-and-transport",
       "public_source_route": true,
       "sdk_methods": [
+        "AdditionalApi.GetHelloDetailsAsyncWithHttpInfo",
+        "AdditionalApi.GetHelloDetailsWithHttpInfo",
         "AdditionalApi.HelloJsonAsyncWithHttpInfo",
         "AdditionalApi.HelloJsonWithHttpInfo"
       ],
@@ -6190,6 +6192,8 @@
       "phase": "1-contract-and-transport",
       "public_source_route": true,
       "sdk_methods": [
+        "AdditionalApi.GetOrganisationsDetailsAsyncWithHttpInfo",
+        "AdditionalApi.GetOrganisationsDetailsWithHttpInfo",
         "AdditionalApi.OrganisationJsonAsyncWithHttpInfo",
         "AdditionalApi.OrganisationJsonWithHttpInfo"
       ],
@@ -8226,6 +8230,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "AdditionalApi.GetTeamworkTokenAsyncWithHttpInfo",
+        "AdditionalApi.GetTeamworkTokenDetailsAsyncWithHttpInfo",
+        "AdditionalApi.GetTeamworkTokenDetailsWithHttpInfo",
         "AdditionalApi.GetTeamworkTokenWithHttpInfo"
       ],
       "parameters": [
@@ -8515,6 +8521,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "AdditionalApi.GetVersionAsyncWithHttpInfo",
+        "AdditionalApi.GetVersionDetailsAsyncWithHttpInfo",
+        "AdditionalApi.GetVersionDetailsWithHttpInfo",
         "AdditionalApi.GetVersionWithHttpInfo"
       ],
       "parameters": [],
@@ -24069,6 +24077,390 @@
         [
           "GET",
           "/myaccount"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetHelloDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "",
+      "line": 18,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHelloDetailsWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetHelloDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "",
+      "line": 25,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/hello"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetHelloDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 45,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHelloDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetHelloDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "",
+      "line": 51,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetHelloDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetHelloDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 59,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/hello"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetVersionDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "",
+      "line": 76,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetVersionDetailsWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetVersionDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "",
+      "line": 83,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/version"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetVersionDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 103,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetVersionDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetVersionDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "",
+      "line": 109,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetVersionDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetVersionDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 117,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/version"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetOrganisationsDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "",
+      "line": 134,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrganisationsDetailsWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetOrganisationsDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "",
+      "line": 141,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/organisations"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetOrganisationsDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 161,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrganisationsDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetOrganisationsDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "",
+      "line": 167,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrganisationsDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetOrganisationsDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 175,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/organisations"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetTeamworkTokenDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "bool? force = null",
+      "line": 196,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTeamworkTokenDetailsWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetTeamworkTokenDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "bool? force = null",
+      "line": 203,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/teamworktoken"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetTeamworkTokenDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "bool? force, CancellationToken cancellationToken",
+      "line": 227,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTeamworkTokenDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetTeamworkTokenDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "bool? force = null",
+      "line": 233,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTeamworkTokenDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AdditionalApi.ContextReads.cs",
+      "class": "AdditionalApi",
+      "class_access": "public",
+      "method": "GetTeamworkTokenDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "bool? force, CancellationToken cancellationToken",
+      "line": 244,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/teamworktoken"
         ]
       ],
       "delegates": [],

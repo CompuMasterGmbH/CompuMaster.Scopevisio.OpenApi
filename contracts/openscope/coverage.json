@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 884,
+    "source_http_methods": 890,
     "status_counts": {
       "deferred": 323
     },
@@ -9535,7 +9535,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "CreditApi.PostCreditAsyncWithHttpInfo",
-        "CreditApi.PostCreditWithHttpInfo"
+        "CreditApi.PostCreditWithHttpInfo",
+        "CreditApi.PostCreditWithResultAsyncWithHttpInfo",
+        "CreditApi.PostCreditWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -10636,7 +10638,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.CancelPostingDocumentAsyncWithHttpInfo",
-        "AccountingApi.CancelPostingDocumentWithHttpInfo"
+        "AccountingApi.CancelPostingDocumentWithHttpInfo",
+        "AccountingApi.CancelPostingDocumentWithResultAsyncWithHttpInfo",
+        "AccountingApi.CancelPostingDocumentWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -12801,7 +12805,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "OutgoingInvoiceApi.PostOutgoingInvoiceAsyncWithHttpInfo",
-        "OutgoingInvoiceApi.PostOutgoingInvoiceWithHttpInfo"
+        "OutgoingInvoiceApi.PostOutgoingInvoiceWithHttpInfo",
+        "OutgoingInvoiceApi.PostOutgoingInvoiceWithResultAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.PostOutgoingInvoiceWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -19696,6 +19702,102 @@
         [
           "PUT",
           "/postings/update"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingResults.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPostingDocumentWithResult",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string documentNumber",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CancelPostingDocumentWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingResults.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPostingDocumentWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string documentNumber",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/journal/{documentNumber}/cancel"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingResults.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPostingDocumentWithResultAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string documentNumber, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CancelPostingDocumentWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingResults.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPostingDocumentWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string documentNumber",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CancelPostingDocumentWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.PostingResults.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CancelPostingDocumentWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string documentNumber, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/journal/{documentNumber}/cancel"
         ]
       ],
       "delegates": [],
@@ -29891,6 +29993,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PostingResults.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "PostCreditWithResult",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "PostCreditWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PostingResults.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "PostCreditWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/credit/{number}/post"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PostingResults.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "PostCreditWithResultAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "PostCreditWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PostingResults.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "PostCreditWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "PostCreditWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PostingResults.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "PostCreditWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/credit/{number}/post"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.Search.cs",
       "class": "CreditApi",
       "class_access": "public",
@@ -39382,6 +39580,102 @@
         [
           "GET",
           "/outgoinginvoice/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PostingResults.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "PostOutgoingInvoiceWithResult",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "PostOutgoingInvoiceWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PostingResults.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "PostOutgoingInvoiceWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoice/{number}/post"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PostingResults.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "PostOutgoingInvoiceWithResultAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "PostOutgoingInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PostingResults.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "PostOutgoingInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "PostOutgoingInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.PostingResults.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "PostOutgoingInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoice/{number}/post"
         ]
       ],
       "delegates": [],

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 818,
+    "source_http_methods": 822,
     "status_counts": {
       "deferred": 323
     },
@@ -13859,7 +13859,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.GetProjectEmployeesAsyncWithHttpInfo",
-        "ProjectApi.GetProjectEmployeesWithHttpInfo"
+        "ProjectApi.GetProjectEmployeesWithHttpInfo",
+        "ProjectApi.SearchProjectEmployeesAsyncWithHttpInfo",
+        "ProjectApi.SearchProjectEmployeesWithHttpInfo"
       ],
       "parameters": [
         {
@@ -15398,7 +15400,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.GetAllTimEntriesAsyncWithHttpInfo",
-        "ProjectApi.GetAllTimEntriesWithHttpInfo"
+        "ProjectApi.GetAllTimEntriesWithHttpInfo",
+        "ProjectApi.SearchTimeEntriesAsyncWithHttpInfo",
+        "ProjectApi.SearchTimeEntriesWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -39748,6 +39752,198 @@
       "delegates": [
         "GetProjectsAsyncWithHttpInfo"
       ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntries",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTimeEntriesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntriesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntriesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTimeEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchTimeEntriesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchTimeEntriesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectEmployees",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long projectId, SearchRequest query = null",
+      "line": 81,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectEmployeesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectEmployeesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long projectId, SearchRequest query = null",
+      "line": 88,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/projectemployees"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectEmployeesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long projectId, SearchRequest query, CancellationToken cancellationToken",
+      "line": 110,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectEmployeesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectEmployeesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long projectId, SearchRequest query = null",
+      "line": 116,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectEmployeesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.OperationalSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectEmployeesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long projectId, SearchRequest query, CancellationToken cancellationToken",
+      "line": 126,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/projectemployees"
+        ]
+      ],
+      "delegates": [],
       "unstable_class": true,
       "facade_property": true
     },

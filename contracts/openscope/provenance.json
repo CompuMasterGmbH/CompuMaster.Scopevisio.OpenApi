@@ -59,6 +59,25 @@
         "/components/schemas/TaskForm/properties/reminderDateTS/example"
       ],
       "note": "Anonymous GET response compared recursively against the committed snapshot. Only six timestamp-example values differ. Snapshot and its repository hash remain unchanged; the response UTF-8 hash is retrieval evidence, not a stable version."
+    },
+    {
+      "checked_on": "2026-10-13",
+      "checked_at_utc": "2026-10-13T05:13:19.546352+00:00",
+      "http_status": 200,
+      "response_raw_sha256": "47efe7f367e24849a8ed247a794729aea55ec8de1e226b512edd7af7c9a16557",
+      "paths": 294,
+      "operations": 323,
+      "schemas": 156,
+      "semantic_changes": 0,
+      "changed_example_pointers": [
+        "/components/schemas/CreditForm/properties/postingDate/example",
+        "/components/schemas/MaterialPostingRow/example",
+        "/components/schemas/MaterialPostingRow/properties/postingTs/example",
+        "/components/schemas/OfferForm/properties/valutaDate/example",
+        "/components/schemas/OutgoingInvoiceForm/properties/postingDate/example",
+        "/components/schemas/TaskForm/properties/reminderDateTS/example"
+      ],
+      "note": "Anonymous GET response is byte-identical to the 12 October recheck. Recursive comparison with the immutable 11 October snapshot finds only the same six timestamp-example values; the material-posting example differs solely in postingTs. No route, parameter, schema shape, profile or other contract text changed. Snapshot and repository hash remain unchanged."
     }
   ]
 }

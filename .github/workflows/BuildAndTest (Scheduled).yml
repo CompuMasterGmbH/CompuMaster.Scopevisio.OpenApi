@@ -1,4 +1,4 @@
-name: Build and Test (Scheduled)
+﻿name: Build and Test (Scheduled)
 
 # PREREQUISITES FOR PUSH-BACK OF TEST RESULTS
 # Please note: test project usually required nuget package JUnitTestLogger
@@ -13,6 +13,11 @@ on:
     # Run every week on sunday to test Scopevisio OpenScope API
     schedule:
     - cron: "0 22 * * 6"
+
+# This lock is repository-scoped; cross-repository account access still needs coordination.
+concurrency:
+    group: openscope_test_account
+    cancel-in-progress: false
 
 env:
     # Path to the solution file relative to the root of the project
@@ -31,6 +36,7 @@ jobs:
 
         strategy:
             fail-fast: false
+            max-parallel: 1
             matrix:
                 os: [windows-latest, ubuntu-latest, macos-latest]
                 include:

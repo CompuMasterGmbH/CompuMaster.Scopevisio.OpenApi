@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 722,
+    "source_http_methods": 728,
     "status_counts": {
       "deferred": 323
     },
@@ -4698,6 +4698,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.GetBankConnectionsForDebitorAsyncWithHttpInfo",
+        "AccountingApi.GetBankConnectionsForDebitorDetailsAsyncWithHttpInfo",
+        "AccountingApi.GetBankConnectionsForDebitorDetailsWithHttpInfo",
         "AccountingApi.GetBankConnectionsForDebitorWithHttpInfo"
       ],
       "parameters": [
@@ -5287,6 +5289,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.GetJournalEntryByDocumentNumberAsyncWithHttpInfo",
+        "AccountingApi.GetJournalEntryByDocumentNumberDetailsAsyncWithHttpInfo",
+        "AccountingApi.GetJournalEntryByDocumentNumberDetailsWithHttpInfo",
         "AccountingApi.GetJournalEntryByDocumentNumberWithHttpInfo"
       ],
       "parameters": [
@@ -5427,6 +5431,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.GetBankConnectionsForKreditorAsyncWithHttpInfo",
+        "AccountingApi.GetBankConnectionsForKreditorDetailsAsyncWithHttpInfo",
+        "AccountingApi.GetBankConnectionsForKreditorDetailsWithHttpInfo",
         "AccountingApi.GetBankConnectionsForKreditorWithHttpInfo"
       ],
       "parameters": [
@@ -16368,6 +16374,294 @@
     }
   ],
   "sdk_methods": [
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForDebitorDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string accountNumber, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetBankConnectionsForDebitorDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForDebitorDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string accountNumber, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/debitoraccounts/{accountNumber}/bankConnections"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForDebitorDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string accountNumber, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetBankConnectionsForDebitorDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForDebitorDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string accountNumber, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetBankConnectionsForDebitorDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForDebitorDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string accountNumber, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/debitoraccounts/{accountNumber}/bankConnections"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForKreditorDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string accountNumber, string fields = null",
+      "line": 94,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetBankConnectionsForKreditorDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForKreditorDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string accountNumber, string fields = null",
+      "line": 101,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/kreditoraccounts/{accountNumber}/bankConnections"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForKreditorDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string accountNumber, string fields, CancellationToken cancellationToken",
+      "line": 127,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetBankConnectionsForKreditorDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForKreditorDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string accountNumber, string fields = null",
+      "line": 133,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetBankConnectionsForKreditorDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetBankConnectionsForKreditorDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string accountNumber, string fields, CancellationToken cancellationToken",
+      "line": 143,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/kreditoraccounts/{accountNumber}/bankConnections"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetJournalEntryByDocumentNumberDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string documentNumber, string fields = null",
+      "line": 167,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetJournalEntryByDocumentNumberDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetJournalEntryByDocumentNumberDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string documentNumber, string fields = null",
+      "line": 174,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/journal/{documentNumber}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetJournalEntryByDocumentNumberDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string documentNumber, string fields, CancellationToken cancellationToken",
+      "line": 200,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetJournalEntryByDocumentNumberDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetJournalEntryByDocumentNumberDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string documentNumber, string fields = null",
+      "line": 206,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetJournalEntryByDocumentNumberDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.BankJournalDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetJournalEntryByDocumentNumberDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string documentNumber, string fields, CancellationToken cancellationToken",
+      "line": 216,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/journal/{documentNumber}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
     {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
       "class": "AccountingApi",

@@ -4,6 +4,9 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
+from types import SimpleNamespace
+import stat
 import generate_read_partials as generator
 from contract_coverage import json_bytes, text_bytes
 
@@ -98,6 +101,38 @@ class BoundedGenerationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "link/junction"):
             generator.validate_output(link / "fresh", self.root)
         self.assertEqual(list(real.iterdir()), [])
+
+    def test_dangling_final_output_link_is_rejected_before_target_creation(self):
+        self.assert_dangling_output_rejected(False)
+
+    def test_dangling_ancestor_output_link_is_rejected_before_target_creation(self):
+        self.assert_dangling_output_rejected(True)
+
+    def assert_dangling_output_rejected(self, ancestor):
+        target = Path(self.temp.name) / "absent-target"
+        link = Path(self.temp.name) / "dangling-output"
+        try:
+            link.symlink_to(target, target_is_directory=True)
+        except OSError as error:
+            self.skipTest("Directory symlink creation is unavailable: " + str(error))
+        selected = link / "fresh" if ancestor else link
+        with self.assertRaisesRegex(ValueError, "link/junction"):
+            generator.generate(selected, self.root)
+        self.assertFalse(target.exists(), "The dangling target must remain absent.")
+        self.assertTrue(link.is_symlink(), "The original link must remain untouched.")
+
+    def test_non_missing_lstat_failure_is_not_ignored(self):
+        expected = PermissionError("Cannot inspect output component")
+        with patch.object(Path, "lstat", side_effect=expected):
+            with self.assertRaises(PermissionError) as actual:
+                generator.validate_output(Path(self.temp.name) / "fresh", self.root)
+        self.assertIs(actual.exception, expected)
+
+    def test_reparse_component_is_rejected_before_resolution(self):
+        attributes = SimpleNamespace(st_mode=stat.S_IFDIR, st_file_attributes=0x400)
+        with patch.object(Path, "lstat", return_value=attributes), patch.object(Path, "resolve", side_effect=AssertionError("Must not follow the reparse point")):
+            with self.assertRaisesRegex(ValueError, "link/junction"):
+                generator.validate_output(Path(self.temp.name) / "fresh", self.root)
 
     def test_owned_disposable_repository_output_is_accepted(self):
         output = self.root / ".task-work-generator/fresh"

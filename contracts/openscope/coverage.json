@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 796,
+    "source_http_methods": 802,
     "status_counts": {
       "deferred": 323
     },
@@ -10022,7 +10022,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ActivitiesApi.GetEventsAsyncWithHttpInfo",
-        "ActivitiesApi.GetEventsWithHttpInfo"
+        "ActivitiesApi.GetEventsWithHttpInfo",
+        "ActivitiesApi.SearchEventsAsyncWithHttpInfo",
+        "ActivitiesApi.SearchEventsWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -10241,7 +10243,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "HumanResourcesApi.GetHumanResourcesAsyncWithHttpInfo",
-        "HumanResourcesApi.GetHumanResourcesWithHttpInfo"
+        "HumanResourcesApi.GetHumanResourcesWithHttpInfo",
+        "HumanResourcesApi.SearchHumanResourcesAsyncWithHttpInfo",
+        "HumanResourcesApi.SearchHumanResourcesWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -10502,7 +10506,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "IncomingInvoiceApi.GetIncomingInvoicesAsyncWithHttpInfo",
-        "IncomingInvoiceApi.GetIncomingInvoicesWithHttpInfo"
+        "IncomingInvoiceApi.GetIncomingInvoicesWithHttpInfo",
+        "IncomingInvoiceApi.SearchIncomingInvoicesAsyncWithHttpInfo",
+        "IncomingInvoiceApi.SearchIncomingInvoicesWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -24013,6 +24019,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ActivitiesApi.Search.cs",
+      "class": "ActivitiesApi",
+      "class_access": "public",
+      "method": "SearchEvents",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchEventsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ActivitiesApi.Search.cs",
+      "class": "ActivitiesApi",
+      "class_access": "public",
+      "method": "SearchEventsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/events"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ActivitiesApi.Search.cs",
+      "class": "ActivitiesApi",
+      "class_access": "public",
+      "method": "SearchEventsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchEventsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ActivitiesApi.Search.cs",
+      "class": "ActivitiesApi",
+      "class_access": "public",
+      "method": "SearchEventsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchEventsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ActivitiesApi.Search.cs",
+      "class": "ActivitiesApi",
+      "class_access": "public",
+      "method": "SearchEventsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/events"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ActivitiesApi.cs",
       "class": "ActivitiesApi",
       "class_access": "public",
@@ -30601,6 +30703,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Search.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResources",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchHumanResourcesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Search.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResourcesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/humanresources"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Search.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResourcesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchHumanResourcesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Search.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResourcesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchHumanResourcesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.Search.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResourcesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/humanresources"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.cs",
       "class": "HumanResourcesApi",
       "class_access": "public",
@@ -30942,6 +31140,102 @@
         [
           "PUT",
           "/incominginvoice/{idOrNumber}/responsiblecontact"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Search.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SearchIncomingInvoices",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchIncomingInvoicesWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Search.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SearchIncomingInvoicesWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/incominginvoices"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Search.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SearchIncomingInvoicesAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchIncomingInvoicesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Search.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SearchIncomingInvoicesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchIncomingInvoicesAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Search.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "SearchIncomingInvoicesAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/incominginvoices"
         ]
       ],
       "delegates": [],

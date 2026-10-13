@@ -68,17 +68,17 @@ namespace CompuMaster.Scopevisio.OpenApi
             }
         }
 
-        private static bool HasExplicitOrganisationId(string json, bool account)
+        private static bool HasRequestedOrganisationId(string json, bool account, long organisationId)
         {
             if (string.IsNullOrWhiteSpace(json)) return false;
             var value = JObject.Parse(json).SelectToken(account ? "organisation.id" : "organisationId");
-            return value != null && value.Type != JTokenType.Null;
+            return value != null && value.Type == JTokenType.Integer && value.Value<long>() == organisationId;
         }
 
         private static void ValidateOrganisationToken(ApiResponse<TokenResponse> response, long organisationId)
         {
             var token = response.Data;
-            if (response.StatusCode != 200 || token == null || !HasExplicitOrganisationId(response.RawJsonContent, false) ||
+            if (response.StatusCode != 200 || token == null || !HasRequestedOrganisationId(response.RawJsonContent, false, organisationId) ||
                 token.OrganisationId != organisationId || string.IsNullOrWhiteSpace(token.AccessToken) || string.IsNullOrWhiteSpace(token.Uid))
                 throw new InvalidDataException("The authorization token does not confirm the requested organisation and user.");
         }
@@ -87,7 +87,7 @@ namespace CompuMaster.Scopevisio.OpenApi
         {
             var account = response.Data;
             if (response.StatusCode != 200 || account?.Organisation == null || account.User == null ||
-                !HasExplicitOrganisationId(response.RawJsonContent, true) || account.Organisation.Id != organisationId ||
+                !HasRequestedOrganisationId(response.RawJsonContent, true, organisationId) || account.Organisation.Id != organisationId ||
                 string.IsNullOrWhiteSpace(account.User.Uid) || !string.Equals(account.User.Uid, token.Uid, StringComparison.Ordinal))
                 throw new InvalidDataException("The account context does not confirm the requested organisation and user.");
         }

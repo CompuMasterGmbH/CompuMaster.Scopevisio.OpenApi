@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 890,
+    "source_http_methods": 896,
     "status_counts": {
       "deferred": 323
     },
@@ -9118,7 +9118,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ContactApi.CreateContactCommentAsyncWithHttpInfo",
-        "ContactApi.CreateContactCommentWithHttpInfo"
+        "ContactApi.CreateContactCommentWithHttpInfo",
+        "ContactApi.CreateContactCommentWithResultAsyncWithHttpInfo",
+        "ContactApi.CreateContactCommentWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -13640,7 +13642,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.CreateProjectCommentAsyncWithHttpInfo",
-        "ProjectApi.CreateProjectCommentWithHttpInfo"
+        "ProjectApi.CreateProjectCommentWithHttpInfo",
+        "ProjectApi.CreateProjectCommentWithResultAsyncWithHttpInfo",
+        "ProjectApi.CreateProjectCommentWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -15111,7 +15115,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TaskApi.CreateTaskCommentAsyncWithHttpInfo",
-        "TaskApi.CreateTaskCommentWithHttpInfo"
+        "TaskApi.CreateTaskCommentWithHttpInfo",
+        "TaskApi.CreateTaskCommentWithResultAsyncWithHttpInfo",
+        "TaskApi.CreateTaskCommentWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -27163,6 +27169,102 @@
         [
           "POST",
           "/contacts"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CommentCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactCommentWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long id, CommentCreationRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateContactCommentWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CommentCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactCommentWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, CommentCreationRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{id}/comment/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CommentCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactCommentWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, CommentCreationRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateContactCommentWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CommentCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactCommentWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, CommentCreationRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateContactCommentWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CommentCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactCommentWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, CommentCreationRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{id}/comment/new"
         ]
       ],
       "delegates": [],
@@ -42185,6 +42287,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CommentCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectCommentWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long id, CommentCreationRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProjectCommentWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CommentCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectCommentWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, CommentCreationRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{id}/comment/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CommentCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectCommentWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, CommentCreationRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProjectCommentWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CommentCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectCommentWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, CommentCreationRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProjectCommentWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CommentCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectCommentWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, CommentCreationRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{id}/comment/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CreateResource.cs",
       "class": "ProjectApi",
       "class_access": "public",
@@ -52604,6 +52802,102 @@
       ],
       "delegates": [],
       "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CommentCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskCommentWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long id, CommentCreationRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTaskCommentWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CommentCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskCommentWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, CommentCreationRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{id}/comment/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CommentCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskCommentWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, CommentCreationRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTaskCommentWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CommentCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskCommentWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, CommentCreationRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTaskCommentWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CommentCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskCommentWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, CommentCreationRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{id}/comment/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
       "facade_property": true
     },
     {

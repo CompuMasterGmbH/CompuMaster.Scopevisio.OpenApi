@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 822,
+    "source_http_methods": 826,
     "status_counts": {
       "deferred": 323
     },
@@ -14013,7 +14013,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.GetProjectResourcesAsyncWithHttpInfo",
-        "ProjectApi.GetProjectResourcesWithHttpInfo"
+        "ProjectApi.GetProjectResourcesWithHttpInfo",
+        "ProjectApi.SearchProjectResourcesLegacyAsyncWithHttpInfo",
+        "ProjectApi.SearchProjectResourcesLegacyWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -14099,7 +14101,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.GetProjectRevenueAsyncWithHttpInfo",
-        "ProjectApi.GetProjectRevenueWithHttpInfo"
+        "ProjectApi.GetProjectRevenueWithHttpInfo",
+        "ProjectApi.SearchProjectRevenuesLegacyAsyncWithHttpInfo",
+        "ProjectApi.SearchProjectRevenuesLegacyWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -39710,6 +39714,198 @@
         [
           "POST",
           "/projectresource/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResourcesLegacy",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "ProjectResourcesLegacySearchRequest request",
+      "line": 24,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectResourcesLegacyWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResourcesLegacyWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "ProjectResourcesLegacySearchRequest request",
+      "line": 32,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectresources"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResourcesLegacyAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "ProjectResourcesLegacySearchRequest request, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectResourcesLegacyAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResourcesLegacyAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "ProjectResourcesLegacySearchRequest request",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectResourcesLegacyAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectResourcesLegacyAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "ProjectResourcesLegacySearchRequest request, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectresources"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenuesLegacy",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "ProjectRevenuesLegacySearchRequest request",
+      "line": 92,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectRevenuesLegacyWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenuesLegacyWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "ProjectRevenuesLegacySearchRequest request",
+      "line": 100,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectrevenue"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenuesLegacyAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "ProjectRevenuesLegacySearchRequest request, CancellationToken cancellationToken",
+      "line": 122,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectRevenuesLegacyAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenuesLegacyAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "ProjectRevenuesLegacySearchRequest request",
+      "line": 129,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchProjectRevenuesLegacyAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.LegacyRangeSearch.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "SearchProjectRevenuesLegacyAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "ProjectRevenuesLegacySearchRequest request, CancellationToken cancellationToken",
+      "line": 139,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/projectrevenue"
         ]
       ],
       "delegates": [],

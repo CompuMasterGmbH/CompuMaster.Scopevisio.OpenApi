@@ -4,7 +4,7 @@ using System;
 namespace CompuMaster.Scopevisio.OpenApi.Model
 {
     /// <summary>Specifies an explicit cashbook entry dimension and optional name.</summary>
-    /// <remarks>The server may create a missing entry when its name is supplied; when the name is omitted the documented server default is the dimension number. The SDK does not infer a name, look up entries or enable creation itself. Typed null setters omit fields; inherited indexers preserve optional explicit null and future fields.</remarks>
+    /// <remarks>The server can create a missing entry even when its name is omitted; omission does not prevent creation. The documented missing-name default is the dimension number. The SDK does not infer a name, look up entries or enable creation itself. Typed null setters omit fields; inherited indexers preserve optional explicit null and future fields.</remarks>
     public class CashbookEntryDimensionRequest : JObject
     {
         /// <summary>Initializes an empty request without inserting defaults.</summary>

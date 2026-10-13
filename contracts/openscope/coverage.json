@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 758,
+    "source_http_methods": 762,
     "status_counts": {
       "deferred": 323
     },
@@ -5255,6 +5255,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "IncomingInvoiceApi.GetIncomingInvoiceTeamworkFileLinkAsyncWithHttpInfo",
+        "IncomingInvoiceApi.GetIncomingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo",
+        "IncomingInvoiceApi.GetIncomingInvoiceTeamworkFileLinkResponseWithHttpInfo",
         "IncomingInvoiceApi.GetIncomingInvoiceTeamworkFileLinkWithHttpInfo"
       ],
       "parameters": [
@@ -6532,6 +6534,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "OutgoingInvoiceApi.GetOutgoingInvoiceTeamworkFileLinkAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.GetOutgoingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.GetOutgoingInvoiceTeamworkFileLinkResponseWithHttpInfo",
         "OutgoingInvoiceApi.GetOutgoingInvoiceTeamworkFileLinkWithHttpInfo"
       ],
       "parameters": [
@@ -30043,6 +30047,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "GetIncomingInvoiceTeamworkFileLinkResponse",
+      "access": "public",
+      "return_type": "string",
+      "parameters": "string idOrNumber",
+      "line": 18,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetIncomingInvoiceTeamworkFileLinkResponseWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "GetIncomingInvoiceTeamworkFileLinkResponseWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<string>",
+      "parameters": "string idOrNumber",
+      "line": 25,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/incominginvoice/{idOrNumber}/teamworkFileLink"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "GetIncomingInvoiceTeamworkFileLinkResponseAsync",
+      "access": "public",
+      "return_type": "Task<string>",
+      "parameters": "string idOrNumber, CancellationToken cancellationToken",
+      "line": 48,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetIncomingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "GetIncomingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<string>>",
+      "parameters": "string idOrNumber",
+      "line": 54,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetIncomingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "IncomingInvoiceApi",
+      "class_access": "public",
+      "method": "GetIncomingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<string>>",
+      "parameters": "string idOrNumber, CancellationToken cancellationToken",
+      "line": 63,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/incominginvoice/{idOrNumber}/teamworkFileLink"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/IncomingInvoiceApi.Update.cs",
       "class": "IncomingInvoiceApi",
       "class_access": "public",
@@ -34932,6 +35032,102 @@
         [
           "GET",
           "/outgoinginvoice/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceTeamworkFileLinkResponse",
+      "access": "public",
+      "return_type": "string",
+      "parameters": "string number",
+      "line": 18,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceTeamworkFileLinkResponseWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceTeamworkFileLinkResponseWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<string>",
+      "parameters": "string number",
+      "line": 25,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/{number}/teamworkFileLink"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceTeamworkFileLinkResponseAsync",
+      "access": "public",
+      "return_type": "Task<string>",
+      "parameters": "string number, CancellationToken cancellationToken",
+      "line": 48,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<string>>",
+      "parameters": "string number",
+      "line": 54,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.TeamworkLinkResponses.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceTeamworkFileLinkResponseAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<string>>",
+      "parameters": "string number, CancellationToken cancellationToken",
+      "line": 63,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/{number}/teamworkFileLink"
         ]
       ],
       "delegates": [],

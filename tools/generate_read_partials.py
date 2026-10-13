@@ -126,6 +126,14 @@ def plan(root=ROOT):
 def validate_output(output, root=ROOT):
     if not output.is_absolute():
         raise ValueError("Output must be an explicit absolute disposable directory.")
+    # Inspect each component without following links, including absent targets.
+    for path in (output, *output.parents):
+        try:
+            attributes = path.lstat()
+        except FileNotFoundError:
+            continue
+        if stat.S_ISLNK(attributes.st_mode) or getattr(attributes, "st_file_attributes", 0) & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0):
+            raise ValueError("Output through a directory link/junction is forbidden.")
     selected = output.resolve()
     root = root.resolve()
     if selected == root or selected in root.parents or selected == Path(selected.anchor):
@@ -134,10 +142,6 @@ def validate_output(output, root=ROOT):
         first = selected.relative_to(root).parts[0]
         if not first.startswith(".task-work"):
             raise ValueError("Repository output must stay in an owned .task-work directory.")
-    # Reject directory links/junctions rather than silently resolving them.
-    for path in (output, *output.parents):
-        if path.exists() and (path.is_symlink() or getattr(path.lstat(), "st_file_attributes", 0) & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0)):
-            raise ValueError("Output through a directory link/junction is forbidden.")
     if selected.exists() and (not selected.is_dir() or any(selected.iterdir())):
         raise ValueError("Output must be absent or empty; no reuse or overwrite is allowed.")
     return selected

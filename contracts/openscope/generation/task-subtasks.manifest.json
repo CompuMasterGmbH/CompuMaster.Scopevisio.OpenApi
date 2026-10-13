@@ -1,7 +1,7 @@
 ﻿{
   "generator_version": 1,
   "tool": "tools/generate_read_partials.py",
-  "tool_sha256": "0ab03153a3b5139cc11100b5e0b6576f63a5c46df3377eff33e00c760bc7ee63",
+  "tool_sha256": "3b06eb2430f34a4fa981020d745296dd3e52c67272a835972909d7d23d2332f1",
   "support_tool": "tools/contract_coverage.py",
   "support_tool_sha256": "52fdc7616b02ae03a152e6ddea182a273ec1ef514400f4287743bf2e2b910e79",
   "recipe": "contracts/openscope/generation/task-subtasks.json",

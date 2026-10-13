@@ -12,35 +12,53 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
         {
         }
 
-        public TestConfig(bool forbidAuthorization)
+        private readonly Action<string> writeToken;
+
+        public TestConfig(bool forbidAuthorization) : this(forbidAuthorization, InputLine,
+            () => InputFromBufferFile("accesstoken"), value => InputToBufferFile("accesstoken", value), AuthorizeWithConfiguredCredentials)
         {
-            //System.Console.WriteLine("PLEASE NOTE: Following user input will be buffered in directory " + System.IO.Path.GetTempPath());
+        }
+
+        // Test-only seams keep cold-cache regressions away from workstation credentials and token buffers.
+        internal TestConfig(bool forbidAuthorization, Func<string, string> readInput, Func<string> readToken,
+            Action<string> writeToken, Action<TestConfig> authorize)
+        {
+            if (readInput == null) throw new ArgumentNullException(nameof(readInput));
+            if (readToken == null) throw new ArgumentNullException(nameof(readToken));
+            this.writeToken = writeToken ?? throw new ArgumentNullException(nameof(writeToken));
+            if (authorize == null) throw new ArgumentNullException(nameof(authorize));
             this.OrganisationName = null;
-            this.Username = InputLine("username");
-            this.ClientNumber = InputLine("customer no.");
-            this.Password = InputLine("password");
+            this.Username = readInput("username");
+            this.ClientNumber = readInput("customer no.");
+            this.Password = readInput("password");
             if (string.IsNullOrWhiteSpace(this.Username))
                 NUnit.Framework.Assert.Ignore("Test ignored until buffered user credentials added in directory " + System.IO.Path.GetTempPath());
             if (forbidAuthorization)
                 this.AccessToken = null;
             else
             {
-                this.AccessToken = InputFromBufferFile("accesstoken");
+                this.AccessToken = readToken();
                 if (this.AccessToken == null)
                 {
-                    TestConfig TokenInfo = new TestConfig(true);
-                    (new Api.AuthorizationApi(TokenInfo)).Token(
-                            "password",
-                            TokenInfo.ClientNumber, 
-                            null, 
-                            null,
-                            TokenInfo.Username, 
-                            null,
-                            TokenInfo.OrganisationName,
-                            TokenInfo.Password, 
-                            null, null, null, null);
+                    var tokenInfo = new TestConfig(true, readInput, readToken, writeToken, authorize);
+                    authorize(tokenInfo);
+                    this.AccessToken = tokenInfo.AccessToken;
                 }
             }
+        }
+
+        private static void AuthorizeWithConfiguredCredentials(TestConfig tokenInfo)
+        {
+            (new Api.AuthorizationApi(tokenInfo)).Token(
+                "password",
+                tokenInfo.ClientNumber,
+                null,
+                null,
+                tokenInfo.Username,
+                null,
+                tokenInfo.OrganisationName,
+                tokenInfo.Password,
+                null, null, null, null);
         }
 
         public override string AccessToken
@@ -49,7 +67,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Test
             set
             {
                 if ((!string.IsNullOrWhiteSpace(value)) && (value != this.AccessToken))
-                    InputToBufferFile("accesstoken", value);
+                    writeToken(value);
                 base.AccessToken = value;
             }
         }

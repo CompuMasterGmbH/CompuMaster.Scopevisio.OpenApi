@@ -17,7 +17,8 @@ $isolatedFixtures = @(
     'CompuMaster.Scopevisio.OpenApi.AsyncTests.AuthorizationCancellationTests',
     'CompuMaster.Scopevisio.OpenApi.AsyncTests.BasicDataSourceProtocolTests',
     'CompuMaster.Scopevisio.OpenApi.AsyncTests.JournalFileDownloadTests',
-    'CompuMaster.Scopevisio.OpenApi.AsyncTests.ApiExceptionCauseTests'
+    'CompuMaster.Scopevisio.OpenApi.AsyncTests.ApiExceptionCauseTests',
+    'CompuMaster.Scopevisio.OpenApi.AsyncTests.TestConfigBootstrapTests'
 )
 [pscustomobject]@{
     Coverage = if ($full) { 'full' } else { 'sample' }

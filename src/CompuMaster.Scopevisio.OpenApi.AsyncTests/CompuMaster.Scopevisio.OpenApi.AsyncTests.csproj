@@ -10,6 +10,7 @@
     <ProjectReference Include="../CompuMaster.Scopevisio.OpenApi/CompuMaster.Scopevisio.OpenApi.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="../CompuMaster.Scopevisio.OpenApi.Test.NetStandard/TestConfig.cs" Link="TestHarness/TestConfig.cs" />
     <None Include="../../contracts/openscope/coverage.json" Link="coverage.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

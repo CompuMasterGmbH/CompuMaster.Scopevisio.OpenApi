@@ -11,7 +11,7 @@ $full = & $select -RunnerOs Windows -Framework net8.0
 if ($full.Coverage -ne 'full' -or $full.LegacyFilter -or $full.IsolatedFilter) { throw 'Windows/net8 must retain both complete suites.' }
 foreach ($case in @(@('Linux', 'net8.0'), @('macOS', 'net8.0'), @('Windows', 'net48'))) {
     $sample = & $select -RunnerOs $case[0] -Framework $case[1]
-    if ($sample.Coverage -ne 'sample' -or $sample.LegacyTests.Count -ne 3 -or $sample.IsolatedFixtures.Count -ne 5 -or !$sample.LegacyFilter -or !$sample.IsolatedFilter) {
+    if ($sample.Coverage -ne 'sample' -or $sample.LegacyTests.Count -ne 3 -or $sample.IsolatedFixtures.Count -ne 6 -or !$sample.LegacyFilter -or !$sample.IsolatedFilter) {
         throw 'Other platform/runtime selections must retain bounded named samples.'
     }
 }

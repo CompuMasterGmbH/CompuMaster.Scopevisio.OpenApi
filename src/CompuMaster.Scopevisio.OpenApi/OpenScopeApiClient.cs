@@ -215,10 +215,22 @@ namespace CompuMaster.Scopevisio.OpenApi
         }
 
         /// <summary>
-        /// Authorize user with username, customer number, organisation name and password as set up in configuration
+        /// Authorizes the configured user with an optional organisation selector.
         /// </summary>
+        /// <remarks>A configured numeric organisation identifier takes precedence over its name. Explicit-ID authorization validates a fresh token and account context before installation, without a lookup or default fallback. An unset identifier retains the existing single token request.</remarks>
+        /// <exception cref="System.IO.InvalidDataException">An explicit organisation's token or account context is missing or inconsistent.</exception>
+        /// <exception cref="InvalidOperationException">The explicit organisation selection changes before token installation.</exception>
         public void AuthorizeWithUserCredentials()
         {
+            var source = this.Config;
+            var organisationId = source.OrganisationId;
+            if (organisationId.HasValue)
+            {
+                asynchronousAuthorization.Wait();
+                try { AuthorizeOrganisation(source, organisationId.Value); }
+                finally { asynchronousAuthorization.Release(); }
+                return;
+            }
             this.Token = this.AuthorizationApi.TokenWithHttpInfo("password", this.Config.ClientNumber, null, null, this.Config.Username, null, this.Config.OrganisationName, this.Config.Password, null, null, null, null).Data;
         }
 

@@ -162,7 +162,8 @@ namespace CompuMaster.Scopevisio.OpenApi.AsyncTests
             var handler = new Handler(token => Task.FromResult(Response(HttpStatusCode.OK, "{}")));
             using (var http = new HttpClient(handler))
             {
-                Assert.CatchAsync<ArgumentException>((Func<Task>)(async () => { await Invoke(Api(http, route), route, mode, true, new object[] { selection, null }, CancellationToken.None); }));
+                var error = Assert.CatchAsync<ArgumentException>((Func<Task>)(async () => { await Invoke(Api(http, route), route, mode, true, new object[] { selection, null }, CancellationToken.None); }));
+                if (route == 2) Assert.That(error.Message, Does.Contain("dispatch document number").And.Not.Contain("internal"));
                 Assert.That(handler.Calls, Is.Zero);
             }
         }

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 728,
+    "source_http_methods": 738,
     "status_counts": {
       "deferred": 323
     },
@@ -1276,6 +1276,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "CreditApi.GetCreditParentAsyncWithHttpInfo",
+        "CreditApi.GetCreditParentDetailsAsyncWithHttpInfo",
+        "CreditApi.GetCreditParentDetailsWithHttpInfo",
         "CreditApi.GetCreditParentWithHttpInfo"
       ],
       "parameters": [
@@ -4930,6 +4932,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "DispatchApi.GetDispatchParentAsyncWithHttpInfo",
+        "DispatchApi.GetDispatchParentDetailsAsyncWithHttpInfo",
+        "DispatchApi.GetDispatchParentDetailsWithHttpInfo",
         "DispatchApi.GetDispatchParentWithHttpInfo"
       ],
       "parameters": [
@@ -5629,6 +5633,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "OfferApi.GetOfferParentAsyncWithHttpInfo",
+        "OfferApi.GetOfferParentDetailsAsyncWithHttpInfo",
+        "OfferApi.GetOfferParentDetailsWithHttpInfo",
         "OfferApi.GetOfferParentWithHttpInfo"
       ],
       "parameters": [
@@ -6052,6 +6058,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "OrderApi.GetOrderParentAsyncWithHttpInfo",
+        "OrderApi.GetOrderParentDetailsAsyncWithHttpInfo",
+        "OrderApi.GetOrderParentDetailsWithHttpInfo",
         "OrderApi.GetOrderParentWithHttpInfo"
       ],
       "parameters": [
@@ -6390,6 +6398,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "OutgoingInvoiceApi.GetOutgoingInvoiceParentAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.GetOutgoingInvoiceParentDetailsAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.GetOutgoingInvoiceParentDetailsWithHttpInfo",
         "OutgoingInvoiceApi.GetOutgoingInvoiceParentWithHttpInfo"
       ],
       "parameters": [
@@ -27715,6 +27725,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.ParentDetails.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditParentDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditParentDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.ParentDetails.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditParentDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/credit/{number}/parent"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.ParentDetails.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditParentDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.ParentDetails.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetCreditParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.ParentDetails.cs",
+      "class": "CreditApi",
+      "class_access": "public",
+      "method": "GetCreditParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/credit/{number}/parent"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CreditApi.PositionPages.cs",
       "class": "CreditApi",
       "class_access": "public",
@@ -28290,6 +28396,102 @@
         [
           "POST",
           "/credit/{number}/post"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.ParentDetails.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchParentDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchParentDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.ParentDetails.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchParentDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/dispatch/{number}/parent"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.ParentDetails.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchParentDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.ParentDetails.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetDispatchParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/DispatchApi.ParentDetails.cs",
+      "class": "DispatchApi",
+      "class_access": "public",
+      "method": "GetDispatchParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/dispatch/{number}/parent"
         ]
       ],
       "delegates": [],
@@ -30499,6 +30701,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.ParentDetails.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferParentDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferParentDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.ParentDetails.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferParentDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/offer/{number}/parent"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.ParentDetails.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferParentDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.ParentDetails.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOfferParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.ParentDetails.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "GetOfferParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/offer/{number}/parent"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.PositionPages.cs",
       "class": "OfferApi",
       "class_access": "public",
@@ -32113,6 +32411,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.ParentDetails.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderParentDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderParentDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.ParentDetails.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderParentDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/order/{number}/parent"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.ParentDetails.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderParentDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.ParentDetails.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOrderParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.ParentDetails.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "GetOrderParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/order/{number}/parent"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.PositionPages.cs",
       "class": "OrderApi",
       "class_access": "public",
@@ -33174,6 +33568,102 @@
         [
           "GET",
           "/outgoinginvoice/{number}/file"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.ParentDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceParentDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceParentDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.ParentDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceParentDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/{number}/parent"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.ParentDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceParentDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.ParentDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceParentDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.ParentDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceParentDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/{number}/parent"
         ]
       ],
       "delegates": [],

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 772,
+    "source_http_methods": 774,
     "status_counts": {
       "deferred": 323
     },
@@ -8074,7 +8074,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.GetHandler1AsyncWithHttpInfo",
-        "TeamworkApi.GetHandler1WithHttpInfo"
+        "TeamworkApi.GetHandler1WithHttpInfo",
+        "TeamworkApi.GetTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.GetTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -8118,7 +8120,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.GetHandler2AsyncWithHttpInfo",
-        "TeamworkApi.GetHandler2WithHttpInfo"
+        "TeamworkApi.GetHandler2WithHttpInfo",
+        "TeamworkApi.GetTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.GetTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -8170,7 +8174,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.GetHandler3AsyncWithHttpInfo",
-        "TeamworkApi.GetHandler3WithHttpInfo"
+        "TeamworkApi.GetHandler3WithHttpInfo",
+        "TeamworkApi.GetTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.GetTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -48306,6 +48312,64 @@
       ],
       "delegates": [],
       "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TeamworkApi.ResourceReads.cs",
+      "class": "TeamworkApi",
+      "class_access": "public",
+      "method": "GetTeamworkResourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "TeamworkBridgeReadRequest request",
+      "line": 24,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/teamworkbridge/{arg1}"
+        ],
+        [
+          "GET",
+          "/teamworkbridge/{arg1}/{arg2}"
+        ],
+        [
+          "GET",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TeamworkApi.ResourceReads.cs",
+      "class": "TeamworkApi",
+      "class_access": "public",
+      "method": "GetTeamworkResourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "TeamworkBridgeReadRequest request, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/teamworkbridge/{arg1}"
+        ],
+        [
+          "GET",
+          "/teamworkbridge/{arg1}/{arg2}"
+        ],
+        [
+          "GET",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
       "facade_property": true
     },
     {

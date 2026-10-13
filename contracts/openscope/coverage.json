@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 710,
+    "source_http_methods": 712,
     "status_counts": {
       "deferred": 323
     },
@@ -8351,6 +8351,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "UserApi.GetUserAsyncWithHttpInfo",
+        "UserApi.GetUserDetailsAsyncWithHttpInfo",
+        "UserApi.GetUserDetailsWithHttpInfo",
         "UserApi.GetUserWithHttpInfo"
       ],
       "parameters": [
@@ -46552,6 +46554,102 @@
       ],
       "delegates": [],
       "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.SelectedReads.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUserDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string uidOrEmail",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetUserDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.SelectedReads.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUserDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string uidOrEmail",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/users/{uidOrEmail}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.SelectedReads.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUserDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string uidOrEmail, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetUserDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.SelectedReads.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUserDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string uidOrEmail",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetUserDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.SelectedReads.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUserDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string uidOrEmail, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/users/{uidOrEmail}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
       "facade_property": true
     },
     {

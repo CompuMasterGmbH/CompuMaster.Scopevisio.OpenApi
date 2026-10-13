@@ -8,7 +8,7 @@ The pinned schemas label bodies as strings but link the manufacturer's [JSON-obj
 
 No fixed success schema is declared. Full JToken responses retain arbitrary records, metadata, scalars and JSON null; empty content returns null. HTTP-info retains original raw JSON, status and response/content headers. Parsed decimal fractions have bounded .NET precision; raw JSON remains exact. The configured factory sees the original response/operation name before parsing; team 403/404 remains a server diagnostic. Native cancellation reaches active I/O; pre-cancellation prevents sending.
 
-Historical GetAllTimEntries spelling, JObject result and string-body behavior remain unchanged. Historical GetProjectEmployees retains its void/null result and defaults. Modern project resource/revenue v2 workflows and deprecated epoch-range workflows remain separate.
+Historical GetAllTimEntries spelling, Object result with unchanged JSON deserialization and string-body behavior remain unchanged. Historical GetProjectEmployees retains its void/null result and defaults. Modern project resource/revenue v2 workflows and deprecated epoch-range workflows remain separate.
 
 Initial tests reproduce 134 missing forms with two legacy regressions passing. Final 136 cases verify all twelve forms, full-width invariant project identifiers, optional search choices, serialized snapshots/culture, unknown/count/null/empty/raw/header responses, factories/errors/malformed/overflow and pre/active cancellation. Fake-host tests do not establish actual data/search/profile acceptance. Required coordinated server matrix, publication and DMS adoption remain separate.
 

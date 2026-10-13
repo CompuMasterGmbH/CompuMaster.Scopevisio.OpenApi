@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 802,
+    "source_http_methods": 804,
     "status_counts": {
       "deferred": 323
     },
@@ -10289,7 +10289,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "HumanResourcesApi.GetHumanResourcesYearAsyncWithHttpInfo",
-        "HumanResourcesApi.GetHumanResourcesYearWithHttpInfo"
+        "HumanResourcesApi.GetHumanResourcesYearWithHttpInfo",
+        "HumanResourcesApi.SearchHumanResourceAvailabilityLegacyAsyncWithHttpInfo",
+        "HumanResourcesApi.SearchHumanResourceAvailabilityLegacyWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -30312,6 +30314,102 @@
         [
           "POST",
           "/humanresource/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.LegacyAvailability.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResourceAvailabilityLegacy",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "HumanResourceAvailabilityLegacyRequest request",
+      "line": 24,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchHumanResourceAvailabilityLegacyWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.LegacyAvailability.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResourceAvailabilityLegacyWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "HumanResourceAvailabilityLegacyRequest request",
+      "line": 32,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/humanresourcesAvailability"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.LegacyAvailability.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResourceAvailabilityLegacyAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "HumanResourceAvailabilityLegacyRequest request, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchHumanResourceAvailabilityLegacyAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.LegacyAvailability.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResourceAvailabilityLegacyAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "HumanResourceAvailabilityLegacyRequest request",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchHumanResourceAvailabilityLegacyAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/HumanResourcesApi.LegacyAvailability.cs",
+      "class": "HumanResourcesApi",
+      "class_access": "public",
+      "method": "SearchHumanResourceAvailabilityLegacyAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "HumanResourceAvailabilityLegacyRequest request, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/humanresourcesAvailability"
         ]
       ],
       "delegates": [],

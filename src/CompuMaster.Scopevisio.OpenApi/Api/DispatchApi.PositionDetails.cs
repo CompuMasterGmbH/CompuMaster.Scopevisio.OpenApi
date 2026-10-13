@@ -11,7 +11,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 {
     public partial class DispatchApi
     {
-        /// <summary>Retrieves the complete JSON details of a selected dispatch note.</summary>
+        /// <summary>Retrieves the complete JSON positions of a selected dispatch note.</summary>
         /// <param name="number">The original explicitly selected internal dispatch note number, escaped without trimming or numeric conversion.</param>
         /// <param name="fields">The original optional comma-separated response field selection; null omits it and an empty string is retained.</param>
         /// <param name="page">The optional zero-based page number; null omits it and an explicit Int32 value is retained.</param>

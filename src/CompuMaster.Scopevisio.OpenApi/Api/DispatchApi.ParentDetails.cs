@@ -10,8 +10,8 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
 {
     public partial class DispatchApi
     {
-        /// <summary>Retrieves the complete JSON details of a selected dispatch note.</summary>
-        /// <param name="number">The original explicitly selected internal dispatch note number, escaped without trimming or numeric conversion.</param>
+        /// <summary>Retrieves the complete JSON parent of a selected dispatch note.</summary>
+        /// <param name="number">The original explicitly selected dispatch document number, escaped without trimming or numeric conversion.</param>
         /// <param name="fields">The original optional comma-separated response field selection; null omits it and an empty string is retained.</param>
         /// <returns>The complete JSON response, or null for an empty response body.</returns>
         /// <remarks>The current parent route selects a document number, unlike the internal-number terminology of document details. The server requires Lieferscheine (Anzeigen) and supplies no fixed success schema. HTTP 404 can mean an unknown document, missing authorization or no parent. Copied manufacturer descriptions do not establish the parent document type or resolve the order parameter text mentioning an offer; no identifier mapping or automatic traversal is inferred. Existing generated methods and their null-data behavior remain unchanged. Fractional values use .NET decimal precision and may round or exceed its range; raw JSON remains exact.</remarks>
@@ -28,7 +28,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         public ApiResponse<JToken> GetDispatchParentDetailsWithHttpInfo(string number, string fields = null)
         {
             if (string.IsNullOrWhiteSpace(number) || number == "." || number == "..")
-                throw new ArgumentException("An explicit internal dispatch note number is required.", nameof(number));
+                throw new ArgumentException("An explicit dispatch document number is required.", nameof(number));
             var localVarPath = "/dispatch/{number}/parent";
             localVarPath = localVarPath.Replace("{number}", Uri.EscapeDataString(number));
             var queryParams = new List<KeyValuePair<string, string>>();
@@ -47,7 +47,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         }
 
         /// <inheritdoc cref="GetDispatchParentDetails"/>
-        /// <param name="number">The original explicitly selected internal dispatch note number, escaped without trimming or numeric conversion.</param>
+        /// <param name="number">The original explicitly selected dispatch document number, escaped without trimming or numeric conversion.</param>
         /// <param name="fields">The original optional comma-separated response field selection; null omits it and an empty string is retained.</param>
         /// <param name="cancellationToken">The token used to cancel admission and native active HTTP I/O.</param>
         /// <exception cref="OperationCanceledException">Cancellation is requested before or during the request.</exception>
@@ -63,7 +63,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         }
 
         /// <inheritdoc cref="GetDispatchParentDetailsWithHttpInfo"/>
-        /// <param name="number">The original explicitly selected internal dispatch note number, escaped without trimming or numeric conversion.</param>
+        /// <param name="number">The original explicitly selected dispatch document number, escaped without trimming or numeric conversion.</param>
         /// <param name="fields">The original optional comma-separated response field selection; null omits it and an empty string is retained.</param>
         /// <param name="cancellationToken">The token used to cancel admission and native active HTTP I/O.</param>
         /// <exception cref="OperationCanceledException">Cancellation is requested before or during the request.</exception>
@@ -71,7 +71,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         {
             cancellationToken.ThrowIfCancellationRequested();
             if (string.IsNullOrWhiteSpace(number) || number == "." || number == "..")
-                throw new ArgumentException("An explicit internal dispatch note number is required.", nameof(number));
+                throw new ArgumentException("An explicit dispatch document number is required.", nameof(number));
             var localVarPath = "/dispatch/{number}/parent";
             localVarPath = localVarPath.Replace("{number}", Uri.EscapeDataString(number));
             var queryParams = new List<KeyValuePair<string, string>>();

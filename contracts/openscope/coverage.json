@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 752,
+    "source_http_methods": 758,
     "status_counts": {
       "deferred": 323
     },
@@ -5830,6 +5830,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "OpportunityApi.GetOpportunityAsyncWithHttpInfo",
+        "OpportunityApi.GetOpportunityDetailsAsyncWithHttpInfo",
+        "OpportunityApi.GetOpportunityDetailsWithHttpInfo",
         "OpportunityApi.GetOpportunityWithHttpInfo"
       ],
       "parameters": [
@@ -6288,6 +6290,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "OutgoingInvoiceApi.GetOutgoingInvoiceExportTemplatesAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.GetOutgoingInvoiceExportTemplatesDetailsAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.GetOutgoingInvoiceExportTemplatesDetailsWithHttpInfo",
         "OutgoingInvoiceApi.GetOutgoingInvoiceExportTemplatesWithHttpInfo"
       ],
       "parameters": [],
@@ -6783,7 +6787,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProductApi.GetProductGroupAsyncWithHttpInfo",
-        "ProductApi.GetProductGroupWithHttpInfo"
+        "ProductApi.GetProductGroupWithHttpInfo",
+        "ProductApi.GetProductGroupsDetailsAsyncWithHttpInfo",
+        "ProductApi.GetProductGroupsDetailsWithHttpInfo"
       ],
       "parameters": [],
       "request_body": null,
@@ -32185,6 +32191,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.SelectedReads.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, string fields = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOpportunityDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.SelectedReads.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, string fields = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/opportunity/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.SelectedReads.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOpportunityDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.SelectedReads.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields = null",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOpportunityDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.SelectedReads.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "GetOpportunityDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, string fields, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/opportunity/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.cs",
       "class": "OpportunityApi",
       "class_access": "public",
@@ -33966,6 +34068,102 @@
         [
           "POST",
           "/organisation/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CatalogDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceExportTemplatesDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "",
+      "line": 19,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceExportTemplatesDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CatalogDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceExportTemplatesDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/exporttemplates"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CatalogDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceExportTemplatesDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 46,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceExportTemplatesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CatalogDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceExportTemplatesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "",
+      "line": 52,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetOutgoingInvoiceExportTemplatesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CatalogDetails.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "GetOutgoingInvoiceExportTemplatesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 60,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/outgoinginvoice/exporttemplates"
         ]
       ],
       "delegates": [],
@@ -36000,6 +36198,102 @@
         [
           "POST",
           "/outgoinginvoice/{number}/post"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CatalogDetails.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductGroupsDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "",
+      "line": 19,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductGroupsDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CatalogDetails.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductGroupsDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/productGroups"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CatalogDetails.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductGroupsDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 46,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductGroupsDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CatalogDetails.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductGroupsDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "",
+      "line": 52,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetProductGroupsDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CatalogDetails.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "GetProductGroupsDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 60,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/productGroups"
         ]
       ],
       "delegates": [],

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 762,
+    "source_http_methods": 764,
     "status_counts": {
       "deferred": 323
     },
@@ -8348,6 +8348,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "UserApi.GetUsersAsyncWithHttpInfo",
+        "UserApi.GetUsersDetailsAsyncWithHttpInfo",
+        "UserApi.GetUsersDetailsWithHttpInfo",
         "UserApi.GetUsersWithHttpInfo"
       ],
       "parameters": [
@@ -49004,6 +49006,102 @@
       ],
       "delegates": [],
       "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.ListDetails.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUsersDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "bool? onlyActive = null, long? organisationId = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetUsersDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.ListDetails.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUsersDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "bool? onlyActive = null, long? organisationId = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/users"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.ListDetails.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUsersDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "bool? onlyActive, long? organisationId, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetUsersDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.ListDetails.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUsersDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "bool? onlyActive = null, long? organisationId = null",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetUsersDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.ListDetails.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "GetUsersDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "bool? onlyActive, long? organisationId, CancellationToken cancellationToken",
+      "line": 72,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/users"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
       "facade_property": true
     },
     {

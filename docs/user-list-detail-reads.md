@@ -1,0 +1,13 @@
+﻿# Current organisation-filtered user-list JSON
+
+Issue #138 contributes to #17 and consuming CompuMasterGmbH/CompuMaster.Dms#90. GetUsersDetails adds six synchronous/HTTP-info/asynchronous/native-cancellation forms for GET /users, alongside unchanged historical typed lists and models.
+
+The current contract includes optional organisationId, omitted from the old bool-only signature. Nullable onlyActive and Int64 organisationId are independent: null omits each choice; explicit false/true, zero and full-width values are sent unchanged with invariant formatting. An onlyActive example of true is not a default. No local positivity/range rule, automatic organisation lookup, default filter, fields, pagination or request body is added.
+
+When onlyActive is true the server omits deleted users. organisationId asks for users with rights in the selected organisation; it does not switch the authenticated account, establish membership or infer permissions/user identities. Actual role visibility remains server-authoritative. The current reference requires Benutzer (Bearbeiten), although older generated summaries say Anzeigen. HTTP 404 can indicate an unknown organisation. All original status/body/factory diagnostics are retained instead of converting absence into an empty list.
+
+Success has no fixed schema. Complete JToken results retain arbitrary arrays/envelopes, nested future fields, JSON nulls and original date strings. HTTP-info retains exact raw JSON/status and combined response/content headers. Parsed fractions use .NET decimal precision and may round, underflow or overflow; raw JSON remains exact. Historical typed User records retain their original deserialization and defaults; they are not redefined by this addition.
+
+The configured factory inspects the original response before parsing and its exception instance remains intact. Native cancellation reaches active HTTP I/O. Authentication/token renewal, selected account/organisation and user mapping remain unchanged. No user/account mutation or retry is introduced.
+
+Three absent HTTP-info forms reproduce before implementation. The 100 isolated cases cover all six forms, independent omission/false/true and full Int64 filters under a modified culture, bodyless/query-only requests, complete arrays/future dates/unknown shapes, raw/header/error/hooks, pre/active cancellation and preserved historical typed UID/default filtering/token behavior. Forwarding unusual identifiers does not establish actual server acceptance. Review/merge and coordinated actual organisation/profile/filter acceptance, publication and downstream adoption remain separate.

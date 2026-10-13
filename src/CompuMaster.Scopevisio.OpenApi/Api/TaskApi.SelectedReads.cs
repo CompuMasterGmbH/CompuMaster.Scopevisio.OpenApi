@@ -45,7 +45,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         }
 
         /// <inheritdoc cref="GetTaskDetails"/>
-        /// <param name="id">The explicitly selected contact property identifier.</param>
+        /// <param name="id">The explicitly selected task master identifier.</param>
         /// <param name="fields">The original optional comma-separated response field selection; null omits it and an empty string is retained.</param>
         /// <param name="cancellationToken">The token used to cancel admission and native active HTTP I/O.</param>
         /// <exception cref="OperationCanceledException">Cancellation is requested before or during the request.</exception>
@@ -61,7 +61,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         }
 
         /// <inheritdoc cref="GetTaskDetailsWithHttpInfo"/>
-        /// <param name="id">The explicitly selected contact property identifier.</param>
+        /// <param name="id">The explicitly selected task master identifier.</param>
         /// <param name="fields">The original optional comma-separated response field selection; null omits it and an empty string is retained.</param>
         /// <param name="cancellationToken">The token used to cancel admission and native active HTTP I/O.</param>
         /// <exception cref="OperationCanceledException">Cancellation is requested before or during the request.</exception>

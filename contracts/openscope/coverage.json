@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 778,
+    "source_http_methods": 780,
     "status_counts": {
       "deferred": 323
     },
@@ -8788,7 +8788,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "CashbookApi.CreateCashbookEntryAsyncWithHttpInfo",
-        "CashbookApi.CreateCashbookEntryWithHttpInfo"
+        "CashbookApi.CreateCashbookEntryWithHttpInfo",
+        "CashbookApi.CreateCashbookEntryWithResultAsyncWithHttpInfo",
+        "CashbookApi.CreateCashbookEntryWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -25456,6 +25458,102 @@
       ],
       "delegates": [],
       "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.EntryCreation.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "CreateCashbookEntryWithResult",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "CashbookEntryCreationRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateCashbookEntryWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.EntryCreation.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "CreateCashbookEntryWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "CashbookEntryCreationRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/cashbookentry/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.EntryCreation.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "CreateCashbookEntryWithResultAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CashbookEntryCreationRequest request, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateCashbookEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.EntryCreation.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "CreateCashbookEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CashbookEntryCreationRequest request",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateCashbookEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.EntryCreation.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "CreateCashbookEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CashbookEntryCreationRequest request, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/cashbookentry/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
       "facade_property": true
     },
     {

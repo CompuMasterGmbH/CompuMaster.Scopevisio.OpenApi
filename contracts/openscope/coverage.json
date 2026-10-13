@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 712,
+    "source_http_methods": 722,
     "status_counts": {
       "deferred": 323
     },
@@ -535,6 +535,8 @@
       "phase": "3-accounting-invoices",
       "public_source_route": true,
       "sdk_methods": [
+        "AccountingApi.GetAccountingInfoDetailsAsyncWithHttpInfo",
+        "AccountingApi.GetAccountingInfoDetailsWithHttpInfo",
         "AccountingApi.GetAccountingInfosAsyncWithHttpInfo",
         "AccountingApi.GetAccountingInfosWithHttpInfo"
       ],
@@ -6540,6 +6542,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.GetPaymentTermAsyncWithHttpInfo",
+        "AccountingApi.GetPaymentTermDetailsAsyncWithHttpInfo",
+        "AccountingApi.GetPaymentTermDetailsWithHttpInfo",
         "AccountingApi.GetPaymentTermWithHttpInfo"
       ],
       "parameters": [
@@ -6582,6 +6586,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.GetPaymentTermsAsyncWithHttpInfo",
+        "AccountingApi.GetPaymentTermsDetailsAsyncWithHttpInfo",
+        "AccountingApi.GetPaymentTermsDetailsWithHttpInfo",
         "AccountingApi.GetPaymentTermsWithHttpInfo"
       ],
       "parameters": [
@@ -8223,6 +8229,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.GetTextTemplatesAsyncWithHttpInfo",
+        "AccountingApi.GetTextTemplatesDetailsAsyncWithHttpInfo",
+        "AccountingApi.GetTextTemplatesDetailsWithHttpInfo",
         "AccountingApi.GetTextTemplatesWithHttpInfo"
       ],
       "parameters": [],
@@ -8391,6 +8399,8 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.GetVatMatrixEntriesAsyncWithHttpInfo",
+        "AccountingApi.GetVatMatrixEntriesDetailsAsyncWithHttpInfo",
+        "AccountingApi.GetVatMatrixEntriesDetailsWithHttpInfo",
         "AccountingApi.GetVatMatrixEntriesWithHttpInfo"
       ],
       "parameters": [],
@@ -16358,6 +16368,486 @@
     }
   ],
   "sdk_methods": [
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountingInfoDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "",
+      "line": 19,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetAccountingInfoDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountingInfoDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/accountinginfo"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountingInfoDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 46,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetAccountingInfoDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountingInfoDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "",
+      "line": 52,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetAccountingInfoDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetAccountingInfoDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 60,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/accountinginfo"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermsDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string fields = null",
+      "line": 78,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPaymentTermsDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermsDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string fields = null",
+      "line": 85,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/paymentterms"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermsDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string fields, CancellationToken cancellationToken",
+      "line": 107,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPaymentTermsDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermsDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string fields = null",
+      "line": 113,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPaymentTermsDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermsDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string fields, CancellationToken cancellationToken",
+      "line": 122,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/paymentterms"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "long id",
+      "line": 141,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPaymentTermDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "long id",
+      "line": 148,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/paymentterm/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "long id, CancellationToken cancellationToken",
+      "line": 170,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPaymentTermDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id",
+      "line": 176,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetPaymentTermDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetPaymentTermDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "long id, CancellationToken cancellationToken",
+      "line": 185,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/paymentterm/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetTextTemplatesDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "",
+      "line": 203,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTextTemplatesDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetTextTemplatesDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "",
+      "line": 210,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/texttemplates"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetTextTemplatesDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 230,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTextTemplatesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetTextTemplatesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "",
+      "line": 236,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetTextTemplatesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetTextTemplatesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 244,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/texttemplates"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatMatrixEntriesDetails",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "",
+      "line": 261,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetVatMatrixEntriesDetailsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatMatrixEntriesDetailsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "",
+      "line": 268,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/vatmatrixentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatMatrixEntriesDetailsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 288,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetVatMatrixEntriesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatMatrixEntriesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "",
+      "line": 294,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "GetVatMatrixEntriesDetailsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CatalogDetails.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "GetVatMatrixEntriesDetailsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "CancellationToken cancellationToken",
+      "line": 302,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/vatmatrixentries"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
     {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.ConfigurationWrites.cs",
       "class": "AccountingApi",

@@ -1,0 +1,11 @@
+﻿# Complete accounting information and catalog reads
+
+AccountingApi exposes complete JToken results through GetAccountingInfoDetails, GetPaymentTermsDetails, GetPaymentTermDetails, GetTextTemplatesDetails and GetVatMatrixEntriesDetails. Each has synchronous, HTTP-info and native asynchronous forms alongside unchanged historical methods that discard JSON. These reads do not configure accounting, change payment terms, alter templates or update VAT entries.
+
+Accounting info uses GET /accountinginfo, the Stammdaten (Anzeigen) profile and a documented HTTP500 diagnostic when accounting is not set up for the organisation. Payment-term list/detail use Stammdaten, Zahlungsbedingungen (Anzeigen); the list preserves optional original fields with null omission versus explicit empty text. Detail selection retains the original signed Int64 ID without inferred minimums; HTTP404 can report a missing term. Text templates list the manufacturer profiles Angebote, Aufträge, Lieferscheine, Rechnungen, Rechnungseingangsbuch (Anzeigen). VAT-matrix entries list Stammdaten, Steuermatrix (Anzeigen). Profile interpretation and actual catalog availability remain server-authoritative.
+
+No fixed successful schemas are declared. Complete objects, arrays, scalars, future fields and explicit null are retained; empty content returns null. Bodyless GETs add no queries except explicitly selected payment-term fields, no formatting/paging, no local capability/permission/default-data guesses and no setup lookups. WithHttpInfo preserves status, combined response/content headers and exact raw JSON. Dates remain strings; parsed fractions follow .NET decimal precision with possible rounding/underflow/overflow, while raw JSON stays exact.
+
+The caller's exception factory runs before parsing, original errors remain authoritative and native cancellation reaches admission and active HTTP I/O. Existing configuration, active organisation/account selection, OAuth/token defaults, generated getters and existing fiscal mutations remain intact.
+
+[SDK #123](https://github.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi/issues/123) tracks five current contracts, fake .invalid result/query/error/cancellation fixtures, compiled compatibility and remaining coordinated real catalog/profile/accounting-setup acceptance. Publication and downstream adoption remain separate.

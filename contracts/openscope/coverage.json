@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 876,
+    "source_http_methods": 884,
     "status_counts": {
       "deferred": 323
     },
@@ -11406,7 +11406,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "OfferApi.ConvertOfferToRecurringInvoiceAsyncWithHttpInfo",
-        "OfferApi.ConvertOfferToRecurringInvoiceWithHttpInfo"
+        "OfferApi.ConvertOfferToRecurringInvoiceWithHttpInfo",
+        "OfferApi.ConvertOfferToRecurringInvoiceWithResultAsyncWithHttpInfo",
+        "OfferApi.ConvertOfferToRecurringInvoiceWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -12115,7 +12117,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "OpportunityApi.ConvertOpportunityToRecurringInvoiceAsyncWithHttpInfo",
-        "OpportunityApi.ConvertOpportunityToRecurringInvoiceWithHttpInfo"
+        "OpportunityApi.ConvertOpportunityToRecurringInvoiceWithHttpInfo",
+        "OpportunityApi.ConvertOpportunityToRecurringInvoiceWithResultAsyncWithHttpInfo",
+        "OpportunityApi.ConvertOpportunityToRecurringInvoiceWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -12336,7 +12340,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "OrderApi.ConvertOrderToRecurringInvoiceAsyncWithHttpInfo",
-        "OrderApi.ConvertOrderToRecurringInvoiceWithHttpInfo"
+        "OrderApi.ConvertOrderToRecurringInvoiceWithHttpInfo",
+        "OrderApi.ConvertOrderToRecurringInvoiceWithResultAsyncWithHttpInfo",
+        "OrderApi.ConvertOrderToRecurringInvoiceWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -12691,7 +12697,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "OutgoingInvoiceApi.ConvertInvoiceToRecurringInvoiceAsyncWithHttpInfo",
-        "OutgoingInvoiceApi.ConvertInvoiceToRecurringInvoiceWithHttpInfo"
+        "OutgoingInvoiceApi.ConvertInvoiceToRecurringInvoiceWithHttpInfo",
+        "OutgoingInvoiceApi.ConvertInvoiceToRecurringInvoiceWithResultAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.ConvertInvoiceToRecurringInvoiceWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -34011,6 +34019,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.RecurringConversions.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "ConvertOfferToRecurringInvoiceWithResult",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertOfferToRecurringInvoiceWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.RecurringConversions.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "ConvertOfferToRecurringInvoiceWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/offer/{number}/convertToRecurringInvoice"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.RecurringConversions.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "ConvertOfferToRecurringInvoiceWithResultAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request, CancellationToken cancellationToken",
+      "line": 53,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertOfferToRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.RecurringConversions.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "ConvertOfferToRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 59,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertOfferToRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.RecurringConversions.cs",
+      "class": "OfferApi",
+      "class_access": "public",
+      "method": "ConvertOfferToRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request, CancellationToken cancellationToken",
+      "line": 69,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/offer/{number}/convertToRecurringInvoice"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OfferApi.Search.cs",
       "class": "OfferApi",
       "class_access": "public",
@@ -35474,6 +35578,102 @@
         [
           "GET",
           "/opportunity/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.RecurringConversions.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "ConvertOpportunityToRecurringInvoiceWithResult",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertOpportunityToRecurringInvoiceWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.RecurringConversions.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "ConvertOpportunityToRecurringInvoiceWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/opportunity/{number}/convertToRecurringInvoice"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.RecurringConversions.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "ConvertOpportunityToRecurringInvoiceWithResultAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request, CancellationToken cancellationToken",
+      "line": 53,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertOpportunityToRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.RecurringConversions.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "ConvertOpportunityToRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 59,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertOpportunityToRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OpportunityApi.RecurringConversions.cs",
+      "class": "OpportunityApi",
+      "class_access": "public",
+      "method": "ConvertOpportunityToRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request, CancellationToken cancellationToken",
+      "line": 69,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/opportunity/{number}/convertToRecurringInvoice"
         ]
       ],
       "delegates": [],
@@ -36962,6 +37162,102 @@
         [
           "GET",
           "/order/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.RecurringConversions.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "ConvertOrderToRecurringInvoiceWithResult",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertOrderToRecurringInvoiceWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.RecurringConversions.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "ConvertOrderToRecurringInvoiceWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/order/{number}/convertToRecurringInvoice"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.RecurringConversions.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "ConvertOrderToRecurringInvoiceWithResultAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request, CancellationToken cancellationToken",
+      "line": 53,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertOrderToRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.RecurringConversions.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "ConvertOrderToRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 59,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertOrderToRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OrderApi.RecurringConversions.cs",
+      "class": "OrderApi",
+      "class_access": "public",
+      "method": "ConvertOrderToRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request, CancellationToken cancellationToken",
+      "line": 69,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/order/{number}/convertToRecurringInvoice"
         ]
       ],
       "delegates": [],
@@ -39086,6 +39382,102 @@
         [
           "GET",
           "/outgoinginvoice/all/positions"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.RecurringConversions.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ConvertInvoiceToRecurringInvoiceWithResult",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertInvoiceToRecurringInvoiceWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.RecurringConversions.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ConvertInvoiceToRecurringInvoiceWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoice/{number}/convertToRecurringInvoice"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.RecurringConversions.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ConvertInvoiceToRecurringInvoiceWithResultAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request, CancellationToken cancellationToken",
+      "line": 53,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertInvoiceToRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.RecurringConversions.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ConvertInvoiceToRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request = null",
+      "line": 59,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ConvertInvoiceToRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.RecurringConversions.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ConvertInvoiceToRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "string number, RecurringInvoiceConversionRequest request, CancellationToken cancellationToken",
+      "line": 69,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoice/{number}/convertToRecurringInvoice"
         ]
       ],
       "delegates": [],

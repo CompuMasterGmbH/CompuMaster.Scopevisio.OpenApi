@@ -69,17 +69,28 @@ jobs:
               run: ls -la
 
             - name: Install dependencies
-              run: dotnet restore
+              shell: pwsh
+              run: |
+                  dotnet restore
+                  if ($LASTEXITCODE -ne 0) { throw 'Solution restore failed.' }
+                  dotnet restore src/CompuMaster.Scopevisio.OpenApi.AsyncTests/CompuMaster.Scopevisio.OpenApi.AsyncTests.csproj
+                  if ($LASTEXITCODE -ne 0) { throw 'Isolated SDK restore failed.' }
+
+            - name: Validate full and sampled CI selections without account access
+              shell: pwsh
+              run: ./.github/scripts/test-ci-test-selection.ps1
 
             - name: Build
               run: dotnet build --configuration=${{env.BUILD_CONFIGURATION}} --no-restore
 
-            - name: Run Unit Tests - .NET 8.0
-              run: dotnet test --framework net8.0 --results-directory test-results-net8.0 --logger junit --configuration=${{env.BUILD_CONFIGURATION}} --no-restore
+            - name: Run full Windows or sampled non-Windows tests - .NET 8.0
+              shell: pwsh
+              run: ./.github/scripts/run-ci-tests.ps1 -RunnerOs $env:RUNNER_OS -Framework net8.0 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net8.0 -IncludeCredentialedSuite
 
-            - name: Run Unit Tests - .NET Framework 4.8
+            - name: Run representative tests - .NET Framework 4.8
               if: (startsWith(matrix.os, 'windows'))
-              run: dotnet test --framework net48 --results-directory test-results-net48 --logger junit --configuration=${{env.BUILD_CONFIGURATION}} --no-restore
+              shell: pwsh
+              run: ./.github/scripts/run-ci-tests.ps1 -RunnerOs $env:RUNNER_OS -Framework net48 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net48 -IncludeCredentialedSuite
 
 #            - name: Dir Listing (Win) test-results
 #              if: startsWith(matrix.os, 'windows')
@@ -98,7 +109,7 @@ jobs:
               if: always() && startsWith(matrix.os, 'ubuntu')
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  files: "test-results-net8.0/TestResults.xml"
+                  files: "test-results-net8.0/historical/TestResults.xml"
                   check_run_annotations: all tests
                   comment_title: Unit Test Statistics (${{matrix.os}})  - NET 8.0
                   check_name: Unit Test Results (${{matrix.os}})  - NET 8.0
@@ -109,7 +120,7 @@ jobs:
               if: always() && (!(startsWith(matrix.os, 'ubuntu')))
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  files: "test-results-net8.0/TestResults.xml"
+                  files: "test-results-net8.0/historical/TestResults.xml"
                   check_run_annotations: all tests
                   comment_title: Unit Test Statistics (${{matrix.os}})  - NET 8.0
                   check_name: Unit Test Results (${{matrix.os}})  - NET 8.0
@@ -120,8 +131,18 @@ jobs:
               if: always() && (startsWith(matrix.os, 'windows'))
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  files: "test-results-net48/TestResults.xml"
+                  files: "test-results-net48/historical/TestResults.xml"
                   check_run_annotations: all tests
                   comment_title: Unit Test Statistics (${{matrix.os}}) - NET Framework 4.8
                   check_name: Unit Test Results (${{matrix.os}}) - NET Framework 4.8
                   report_individual_runs: true
+
+            - name: Retain full and sampled test evidence
+              uses: actions/upload-artifact@v4
+              if: always()
+              with:
+                  name: openscope-test-evidence-${{ matrix.os }}
+                  path: |
+                      test-results-net8.0/
+                      test-results-net48/
+                  if-no-files-found: warn

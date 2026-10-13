@@ -1,0 +1,13 @@
+﻿# CI platform coverage
+
+The normal and scheduled account workflows run the complete historical test project and complete isolated SDK test project on Windows with .NET 8. Linux/macOS with .NET 8 and Windows with .NET Framework 4.8 run named representative samples. All existing SDK compilation targets remain built. This follows the human's 13 October 2026 instruction to reduce duplicate platform/runtime test execution.
+
+Historical samples select the application-context read and the Additional/Authorization API construction tests. These fixtures still use configured real account credentials, including in setup. They are integration evidence rather than isolated unit tests. Isolated samples select AuthorizationCancellationTests, BasicDataSourceProtocolTests, JournalFileDownloadTests and ApiExceptionCauseTests, covering active cancellation, token installation/renewal, source request contracts, binary responses and original exception causes through fake transports.
+
+The shared selector logs full/sample coverage explicitly. TRX admission rejects missing, empty or failed runs and skipped sample cases and requires every named sample method/fixture to have passed. The Ubuntu offline contract workflow retains complete inventory/generator checks and runs the isolated SDK sample instead of repeating the full SDK suite. Its success does not establish a complete non-Windows SDK pass.
+
+The account workflows retain openscope_test_account, cancel-in-progress: false and max-parallel: 1. They still need coordinated exclusive access across repositories/local sessions for setup, execution and cleanup. Source changes grant no account access and must not enable held workflows. The previously inactive scheduled workflow remains disabled until explicitly requested; fresh credentialed CI requires a separate coordinator grant.
+
+This infrastructure-only change does not modify the published CompuMaster.Scopevisio.OpenApi 2026.10.13 package or DMS dependency pins and does not require another publication. A complete Windows historical pass also does not establish full API/server coverage: historical placeholder tests and deferred business workflows remain separate from actual verified requests.
+
+Offline policy checks: pwsh -File .github/scripts/test-ci-test-selection.ps1. For isolated local samples, invoke run-ci-tests.ps1 without IncludeCredentialedSuite, selecting Linux/net8 or Windows/net48 and a fresh results directory. Never use the credentialed option locally.

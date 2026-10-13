@@ -12,6 +12,7 @@ on:
       - 'src/CompuMaster.Scopevisio.OpenApi/**'
       - 'src/CompuMaster.Scopevisio.OpenApi.AsyncTests/**'
       - '.github/workflows/ContractCoverage.yml'
+      - '.github/scripts/**'
   pull_request:
     paths:
       - 'contracts/openscope/**'
@@ -23,6 +24,7 @@ on:
       - 'src/CompuMaster.Scopevisio.OpenApi/**'
       - 'src/CompuMaster.Scopevisio.OpenApi.AsyncTests/**'
       - '.github/workflows/ContractCoverage.yml'
+      - '.github/scripts/**'
   workflow_dispatch:
 
 permissions:
@@ -47,5 +49,17 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
-      - name: Verify isolated SDK contracts and authorization
-        run: dotnet test src/CompuMaster.Scopevisio.OpenApi.AsyncTests/CompuMaster.Scopevisio.OpenApi.AsyncTests.csproj -f net8.0 --logger 'console;verbosity=quiet'
+      - name: Verify bounded non-Windows SDK sample and selection policy
+        shell: pwsh
+        run: |
+          ./.github/scripts/test-ci-test-selection.ps1
+          dotnet restore src/CompuMaster.Scopevisio.OpenApi.AsyncTests/CompuMaster.Scopevisio.OpenApi.AsyncTests.csproj
+          if ($LASTEXITCODE -ne 0) { throw 'Isolated sample restore failed.' }
+          ./.github/scripts/run-ci-tests.ps1 -RunnerOs $env:RUNNER_OS -Framework net8.0 -ResultsDirectory test-results-offline
+      - name: Retain sampled SDK evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: offline-sdk-sample
+          path: test-results-offline/
+          if-no-files-found: warn

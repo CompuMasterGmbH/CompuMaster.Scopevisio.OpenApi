@@ -148,6 +148,25 @@ namespace CompuMaster.Scopevisio.OpenApi.AsyncTests
         }
 
         [TestCase(false, false), TestCase(true, false), TestCase(false, true), TestCase(true, true)]
+        public async Task FractionalWireIdentityCannotBeRoundedIntoTheRequestedInteger(bool native, bool account)
+        {
+            var handler = new Handler();
+            var token = JObject.Parse(handler.TokenBody);
+            token["organisationId"] = account ? (JToken)7L : 7.25;
+            handler.TokenBody = token.ToString();
+            handler.AccountBody = "{\"user\":{\"uid\":\"fixture-scope-user\"},\"organisation\":{\"id\":7.25}}";
+            using (var http = new HttpClient(handler))
+            {
+                var client = CreateClient(http);
+                client.Config.OrganisationId = 7;
+                var prior = SeedPrevious(client);
+                Assert.That(await Catch(() => Authorize(client, native)), Is.TypeOf<InvalidDataException>());
+                AssertUnchanged(client, prior);
+                Assert.That(handler.Paths.Count, Is.EqualTo(account ? 2 : 1));
+            }
+        }
+
+        [TestCase(false, false), TestCase(true, false), TestCase(false, true), TestCase(true, true)]
         public async Task OriginalFactoryFailuresArePreservedWithoutFallback(bool native, bool account)
         {
             var handler = new Handler();

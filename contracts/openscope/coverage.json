@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 774,
+    "source_http_methods": 778,
     "status_counts": {
       "deferred": 323
     },
@@ -8826,7 +8826,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "CashbookApi.GetCashbooksAsyncWithHttpInfo",
-        "CashbookApi.GetCashbooksWithHttpInfo"
+        "CashbookApi.GetCashbooksWithHttpInfo",
+        "CashbookApi.SearchCashbooksAsyncWithHttpInfo",
+        "CashbookApi.SearchCashbooksWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -8863,7 +8865,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "CashbookApi.GetCashbookSheetsAsyncWithHttpInfo",
-        "CashbookApi.GetCashbookSheetsWithHttpInfo"
+        "CashbookApi.GetCashbookSheetsWithHttpInfo",
+        "CashbookApi.SearchCashbookSheetsAsyncWithHttpInfo",
+        "CashbookApi.SearchCashbookSheetsWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -25452,6 +25456,198 @@
       ],
       "delegates": [],
       "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbooks",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCashbooksWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbooksWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/cashbooks"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbooksAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCashbooksAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbooksAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCashbooksAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbooksAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/cashbooks"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbookSheets",
+      "access": "public",
+      "return_type": "JToken",
+      "parameters": "SearchRequest query = null",
+      "line": 79,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCashbookSheetsWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbookSheetsWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<JToken>",
+      "parameters": "SearchRequest query = null",
+      "line": 86,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/cashbooksheets"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbookSheetsAsync",
+      "access": "public",
+      "return_type": "Task<JToken>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 106,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCashbookSheetsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbookSheetsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query = null",
+      "line": 112,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "SearchCashbookSheetsAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/CashbookApi.Search.cs",
+      "class": "CashbookApi",
+      "class_access": "public",
+      "method": "SearchCashbookSheetsAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<JToken>>",
+      "parameters": "SearchRequest query, CancellationToken cancellationToken",
+      "line": 121,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/cashbooksheets"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
       "facade_property": true
     },
     {

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 708,
+    "source_http_methods": 710,
     "status_counts": {
       "deferred": 323
     },
@@ -7379,6 +7379,8 @@
       "phase": "4-remaining-groups",
       "public_source_route": true,
       "sdk_methods": [
+        "ReportApi.DownloadAccountingReportAsyncWithHttpInfo",
+        "ReportApi.DownloadAccountingReportWithHttpInfo",
         "ReportApi.GetReportAsyncWithHttpInfo",
         "ReportApi.GetReportWithHttpInfo"
       ],
@@ -39664,6 +39666,102 @@
         [
           "GET",
           "/proreport/{type}/{name}/{year}/{month}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.Downloads.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "DownloadAccountingReport",
+      "access": "public",
+      "return_type": "byte[]",
+      "parameters": "ReportExportRequest request",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadAccountingReportWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.Downloads.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "DownloadAccountingReportWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "ReportExportRequest request",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/reports/{type}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.Downloads.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "DownloadAccountingReportAsync",
+      "access": "public",
+      "return_type": "Task<byte[]>",
+      "parameters": "ReportExportRequest request, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadAccountingReportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.Downloads.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "DownloadAccountingReportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "ReportExportRequest request",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "DownloadAccountingReportAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ReportApi.Downloads.cs",
+      "class": "ReportApi",
+      "class_access": "public",
+      "method": "DownloadAccountingReportAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "ReportExportRequest request, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "GET",
+          "/reports/{type}"
         ]
       ],
       "delegates": [],

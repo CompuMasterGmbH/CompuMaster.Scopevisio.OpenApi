@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 962,
+    "source_http_methods": 966,
     "status_counts": {
       "deferred": 323
     },
@@ -9638,7 +9638,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.ExportDatevAsyncWithHttpInfo",
-        "AccountingApi.ExportDatevWithHttpInfo"
+        "AccountingApi.ExportDatevWithHttpInfo",
+        "AccountingApi.ExportDatevWithResultAsyncWithHttpInfo",
+        "AccountingApi.ExportDatevWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -9674,7 +9676,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.ImportDatevDataAsyncWithHttpInfo",
-        "AccountingApi.ImportDatevDataWithHttpInfo"
+        "AccountingApi.ImportDatevDataWithHttpInfo",
+        "AccountingApi.ImportDatevDataWithResultAsyncWithHttpInfo",
+        "AccountingApi.ImportDatevDataWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -17566,6 +17570,198 @@
         [
           "POST",
           "/fiscalyears/edit"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevExport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ExportDatevWithResult",
+      "access": "public",
+      "return_type": "byte[]",
+      "parameters": "DatevExportRequest request = null",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ExportDatevWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevExport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ExportDatevWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "DatevExportRequest request = null",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/datevexport"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevExport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ExportDatevWithResultAsync",
+      "access": "public",
+      "return_type": "Task<byte[]>",
+      "parameters": "DatevExportRequest request, CancellationToken cancellationToken",
+      "line": 50,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ExportDatevWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevExport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ExportDatevWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "DatevExportRequest request = null",
+      "line": 56,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ExportDatevWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevExport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ExportDatevWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "DatevExportRequest request, CancellationToken cancellationToken",
+      "line": 65,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/datevexport"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevImport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportDatevDataWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "DatevImportRequest request = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportDatevDataWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevImport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportDatevDataWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "DatevImportRequest request = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/datevpostings/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevImport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportDatevDataWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "DatevImportRequest request, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportDatevDataWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevImport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportDatevDataWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "DatevImportRequest request = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportDatevDataWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDatevImport.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "ImportDatevDataWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "DatevImportRequest request, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/datevpostings/new"
         ]
       ],
       "delegates": [],

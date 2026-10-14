@@ -26,22 +26,22 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             if (request == null) throw new ArgumentNullException(nameof(request));
             var query = new List<KeyValuePair<string, string>>(request.Query);
             var headers = BinaryFileResponse.Headers(Configuration);
-            var paths = BridgeReadPathParameters(request);
+            var paths = new Dictionary<string, string>();
             var forms = new Dictionary<string, string>();
             var files = new Dictionary<string, FileParameter>();
             RestResponse response;
             switch (request.PathSegments.Count)
             {
                 case 1:
-                    response = Configuration.ApiClient.CallApi("/teamworkbridge/{arg1}", Method.Get,
+                    response = Configuration.ApiClient.CallApi(BridgeReadPath("/teamworkbridge/{arg1}", request), Method.Get,
                         query, null, headers, forms, files, paths, "application/octet-stream");
                     break;
                 case 2:
-                    response = Configuration.ApiClient.CallApi("/teamworkbridge/{arg1}/{arg2}", Method.Get,
+                    response = Configuration.ApiClient.CallApi(BridgeReadPath("/teamworkbridge/{arg1}/{arg2}", request), Method.Get,
                         query, null, headers, forms, files, paths, "application/octet-stream");
                     break;
                 case 3:
-                    response = Configuration.ApiClient.CallApi("/teamworkbridge/{arg1}/{arg2}/{arg3}", Method.Get,
+                    response = Configuration.ApiClient.CallApi(BridgeReadPath("/teamworkbridge/{arg1}/{arg2}/{arg3}", request), Method.Get,
                         query, null, headers, forms, files, paths, "application/octet-stream");
                     break;
                 default: throw new ArgumentException("An unsupported resource selection was supplied.", nameof(request));
@@ -74,22 +74,22 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             if (request == null) throw new ArgumentNullException(nameof(request));
             var query = new List<KeyValuePair<string, string>>(request.Query);
             var headers = BinaryFileResponse.Headers(Configuration);
-            var paths = BridgeReadPathParameters(request);
+            var paths = new Dictionary<string, string>();
             var forms = new Dictionary<string, string>();
             var files = new Dictionary<string, FileParameter>();
             RestResponse response;
             switch (request.PathSegments.Count)
             {
                 case 1:
-                    response = await Configuration.ApiClient.CallApiAsync("/teamworkbridge/{arg1}", Method.Get,
+                    response = await Configuration.ApiClient.CallApiAsync(BridgeReadPath("/teamworkbridge/{arg1}", request), Method.Get,
                         query, null, headers, forms, files, paths, "application/octet-stream", cancellationToken).ConfigureAwait(false);
                     break;
                 case 2:
-                    response = await Configuration.ApiClient.CallApiAsync("/teamworkbridge/{arg1}/{arg2}", Method.Get,
+                    response = await Configuration.ApiClient.CallApiAsync(BridgeReadPath("/teamworkbridge/{arg1}/{arg2}", request), Method.Get,
                         query, null, headers, forms, files, paths, "application/octet-stream", cancellationToken).ConfigureAwait(false);
                     break;
                 case 3:
-                    response = await Configuration.ApiClient.CallApiAsync("/teamworkbridge/{arg1}/{arg2}/{arg3}", Method.Get,
+                    response = await Configuration.ApiClient.CallApiAsync(BridgeReadPath("/teamworkbridge/{arg1}/{arg2}/{arg3}", request), Method.Get,
                         query, null, headers, forms, files, paths, "application/octet-stream", cancellationToken).ConfigureAwait(false);
                     break;
                 default: throw new ArgumentException("An unsupported resource selection was supplied.", nameof(request));
@@ -97,12 +97,11 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
             return BinaryFileResponse.Parse("GetTeamworkResource", response, ExceptionFactory);
         }
 
-        private static Dictionary<string, string> BridgeReadPathParameters(TeamworkBridgeReadRequest request)
+        private static string BridgeReadPath(string path, TeamworkBridgeReadRequest request)
         {
-            var paths = new Dictionary<string, string>();
             for (var index = 0; index < request.PathSegments.Count; index++)
-                paths.Add("arg" + (index + 1), request.PathSegments[index]);
-            return paths;
+                path = path.Replace("{arg" + (index + 1) + "}", Uri.EscapeDataString(request.PathSegments[index]));
+            return path;
         }
     }
 }

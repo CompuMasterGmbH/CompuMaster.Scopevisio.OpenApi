@@ -104,6 +104,10 @@ class InventoryTests(unittest.TestCase):
         api = source(extra='public void Bridge(CancellationToken token) { client.CallApi(BridgeWritePath("/teamworkbridge/{arg1}", request), Method.Put); client.CallApiAsync(BridgeWritePath("/teamworkbridge/{arg1}/{arg2}", request), Method.Delete, token); }')
         self.assertEqual(extract(api, "fixture.cs")[-1]["routes"], [("PUT", "/teamworkbridge/{arg1}"), ("DELETE", "/teamworkbridge/{arg1}/{arg2}")])
 
+    def test_fixed_read_bridge_helper_maps_literal_get_routes(self):
+        api = source(extra='public void Bridge(CancellationToken token) { client.CallApi(BridgeReadPath("/teamworkbridge/{arg1}", request), Method.Get); client.CallApiAsync(BridgeReadPath("/teamworkbridge/{arg1}/{arg2}/{arg3}", request), Method.Get, token); }')
+        self.assertEqual(extract(api, "fixture.cs")[-1]["routes"], [("GET", "/teamworkbridge/{arg1}"), ("GET", "/teamworkbridge/{arg1}/{arg2}/{arg3}")])
+
     def test_bridge_helper_unknown_shapes_still_fail_closed(self):
         for expression in ('OtherPath("/teamworkbridge/{arg1}", request)', 'BridgeWritePath(dynamicPath, request)', 'BridgeWritePath("/teamworkbridge/{arg1}", otherRequest)'):
             with self.subTest(expression=expression), self.assertRaisesRegex(ValueError, "Unparsed HTTP calls"):

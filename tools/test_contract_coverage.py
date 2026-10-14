@@ -30,6 +30,21 @@ def spec():
         "/projects": {"post": {"operationId": "read", "tags": ["Project"], "responses": {}}}}, "components": {"schemas": {}}}
 
 
+def native_result_gaps(report):
+    # Preserve overloads; source mappings alone do not prove active I/O or server support.
+    candidates = {method["class"] + "." + method["method"]
+                  for method in report["sdk_methods"]
+                  if method["class_access"] == "public" and method["access"] == "public"
+                  and method["native_cancellation_parameter"]
+                  and "Task<" in method["return_type"]
+                  and "ApiResponse<" in method["return_type"]
+                  and "ApiResponse<Object>" not in method["return_type"]
+                  and "ApiResponse<object>" not in method["return_type"]}
+    return [operation["method"] + " " + operation["path"]
+            for operation in report["operations"]
+            if not candidates.intersection(operation["sdk_methods"])]
+
+
 class InventoryTests(unittest.TestCase):
     def test_verb_case_and_placeholder_names_do_not_change_route_identity(self):
         self.assertEqual(normalized("get", "/contact/{id}"), normalized("GET", "/contact/{legacyId}"))
@@ -103,6 +118,23 @@ class InventoryTests(unittest.TestCase):
         contract["paths"]["/contact/{other}"] = {"get": {"responses": {}}}
         with self.assertRaisesRegex(ValueError, "Ambiguous normalized"):
             build_report(contract, {"fixture.cs": source()}, "", "hash")
+
+    def test_all_current_operations_have_public_native_result_source(self):
+        report = run(ROOT)
+        self.assertEqual(len(report["operations"]), 323)
+        self.assertEqual(native_result_gaps(report), [])
+
+    def test_missing_native_result_is_detected_without_losing_overloads(self):
+        report = run(ROOT)
+        selected = next(operation for operation in report["operations"]
+                        if operation["method"] == "POST" and operation["path"] == "/token")
+        selected_names = set(selected["sdk_methods"])
+        seeded = copy.deepcopy(report)
+        for method in seeded["sdk_methods"]:
+            if method["class"] + "." + method["method"] in selected_names:
+                method["native_cancellation_parameter"] = False
+        self.assertEqual(native_result_gaps(seeded), ["POST /token"])
+        self.assertEqual(native_result_gaps(report), [])
 
     def test_pinned_report_is_complete_and_reproducible_including_handwritten_partials(self):
         report = run(ROOT)

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 936,
+    "source_http_methods": 940,
     "status_counts": {
       "deferred": 323
     },
@@ -10700,7 +10700,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.AddFileAsyncWithHttpInfo",
-        "AccountingApi.AddFileWithHttpInfo"
+        "AccountingApi.AddFileWithHttpInfo",
+        "AccountingApi.AddJournalFileWithResultAsyncWithHttpInfo",
+        "AccountingApi.AddJournalFileWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -12766,7 +12768,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "OutgoingInvoiceApi.AddFileToOutgoingInvoiceAsyncWithHttpInfo",
-        "OutgoingInvoiceApi.AddFileToOutgoingInvoiceWithHttpInfo"
+        "OutgoingInvoiceApi.AddFileToOutgoingInvoiceWithHttpInfo",
+        "OutgoingInvoiceApi.AddFileToOutgoingInvoiceWithResultAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.AddFileToOutgoingInvoiceWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -17732,6 +17736,102 @@
         [
           "POST",
           "/dimensions/{dimensionNameOrNumber}/dimensionentry"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentFileAttachment.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddJournalFileWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string documentNumber, FileWriteRequest request = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddJournalFileWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentFileAttachment.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddJournalFileWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string documentNumber, FileWriteRequest request = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/journal/{documentNumber}/file/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentFileAttachment.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddJournalFileWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string documentNumber, FileWriteRequest request, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddJournalFileWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentFileAttachment.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddJournalFileWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string documentNumber, FileWriteRequest request = null",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddJournalFileWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentFileAttachment.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddJournalFileWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string documentNumber, FileWriteRequest request, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/journal/{documentNumber}/file/new"
         ]
       ],
       "delegates": [],
@@ -39818,6 +39918,102 @@
         [
           "GET",
           "/outgoinginvoice/exporttemplates"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentFileAttachment.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "AddFileToOutgoingInvoiceWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string number, FileWriteRequest request = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddFileToOutgoingInvoiceWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentFileAttachment.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "AddFileToOutgoingInvoiceWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string number, FileWriteRequest request = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoice/{number}/file/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentFileAttachment.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "AddFileToOutgoingInvoiceWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string number, FileWriteRequest request, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddFileToOutgoingInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentFileAttachment.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "AddFileToOutgoingInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string number, FileWriteRequest request = null",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddFileToOutgoingInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentFileAttachment.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "AddFileToOutgoingInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string number, FileWriteRequest request, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoice/{number}/file/new"
         ]
       ],
       "delegates": [],

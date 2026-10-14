@@ -1,0 +1,13 @@
+﻿# Current account user licenses and profiles
+
+The handwritten User partial adds optional `Licenses` and `Profiles` lists with exact `licenses` and `profiles` wire names. They represent the current seven-field User schema under `AccountInfo.User`; the existing License and Profile models represent the child fields. The original generated User constructor, defaults, validation, equality, hash, diagnostic formatting and all account/authentication/organisation/fresh-account code remain unchanged.
+
+Null or missing lists become null and are omitted by normal JSON/data-contract serialization. Explicit empty lists remain empty arrays. Original ordering, duplicates, license types, profile names and organisation strings are retained without sorting, filtering, translation or default insertion. The lists and child DTOs retain the existing mutable model convention. No ownership or defensive-copy guarantee is introduced.
+
+License `validTill` is read-only signed Int64 metadata in the existing model, including extreme values. The client does not calculate expiry or enforce licensing policy from it. Profile organisation strings can identify a named organisation or the whole instance through `Instanz`; they are not numeric Scope organisation IDs or opaque Teamwork tenant IDs. Returned metadata does not purchase licenses, grant administrator/profile permissions, select a tenant or establish effective access. No additional HTTP request, cache/configuration change or authentication fallback is added.
+
+The existing child models retain their broader legacy fields and serialization/validation behavior, including License `assignedToUid` and `assignedToEmail`. This change does not use output DTOs as assignment requests or alter the separate current user write workflow. Complete HTTP-info raw JSON retains future fields and null-versus-absence; typed child views expose known fields only.
+
+JSON `ToJson` includes supplied lists. Historical generated User equality/hash/ToString continue using their original five fields and cannot establish full metadata or tenant equality. Existing three account HTTP-info forms and staged organisation/fresh-user guards remain unchanged. Isolated tests distinguish metadata from admission and preserve response/status/header context.
+
+Actual optional license/profile metadata and identity remain unverified. Real tests require a new finite exclusive Demo window, exact numeric Scope organisation and fresh account proof, separate opaque Teamwork tenant binding, and no PROD fallback or historical grant reuse. Source validation is separate from publication and DMS adoption.

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 988,
+    "source_http_methods": 994,
     "status_counts": {
       "deferred": 323
     },
@@ -9287,7 +9287,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ContactApi.AddContactFileAsyncWithHttpInfo",
-        "ContactApi.AddContactFileWithHttpInfo"
+        "ContactApi.AddContactFileWithHttpInfo",
+        "ContactApi.AddContactFileWithResultAsyncWithHttpInfo",
+        "ContactApi.AddContactFileWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -13814,7 +13816,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.AddProjectFileAsyncWithHttpInfo",
-        "ProjectApi.AddProjectFileWithHttpInfo"
+        "ProjectApi.AddProjectFileWithHttpInfo",
+        "ProjectApi.AddProjectFileWithResultAsyncWithHttpInfo",
+        "ProjectApi.AddProjectFileWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -15305,7 +15309,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TaskApi.AddTaskFileAsyncWithHttpInfo",
-        "TaskApi.AddTaskFileWithHttpInfo"
+        "TaskApi.AddTaskFileWithHttpInfo",
+        "TaskApi.AddTaskFileWithResultAsyncWithHttpInfo",
+        "TaskApi.AddTaskFileWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -29373,6 +29379,102 @@
         [
           "POST",
           "/contact/contactProperty/{propertyId}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentTeamworkFile.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AddContactFileWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string contactIdOrLegacyNumber, TeamworkFileWriteRequest request = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddContactFileWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentTeamworkFile.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AddContactFileWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string contactIdOrLegacyNumber, TeamworkFileWriteRequest request = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{contactIdOrLegacyNumber}/file/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentTeamworkFile.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AddContactFileWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string contactIdOrLegacyNumber, TeamworkFileWriteRequest request, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddContactFileWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentTeamworkFile.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AddContactFileWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string contactIdOrLegacyNumber, TeamworkFileWriteRequest request = null",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddContactFileWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentTeamworkFile.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AddContactFileWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string contactIdOrLegacyNumber, TeamworkFileWriteRequest request, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{contactIdOrLegacyNumber}/file/new"
         ]
       ],
       "delegates": [],
@@ -46123,6 +46225,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTeamworkFile.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AddProjectFileWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long projectId, TeamworkFileWriteRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddProjectFileWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTeamworkFile.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AddProjectFileWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long projectId, TeamworkFileWriteRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/file/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTeamworkFile.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AddProjectFileWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long projectId, TeamworkFileWriteRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddProjectFileWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTeamworkFile.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AddProjectFileWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long projectId, TeamworkFileWriteRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddProjectFileWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTeamworkFile.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AddProjectFileWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long projectId, TeamworkFileWriteRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/file/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryCreation.cs",
       "class": "ProjectApi",
       "class_access": "public",
@@ -57210,6 +57408,102 @@
         [
           "POST",
           "/task/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTeamworkFile.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AddTaskFileWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long taskId, TeamworkFileWriteRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddTaskFileWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTeamworkFile.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AddTaskFileWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long taskId, TeamworkFileWriteRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{taskId}/file/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTeamworkFile.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AddTaskFileWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long taskId, TeamworkFileWriteRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddTaskFileWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTeamworkFile.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AddTaskFileWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long taskId, TeamworkFileWriteRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddTaskFileWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTeamworkFile.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AddTaskFileWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long taskId, TeamworkFileWriteRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{taskId}/file/new"
         ]
       ],
       "delegates": [],

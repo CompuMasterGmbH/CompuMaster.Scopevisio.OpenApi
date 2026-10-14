@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 948,
+    "source_http_methods": 956,
     "status_counts": {
       "deferred": 323
     },
@@ -9415,7 +9415,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.CreateDebitorAsyncWithHttpInfo",
-        "AccountingApi.CreateDebitorWithHttpInfo"
+        "AccountingApi.CreateDebitorWithHttpInfo",
+        "AccountingApi.CreateDebitorWithResultAsyncWithHttpInfo",
+        "AccountingApi.CreateDebitorWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -9499,7 +9501,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.CreateKreditorAsyncWithHttpInfo",
-        "AccountingApi.CreateKreditorWithHttpInfo"
+        "AccountingApi.CreateKreditorWithHttpInfo",
+        "AccountingApi.CreateKreditorWithResultAsyncWithHttpInfo",
+        "AccountingApi.CreateKreditorWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -9753,7 +9757,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.UpdateDebitorAsyncWithHttpInfo",
-        "AccountingApi.UpdateDebitorWithHttpInfo"
+        "AccountingApi.UpdateDebitorWithHttpInfo",
+        "AccountingApi.UpdateDebitorWithResultAsyncWithHttpInfo",
+        "AccountingApi.UpdateDebitorWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -10799,7 +10805,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.UpdateKreditorAsyncWithHttpInfo",
-        "AccountingApi.UpdateKreditorWithHttpInfo"
+        "AccountingApi.UpdateKreditorWithHttpInfo",
+        "AccountingApi.UpdateKreditorWithResultAsyncWithHttpInfo",
+        "AccountingApi.UpdateKreditorWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -17559,6 +17567,198 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "PersonalAccountCreationRequest request = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateDebitorWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "PersonalAccountCreationRequest request = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/createdebitor"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "PersonalAccountCreationRequest request, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateDebitorWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "PersonalAccountCreationRequest request = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateDebitorWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "PersonalAccountCreationRequest request, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/createdebitor"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDebitorWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateDebitorWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDebitorWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/debitoraccounts/{accountNumber}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDebitorWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request, CancellationToken cancellationToken",
+      "line": 56,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateDebitorWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDebitorWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request",
+      "line": 62,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateDebitorWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDebitorWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request, CancellationToken cancellationToken",
+      "line": 72,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/debitoraccounts/{accountNumber}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryCreation.cs",
       "class": "AccountingApi",
       "class_access": "public",
@@ -17840,6 +18040,198 @@
         [
           "POST",
           "/journal/{documentNumber}/file/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "PersonalAccountCreationRequest request = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateKreditorWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "PersonalAccountCreationRequest request = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/createkreditor"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "PersonalAccountCreationRequest request, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateKreditorWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "PersonalAccountCreationRequest request = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateKreditorWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "PersonalAccountCreationRequest request, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/createkreditor"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateKreditorWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateKreditorWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateKreditorWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/kreditoraccounts/{accountNumber}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateKreditorWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request, CancellationToken cancellationToken",
+      "line": 56,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateKreditorWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateKreditorWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request",
+      "line": 62,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateKreditorWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateKreditorWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string accountNumber, PersonalAccountUpdateRequest request, CancellationToken cancellationToken",
+      "line": 72,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/kreditoraccounts/{accountNumber}"
         ]
       ],
       "delegates": [],

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 910,
+    "source_http_methods": 914,
     "status_counts": {
       "deferred": 323
     },
@@ -8913,6 +8913,8 @@
       "phase": "2-contacts-projects-tasks",
       "public_source_route": true,
       "sdk_methods": [
+        "ContactApi.UpdateContactPropertyWithResultAsyncWithHttpInfo",
+        "ContactApi.UpdateContactPropertyWithResultWithHttpInfo",
         "ContactApi.UpdatePropertyAsyncWithHttpInfo",
         "ContactApi.UpdatePropertyWithHttpInfo"
       ],
@@ -9230,6 +9232,8 @@
       "phase": "2-contacts-projects-tasks",
       "public_source_route": true,
       "sdk_methods": [
+        "ContactApi.CreateContactPropertyWithResultAsyncWithHttpInfo",
+        "ContactApi.CreateContactPropertyWithResultWithHttpInfo",
         "ContactApi.CreatePropertyAsyncWithHttpInfo",
         "ContactApi.CreatePropertyWithHttpInfo"
       ],
@@ -27375,6 +27379,198 @@
         [
           "POST",
           "/contact/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactPropertyWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string contactIdOrLegacyNumber, ContactPropertyWriteRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateContactPropertyWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactPropertyWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string contactIdOrLegacyNumber, ContactPropertyWriteRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{contactIdOrLegacyNumber}/contactProperty/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactPropertyWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string contactIdOrLegacyNumber, ContactPropertyWriteRequest request, CancellationToken cancellationToken",
+      "line": 56,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateContactPropertyWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactPropertyWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string contactIdOrLegacyNumber, ContactPropertyWriteRequest request",
+      "line": 62,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateContactPropertyWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyCreation.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "CreateContactPropertyWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string contactIdOrLegacyNumber, ContactPropertyWriteRequest request, CancellationToken cancellationToken",
+      "line": 72,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{contactIdOrLegacyNumber}/contactProperty/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyUpdate.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "UpdateContactPropertyWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long propertyId, ContactPropertyWriteRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateContactPropertyWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyUpdate.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "UpdateContactPropertyWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long propertyId, ContactPropertyWriteRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/contactProperty/{propertyId}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyUpdate.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "UpdateContactPropertyWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long propertyId, ContactPropertyWriteRequest request, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateContactPropertyWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyUpdate.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "UpdateContactPropertyWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long propertyId, ContactPropertyWriteRequest request",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateContactPropertyWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentPropertyUpdate.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "UpdateContactPropertyWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long propertyId, ContactPropertyWriteRequest request, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/contactProperty/{propertyId}"
         ]
       ],
       "delegates": [],

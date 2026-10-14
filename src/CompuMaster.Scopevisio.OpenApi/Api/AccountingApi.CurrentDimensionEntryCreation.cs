@@ -30,7 +30,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         public ApiResponse<Newtonsoft.Json.Linq.JToken> AddDimensionEntryWithResultWithHttpInfo(string dimensionNameOrNumber, DimensionEntryWriteRequest request)
         {
             if (dimensionNameOrNumber == null) throw new ArgumentNullException(nameof(dimensionNameOrNumber));
-            if (dimensionNameOrNumber == "." || dimensionNameOrNumber == "..") throw new ArgumentException("The contact selector cannot be a path dot segment.", nameof(dimensionNameOrNumber));
+            if (dimensionNameOrNumber == "." || dimensionNameOrNumber == "..") throw new ArgumentException("The dimension selector cannot be a path dot segment.", nameof(dimensionNameOrNumber));
             if (request == null) throw new ArgumentNullException(nameof(request));
             var body = request.SnapshotForSend(true);
             var localVarPath = "/dimensions/{dimensionNameOrNumber}/dimensionentry/new";
@@ -73,7 +73,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         {
             cancellationToken.ThrowIfCancellationRequested();
             if (dimensionNameOrNumber == null) throw new ArgumentNullException(nameof(dimensionNameOrNumber));
-            if (dimensionNameOrNumber == "." || dimensionNameOrNumber == "..") throw new ArgumentException("The contact selector cannot be a path dot segment.", nameof(dimensionNameOrNumber));
+            if (dimensionNameOrNumber == "." || dimensionNameOrNumber == "..") throw new ArgumentException("The dimension selector cannot be a path dot segment.", nameof(dimensionNameOrNumber));
             if (request == null) throw new ArgumentNullException(nameof(request));
             var body = request.SnapshotForSend(true);
             var localVarPath = "/dimensions/{dimensionNameOrNumber}/dimensionentry/new";

@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 922,
+    "source_http_methods": 928,
     "status_counts": {
       "deferred": 323
     },
@@ -14950,7 +14950,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TaskApi.CreateSubtaskAsyncWithHttpInfo",
-        "TaskApi.CreateSubtaskWithHttpInfo"
+        "TaskApi.CreateSubtaskWithHttpInfo",
+        "TaskApi.CreateSubtaskWithResultAsyncWithHttpInfo",
+        "TaskApi.CreateSubtaskWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -14991,7 +14993,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TaskApi.CreateTaskAsyncWithHttpInfo",
-        "TaskApi.CreateTaskWithHttpInfo"
+        "TaskApi.CreateTaskWithHttpInfo",
+        "TaskApi.CreateTaskWithResultAsyncWithHttpInfo",
+        "TaskApi.CreateTaskWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -15029,7 +15033,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TaskApi.UpdateTaskAsyncWithHttpInfo",
-        "TaskApi.UpdateTaskWithHttpInfo"
+        "TaskApi.UpdateTaskWithHttpInfo",
+        "TaskApi.UpdateTaskWithResultAsyncWithHttpInfo",
+        "TaskApi.UpdateTaskWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -54168,6 +54174,294 @@
         [
           "POST",
           "/task/{id}/comment/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentSubtaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateSubtaskWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "SubtaskWriteRequest request",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateSubtaskWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentSubtaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateSubtaskWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "SubtaskWriteRequest request",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/subtask/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentSubtaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateSubtaskWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "SubtaskWriteRequest request, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateSubtaskWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentSubtaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateSubtaskWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "SubtaskWriteRequest request",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateSubtaskWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentSubtaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateSubtaskWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "SubtaskWriteRequest request, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/subtask/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "TaskWriteRequest request",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTaskWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "TaskWriteRequest request",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "TaskWriteRequest request, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTaskWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "TaskWriteRequest request",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTaskWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskCreation.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "CreateTaskWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "TaskWriteRequest request, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskUpdate.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "UpdateTaskWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long id, TaskWriteRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateTaskWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskUpdate.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "UpdateTaskWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, TaskWriteRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskUpdate.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "UpdateTaskWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, TaskWriteRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateTaskWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskUpdate.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "UpdateTaskWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, TaskWriteRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateTaskWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentTaskUpdate.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "UpdateTaskWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, TaskWriteRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{id}"
         ]
       ],
       "delegates": [],

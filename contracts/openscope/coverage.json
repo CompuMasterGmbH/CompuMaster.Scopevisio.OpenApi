@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 970,
+    "source_http_methods": 972,
     "status_counts": {
       "deferred": 323
     },
@@ -14389,7 +14389,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "RecurringInvoiceApi.UpdateRecurringInvoiceAsyncWithHttpInfo",
-        "RecurringInvoiceApi.UpdateRecurringInvoiceWithHttpInfo"
+        "RecurringInvoiceApi.UpdateRecurringInvoiceWithHttpInfo",
+        "RecurringInvoiceApi.UpdateRecurringInvoiceWithResultAsyncWithHttpInfo",
+        "RecurringInvoiceApi.UpdateRecurringInvoiceWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -49500,6 +49502,102 @@
         [
           "POST",
           "/recurringinvoice/{number}/convertToOutgoingInvoice"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.CurrentUpdate.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateRecurringInvoiceWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string number, RecurringInvoiceUpdateRequest request = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateRecurringInvoiceWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.CurrentUpdate.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateRecurringInvoiceWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string number, RecurringInvoiceUpdateRequest request = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/recurringinvoice/{number}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.CurrentUpdate.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateRecurringInvoiceWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string number, RecurringInvoiceUpdateRequest request, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.CurrentUpdate.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string number, RecurringInvoiceUpdateRequest request = null",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateRecurringInvoiceWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/RecurringInvoiceApi.CurrentUpdate.cs",
+      "class": "RecurringInvoiceApi",
+      "class_access": "public",
+      "method": "UpdateRecurringInvoiceWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string number, RecurringInvoiceUpdateRequest request, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/recurringinvoice/{number}"
         ]
       ],
       "delegates": [],

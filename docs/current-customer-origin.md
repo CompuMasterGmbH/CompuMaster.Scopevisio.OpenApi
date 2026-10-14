@@ -1,0 +1,9 @@
+﻿# Current customer origin metadata
+
+The handwritten `Customer.Origin` partial represents the current optional `origin` string nested under `AccountInfo.Customer`. The current Customer schema contains publicId/name/status/origin without required fields, defaults, enum or further origin semantics. Original strings, whitespace and empty values are retained; null/missing becomes null and is omitted by normal JSON/data-contract serialization. Existing HTTP-info raw JSON retains the original response, including null-versus-absence and future fields.
+
+The origin value is opaque output metadata. It is not interpreted as a URL, authentication endpoint, resource base path, account/organisation selector, permission or tenant identity proof. No lookup, parsing, configuration/context/cache change, extra HTTP request or authentication fallback is added. Customer public number, numeric Scope organisation, user UID and opaque Teamwork tenant remain separate. No semantic catalogue is invented from examples.
+
+The generated Customer constructor/defaults/validation/equality/hash/diagnostic ToString,AccountInfo and existing three synchronous/asynchronous/native-cancellable `GetApplicationContextWithHttpInfo` forms remain unchanged. JSON `ToJson` includes supplied known origin metadata;historical equality/hash/ToString still use only their original fields and cannot establish complete customer/tenant identity. The staged explicit organisation/fresh-account guard is byte-identical.
+
+Isolated fixtures cover primary fields,optional state,JSON/XML roundtrips,three fake-host account-read forms,raw/status/header retention and no endpoint/context retargeting,plus historical behavior. Actual metadata/identity remains open,requiring a new finite exclusive Demo window with exact numeric Scope organisation/fresh account and distinct opaque TW binding,no PROD fallback or historical grant reuse. Source validation is separate from publication and DMS adoption.

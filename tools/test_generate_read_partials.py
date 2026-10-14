@@ -56,6 +56,9 @@ class BoundedGenerationTests(unittest.TestCase):
         self.assertEqual(generator.sha((outputs[0] / name).read_bytes()), manifest["generated_sha256"])
         self.assertNotIn(str(self.temp.name), (outputs[0] / "manifest.json").read_text(encoding="utf-8-sig"))
 
+    def test_current_repository_import_and_manifest_are_reproducible(self):
+        generator.check_import()
+
     def test_reviewed_import_and_manifest_are_checked_without_writing(self):
         recipe, source, manifest = generator.plan(self.root)
         self.write(generator.SDK / recipe["import"], source)

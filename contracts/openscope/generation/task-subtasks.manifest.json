@@ -3,7 +3,7 @@
   "tool": "tools/generate_read_partials.py",
   "tool_sha256": "3b06eb2430f34a4fa981020d745296dd3e52c67272a835972909d7d23d2332f1",
   "support_tool": "tools/contract_coverage.py",
-  "support_tool_sha256": "52fdc7616b02ae03a152e6ddea182a273ec1ef514400f4287743bf2e2b910e79",
+  "support_tool_sha256": "1c99e602ebd4bb7353b96ffac1f953a9fcd237c6daf2d78fc1cbe509eae6fe05",
   "recipe": "contracts/openscope/generation/task-subtasks.json",
   "recipe_sha256": "1521701b4045abce20118d4a30bf1db809e675b2d463678bad292ffe58e8cb9b",
   "contract": "contracts/openscope/openapi-2026-10-11.json",

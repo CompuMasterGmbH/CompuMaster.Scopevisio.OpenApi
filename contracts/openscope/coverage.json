@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 900,
+    "source_http_methods": 904,
     "status_counts": {
       "deferred": 323
     },
@@ -15517,7 +15517,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.CreateTimeEntryAsyncWithHttpInfo",
-        "ProjectApi.CreateTimeEntryWithHttpInfo"
+        "ProjectApi.CreateTimeEntryWithHttpInfo",
+        "ProjectApi.CreateTimeEntryWithResultAsyncWithHttpInfo",
+        "ProjectApi.CreateTimeEntryWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -15557,7 +15559,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.UpdateTimeEntryAsyncWithHttpInfo",
-        "ProjectApi.UpdateTimeEntryWithHttpInfo"
+        "ProjectApi.UpdateTimeEntryWithHttpInfo",
+        "ProjectApi.UpdateTimeEntryWithResultAsyncWithHttpInfo",
+        "ProjectApi.UpdateTimeEntryWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -42668,6 +42672,198 @@
         [
           "POST",
           "/projectresource/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateTimeEntryWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "TimeEntryWriteRequest request",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTimeEntryWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateTimeEntryWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "TimeEntryWriteRequest request",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentry/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateTimeEntryWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "TimeEntryWriteRequest request, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTimeEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateTimeEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "TimeEntryWriteRequest request",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateTimeEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateTimeEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "TimeEntryWriteRequest request, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentry/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateTimeEntryWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long id, TimeEntryWriteRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateTimeEntryWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateTimeEntryWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, TimeEntryWriteRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentry/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateTimeEntryWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, TimeEntryWriteRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateTimeEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateTimeEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, TimeEntryWriteRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateTimeEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentTimeEntryUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateTimeEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, TimeEntryWriteRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/timeentry/{id}"
         ]
       ],
       "delegates": [],

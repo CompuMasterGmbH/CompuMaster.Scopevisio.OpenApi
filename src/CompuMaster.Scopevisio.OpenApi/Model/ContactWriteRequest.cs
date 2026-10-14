@@ -429,6 +429,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Model
 
         /// <summary>Gets or sets the original permissionType value.</summary>
         /// <value>The optional original signed Int32 value, or null to omit it; server identity and range semantics remain authoritative.</value>
+        /// <remarks>The contract declares 0 for public, 1 for custom and 2 for personal permissions. The client checks Int32 width; the server enforces the 0 through 2 semantic range without a default being inserted.</remarks>
         public int? PermissionType { get { return Value<int?>("permissionType"); } set { SetOptional("permissionType", value.HasValue ? new JValue(value.Value) : null); } }
 
         /// <summary>Gets or sets the original readPermissionProfiles value.</summary>

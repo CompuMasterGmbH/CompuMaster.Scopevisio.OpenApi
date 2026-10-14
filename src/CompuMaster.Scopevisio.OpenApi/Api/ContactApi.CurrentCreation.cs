@@ -13,9 +13,9 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
     {
         /// <summary>Creates a contact using explicitly supplied current fields.</summary>
         /// <param name="request">The optional complete current contact JSON, copied before HTTP I/O. Null omits the body; omission does not insert defaults or clear existing values.</param>
-        /// <returns>The complete JSON result, or null for an empty body. The manufacturer declares HTTP 201 without a fixed success schema.</returns>
+        /// <returns>The complete JSON result, or null for an empty body. The HTTP 201 ContactNewResponse declares status, contactId, location and errors; unknown fields remain available.</returns>
         /// <remarks>The server enforces Kontakte (Bearbeiten), additional Personal profile restrictions, catalogue values and field-dependent semantics. A supplied creation object requires lastname and person. Partial updates retain omitted fields and send explicit JSON null or empty text without assuming that every field can be cleared. Person is evaluated only during creation. Employer identifiers, fallback precedence, dates and visibility remain server-authoritative. No resource lookup, implicit account selection, automatic role/default choices or mutation retry is added. Cancellation after sending cannot establish the server outcome. Parsed result fractions use bounded .NET decimal precision; raw JSON remains exact. Legacy KontaktForm methods and defaults remain unchanged.</remarks>
-        /// <exception cref="ArgumentException">A supplied known field has an incompatible JSON kind or an integer exceeds its declared width/range.</exception>
+        /// <exception cref="ArgumentException">A supplied known field has an incompatible JSON kind a required supplied creation field is missing, or an integer exceeds its declared width.</exception>
         /// <exception cref="ApiException">The configured exception factory rejects the response.</exception>
         /// <exception cref="Newtonsoft.Json.JsonException">The response is invalid JSON or exceeds the numeric parser range.</exception>
         public Newtonsoft.Json.Linq.JToken CreateContactWithResult(ContactWriteRequest request = null)
@@ -45,7 +45,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <inheritdoc cref="CreateContactWithResult"/>
         /// <param name="request">The optional complete contact JSON, copied before HTTP I/O; null omits the body.</param>
         /// <param name="cancellationToken">The token used to cancel active HTTP I/O.</param>
-        /// <exception cref="OperationCanceledException">The token is canceled before or during transport; the server may already have applied the update.</exception>
+        /// <exception cref="OperationCanceledException">The token is canceled before or during transport; the server may already have created the contact.</exception>
         public async Task<Newtonsoft.Json.Linq.JToken> CreateContactWithResultAsync(ContactWriteRequest request, CancellationToken cancellationToken)
         {
             return (await CreateContactWithResultAsyncWithHttpInfo(request, cancellationToken).ConfigureAwait(false)).Data;
@@ -60,7 +60,7 @@ namespace CompuMaster.Scopevisio.OpenApi.Api
         /// <inheritdoc cref="CreateContactWithResultWithHttpInfo"/>
         /// <param name="request">The optional complete contact JSON, copied before HTTP I/O; null omits the body.</param>
         /// <param name="cancellationToken">The token used to cancel active HTTP I/O.</param>
-        /// <exception cref="OperationCanceledException">The token is canceled before or during transport; the server may already have applied the update.</exception>
+        /// <exception cref="OperationCanceledException">The token is canceled before or during transport; the server may already have created the contact.</exception>
         public async Task<ApiResponse<Newtonsoft.Json.Linq.JToken>> CreateContactWithResultAsyncWithHttpInfo(ContactWriteRequest request, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();

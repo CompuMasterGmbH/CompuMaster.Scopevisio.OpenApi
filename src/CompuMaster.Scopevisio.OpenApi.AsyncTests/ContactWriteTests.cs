@@ -222,7 +222,7 @@ namespace CompuMaster.Scopevisio.OpenApi.AsyncTests
         }
 
         [Test]
-        public async Task ResultFormsKeepUndeclaredShapes([Values(false, true)] bool creating, [Values(0, 1, 2)] int mode, [Values("{}", "[]", "null", "true", "{\"warnings\":[\"inspect\"]}")] string json)
+        public async Task CompleteResultFormsRetainOriginalJsonWithoutInventedValues([Values(false, true)] bool creating, [Values(0, 1, 2)] int mode, [Values("{}", "[]", "null", "true", "{\"warnings\":[\"inspect\"]}")] string json)
         {
             var handler = new Handler(token => Task.FromResult(Response(creating ? 201 : 200, json)));
             using (var http = new HttpClient(handler))
@@ -298,6 +298,46 @@ namespace CompuMaster.Scopevisio.OpenApi.AsyncTests
                 else { await Invoke(Api(http), 1L, request, false, 2, CancellationToken.None); Assert.That(handler.Body, Is.EqualTo(request.ToString(Formatting.None))); }
             }
             Assert.That(handler.Calls, Is.EqualTo(creating ? 0 : 1));
+        }
+
+
+        [Test]
+        public async Task DocumentedCreationResultSurvivesAllSixForms([Values(0, 1, 2, 3, 4, 5)] int form)
+        {
+            const string json = "{\"status\":2,\"contactId\":9223372036854775807,\"location\":\"/contact/9223372036854775807\",\"errors\":{\"original\":[\"inspect\"],\"nested\":{\"code\":400}},\"future\":{\"retained\":true}}";
+            var handler = new Handler(token => Task.FromResult(Response(201, json)));
+            using (var http = new HttpClient(handler))
+            {
+                JToken data;
+                if (form < 3)
+                {
+                    var info = await Invoke(Api(http), 0L, Valid(true), true, form, CancellationToken.None);
+                    Assert.That(info.StatusCode, Is.EqualTo(201)); Assert.That(info.RawJsonContent, Is.EqualTo(json));
+                    Assert.That(info.Headers["X-Contact-Fixture"], Is.EqualTo("retained")); data = info.Data;
+                }
+                else data = await InvokeData(Api(http), 0L, Valid(true), true, form - 3);
+                Assert.That(data.Value<int>("status"), Is.EqualTo(2));
+                Assert.That(data.Value<long>("contactId"), Is.EqualTo(long.MaxValue));
+                Assert.That(data.Value<string>("location"), Is.EqualTo("/contact/9223372036854775807"));
+                Assert.That(data["errors"]["nested"].Value<int>("code"), Is.EqualTo(400));
+                Assert.That(data["errors"]["original"][0].Value<string>(), Is.EqualTo("inspect"));
+                Assert.That(data["future"].Value<bool>("retained"), Is.True);
+                Assert.That(data["success"], Is.Null); Assert.That(handler.Calls, Is.EqualTo(1));
+            }
+        }
+
+        [Test]
+        public void PermissionSemanticRangeRemainsServerAuthoritative([Values(-1, 3)] int permission)
+        {
+            var request = new ContactWriteRequest { PermissionType = permission };
+            var handler = new Handler(token => Task.FromResult(Response(400, "original permission diagnostic")));
+            using (var http = new HttpClient(handler))
+            {
+                var error = Assert.ThrowsAsync<ApiException>((Func<Task>)(async () => { await Invoke(Api(http), 1L, request, false, 2, CancellationToken.None); }));
+                Assert.That(error.ErrorCode, Is.EqualTo(400)); Assert.That((object)error.ErrorContent, Is.EqualTo("original permission diagnostic"));
+                Assert.That(JObject.Parse(handler.Body).Value<int>("permissionType"), Is.EqualTo(permission));
+                Assert.That(handler.Calls, Is.EqualTo(1));
+            }
         }
 
         private const string Result = "{\"id\":9223372036854775807,\"fraction\":123456789.123456789,\"date\":\"2026-10-14T00:00:00Z\",\"future\":false}";

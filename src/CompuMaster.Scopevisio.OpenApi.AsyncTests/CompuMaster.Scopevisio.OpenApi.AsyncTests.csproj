@@ -12,5 +12,6 @@
   <ItemGroup>
     <Compile Include="../CompuMaster.Scopevisio.OpenApi.Test.NetStandard/TestConfig.cs" Link="TestHarness/TestConfig.cs" />
     <None Include="../../contracts/openscope/coverage.json" Link="coverage.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../contracts/openscope/openapi-2026-10-11.json" Link="openscope-contact-contract.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

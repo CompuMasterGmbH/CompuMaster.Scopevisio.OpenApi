@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 940,
+    "source_http_methods": 948,
     "status_counts": {
       "deferred": 323
     },
@@ -9068,7 +9068,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ContactApi.AssignMailContactAsyncWithHttpInfo",
-        "ContactApi.AssignMailContactWithHttpInfo"
+        "ContactApi.AssignMailContactWithHttpInfo",
+        "ContactApi.AssignMailToContactWithResultAsyncWithHttpInfo",
+        "ContactApi.AssignMailToContactWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -10577,7 +10579,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.CreateIncomingMailAsyncWithHttpInfo",
-        "ProjectApi.CreateIncomingMailWithHttpInfo"
+        "ProjectApi.CreateIncomingMailWithHttpInfo",
+        "ProjectApi.ImportIncomingMailWithResultAsyncWithHttpInfo",
+        "ProjectApi.ImportIncomingMailWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -13615,7 +13619,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.AssignMailProjectAsyncWithHttpInfo",
-        "ProjectApi.AssignMailProjectWithHttpInfo"
+        "ProjectApi.AssignMailProjectWithHttpInfo",
+        "ProjectApi.AssignMailToProjectWithResultAsyncWithHttpInfo",
+        "ProjectApi.AssignMailToProjectWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -15098,7 +15104,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TaskApi.AssignMailTaskAsyncWithHttpInfo",
-        "TaskApi.AssignMailTaskWithHttpInfo"
+        "TaskApi.AssignMailTaskWithHttpInfo",
+        "TaskApi.AssignMailToTaskWithResultAsyncWithHttpInfo",
+        "TaskApi.AssignMailToTaskWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -27885,6 +27893,102 @@
         [
           "POST",
           "/contact/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentMailAssignment.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AssignMailToContactWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string contactIdOrLegacyNumber, MailAssignmentWriteRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AssignMailToContactWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentMailAssignment.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AssignMailToContactWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string contactIdOrLegacyNumber, MailAssignmentWriteRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{contactIdOrLegacyNumber}/assignMail"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentMailAssignment.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AssignMailToContactWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string contactIdOrLegacyNumber, MailAssignmentWriteRequest request, CancellationToken cancellationToken",
+      "line": 56,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AssignMailToContactWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentMailAssignment.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AssignMailToContactWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string contactIdOrLegacyNumber, MailAssignmentWriteRequest request",
+      "line": 62,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AssignMailToContactWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ContactApi.CurrentMailAssignment.cs",
+      "class": "ContactApi",
+      "class_access": "public",
+      "method": "AssignMailToContactWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string contactIdOrLegacyNumber, MailAssignmentWriteRequest request, CancellationToken cancellationToken",
+      "line": 72,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/contact/{contactIdOrLegacyNumber}/assignMail"
         ]
       ],
       "delegates": [],
@@ -43963,6 +44067,198 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentIncomingMail.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "ImportIncomingMailWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "IncomingMailWriteRequest request = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportIncomingMailWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentIncomingMail.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "ImportIncomingMailWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "IncomingMailWriteRequest request = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/incomingmail/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentIncomingMail.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "ImportIncomingMailWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "IncomingMailWriteRequest request, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportIncomingMailWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentIncomingMail.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "ImportIncomingMailWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "IncomingMailWriteRequest request = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportIncomingMailWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentIncomingMail.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "ImportIncomingMailWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "IncomingMailWriteRequest request, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/incomingmail/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentMailAssignment.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AssignMailToProjectWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long projectId, MailAssignmentWriteRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AssignMailToProjectWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentMailAssignment.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AssignMailToProjectWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long projectId, MailAssignmentWriteRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/assignMail"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentMailAssignment.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AssignMailToProjectWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long projectId, MailAssignmentWriteRequest request, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AssignMailToProjectWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentMailAssignment.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AssignMailToProjectWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long projectId, MailAssignmentWriteRequest request",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AssignMailToProjectWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentMailAssignment.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "AssignMailToProjectWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long projectId, MailAssignmentWriteRequest request, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/assignMail"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentProjectCreation.cs",
       "class": "ProjectApi",
       "class_access": "public",
@@ -54762,6 +55058,102 @@
         [
           "POST",
           "/task/{id}/comment/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentMailAssignment.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AssignMailToTaskWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long taskId, MailAssignmentWriteRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AssignMailToTaskWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentMailAssignment.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AssignMailToTaskWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long taskId, MailAssignmentWriteRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{taskId}/assignMail"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentMailAssignment.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AssignMailToTaskWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long taskId, MailAssignmentWriteRequest request, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AssignMailToTaskWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentMailAssignment.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AssignMailToTaskWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long taskId, MailAssignmentWriteRequest request",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AssignMailToTaskWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TaskApi.CurrentMailAssignment.cs",
+      "class": "TaskApi",
+      "class_access": "public",
+      "method": "AssignMailToTaskWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long taskId, MailAssignmentWriteRequest request, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/task/{taskId}/assignMail"
         ]
       ],
       "delegates": [],

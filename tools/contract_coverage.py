@@ -12,7 +12,7 @@ REPORT = Path("contracts/openscope/coverage.json")
 VERBS = {"get", "put", "post", "delete", "patch", "head", "options", "trace"}
 CLASS = re.compile(r"\b(public|internal)\s+(?:partial\s+)?class\s+(\w+)")
 METHOD = re.compile(r"^\s*(public|internal|protected|private)\s+(?:(?:async|static|virtual|override|sealed)\s+)*([^\n=;{}]+?)\s+(\w+)\s*\(([^;{}]*?)\)\s*\{", re.M)
-CALL = re.compile(r"\bCallApi(?:Async)?\(\s*(localVarPath|\"[^\"]+\")\s*,\s*Method\.(\w+)")
+CALL = re.compile(r'\bCallApi(?:Async)?\(\s*(localVarPath|"[^"]+"|BridgeWritePath\(\s*"[^"]+"\s*,\s*request\s*\))\s*,\s*Method\.(\w+)')
 
 
 def normalized(method, path):
@@ -63,6 +63,9 @@ def extract(source, file):
                 if len(paths) != 1:
                     raise ValueError(f"Ambiguous route in {file}:{name}.")
                 path = paths[0]
+            elif path_expression.startswith("BridgeWritePath"):
+                # Only the fixed, segment-escaping bridge helper and literal routes are supported.
+                path = re.search(r'"([^"]+)"', path_expression).group(1)
             else:
                 path = path_expression[1:-1]
             calls.append((verb.upper(), path))

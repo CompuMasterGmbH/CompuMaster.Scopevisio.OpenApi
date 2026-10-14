@@ -195,6 +195,11 @@ namespace CompuMaster.Scopevisio.OpenApi.AsyncTests
                 Assert.That(api.Configuration.AccessToken, Is.EqualTo("isolated-bridge-token"));
             }
         }
+        [Test]
+        public async Task EncodedLookingOriginalsRemainLiteralSegments([Values("a%2Fb","%2e%2e","a%25b")]string original,[Values(1,2,3)]int count,[Values(0,1,2)]int mode,[Values(false,true)]bool info)
+        {
+            var segments=Enumerable.Repeat("document",count).ToArray();segments[count-1]=original;var expected="/rest/teamworkbridge/"+string.Join("/",segments.Select(Uri.EscapeDataString));var handler=new Handler(token=>Task.FromResult(Response(200,Bytes)));using(var http=new HttpClient(handler)){var api=Api(http);var result=await Call(api,Request(segments),mode,info);Assert.That(handler.Uri.AbsolutePath,Is.EqualTo(expected));Assert.That(handler.Uri.Query,Is.Empty);Assert.That(handler.Uri.Fragment,Is.Empty);Assert.That(handler.Calls,Is.EqualTo(1));Assert.That(info?((ApiResponse<byte[]>)result).Data:(byte[])result,Is.EqualTo(Bytes));Assert.That(api.Configuration.AccessToken,Is.EqualTo("isolated-bridge-token"));}
+        }
         private sealed class Handler : HttpMessageHandler
         {
             private readonly Func<CancellationToken, Task<HttpResponseMessage>> send;

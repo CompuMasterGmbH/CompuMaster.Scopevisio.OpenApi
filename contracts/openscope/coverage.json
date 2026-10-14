@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 956,
+    "source_http_methods": 960,
     "status_counts": {
       "deferred": 323
     },
@@ -9812,7 +9812,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.CreateDebitorBankConnectionAsyncWithHttpInfo",
-        "AccountingApi.CreateDebitorBankConnectionWithHttpInfo"
+        "AccountingApi.CreateDebitorBankConnectionWithHttpInfo",
+        "AccountingApi.CreateDebitorBankConnectionWithResultAsyncWithHttpInfo",
+        "AccountingApi.CreateDebitorBankConnectionWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -10860,7 +10862,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.CreateKebitorBankConnectionAsyncWithHttpInfo",
-        "AccountingApi.CreateKebitorBankConnectionWithHttpInfo"
+        "AccountingApi.CreateKebitorBankConnectionWithHttpInfo",
+        "AccountingApi.CreateKreditorBankConnectionWithResultAsyncWithHttpInfo",
+        "AccountingApi.CreateKreditorBankConnectionWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -17567,6 +17571,102 @@
       "facade_property": true
     },
     {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorBankConnectionWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateDebitorBankConnectionWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorBankConnectionWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/debitoraccounts/{accountNumber}/bankConnection/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorBankConnectionWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateDebitorBankConnectionWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorBankConnectionWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request = null",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateDebitorBankConnectionWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateDebitorBankConnectionWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/debitoraccounts/{accountNumber}/bankConnection/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
       "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDebitorCreation.cs",
       "class": "AccountingApi",
       "class_access": "public",
@@ -18040,6 +18140,102 @@
         [
           "POST",
           "/journal/{documentNumber}/file/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorBankConnectionWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request = null",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateKreditorBankConnectionWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorBankConnectionWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request = null",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/kreditoraccounts/{accountNumber}/bankConnection/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorBankConnectionWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request, CancellationToken cancellationToken",
+      "line": 55,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateKreditorBankConnectionWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorBankConnectionWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request = null",
+      "line": 61,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateKreditorBankConnectionWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentKreditorBankConnection.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreateKreditorBankConnectionWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string accountNumber, BankConnectionWriteRequest request, CancellationToken cancellationToken",
+      "line": 71,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/kreditoraccounts/{accountNumber}/bankConnection/new"
         ]
       ],
       "delegates": [],

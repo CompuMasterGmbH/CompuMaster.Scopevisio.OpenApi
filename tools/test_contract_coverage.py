@@ -85,6 +85,15 @@ class InventoryTests(unittest.TestCase):
         self.assertEqual(report["summary"]["legacy_routes"], 1)
         self.assertIn("Retain", report["legacy_routes"][0]["decision"])
 
+    def test_fixed_bridge_path_helper_maps_each_literal_route(self):
+        api = source(extra='public void Bridge(CancellationToken token) { client.CallApi(BridgeWritePath("/teamworkbridge/{arg1}", request), Method.Put); client.CallApiAsync(BridgeWritePath("/teamworkbridge/{arg1}/{arg2}", request), Method.Delete, token); }')
+        self.assertEqual(extract(api, "fixture.cs")[-1]["routes"], [("PUT", "/teamworkbridge/{arg1}"), ("DELETE", "/teamworkbridge/{arg1}/{arg2}")])
+
+    def test_bridge_helper_unknown_shapes_still_fail_closed(self):
+        for expression in ('OtherPath("/teamworkbridge/{arg1}", request)', 'BridgeWritePath(dynamicPath, request)', 'BridgeWritePath("/teamworkbridge/{arg1}", otherRequest)'):
+            with self.subTest(expression=expression), self.assertRaisesRegex(ValueError, "Unparsed HTTP calls"):
+                extract(source(extra='public void Bridge() { client.CallApi(' + expression + ', Method.Put); }'), "fixture.cs")
+
     def test_unknown_call_shape_fails_instead_of_underreporting(self):
         with self.assertRaisesRegex(ValueError, "Unparsed HTTP calls"):
             extract(source(extra="public void Dynamic() { client.CallApi(GetPath(), GetVerb()); }"), "fixture.cs")

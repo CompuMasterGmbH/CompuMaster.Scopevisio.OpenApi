@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 994,
+    "source_http_methods": 1000,
     "status_counts": {
       "deferred": 323
     },
@@ -124,7 +124,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.DeleteHandler1AsyncWithHttpInfo",
-        "TeamworkApi.DeleteHandler1WithHttpInfo"
+        "TeamworkApi.DeleteHandler1WithHttpInfo",
+        "TeamworkApi.RemoveTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.RemoveTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -168,7 +170,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.DeleteHandler2AsyncWithHttpInfo",
-        "TeamworkApi.DeleteHandler2WithHttpInfo"
+        "TeamworkApi.DeleteHandler2WithHttpInfo",
+        "TeamworkApi.RemoveTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.RemoveTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -220,7 +224,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.DeleteHandler3AsyncWithHttpInfo",
-        "TeamworkApi.DeleteHandler3WithHttpInfo"
+        "TeamworkApi.DeleteHandler3WithHttpInfo",
+        "TeamworkApi.RemoveTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.RemoveTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -280,7 +286,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.DeleteHandler4AsyncWithHttpInfo",
-        "TeamworkApi.DeleteHandler4WithHttpInfo"
+        "TeamworkApi.DeleteHandler4WithHttpInfo",
+        "TeamworkApi.RemoveTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.RemoveTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -15404,7 +15412,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.PostHandler1AsyncWithHttpInfo",
-        "TeamworkApi.PostHandler1WithHttpInfo"
+        "TeamworkApi.PostHandler1WithHttpInfo",
+        "TeamworkApi.PostTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.PostTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -15448,7 +15458,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.PostHandler2AsyncWithHttpInfo",
-        "TeamworkApi.PostHandler2WithHttpInfo"
+        "TeamworkApi.PostHandler2WithHttpInfo",
+        "TeamworkApi.PostTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.PostTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -15500,7 +15512,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.PostHandler3AsyncWithHttpInfo",
-        "TeamworkApi.PostHandler3WithHttpInfo"
+        "TeamworkApi.PostHandler3WithHttpInfo",
+        "TeamworkApi.PostTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.PostTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -16303,7 +16317,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.PutHandler1AsyncWithHttpInfo",
-        "TeamworkApi.PutHandler1WithHttpInfo"
+        "TeamworkApi.PutHandler1WithHttpInfo",
+        "TeamworkApi.PutTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.PutTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -16347,7 +16363,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.PutHandler2AsyncWithHttpInfo",
-        "TeamworkApi.PutHandler2WithHttpInfo"
+        "TeamworkApi.PutHandler2WithHttpInfo",
+        "TeamworkApi.PutTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.PutTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -16399,7 +16417,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.PutHandler3AsyncWithHttpInfo",
-        "TeamworkApi.PutHandler3WithHttpInfo"
+        "TeamworkApi.PutHandler3WithHttpInfo",
+        "TeamworkApi.PutTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.PutTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -16459,7 +16479,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "TeamworkApi.PutHandler4AsyncWithHttpInfo",
-        "TeamworkApi.PutHandler4WithHttpInfo"
+        "TeamworkApi.PutHandler4WithHttpInfo",
+        "TeamworkApi.PutTeamworkResourceAsyncWithHttpInfo",
+        "TeamworkApi.PutTeamworkResourceWithHttpInfo"
       ],
       "parameters": [
         {
@@ -58857,6 +58879,196 @@
         ],
         [
           "GET",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TeamworkApi.ResourceWrites.cs",
+      "class": "TeamworkApi",
+      "class_access": "public",
+      "method": "RemoveTeamworkResourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "TeamworkBridgeWriteRequest request",
+      "line": 25,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "DELETE",
+          "/teamworkbridge/{arg1}"
+        ],
+        [
+          "DELETE",
+          "/teamworkbridge/{arg1}/{arg2}"
+        ],
+        [
+          "DELETE",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}"
+        ],
+        [
+          "DELETE",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}/{arg4}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TeamworkApi.ResourceWrites.cs",
+      "class": "TeamworkApi",
+      "class_access": "public",
+      "method": "RemoveTeamworkResourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "TeamworkBridgeWriteRequest request, CancellationToken cancellationToken",
+      "line": 78,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "DELETE",
+          "/teamworkbridge/{arg1}"
+        ],
+        [
+          "DELETE",
+          "/teamworkbridge/{arg1}/{arg2}"
+        ],
+        [
+          "DELETE",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}"
+        ],
+        [
+          "DELETE",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}/{arg4}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TeamworkApi.ResourceWrites.cs",
+      "class": "TeamworkApi",
+      "class_access": "public",
+      "method": "PutTeamworkResourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "TeamworkBridgeWriteRequest request",
+      "line": 125,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/teamworkbridge/{arg1}"
+        ],
+        [
+          "PUT",
+          "/teamworkbridge/{arg1}/{arg2}"
+        ],
+        [
+          "PUT",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}"
+        ],
+        [
+          "PUT",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}/{arg4}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TeamworkApi.ResourceWrites.cs",
+      "class": "TeamworkApi",
+      "class_access": "public",
+      "method": "PutTeamworkResourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "TeamworkBridgeWriteRequest request, CancellationToken cancellationToken",
+      "line": 178,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/teamworkbridge/{arg1}"
+        ],
+        [
+          "PUT",
+          "/teamworkbridge/{arg1}/{arg2}"
+        ],
+        [
+          "PUT",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}"
+        ],
+        [
+          "PUT",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}/{arg4}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TeamworkApi.ResourceWrites.cs",
+      "class": "TeamworkApi",
+      "class_access": "public",
+      "method": "PostTeamworkResourceWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<byte[]>",
+      "parameters": "TeamworkBridgeWriteRequest request",
+      "line": 225,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/teamworkbridge/{arg1}"
+        ],
+        [
+          "POST",
+          "/teamworkbridge/{arg1}/{arg2}"
+        ],
+        [
+          "POST",
+          "/teamworkbridge/{arg1}/{arg2}/{arg3}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/TeamworkApi.ResourceWrites.cs",
+      "class": "TeamworkApi",
+      "class_access": "public",
+      "method": "PostTeamworkResourceAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<byte[]>>",
+      "parameters": "TeamworkBridgeWriteRequest request, CancellationToken cancellationToken",
+      "line": 274,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/teamworkbridge/{arg1}"
+        ],
+        [
+          "POST",
+          "/teamworkbridge/{arg1}/{arg2}"
+        ],
+        [
+          "POST",
           "/teamworkbridge/{arg1}/{arg2}/{arg3}"
         ]
       ],

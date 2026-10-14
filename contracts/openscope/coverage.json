@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 928,
+    "source_http_methods": 936,
     "status_counts": {
       "deferred": 323
     },
@@ -9899,7 +9899,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.UpdateDimensionEntryAsyncWithHttpInfo",
-        "AccountingApi.UpdateDimensionEntryWithHttpInfo"
+        "AccountingApi.UpdateDimensionEntryWithHttpInfo",
+        "AccountingApi.UpdateDimensionEntryWithResultAsyncWithHttpInfo",
+        "AccountingApi.UpdateDimensionEntryWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -9953,7 +9955,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.AddDimensionEntryAsyncWithHttpInfo",
-        "AccountingApi.AddDimensionEntryWithHttpInfo"
+        "AccountingApi.AddDimensionEntryWithHttpInfo",
+        "AccountingApi.AddDimensionEntryWithResultAsyncWithHttpInfo",
+        "AccountingApi.AddDimensionEntryWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -13044,7 +13048,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.CreatePaymentTermAsyncWithHttpInfo",
-        "AccountingApi.CreatePaymentTermWithHttpInfo"
+        "AccountingApi.CreatePaymentTermWithHttpInfo",
+        "AccountingApi.CreatePaymentTermWithResultAsyncWithHttpInfo",
+        "AccountingApi.CreatePaymentTermWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -13083,7 +13089,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AccountingApi.UpdatePaymentTermAsyncWithHttpInfo",
-        "AccountingApi.UpdatePaymentTermWithHttpInfo"
+        "AccountingApi.UpdatePaymentTermWithHttpInfo",
+        "AccountingApi.UpdatePaymentTermWithResultAsyncWithHttpInfo",
+        "AccountingApi.UpdatePaymentTermWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -17532,6 +17540,390 @@
         [
           "POST",
           "/fiscalyears/edit"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddDimensionEntryWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddDimensionEntryWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddDimensionEntryWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/dimensions/{dimensionNameOrNumber}/dimensionentry/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddDimensionEntryWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request, CancellationToken cancellationToken",
+      "line": 56,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddDimensionEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddDimensionEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request",
+      "line": 62,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "AddDimensionEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "AddDimensionEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request, CancellationToken cancellationToken",
+      "line": 72,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/dimensions/{dimensionNameOrNumber}/dimensionentry/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDimensionEntryWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateDimensionEntryWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDimensionEntryWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/dimensions/{dimensionNameOrNumber}/dimensionentry"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDimensionEntryWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request, CancellationToken cancellationToken",
+      "line": 56,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateDimensionEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDimensionEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request",
+      "line": 62,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateDimensionEntryWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentDimensionEntryUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdateDimensionEntryWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string dimensionNameOrNumber, DimensionEntryWriteRequest request, CancellationToken cancellationToken",
+      "line": 72,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/dimensions/{dimensionNameOrNumber}/dimensionentry"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreatePaymentTermWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "PaymentTermWriteRequest request = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreatePaymentTermWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreatePaymentTermWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "PaymentTermWriteRequest request = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/paymentterm/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreatePaymentTermWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "PaymentTermWriteRequest request, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreatePaymentTermWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreatePaymentTermWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "PaymentTermWriteRequest request = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreatePaymentTermWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermCreation.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "CreatePaymentTermWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "PaymentTermWriteRequest request, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/paymentterm/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePaymentTermWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long id, PaymentTermWriteRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdatePaymentTermWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePaymentTermWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, PaymentTermWriteRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/paymentterm/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePaymentTermWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, PaymentTermWriteRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdatePaymentTermWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePaymentTermWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, PaymentTermWriteRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdatePaymentTermWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AccountingApi.CurrentPaymentTermUpdate.cs",
+      "class": "AccountingApi",
+      "class_access": "public",
+      "method": "UpdatePaymentTermWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, PaymentTermWriteRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/paymentterm/{id}"
         ]
       ],
       "delegates": [],

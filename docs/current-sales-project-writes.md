@@ -1,0 +1,35 @@
+﻿# Current sales-project writes
+
+Tracked by [SDK #215](https://github.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi/issues/215), parent [SDK #17](https://github.com/CompuMasterGmbH/CompuMaster.Scopevisio.OpenApi/issues/17) and consuming [DMS #90](https://github.com/CompuMasterGmbH/CompuMaster.Dms/issues/90).
+
+`SalesProjectWriteRequest` exposes all seventy-one current SalesProjectForm fields: forty-seven strings, seventeen integers, two nullable booleans, three nullable decimals and two copied arrays. It includes current category, which the historical seventy-field model lacks. Workdays/permissionType use current nullable Int32 instead of historical decimal/Int64; other integer fields retain Int64. Historical models, enums, constructors, defaults and ProjectApi ownership remain unchanged. Old data-only methods discard data and HTTP-info forms retain raw/status/headers with null Data.
+
+All thirty-six common ProjectForm field schemas match the pinned sales schema. The new request preserves their reviewed kinds, widths and child validation while adding thirty-five sales fields; existing ProjectWriteRequest is unchanged. New sales customFields/projectEmployees arrays are deeply copied on assignment and reading, and complete source/future JSON is copied before sending. Custom fields retain mixed original values and configured names; supplied creation team entries require personal contactId. Sparse update child fields/nulls remain server-authoritative without array merging, contact/team-entry translation, member lookup or a separate write. The Type property hides JObject.Type as in the current normal-project request; a JToken reference still exposes its token kind.
+
+`ProjectApi.CreateSalesProjectWithResult` and `UpdateSalesProjectWithResult` each provide six synchronous, HTTP-info, asynchronous and native CancellationToken forms for POST `/salesproject/new` and `/salesproject/{id}`. Both route bodies are optional: null sends no body. A supplied creation object requires original name/contactId; updates preserve sparse fields and explicit nulls under general update contracts. Known kinds, Int64/Int32 widths, finite numbers and nested fields are checked before I/O. Actual update400 required-name/contact/member/uniqueness failures remain server decisions, rather than a guarantee that every sparse update is accepted. Typed null omits a field; known raw creation nulls fail while update nulls remain available.
+
+```csharp
+var request = new SalesProjectWriteRequest
+{
+    Name = selectedName,
+    ContactId = selectedProjectContact,
+    Category = selectedCategory,
+    SalesPersonId = selectedSalesUserContact,
+    LeadBudget = selectedBudgetCatalogueValue,
+    LeadBudgetSum = selectedBudgetAmount
+};
+var result = await projectApi.CreateSalesProjectWithResultAsyncWithHttpInfo(
+    request, cancellationToken);
+```
+
+The server creates a sales project in lead state (sphereLead). The manufacturer explicitly says REST cannot convert a lead to interested (sphereInterested); conversion must occur in its desktop client. InterestedBudget/InterestedBudgetSum/InterestedAuthority/InterestedNeed/InterestedTime apply only to a project already marked interested. The client performs no retrieval, conversion, state inference or automatic sphere selection. Existing project/{id} is the documented retrieval route; the new write methods issue no additional read.
+
+Original Int64 update project ID is formatted invariantly without lookup or conversion to a project number, contact, user or team-entry selector. SalesPersonId and LeadPersonId are user-contact IDs, distinct from user UIDs and generic employee/team-entry IDs. SalesContractPerson is the original decision-maker contact; the server validates employment by the project contact. ContactPerson retains its employment/main-employer contract. OwnerUid remains original user UID without default current-user selection. All identifiers are retained without lookup or translation.
+
+Original category/type/type2/phase/status and sales catalogues remain strings rather than being restricted to historical examples. Actual configured memberships and category-dependent choices remain server-authoritative. SalesKontaktType, SalesContractPerson and SalesPotenzial preserve the current JSON spellings. ResidualProductName/CompetitionProductsName retain original multi-product text and the documented ¤¤¤ separator without splitting, joining or resolving products. The client neither substitutes a sales category nor inserts the manufacturer's shared default category/dimension name.
+
+Epoch milliseconds, reminder/contract dates and hours retain original values without calendar/timezone/default/order calculations. Lead/interested budgets and estimated hours remain independent finite numbers without zero insertion, budget sums, rates or financial calculations. Typed decimals have bounded .NET precision; raw finite tokens already represented by supplied JToken remain available. Omitted SalesUpgrade/EstimatedHoursMode remain distinct from false and true; estimatedHours evaluation and upgrade meaning stay server-authoritative. Permissions, read/write strings, dimensions, billing/time-recording choices and child arrays remain explicitly selected without local catalogue/range defaults or permission changes.
+
+The server requires `Projekte (Bearbeiten)`. Both sales write successes declare HTTP200 without a fixed successful schema, unlike normal-project creation's201 ProjectNewResponse. Complete JToken data/future errors, exact raw JSON, status and response/content headers remain available without invented project IDs, per-row/aggregate success or creation flags. HTTP404 may mean absent project or missing authorization. Empty content gives null Data, explicit JSON null stays a token and date-like text stays a string. Parsed fractions use bounded decimal precision while raw JSON remains exact; the configured exception factory runs before parsing and preserves original failures.
+
+Requests, child arrays and future JSON are deeply snapshotted before active HTTP. No account-context change, hidden write, retry or mutation replay is added; cancellation after sending cannot establish sales-project state. 1,311 isolated fake-host cases cover all fields, common schemas/child validation, creation/sparse updates, kinds/nulls/widths/nonfinite budgets, original IDs/catalogues/separators/flags, copies/snapshots, complete results/errors/factories/cancellation and legacy ownership/models/defaults. Actual Demo sales/lead/interested/catalogue/contact/user/employee/product/budget/dimension/permission/profile acceptance and complete owned reversible cleanup remain open, requiring a fresh coordinated window with exact numeric Scope organisation proof and no PROD fallback. Source merge, separate SDK publication and exact consumer adoption remain distinct; this source is excluded from delivered DMS2026.10.14's unchanged published SDK2026.10.13 pin, and that release waiver does not authorize SDK tests or publication.

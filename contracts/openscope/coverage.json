@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 978,
+    "source_http_methods": 982,
     "status_counts": {
       "deferred": 323
     },
@@ -16021,7 +16021,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "UserApi.CreateUsersAsyncWithHttpInfo",
-        "UserApi.CreateUsersWithHttpInfo"
+        "UserApi.CreateUsersWithHttpInfo",
+        "UserApi.CreateUsersWithResultAsyncWithHttpInfo",
+        "UserApi.CreateUsersWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -16600,7 +16602,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "UserApi.UpdateUsersAsyncWithHttpInfo",
-        "UserApi.UpdateUsersWithHttpInfo"
+        "UserApi.UpdateUsersWithHttpInfo",
+        "UserApi.UpdateUsersWithResultAsyncWithHttpInfo",
+        "UserApi.UpdateUsersWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -59362,6 +59366,198 @@
       ],
       "delegates": [],
       "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentCreation.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "CreateUsersWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "UserBatchWriteRequest request = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateUsersWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentCreation.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "CreateUsersWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "UserBatchWriteRequest request = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/users"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentCreation.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "CreateUsersWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "UserBatchWriteRequest request, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateUsersWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentCreation.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "CreateUsersWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "UserBatchWriteRequest request = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateUsersWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentCreation.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "CreateUsersWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "UserBatchWriteRequest request, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/users"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentUpdate.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "UpdateUsersWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "UserBatchWriteRequest request = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateUsersWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentUpdate.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "UpdateUsersWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "UserBatchWriteRequest request = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/users"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentUpdate.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "UpdateUsersWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "UserBatchWriteRequest request, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateUsersWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentUpdate.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "UpdateUsersWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "UserBatchWriteRequest request = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateUsersWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/UserApi.CurrentUpdate.cs",
+      "class": "UserApi",
+      "class_access": "public",
+      "method": "UpdateUsersWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "UserBatchWriteRequest request, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/users"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
       "facade_property": true
     },
     {

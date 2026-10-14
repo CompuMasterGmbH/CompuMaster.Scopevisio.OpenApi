@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 904,
+    "source_http_methods": 910,
     "status_counts": {
       "deferred": 323
     },
@@ -13302,7 +13302,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProductApi.CreateProductAsyncWithHttpInfo",
-        "ProductApi.CreateProductWithHttpInfo"
+        "ProductApi.CreateProductWithHttpInfo",
+        "ProductApi.CreateProductWithResultAsyncWithHttpInfo",
+        "ProductApi.CreateProductWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -13347,7 +13349,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProductApi.UpdateProductAsyncWithHttpInfo",
-        "ProductApi.UpdateProductWithHttpInfo"
+        "ProductApi.UpdateProductWithHttpInfo",
+        "ProductApi.UpdateProductWithResultAsyncWithHttpInfo",
+        "ProductApi.UpdateProductWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -13397,7 +13401,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProductApi.CreateProductGroupAsyncWithHttpInfo",
-        "ProductApi.CreateProductGroupWithHttpInfo"
+        "ProductApi.CreateProductGroupWithHttpInfo",
+        "ProductApi.CreateProductGroupWithResultAsyncWithHttpInfo",
+        "ProductApi.CreateProductGroupWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -41724,6 +41730,294 @@
         [
           "GET",
           "/productGroups"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "ProductWriteRequest request",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProductWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "ProductWriteRequest request",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/product/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "ProductWriteRequest request, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProductWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "ProductWriteRequest request",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProductWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "ProductWriteRequest request, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/product/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentGroupCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductGroupWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "ProductGroupWriteRequest request",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProductGroupWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentGroupCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductGroupWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "ProductGroupWriteRequest request",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/productGroup/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentGroupCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductGroupWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "ProductGroupWriteRequest request, CancellationToken cancellationToken",
+      "line": 51,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProductGroupWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentGroupCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductGroupWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "ProductGroupWriteRequest request",
+      "line": 57,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProductGroupWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentGroupCreation.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "CreateProductGroupWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "ProductGroupWriteRequest request, CancellationToken cancellationToken",
+      "line": 66,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/productGroup/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentUpdate.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "UpdateProductWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long id, ProductWriteRequest request = null",
+      "line": 22,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateProductWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentUpdate.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "UpdateProductWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, ProductWriteRequest request = null",
+      "line": 29,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/product/{id}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentUpdate.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "UpdateProductWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long id, ProductWriteRequest request, CancellationToken cancellationToken",
+      "line": 52,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateProductWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentUpdate.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "UpdateProductWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, ProductWriteRequest request = null",
+      "line": 58,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateProductWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProductApi.CurrentUpdate.cs",
+      "class": "ProductApi",
+      "class_access": "public",
+      "method": "UpdateProductWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long id, ProductWriteRequest request, CancellationToken cancellationToken",
+      "line": 68,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/product/{id}"
         ]
       ],
       "delegates": [],

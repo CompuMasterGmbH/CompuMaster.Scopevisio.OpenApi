@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 972,
+    "source_http_methods": 974,
     "status_counts": {
       "deferred": 323
     },
@@ -12968,7 +12968,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "OutgoingInvoiceApi.ImportOutgoingInvoicesAsyncWithHttpInfo",
-        "OutgoingInvoiceApi.ImportOutgoingInvoicesWithHttpInfo"
+        "OutgoingInvoiceApi.ImportOutgoingInvoicesWithHttpInfo",
+        "OutgoingInvoiceApi.ImportOutgoingInvoicesWithResultAsyncWithHttpInfo",
+        "OutgoingInvoiceApi.ImportOutgoingInvoicesWithResultWithHttpInfo"
       ],
       "parameters": [],
       "request_body": {
@@ -41198,6 +41200,102 @@
         [
           "POST",
           "/outgoinginvoice/{number}/file/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentImport.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ImportOutgoingInvoicesWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "OutgoingInvoiceImportRequest request = null",
+      "line": 21,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportOutgoingInvoicesWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentImport.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ImportOutgoingInvoicesWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "OutgoingInvoiceImportRequest request = null",
+      "line": 28,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoices/import"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentImport.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ImportOutgoingInvoicesWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "OutgoingInvoiceImportRequest request, CancellationToken cancellationToken",
+      "line": 49,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportOutgoingInvoicesWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentImport.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ImportOutgoingInvoicesWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "OutgoingInvoiceImportRequest request = null",
+      "line": 55,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ImportOutgoingInvoicesWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/OutgoingInvoiceApi.CurrentImport.cs",
+      "class": "OutgoingInvoiceApi",
+      "class_access": "public",
+      "method": "ImportOutgoingInvoicesWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "OutgoingInvoiceImportRequest request, CancellationToken cancellationToken",
+      "line": 64,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/outgoinginvoices/import"
         ]
       ],
       "delegates": [],

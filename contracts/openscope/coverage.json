@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 914,
+    "source_http_methods": 918,
     "status_counts": {
       "deferred": 323
     },
@@ -13820,7 +13820,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.CreateProjectEmployeeAsyncWithHttpInfo",
-        "ProjectApi.CreateProjectEmployeeWithHttpInfo"
+        "ProjectApi.CreateProjectEmployeeWithHttpInfo",
+        "ProjectApi.CreateProjectEmployeeWithResultAsyncWithHttpInfo",
+        "ProjectApi.CreateProjectEmployeeWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -13871,7 +13873,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "ProjectApi.UpdateProjectEmployeeAsyncWithHttpInfo",
-        "ProjectApi.UpdateProjectEmployeeWithHttpInfo"
+        "ProjectApi.UpdateProjectEmployeeWithHttpInfo",
+        "ProjectApi.UpdateProjectEmployeeWithResultAsyncWithHttpInfo",
+        "ProjectApi.UpdateProjectEmployeeWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -43162,6 +43166,198 @@
         [
           "POST",
           "/projectresource/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectEmployeeWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long projectId, ProjectEmployeeWriteRequest request",
+      "line": 23,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProjectEmployeeWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectEmployeeWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long projectId, ProjectEmployeeWriteRequest request",
+      "line": 30,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/projectemployee/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectEmployeeWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long projectId, ProjectEmployeeWriteRequest request, CancellationToken cancellationToken",
+      "line": 54,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProjectEmployeeWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectEmployeeWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long projectId, ProjectEmployeeWriteRequest request",
+      "line": 60,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "CreateProjectEmployeeWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeCreation.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "CreateProjectEmployeeWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long projectId, ProjectEmployeeWriteRequest request, CancellationToken cancellationToken",
+      "line": 70,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/projectemployee/new"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateProjectEmployeeWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long projectId, long employeeId, ProjectEmployeeWriteRequest request",
+      "line": 24,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateProjectEmployeeWithResultWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateProjectEmployeeWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long projectId, long employeeId, ProjectEmployeeWriteRequest request",
+      "line": 31,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/projectemployee/{employeeId}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateProjectEmployeeWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long projectId, long employeeId, ProjectEmployeeWriteRequest request, CancellationToken cancellationToken",
+      "line": 57,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateProjectEmployeeWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateProjectEmployeeWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long projectId, long employeeId, ProjectEmployeeWriteRequest request",
+      "line": 63,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "UpdateProjectEmployeeWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": true,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/ProjectApi.CurrentEmployeeUpdate.cs",
+      "class": "ProjectApi",
+      "class_access": "public",
+      "method": "UpdateProjectEmployeeWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long projectId, long employeeId, ProjectEmployeeWriteRequest request, CancellationToken cancellationToken",
+      "line": 74,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "POST",
+          "/project/{projectId}/projectemployee/{employeeId}"
         ]
       ],
       "delegates": [],

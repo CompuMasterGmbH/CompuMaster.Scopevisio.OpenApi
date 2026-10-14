@@ -11,7 +11,7 @@
     "missing_routes": 0,
     "legacy_routes": 5,
     "source_routes_on_unstable_classes": 294,
-    "source_http_methods": 984,
+    "source_http_methods": 988,
     "status_counts": {
       "deferred": 323
     },
@@ -16521,7 +16521,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AuthorizationApi.ChangeOrganisationByNameAsyncWithHttpInfo",
-        "AuthorizationApi.ChangeOrganisationByNameWithHttpInfo"
+        "AuthorizationApi.ChangeOrganisationByNameWithHttpInfo",
+        "AuthorizationApi.ChangeOrganisationByNameWithResultAsyncWithHttpInfo",
+        "AuthorizationApi.ChangeOrganisationByNameWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -16562,7 +16564,9 @@
       "public_source_route": true,
       "sdk_methods": [
         "AuthorizationApi.ChangeOrganisationByIdAsyncWithHttpInfo",
-        "AuthorizationApi.ChangeOrganisationByIdWithHttpInfo"
+        "AuthorizationApi.ChangeOrganisationByIdWithHttpInfo",
+        "AuthorizationApi.ChangeOrganisationByIdWithResultAsyncWithHttpInfo",
+        "AuthorizationApi.ChangeOrganisationByIdWithResultWithHttpInfo"
       ],
       "parameters": [
         {
@@ -27557,6 +27561,198 @@
         [
           "POST",
           "/token"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationById.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByIdWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "long organisationId",
+      "line": 19,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ChangeOrganisationByIdWithResultWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationById.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByIdWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long organisationId",
+      "line": 26,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/token/organisation/{organisationId}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationById.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByIdWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "long organisationId, CancellationToken cancellationToken",
+      "line": 47,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ChangeOrganisationByIdWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationById.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByIdWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long organisationId",
+      "line": 53,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ChangeOrganisationByIdWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationById.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByIdWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "long organisationId, CancellationToken cancellationToken",
+      "line": 62,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/token/organisation/{organisationId}"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationByName.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByNameWithResult",
+      "access": "public",
+      "return_type": "Newtonsoft.Json.Linq.JToken",
+      "parameters": "string name",
+      "line": 20,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ChangeOrganisationByNameWithResultWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationByName.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByNameWithResultWithHttpInfo",
+      "access": "public",
+      "return_type": "ApiResponse<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string name",
+      "line": 27,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/token/organisation"
+        ]
+      ],
+      "delegates": [],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationByName.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByNameWithResultAsync",
+      "access": "public",
+      "return_type": "Task<Newtonsoft.Json.Linq.JToken>",
+      "parameters": "string name, CancellationToken cancellationToken",
+      "line": 48,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ChangeOrganisationByNameWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationByName.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByNameWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string name",
+      "line": 54,
+      "native_cancellation_parameter": false,
+      "deserializes_response": false,
+      "routes": [],
+      "delegates": [
+        "ChangeOrganisationByNameWithResultAsyncWithHttpInfo"
+      ],
+      "unstable_class": false,
+      "facade_property": true
+    },
+    {
+      "file": "src/CompuMaster.Scopevisio.OpenApi/Api/AuthorizationApi.CurrentOrganisationByName.cs",
+      "class": "AuthorizationApi",
+      "class_access": "public",
+      "method": "ChangeOrganisationByNameWithResultAsyncWithHttpInfo",
+      "access": "public",
+      "return_type": "Task<ApiResponse<Newtonsoft.Json.Linq.JToken>>",
+      "parameters": "string name, CancellationToken cancellationToken",
+      "line": 63,
+      "native_cancellation_parameter": true,
+      "deserializes_response": false,
+      "routes": [
+        [
+          "PUT",
+          "/token/organisation"
         ]
       ],
       "delegates": [],

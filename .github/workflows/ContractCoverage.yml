@@ -46,20 +46,6 @@ jobs:
           python tools/generate_read_partials.py --check-import
       - name: Verify pinned contract and reproducible report
         run: python tools/contract_coverage.py --check
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-      - name: Verify bounded non-Windows SDK sample and selection policy
+      - name: Verify shared secondary SDK selection policy without executing duplicate samples
         shell: pwsh
-        run: |
-          ./.github/scripts/test-ci-test-selection.ps1
-          dotnet restore src/CompuMaster.Scopevisio.OpenApi.AsyncTests/CompuMaster.Scopevisio.OpenApi.AsyncTests.csproj
-          if ($LASTEXITCODE -ne 0) { throw 'Isolated sample restore failed.' }
-          ./.github/scripts/run-ci-tests.ps1 -RunnerOs $env:RUNNER_OS -Framework net8.0 -ResultsDirectory test-results-offline
-      - name: Retain sampled SDK evidence
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: offline-sdk-sample
-          path: test-results-offline/
-          if-no-files-found: warn
+        run: ./.github/scripts/test-ci-test-selection.ps1

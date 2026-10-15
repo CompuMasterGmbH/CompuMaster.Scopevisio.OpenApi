@@ -42,6 +42,11 @@ jobs:
                 include:
                     - os: macos-latest
                       runNetExe: mono
+                      sampleResults: test-results-net8.0
+                    - os: ubuntu-latest
+                      sampleResults: test-results-net8.0
+                    - os: windows-latest
+                      sampleResults: test-results-net48
 
         # the build-and-test job might be skipped, we don't need to run this job then
         #if: success() || failure()
@@ -150,4 +155,32 @@ jobs:
                   path: |
                       test-results-net8.0/
                       test-results-net48/
+                  if-no-files-found: warn
+
+            - name: Retain allocated secondary evidence for combined admission
+              uses: actions/upload-artifact@v4
+              if: always()
+              with:
+                  name: openscope-secondary-${{ matrix.os }}
+                  path: ${{ matrix.sampleResults }}/isolated/
+                  if-no-files-found: error
+
+    secondary-budget:
+        needs: test
+        if: always()
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/download-artifact@v4
+              with:
+                  pattern: openscope-secondary-*
+                  path: test-results-secondary
+            - name: Admit at most 20 actual secondary executions across all platforms
+              shell: pwsh
+              run: ./.github/scripts/assert-ci-sample-matrix.ps1 -Directory test-results-secondary
+            - uses: actions/upload-artifact@v4
+              if: always()
+              with:
+                  name: openscope-secondary-matrix-summary
+                  path: test-results-secondary/secondary-matrix-summary.json
                   if-no-files-found: warn

@@ -90,12 +90,17 @@ jobs:
 
             - name: Run full Windows or sampled non-Windows tests - .NET 8.0
               shell: pwsh
-              run: ./.github/scripts/run-ci-tests.ps1 -RunnerOs $env:RUNNER_OS -Framework net8.0 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net8.0 -IncludeCredentialedSuite
+              run: |
+                  if ($env:RUNNER_OS -eq 'Windows') {
+                      ./.github/scripts/run-ci-tests.ps1 -RunnerOs Windows -Framework net8.0 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net8.0 -IncludeCredentialedSuite
+                  } else {
+                      ./.github/scripts/run-ci-tests.ps1 -RunnerOs $env:RUNNER_OS -Framework net8.0 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net8.0
+                  }
 
             - name: Run representative tests - .NET Framework 4.8
               if: (startsWith(matrix.os, 'windows'))
               shell: pwsh
-              run: ./.github/scripts/run-ci-tests.ps1 -RunnerOs $env:RUNNER_OS -Framework net48 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net48 -IncludeCredentialedSuite
+              run: ./.github/scripts/run-ci-tests.ps1 -RunnerOs $env:RUNNER_OS -Framework net48 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net48
 
 #            - name: Dir Listing (Win) test-results
 #              if: startsWith(matrix.os, 'windows')
@@ -114,7 +119,7 @@ jobs:
               if: always() && startsWith(matrix.os, 'ubuntu')
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  files: "test-results-net8.0/historical/TestResults.xml"
+                  files: "test-results-net8.0/**/*.trx"
                   check_run_annotations: all tests
                   comment_title: Unit Test Statistics (${{matrix.os}})  - NET 8.0
                   check_name: Unit Test Results (${{matrix.os}})  - NET 8.0
@@ -125,7 +130,7 @@ jobs:
               if: always() && (!(startsWith(matrix.os, 'ubuntu')))
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  files: "test-results-net8.0/historical/TestResults.xml"
+                  files: "test-results-net8.0/**/*.trx"
                   check_run_annotations: all tests
                   comment_title: Unit Test Statistics (${{matrix.os}})  - NET 8.0
                   check_name: Unit Test Results (${{matrix.os}})  - NET 8.0
@@ -136,7 +141,7 @@ jobs:
               if: always() && (startsWith(matrix.os, 'windows'))
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  files: "test-results-net48/historical/TestResults.xml"
+                  files: "test-results-net48/**/*.trx"
                   check_run_annotations: all tests
                   comment_title: Unit Test Statistics (${{matrix.os}}) - NET Framework 4.8
                   check_name: Unit Test Results (${{matrix.os}}) - NET Framework 4.8

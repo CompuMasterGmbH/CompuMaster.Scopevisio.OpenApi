@@ -9,12 +9,15 @@ $select = Join-Path $PSScriptRoot 'get-ci-test-selection.ps1'
 $assert = Join-Path $PSScriptRoot 'assert-ci-test-results.ps1'
 $full = & $select -RunnerOs Windows -Framework net8.0
 if ($full.Coverage -ne 'full' -or $full.LegacyFilter -or $full.IsolatedFilter -or !$full.IncludeHistorical -or $full.MaximumCases -ne 0) { throw 'Windows/net8 must retain both complete suites.' }
-foreach ($case in @(@('Linux', 'net8.0'), @('macOS', 'net8.0'), @('Windows', 'net48'))) {
+$secondaryCases = @()
+foreach ($case in @(@('Linux', 'net8.0', 6), @('macOS', 'net8.0', 6), @('Windows', 'net48', 8))) {
     $sample = & $select -RunnerOs $case[0] -Framework $case[1]
-    if ($sample.Coverage -ne 'sample' -or $sample.IncludeHistorical -or $sample.LegacyTests.Count -ne 0 -or $sample.IsolatedTests.Count -ne 20 -or $sample.MaximumCases -ne 20 -or $sample.LegacyFilter -or !$sample.IsolatedFilter -or $sample.IsolatedFilter.Contains('~') -or @($sample.IsolatedTests | Select-Object -Unique).Count -ne 20) {
-        throw 'Other platform/runtime selections must retain exactly 20 named isolated cases and no historical account tests.'
+    if ($sample.Coverage -ne 'sample' -or $sample.IncludeHistorical -or $sample.LegacyTests.Count -ne 0 -or $sample.IsolatedTests.Count -ne $case[2] -or $sample.MaximumCases -ne $case[2] -or $sample.LegacyFilter -or !$sample.IsolatedFilter -or $sample.IsolatedFilter.Contains('~') -or @($sample.IsolatedTests | Select-Object -Unique).Count -ne $case[2]) {
+        throw 'Other platform/runtime selections must retain the allocated named isolated cases and no historical account tests.'
     }
+    $secondaryCases += $sample.IsolatedTests
 }
+if ($secondaryCases.Count -ne 20 -or @($secondaryCases | Select-Object -Unique).Count -ne 20) { throw 'Secondary matrix allocations must sum to 20 distinct actual cases.' }
 $rejected = $false
 try { $null = & $select -RunnerOs Linux -Framework net48 } catch { $rejected = $true }
 if (!$rejected) { throw 'Unsupported runtime/platform combination accepted.' }
@@ -81,3 +84,4 @@ try {
     if (Test-Path -LiteralPath $temporary) { Remove-Item -LiteralPath $temporary }
 }
 Write-Host 'Offline CI selector and result-admission checks passed; no credentials, profiles or server access.'
+& (Join-Path $PSScriptRoot 'test-ci-sample-matrix.ps1')

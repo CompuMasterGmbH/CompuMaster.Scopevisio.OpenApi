@@ -8,7 +8,7 @@ if ($Framework -eq 'net48' -and $RunnerOs -ne 'Windows') {
     throw '.NET Framework samples require Windows.'
 }
 $full = $RunnerOs -eq 'Windows' -and $Framework -eq 'net8.0'
-# Exact nonparameterized methods share one budget across all projects.
+# Exact nonparameterized methods partition one 20-case secondary matrix budget.
 $isolatedTests = @(
     'CompuMaster.Scopevisio.OpenApi.AsyncTests.AuthorizationCancellationTests.AuthorizationInstallsTokensAndRefreshUsesTheInstalledRefreshToken',
     'CompuMaster.Scopevisio.OpenApi.AsyncTests.OrganisationAuthorizationTests.PreCancellationDoesNotSendHttpOrInstallState',
@@ -31,6 +31,14 @@ $isolatedTests = @(
     'CompuMaster.Scopevisio.OpenApi.AsyncTests.AccountUserMetadataTests.CurrentAccountFieldAuditUsesActualDeclaredTypesAndKinds',
     'CompuMaster.Scopevisio.OpenApi.AsyncTests.TokenCustomerMetadataTests.CurrentPrimaryFieldsAreOptionalStringsAndNamespacesAreDistinct'
 )
+if (!$full) {
+    $indices = switch ($RunnerOs) {
+        'Windows' { @(0, 2, 6, 8, 10, 12, 16, 17) }
+        'Linux' { @(1, 4, 7, 9, 13, 18) }
+        'macOS' { @(3, 5, 11, 14, 15, 19) }
+    }
+    $isolatedTests = @($indices | ForEach-Object { $isolatedTests[$_] })
+}
 [pscustomobject]@{
     Coverage = if ($full) { 'full' } else { 'sample' }
     IncludeHistorical = $full
@@ -38,5 +46,5 @@ $isolatedTests = @(
     LegacyTests = @()
     IsolatedFilter = if ($full) { '' } else { ($isolatedTests | ForEach-Object { 'FullyQualifiedName=' + $_ }) -join '|' }
     IsolatedTests = if ($full) { @() } else { $isolatedTests }
-    MaximumCases = if ($full) { 0 } else { 20 }
+    MaximumCases = if ($full) { 0 } else { $isolatedTests.Count }
 }

@@ -12,6 +12,8 @@ Run credential-free policy regressions with `pwsh -File .github/scripts/test-ci-
 
 The normal and scheduled account workflows retain `openscope_test_account`, `cancel-in-progress: false` and `max-parallel: 1`. This repository-scoped lock does not exclude other repositories or local sessions. No source change enables a held workflow or grants account access. Preserve original workflow states, including the disabled scheduled workflow.
 
+Manual dispatch of the normal workflow can set `include_credentialed_suite=false` for credential-free release validation: full isolated Windows/net8 coverage and the same combined 20-case secondary sample. The default remains true, preserving existing push, pull-request and manual account-test behavior. A false selection does not include the historical account project and does not require a new account window. For example: `gh workflow run BuildAndTest.yml --ref master -f include_credentialed_suite=false`.
+
 ## Current acceptance scope
 
 The human's 15 October 2026 instruction excludes Teamwork from current live acceptance. Its unresolved tenant behavior does not gate acceptance of independent OpenScope operations. Excluded live requests include Teamwork token queries/revocation, all Teamwork bridge routes, Teamwork file operations and invoice Teamwork links. The complete isolated Windows/net8 suite may retain fake Teamwork regression tests; passing them does not constitute Teamwork live acceptance.
@@ -20,4 +22,4 @@ Non-Teamwork live tests must bind an explicitly approved numeric Scopevisio Demo
 
 First perform a separately admitted read-only selection with an exact endpoint allowlist under a fresh finite exclusive account window. Do not run the complete historical account suite as a substitute: it includes default-login and Teamwork behavior. Finance/material writes, imports and posting require operation-specific owned fixtures, known baseline and verified restoration; no resettable fixture has yet been established. Account-wide users, licences and organisation creation require their own explicit contained scope. These remaining server checks stay open rather than being inferred from isolated results.
 
-Implementation, isolated verification, real-server acceptance, merge, package publication and downstream adoption are separate states. This CI-only change does not publish `CompuMaster.Scopevisio.OpenApi` or change DMS pins; the published SDK remains 2026.10.13.
+Implementation, isolated verification, real-server acceptance, merge, package publication and downstream adoption are separate states. The maintainer accepted the tested implementation on 16 October 2026; optional future coverage and known failures are tracked separately. Workflow execution does not publish `CompuMaster.Scopevisio.OpenApi` or change DMS pins; publication uses the separately approved release event.

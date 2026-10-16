@@ -18,6 +18,11 @@ on:
 
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
+        inputs:
+            include_credentialed_suite:
+                description: 'Run historical account tests; requires coordinated exclusive account access.'
+                type: boolean
+                default: true
 
 # This lock is repository-scoped; cross-repository account access still needs coordination.
 concurrency:
@@ -58,6 +63,7 @@ jobs:
 
         env:
             RESULTS_PATH: TestResults.xml
+            INCLUDE_CREDENTIALED_SUITE: ${{ github.event_name != 'workflow_dispatch' || inputs.include_credentialed_suite }}
             TEST_USERNAME: ${{ secrets.TEST_USERNAME }}
             TEST_CUSTOMERNO: ${{ secrets.TEST_CUSTOMERNO }}
             TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
@@ -97,7 +103,11 @@ jobs:
               shell: pwsh
               run: |
                   if ($env:RUNNER_OS -eq 'Windows') {
-                      ./.github/scripts/run-ci-tests.ps1 -RunnerOs Windows -Framework net8.0 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net8.0 -IncludeCredentialedSuite
+                      if ($env:INCLUDE_CREDENTIALED_SUITE -eq 'true') {
+                          ./.github/scripts/run-ci-tests.ps1 -RunnerOs Windows -Framework net8.0 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net8.0 -IncludeCredentialedSuite
+                      } else {
+                          ./.github/scripts/run-ci-tests.ps1 -RunnerOs Windows -Framework net8.0 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net8.0
+                      }
                   } else {
                       ./.github/scripts/run-ci-tests.ps1 -RunnerOs $env:RUNNER_OS -Framework net8.0 -Configuration $env:BUILD_CONFIGURATION -ResultsDirectory test-results-net8.0
                   }
